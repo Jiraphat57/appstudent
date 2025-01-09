@@ -37,7 +37,7 @@
         /* Insert the A4 style code here */
         @page {
             size: A4;
-            margin: 5mm 10mm 20mm 20mm
+            margin: 15mm 10mm 20mm 20mm
                 /* [บน (top): 10mm
                 ขวา (right): 10mm
                 ล่าง (bottom): 20mm
@@ -120,7 +120,7 @@
         </div>
 
         <div class="row d-flex justify-content-center align-items-center"
-            style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครตัวนักเรียนใหม่
+            style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่
         </div>
         {{-- <div class="row d-flex justify-content-center align-items-center col-100%">โรงเรียนพานพิทยาคม อําเภอพาน จังหวัดเชียงราย
         </div> --}}
@@ -133,19 +133,19 @@
         <div class="row col-100%">
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
-                {{ $students->surname }} </span>
+                {{ $students->surname }}</span>
             ชั้น:&nbsp;{{$students->classlevel->classlevel ??'ไม่ระบุ'}}&nbsp;ห้อง:
             .........รหัสนักเรียน:.......................เลขประจำตัวประชาชนนักเรียน:<span
                 class="underline"> {{ $students->nationalid }}</span>
-            <br> เชื้อชาติ:<span class="underline">{{ $students->ethnicity->ethnicitie ?? 'ไม่ระบุ' }} </span>
-            สัญชาติ:<span class="underline">{{ $students->nationality->nationalitie ?? 'ไม่ระบุ' }}</span>ศาสนา:<span
+            <br> เชื้อชาติ:<span class="underline">{{$students->ethnicity->ethnicitie ?? 'ไม่ระบุ'}}</span>
+            สัญชาติ:<span class="underline">{{$students->nationality->nationalitie ?? 'ไม่ระบุ'}}</span>ศาสนา:<span
                 class="underline">
-                {{ $students->religion->religion ?? 'ไม่ระบุ' }}</span> วันเดือนปีเกิด:<span class="underline">
+                {{ $students->religion->religion ?? 'ไม่ระบุ' }}</span>วันเดือนปีเกิด:<span class="underline">
                 {{ $students->dateofbirth? Carbon::parse($students->dateofbirth)->addYears(543)->translatedFormat('d/m/Y'): 'ไม่ระบุ' }}</span>
             จังหวัด:<span class="underline">{{ $students->provincebirth->province ?? 'ไม่ระบุ' }}</span>
-            หมู่เลือด:<span class="underline">{{ $students->bloodtype->bloodtype ?? 'ไม่ระบุ' }}</span>น้ำหนัก:<span
-                class="underline">{{ $students->weight }}</span>ส่วนสูง:<span
-                class="underline">{{ $students->height }}</span>
+            หมู่เลือด:<span class="underline">{{ $students->bloodtype->bloodtype ?? 'ไม่ระบุ' }}</span>
+            น้ำหนัก:<span class="underline">{{ $students->weight }}</span>
+            ส่วนสูง:<span class="underline">{{ $students->height }}</span>
             ความพิการ:&nbsp;@if ($students->disability == 1)
                 <span class="underline">พิการ</span>
             @elseif ($students->disability == 2)
@@ -163,7 +163,7 @@
             นักเรียนเป็นบุตรคนที่ <span
                 class="underline">{{ $students->beingonlychild }}</span>มีพี่น้องร่วมบิดามารดาที่เรียนอยู่
             <span class="underline">{{ $students->sumsiblings }}คน</span>
-            <br>ที่อยู่ปัจจุบันของนักเรียน รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
+            <br>&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
             หมู่บ้าน<span class="underline">{{ $students->villagename }}</span>ตำบล<span
@@ -177,14 +177,14 @@
             <br>ใช้เวลามาโรงเรียน<span class="underline">{{ $students->traveltime }} นาที</span>
             เดินทางมาโรงเรียน<span
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
-            บิดาผู้ให้กำเนิด<span
+                &nbsp;&nbsp;&nbsp;บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }} </span>
             เลขประชาชน<span class="underline">{{ $students->field_citizenfather }}</span>
             อาชีพ<span class="underline"> {{ $students->occupationfather->occupation ?? 'ไม่ระบุ' }}</span>
             รายได้<span class="underline">{{ $students->income_father ?? 'ไม่ระบุ' }}บาท/เดือน </span>
             <br>มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span><br>
-            มารดาผู้ให้กำเนิด<span
+            &nbsp;&nbsp;&nbsp;มารดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlemother->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_mother ?? 'ไม่ระบุ' }}&nbsp;&nbsp;{{ $students->surname_mother ?? 'ไม่ระบุ' }}</span>เลขประชาชน<span
                 class="underline">{{ $students->field_citizenmother ?? 'ไม่ระบุ' }}</span>
             อาชีพ<span class="underline">{{ $students->occupationmother->occupation ?? 'ไม่ระบุ' }}</span>
@@ -215,7 +215,7 @@
                 .....................................................................................&nbsp;รายได้ผู้ปกครอง........................บาท/เดือน
                 มือถือ............................
             @endif
-            แผนการเรียนที่เลือก 1: &nbsp;<span
+            <br>แผนการเรียนที่เลือก 1: &nbsp;<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
             แผนการเรียนที่เลือก 2: &nbsp;<span
                 class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
@@ -236,7 +236,7 @@
             แผนการเรียนที่เลือก 10: &nbsp;<span
                 class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
             แผนการเรียนที่เลือก 11: &nbsp;<span
-                class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
+                class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br><br>
             คํารับรองของผู้ปกครอง
             ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
             <span class="underline">
@@ -244,7 +244,7 @@
             </span>ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......
             ขอให้คำรับรองต่อผู้อํานวยการ
             โรงเรียนพานพิทยาคมว่า
-            <div style="font-size: 12px;">1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน
+            <div style="font-size: 14x;">1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน
                 โดยข้าพเจ้าจะเป็นผู้คอยตักเตือนนักเรียนที่ข้าพเจ้ารับเป็น ผู้ปกครอง
                 ให้หมั่นศึกษาเล่าเรียนและประพฤติตนให้ถูกต้องตามระเบียบของโรงเรียน
                 <br>2. ข้าพเจ้าจะอุปถัมภ์ค่าเล่าเรียน เครื่องแต่งกาย
@@ -256,14 +256,14 @@
                 <br>5. ข้าพเจ้าจะส่งเสริมนักเรียนในความปกครองให้นักเรียนได้ร่วมกิจกรรมของโรงเรียน และพัฒนาตนเองในการ
                 สร้างชื่อเสียงให้แก่โรงเรียน
                 <br>6. หากนักเรียนในความปกครองของข้าพเจ้าไม่สามารถจบหลักสูตรการศึกษาได้ตามที่โรงเรียนกําหนด ข้าพเจ้า
-                ยินดีที่จะให้นักเรียนลาออกจากโรงเรียน เพื่อไปศึกษาต่อในสถานศึกษาอื่นต่อไป
+                ยินดีที่จะให้<br>นักเรียนลาออกจากโรงเรียน เพื่อไปศึกษาต่อในสถานศึกษาอื่นต่อไป
             </div>
             <div class="row d-flex justify-content-center align-items-center col-100%"
                 style="width: 100%; text-align: center;">
                 &nbsp;&nbsp;ลงชื่อ.............................................................ผู้ปกครอง
                 <br> (………………………………………………….)
             </div>
-        </div><div style="font-size: 13px;">
+        </div><div style="font-size: 16px;">
         ตรวจหลักฐานการมอบตัว (สำหรับเจ้าหน้าที่รับมอบตัว)
         ปพ.1 ตัวจริงพร้อมสำเนาพร้อมสำเนา 1 ชุด
         <br>1.สำเนาทะเบียนบ้านของนักเรียน บิดาผู้ให้กำเนิด มารดาผู้ให้กำเนิด
