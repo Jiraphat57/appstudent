@@ -64,9 +64,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">หน้าแรก</a>
-                <a href="about.html" class="nav-item nav-link">เกี่ยวกับ</a>
-                <a href="service.html" class="nav-item nav-link">ระบบสารสนเทศ</a>
+                <a href="{{ url('welcome') }}" class="nav-item nav-link active">หน้าแรก</a>
+                <a href="{{ url('welcome') }}" class="nav-item nav-link">เกี่ยวกับ</a>
+                <a href="{{ url('welcome') }}" class="nav-item nav-link">ระบบสารสนเทศ</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ระบบออนไลน์</a>
                     {{-- <div class="dropdown-menu bg-light m-0">
@@ -95,7 +95,7 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-10 text-start">
-                                    <p class="fs-3 fw-medium text-primary text-uppercase animated slideInRight">โรงเรียนพานพิทยา</p>
+                                    <p class="fs-3 fw-medium text-primary text-uppercase animated slideInRight">โรงเรียนพานพิทยายม</p>
                                     <h1 class="display-9 text-white mb-5 animated slideInRight">เปิดรับสมัครนักเรียน 12 ก.พ.-13 มี.ค. 2568</h1>
                                     {{-- <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">กดสมัครนักเรียน</a> --}}
                                 </div>

@@ -619,7 +619,7 @@
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
-                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; ข้อมูลบิดาผู้ให้กำหนด
+                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; ข้อมูลบิดาผู้ให้กำเนิด
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
@@ -679,7 +679,7 @@
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
-                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;  ข้อมูลมารดาผู้ให้กำหนด
+                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;  ข้อมูลมารดาผู้ให้กำเนิด
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
