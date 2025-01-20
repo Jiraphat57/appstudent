@@ -38,7 +38,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ProvinceSeeder::class,
             BloodtypeSeeder::class,
-            EthnicitySeeder::class,
             GenderSeeder::class,
             MaritalstatusSeeder::class,
             NationalitySeeder::class,
@@ -50,7 +49,8 @@ class DatabaseSeeder extends Seeder
             ClassLevelSeeder::class,
             HighSchoolSeeder::class,
             SecondarySchoolSeeder::class,
-            AdminSeeder::class
+            AdminSeeder::class,
+            EthnicitySeeder::class
         ]);
     }
 }
