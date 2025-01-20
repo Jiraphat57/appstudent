@@ -78,9 +78,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ url('welcome') }}" class="nav-item nav-link active">หน้าแรก</a>
-                <a href="{{ url('welcome') }}" class="nav-item nav-link">เกี่ยวกับ</a>
-                <a href="{{ url('welcome') }}" class="nav-item nav-link">ระบบสารสนเทศ</a>
+                <a href="{{ route('welcome') }}" class="nav-item nav-link active">หน้าแรก</a>
+                <a href="{{ route('welcome') }}" class="nav-item nav-link">เกี่ยวกับ</a>
+                <a href="{{ route('welcome') }}" class="nav-item nav-link">ระบบสารสนเทศ</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ระบบสารสนเทศ</a>
                     {{-- <div class="dropdown-menu bg-light m-0">
