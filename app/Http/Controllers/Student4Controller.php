@@ -37,8 +37,8 @@ class Student4Controller extends Controller
             'classlevel', 'typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather',
             'typetitlemother', 'occupationmother', 'maritalstatus','highschool1','highschool2','highschool3',
-            'highschool4','highschool5','highschool6','highschool7','highschool8','highschool9','highschool10',
-            'highschool11'])->findOrFail($id);
+            'highschool4','highschool5','highschool6','highschool7','highschool8','highschool9','highschool10'
+        ])->findOrFail($id);
         // $students = Students::all()->findOrFail($id);
         // $students = Students::findOrFail($id);
         // สร้าง PDF โดยใช้ View และส่งข้อมูลไปยัง View
@@ -58,8 +58,8 @@ class Student4Controller extends Controller
             'classlevel', 'typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather',
             'typetitlemother', 'occupationmother', 'maritalstatus','highschool1','highschool2','highschool3',
-            'highschool4','highschool5','highschool6','highschool7','highschool8','highschool9','highschool10',
-            'highschool11'])->findOrFail($id);
+            'highschool4','highschool5','highschool6','highschool7','highschool8','highschool9','highschool10'
+            ])->findOrFail($id);
         // $students = Students::all()->findOrFail($id);
         // $students = Students::findOrFail($id);
         // สร้าง PDF โดยใช้ View และส่งข้อมูลไปยัง View
