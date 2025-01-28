@@ -674,12 +674,272 @@
                                 <option value="2"
                                     {{ old('parent_id', $students->parent_id ?? '') == 2 ? 'selected' : '' }}>มารดา
                                 </option>
-                                <option value="2"
-                                    {{ old('parent_id', $students->parent_id ?? '') == 3 ? 'selected' : '' }}>
-                                    อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย</option>
+                                <option value="3"
+                                    {{ old('parent_id', $students->parent_id ?? '') == 3 ? 'selected' : '' }}>อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย
+                                </option>
                             </select>
                         </div>
                     </div>
+                    <div class="alert alert-success text-center" role="alert">
+                        สายการเรียนที่เลือก
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 1</label>
+                            <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 2</label>
+                            <select id="sel_secondaryschool2" name="secondaryschool2_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 3</label>
+                            <select id="sel_secondaryschool3" name="secondaryschool3_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 4</label>
+                            <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 5</label>
+                            <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 6</label>
+                            <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 7</label>
+                            <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 8</label>
+                            <select id="sel_secondaryschool8" name="secondaryschool8_id" class="form-select"
+                                aria-label="Default select example">
+                                <option value="1"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 1 ? 'selected' : '' }}>ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP
+                                </option>
+                                <option value="2"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 2 ? 'selected' : '' }}>ห้องวิทยาศาสตร์พลังสิบ TPSP
+                                </option>
+                                <option value="3"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 3 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP
+                                </option>
+                                <option value="4"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 4 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP
+                                </option>
+                                <option value="5"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 5 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP
+                                </option>
+                                <option value="6"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
+                                </option>
+                                <option value="7"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
+                                </option>
+                                <option value="8"
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="container ">
                     {{-- <div class="row justify-content-center">       --}}

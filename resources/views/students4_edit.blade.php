@@ -674,7 +674,7 @@
                                 <option value="2"
                                     {{ old('parent_id', $students->parent_id ?? '') == 2 ? 'selected' : '' }}>มารดา
                                 </option>
-                                <option value="2"
+                                <option value="3"
                                     {{ old('parent_id', $students->parent_id ?? '') == 3 ? 'selected' : '' }}>
                                     อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย</option>
                             </select>
@@ -826,7 +826,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-2">
+                    {{-- <div class="col-md-6 mb-2">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 11</label>
                             <select id="sel_highschool11" name="highschool11_id" class="form-select"
@@ -839,7 +839,7 @@
                                 @endforeach
                             </select>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="container ">
                     {{-- <div class="row justify-content-center">       --}}
