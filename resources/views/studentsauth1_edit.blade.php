@@ -70,7 +70,7 @@
 <body>
     <br>
     <div class="container">
-        <form class="row g-3" action="{{ route('students.update', $students->id) }}" method="POST"
+        <form class="row g-3" action="{{ route('students1.update', $students->id) }}" method="POST"
             enctype="multipart/form-data">
             @csrf
             @method('PATCH')
