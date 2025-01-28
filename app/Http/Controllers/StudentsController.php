@@ -137,7 +137,12 @@ class StudentsController extends Controller
             'parent_id' => 'required|numeric',
             'secondaryschool1_id' => 'required|numeric',
             'secondaryschool2_id' => 'required|numeric',
-            'secondaryschool3_id' => 'required|numeric'       
+            'secondaryschool3_id' => 'required|numeric',
+            'secondaryschool4_id' => 'required|numeric',  
+            'secondaryschool5_id' => 'required|numeric',
+            'secondaryschool6_id' => 'required|numeric',
+            'secondaryschool7_id' => 'required|numeric',
+            'secondaryschool8_id' => 'required|numeric'
         ]);
         // dd($validatedData);
         // แปลงรูปแบบวันที่
@@ -206,6 +211,11 @@ class StudentsController extends Controller
         $students->secondaryschool1_id = $request->input('secondaryschool1_id');
         $students->secondaryschool2_id = $request->input('secondaryschool2_id');
         $students->secondaryschool3_id = $request->input('secondaryschool3_id');
+        $students->secondaryschool4_id = $request->input('secondaryschool4_id');
+        $students->secondaryschool5_id = $request->input('secondaryschool5_id');
+        $students->secondaryschool6_id = $request->input('secondaryschool6_id');
+        $students->secondaryschool7_id = $request->input('secondaryschool7_id');
+        $students->secondaryschool8_id = $request->input('secondaryschool8_id');
         // ทำif ในนี้ ถ้าเป็นม.1  ให้เลือกไหด้3 สาย ถ้าเป็นม.4
         $students->save();
         if (Auth::check()) {
@@ -314,7 +324,12 @@ class StudentsController extends Controller
             'parent_id' => 'required|numeric',
             'secondaryschool1_id' => 'required|numeric',
             'secondaryschool2_id' => 'required|numeric',
-            'secondaryschool3_id' => 'required|numeric'
+            'secondaryschool3_id' => 'required|numeric', 
+            'secondaryschool4_id' => 'required|numeric',  
+            'secondaryschool5_id' => 'required|numeric',
+            'secondaryschool6_id' => 'required|numeric',
+            'secondaryschool7_id' => 'required|numeric',
+            'secondaryschool8_id' => 'required|numeric'
         ]);
         // dd($validatedData);
         try {

@@ -157,7 +157,7 @@ class Student4Controller extends Controller
             'highschool8_id' => 'required|numeric',
             'highschool9_id' => 'required|numeric',
             'highschool10_id' => 'required|numeric',
-            'highschool11_id' => 'required|numeric' 
+            // 'highschool11_id' => 'required|numeric' 
         ]);
         // dd($validatedData);
         // แปลงรูปแบบวันที่
@@ -233,7 +233,7 @@ class Student4Controller extends Controller
         $students->highschool8_id = $request->input('highschool8_id');
         $students->highschool9_id = $request->input('highschool9_id');
         $students->highschool10_id = $request->input('highschool10_id');
-        $students->highschool11_id = $request->input('highschool11_id');
+        // $students->highschool11_id = $request->input('highschool11_id');
         // ทำif ในนี้ ถ้าเป็นม.1  ให้เลือกไหด้3 สาย ถ้าเป็นม.4
         $students->save();
         if (Auth::check()) {
@@ -346,7 +346,7 @@ class Student4Controller extends Controller
             'highschool8_id' => 'required|numeric',
             'highschool9_id' => 'required|numeric',
             'highschool10_id' => 'required|numeric',
-            'highschool11_id' => 'required|numeric' 
+            // 'highschool11_id' => 'required|numeric' 
         ]);
         // dd($validatedData);
         try {
