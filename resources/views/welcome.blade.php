@@ -157,16 +157,16 @@
                         </div>
                         <div class="ms-4">
                             {{-- <p><i class="fa fa-check text-primary me-3"></i>ห้องเรียนวิทยาศาสตร์พลังสืบ</p> --}}
-                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนห้องเรียนพิเศษ (วิทยาศาสตร์-คณิตศาสตร์) ESMP Excellence in Science and Mathematics Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>ห้แผนการเรียนห้องเรียนวิทยาศาสตร์พลังสิบ TPSPTen Power Science Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP Science Math Excellence Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>ห้แผนการเรียนเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEPEnglish Math Excellence Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล  TEPTechnology Digital Excellence Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEPEnglish Excellence Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาจีน  CEPChinese Excellence Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEPJapanese Excellence Program</p>
-                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านทักษะอาชีพ VEP Vocational Excellence Program</p>
-                            <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEPThai English Social Study Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนห้องเรียนพิเศษ (วิทยาศาสตร์-คณิตศาสตร์) ISMP Intensive Science and Mathematics Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนห้องเรียนวิทยาศาสตร์พลังสิบ TPSP Ten Power Science Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนวิทยาศาสตร์ - คณิตศาสตร์ SMEP Science Math Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านคณิตศาสตร์ - ภาษาอังกฤษ EMEP English & Math Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP Digital Technology Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP English Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาจีน CEP Chinese Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP Japanese Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP Vocational Skills Program</p>
+                            <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP Thai, English & Social Studies Excellence Program</p>
                         </div>
                     </div>
                     <div><p class="mb-4">1. ใบสมัครที่กรอกข้อมูลครบถ้วนสมบูรณ์ <br>

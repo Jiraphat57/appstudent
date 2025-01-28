@@ -778,112 +778,112 @@
                     <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 1</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool2" name="secondaryschool2_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 2</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool3" name="secondaryschool3_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 3</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 4</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 5</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 6</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 7</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool8" name="secondaryschool8_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>เลือกแผนการเรียนลำดับที่ 8</option>
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ESMP</option>
+                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล TEP</option>
+                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                         <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
                         <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                         <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                         <option value="7">ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP</option>
-                        <option value="8">ห้องเรียนทั่วไป</option>
+                        <option value="8">ห้องเรียนทั่วไป GP</option>
                     </select>
                 </div>
             </div>
