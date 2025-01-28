@@ -168,17 +168,20 @@
                             <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP Vocational Skills Program</p>
                             <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP Thai, English & Social Studies Excellence Program</p>
                         </div>
-                    </div>
-                    <div><p class="mb-4">1. ใบสมัครที่กรอกข้อมูลครบถ้วนสมบูรณ์ <br>
+                    </div>			
+                </div>
+				 
+				 <div class="col-sl-6 d-flex justify-content-center align-items-center"><p>1. ใบสมัครที่กรอกข้อมูลครบถ้วนสมบูรณ์ <br>
                         2. เอกสาร ปพ.7 หรือ สำเนาเอกสาร ปพ.1 เพื่อยืนยันสถานะการเป็นนักเรียน <br>
                         3. รูปถ่ายเครื่องแบบนักเรียนขนาด 1.5 นิ้ว จํานวน 1 รูป <br>
                         4. สำเนาทะเบียนบ้านของนักเรียน<br>
                         คุณสมบัติผู้สมัคร<br>
                         - กําลังศึกษาอยู่ในระดับชั้น ป.6 หรือ ม.3                        
-                    </p></div>
-                    <div class="row pt-2">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
+                    </p>
+				</div>
+				<div class="row justify-content-center">
+                        <div class="col-sm-6 text-start justify-content-center">
+                            <div class="d-flex align-items-center justify-content-center">
                                 <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                     <i class="fa fa-phone-alt text-white"></i>
                                 </div>
@@ -189,7 +192,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center">
                                 <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                     <i class="fa fa-phone-alt text-white"></i>
                                 </div>
@@ -200,13 +203,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                  
             </div>
         </div>
     </div>
     <!-- About End -->
     <div class="container">
-        <div class="row justify-content-center p4">
+        <div class="row justify-content-center p2">
             <div class="col-sm-4 text-start" >
                 <a href="{{ url('/takeclass1') }}" class="center btn btn-primary py-3 px-6 animated"><i class="bi bi-1-circle"></i>&nbsp;สมัครเรียน ม.1</a>
             </div>
