@@ -162,6 +162,11 @@ return new class extends Migration
             $table->foreignId('secondaryschool1_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('secondaryschool2_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('secondaryschool3_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('secondaryschool4_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('secondaryschool5_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('secondaryschool6_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('secondaryschool7_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('secondaryschool8_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();
         });
     }

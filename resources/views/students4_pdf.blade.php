@@ -59,9 +59,10 @@
         }
 
         .underline {
-            text-decoration: underline;
-            /* ขีดเส้นใต้ */
-            margin-right: 1px;
+            text-decoration: underline !important;
+            margin-right: 1px !important;
+            margin-left: 1px !important;
+            text-underline-offset: 1px !important;
             /* ระยะห่างทางด้านขวาของข้อความ*/
             /* margin-left: 2px; ระยะห่างทางด้านซ้ายของข้อความ  */
             /* text-underline-offset: 6px; */

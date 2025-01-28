@@ -32,7 +32,7 @@ class Student4 extends Model
     protected $fillable = ['classlevels_id','typetitles_id','name','surname','nameeng','surnameeng','nationalid','religions_id','nationalities_id','ethnicities_id','dateofbirth','provincesbirth_id','bloodtypes_id','travelschool1s_id','weight',
 'height','disability','previousschool','provinceschool_id','beingonlychild','brothers','youngerbrother','oldersister','sister','sumsiblings','houseid','housenumber','villagenumber','villagename','district','subdistrict','provinces_id','postalcode','typeresidences_id','distancelatyangroad','traveltime',
 'travelschool1s_id','typetitlesfather_id','name_father','surname_father','field_citizenfather','occupationfather_id','income_father','phone_father','typetitlesmother_id','name_mother','surname_mother','field_citizenmother','occupationmother_id','income_mother','phone_mother','maritalstatuses_id','parent_id',
-'highschool1_id','highschool2_id','highschool3_id','highschool4_id','highschool5_id','highschool6_id','highschool17_id','highschool8_id','highschool9_id','highschool10_id','highschool11_id'];
+'highschool1_id','highschool2_id','highschool3_id','highschool4_id','highschool5_id','highschool6_id','highschool17_id','highschool8_id','highschool9_id','highschool10_id'];
 
     public function travelschool1(): BelongsTo
     {
@@ -153,10 +153,10 @@ class Student4 extends Model
     {
         return $this->belongsTo(HighSchool::class, 'highschool10_id', 'id');
     }
-    public function highschool11(): BelongsTo
-    {
-        return $this->belongsTo(HighSchool::class, 'highschool11_id', 'id');
-    }
+    // public function highschool11(): BelongsTo
+    // {
+    //     return $this->belongsTo(HighSchool::class, 'highschool11_id', 'id');
+    // }
     // public function curriculumsec()
     // {
     //     return $this->hasMany(SecondarySchool::class, 'curriculumsec_id', 'id');

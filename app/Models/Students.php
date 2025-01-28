@@ -110,4 +110,24 @@ class Students extends Model
     {
         return $this->belongsTo(SecondarySchool::class, 'secondaryschool3_id', 'id');
     }
+    public function curriculumsec4()
+    {
+        return $this->belongsTo(SecondarySchool::class, 'secondaryschool4_id', 'id');
+    }
+    public function curriculumsec5()
+    {
+        return $this->belongsTo(SecondarySchool::class, 'secondaryschool5_id', 'id');
+    }
+    public function curriculumsec6()
+    {
+        return $this->belongsTo(SecondarySchool::class, 'secondaryschool6_id', 'id');
+    }
+    public function curriculumsec7()
+    {
+        return $this->belongsTo(SecondarySchool::class, 'secondaryschool7_id', 'id');
+    }
+    public function curriculumsec8()
+    {
+        return $this->belongsTo(SecondarySchool::class, 'secondaryschool8_id', 'id');
+    }
 }
