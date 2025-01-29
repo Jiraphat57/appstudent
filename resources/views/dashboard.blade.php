@@ -36,7 +36,7 @@
                             </td> --}}
                             <td class="border border-gray-300 px-4 py-2">
                                 <a href="{{ route('studentsauth.pdf', $student->id) }}"><button type="submit" class="btn btn-success"> ดาวน์โหลด PDF </button></a> |
-                                <a href="{{ route('students.edit', $student->id) }}"> <button type="submit" class="btn btn-warning">แก้ไข</button></a> |
+                                <a href="{{ route('studentsauth.edit', $student->id) }}"> <button type="submit" class="btn btn-warning">แก้ไข</button></a> |
                                 <form action="{{ route('students.destroy', $student->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('DELETE')
@@ -85,7 +85,7 @@
                 </td> --}}
                 <td class="border border-gray-300 px-4 py-2">
                     <a href="{{ route('students4auth.pdf', $student4->id) }}"><button type="submit" class="btn btn-success"> ดาวน์โหลด PDF </button></a> |
-                    <a href="{{ route('students4.edit', $student4->id) }}"> <button type="submit" class="btn btn-warning">แก้ไข</button></a> |
+                    <a href="{{ route('students4auth.edit', $student4->id) }}"> <button type="submit" class="btn btn-warning">แก้ไข</button></a> |
                     <form action="{{ route('students4.destroy', $student4->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
