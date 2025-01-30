@@ -656,7 +656,7 @@
                                 aria-label="Default select example">
                                 @foreach ($maritalstatus as $maritalstatuse)
                                     <option value="{{ $maritalstatuse->id }}"
-                                        {{ old('maritalstatuses_id', $students->maritalstatuse_id) == $maritalstatuse->id ? 'selected' : '' }}>
+                                        {{ old('maritalstatuse_id', $students->maritalstatuse_id) == $maritalstatuse->id ? 'selected' : '' }}>
                                         {{ $maritalstatuse->maritalstatuse }}
                                     </option>
                                 @endforeach
