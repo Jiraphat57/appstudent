@@ -652,11 +652,11 @@
                     <div class="col-md-6 mb-2">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="inputGroupSelect01">สถานภาพของบิดามารดา</label>
-                            <select id="sel_maritalstatuse" name="maritalstatuse_id" class="form-select"
+                            <select id="sel_maritalstatuses" name="maritalstatuse_id" class="form-select"
                                 aria-label="Default select example">
                                 @foreach ($maritalstatus as $maritalstatuse)
                                     <option value="{{ $maritalstatuse->id }}"
-                                        {{ old('maritalstatuse_id', $students->maritalstatuse_id) == $maritalstatuse->id ? 'selected' : '' }}>
+                                        {{ old('maritalstatuses_id', $students->maritalstatuse_id) == $maritalstatuse->id ? 'selected' : '' }}>
                                         {{ $maritalstatuse->maritalstatuse }}
                                     </option>
                                 @endforeach
