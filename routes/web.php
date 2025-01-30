@@ -59,10 +59,10 @@ Route::get('/students4auth_edit/{students}/edit', [Student4Controller::class, 'e
     ->middleware(['auth', 'verified'])
     ->name('students4auth.edit');
 
-Route::delete('/students/{id}', [StudentsController::class, 'update'])
+Route::delete('/students/{id}/update', [StudentsController::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('studentsauth.update');
-Route::delete('/students/{id}', [Student4Controller::class, 'update'])
+Route::delete('/students/{id}/update', [Student4Controller::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('students4auth.update');
    
