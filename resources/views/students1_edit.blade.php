@@ -727,6 +727,76 @@
                             </select>
                         </div>
                     </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 4</label>
+                            <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select"
+                                aria-label="Default select example">
+                                @foreach ($secondaryschools as $curriculumsec)
+                                    <option value="{{ $curriculumsec->id }}"
+                                        {{ old('secondaryschool4_id', $students->secondaryschool4_id) == $curriculumsec->id ? 'selected' : '' }}>
+                                        {{ $curriculumsec->curriculumsec}}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 5</label>
+                            <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select"
+                                aria-label="Default select example">
+                                @foreach ($secondaryschools as $curriculumsec)
+                                    <option value="{{ $curriculumsec->id }}"
+                                        {{ old('secondaryschool5_id', $students->secondaryschool5_id) == $curriculumsec->id ? 'selected' : '' }}>
+                                        {{ $curriculumsec->curriculumsec}}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 6</label>
+                            <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select"
+                                aria-label="Default select example">
+                                @foreach ($secondaryschools as $curriculumsec)
+                                    <option value="{{ $curriculumsec->id }}"
+                                        {{ old('secondaryschool6_id', $students->secondaryschool6_id) == $curriculumsec->id ? 'selected' : '' }}>
+                                        {{ $curriculumsec->curriculumsec}}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 7</label>
+                                <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select"
+                                    aria-label="Default select example">
+                                    @foreach ($secondaryschools as $curriculumsec)
+                                        <option value="{{ $curriculumsec->id }}"
+                                            {{ old('secondaryschool7_id', $students->secondaryschool7_id) == $curriculumsec->id ? 'selected' : '' }}>
+                                            {{ $curriculumsec->curriculumsec}}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 8</label>
+                                <select id="sel_secondaryschool8" name="secondaryschool8_id" class="form-select"
+                                    aria-label="Default select example">
+                                    @foreach ($secondaryschools as $curriculumsec)
+                                        <option value="{{ $curriculumsec->id }}"
+                                            {{ old('secondaryschool8_id', $students->secondaryschool8_id) == $curriculumsec->id ? 'selected' : '' }}>
+                                            {{ $curriculumsec->curriculumsec}}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="container ">
                     <div class="col text-center">
