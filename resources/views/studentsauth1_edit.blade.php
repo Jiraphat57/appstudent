@@ -666,7 +666,7 @@
                     <div class="col-md-6 mb-2">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="inputGroupSelect01">ผู้ปกครองนักเรียนคือ</label>
-                            <select id="disability" name="disability" class="form-select"
+                            <select id="disability" name="parent_id" class="form-select"
                                 aria-label="Default select example">
                                 <option value="1"
                                     {{ old('parent_id', $students->parent_id ?? '') == 1 ? 'selected' : '' }}>บิดา
