@@ -82,7 +82,7 @@
         }
 
         body {
-            font-family: 'THSarabun',sans-serif;;
+            font-family: 'THSarabun',sans-serif;
             /* src: url('{{ public_path('fonts/THSarabun.ttf') }}') format('truetype'); */
             font-size: 18px;
             color: black;
@@ -146,7 +146,8 @@
             {{ $students->brothers ?? '0' }} คน </span> พี่สาว:<span class="underline">{{ $students->oldersister ?? '0' }} คน</span>
             น้องชาย:<span class="underline">{{ $students->youngerbrother ?? '0' }} คน </span> น้องสาว:<span class="underline">{{ $students->sister }}คน</span>
             นักเรียนเป็นบุตรคนที่ <span class="underline">{{ $students->beingonlychild }}</span>มีพี่น้องร่วมบิดามารดาที่เรียนอยู่
-            <span class="underline">{{ $students->sumsiblings }}คน</span>
+            <span class="underline">{{ $students->sumsiblings }}คน</span><br>
+            ==================================&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน&nbsp;&nbsp;&nbsp;======================================
             <br>ที่อยู่ปัจจุบันของนักเรียน รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span class="underline">{{ $students->villagenumber }}</span>
             หมู่บ้าน<span class="underline">{{ $students->villagename }}</span>ตำบล<span class="underline">{{ $students->district }}</span>
@@ -157,6 +158,8 @@
             ที่พักห่างโรงเรียนเป็นถนนลาดยาง<span class="underline">{{ $students->distancelatyangroad }} เมตร </span>
             <br>ใช้เวลามาโรงเรียน<span class="underline">{{ $students->traveltime }} นาที</span>
             เดินทางมาโรงเรียน<span class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
+            ==================================&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา&nbsp;&nbsp;&nbsp;======================================
+            <br>
             บิดาผู้ให้กำเนิด<span class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
             &nbsp;&nbsp;{{ $students->surname_father }} </span>
             เลขประชาชน<span class="underline">{{ $students->field_citizenfather }}</span>
@@ -187,10 +190,16 @@
                 ผู้ปกครองอาชีพ&nbsp;
                 .....................................................................................&nbsp;รายได้ผู้ปกครอง........................บาท/เดือน
                 มือถือ............................
-            @endif
+            @endif <br>
+            ==================================&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก&nbsp;&nbsp;&nbsp;======================================<br>
             แผนการเรียนที่เลือกลำดับ 1 <span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span>
             แผนการเรียนที่เลือกลำดับ 2 <span class="underline">{{ $students->curriculumsec2->curriculumsec ?? 'ไม่ระบุ' }} </span>
-            แผนการเรียนที่เลือกลำดับ 3 <span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            แผนการเรียนที่เลือกลำดับ 3 <span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
+            แผนการเรียนที่เลือกลำดับ 4 <span class="underline">{{ $students->curriculumsec4->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            แผนการเรียนที่เลือกลำดับ 5 <span class="underline">{{ $students->curriculumsec5->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            แผนการเรียนที่เลือกลำดับ 6 <span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
+            แผนการเรียนที่เลือกลำดับ 7 <span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            แผนการเรียนที่เลือกลำดับ 8 <span class="underline">{{ $students->curriculumsec8->curriculumsec ?? 'ไม่ระบุ' }} </span>
            <br> คํารับรองของผู้ปกครอง
             ข้าพเจ้า................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
             <span class="underline"> {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}

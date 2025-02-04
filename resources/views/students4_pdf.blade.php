@@ -163,8 +163,9 @@
                 class="underline">{{ $students->sister }}คน</span>
             นักเรียนเป็นบุตรคนที่ <span
                 class="underline">{{ $students->beingonlychild }}</span>มีพี่น้องร่วมบิดามารดาที่เรียนอยู่
-            <span class="underline">{{ $students->sumsiblings }}คน</span>
-            <br>&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
+            <span class="underline">{{ $students->sumsiblings }}คน</span><br>
+            ==================================&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน&nbsp;&nbsp;&nbsp;======================================
+            <br>&nbsp;&nbsp;&nbsp; รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
             หมู่บ้าน<span class="underline">{{ $students->villagename }}</span>ตำบล<span
@@ -178,6 +179,8 @@
             <br>ใช้เวลามาโรงเรียน<span class="underline">{{ $students->traveltime }} นาที</span>
             เดินทางมาโรงเรียน<span
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
+                ==================================&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา&nbsp;&nbsp;&nbsp;======================================
+                <br>
                 &nbsp;&nbsp;&nbsp;บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }} </span>
@@ -215,26 +218,27 @@
                 ผู้ปกครองอาชีพ&nbsp;
                 .....................................................................................&nbsp;รายได้ผู้ปกครอง........................บาท/เดือน
                 มือถือ............................
-            @endif
-            <br>แผนการเรียนที่เลือก 1: &nbsp;<span
+            @endif <br>
+            ==================================&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก&nbsp;&nbsp;&nbsp;======================================
+            <br>แผนการเรียนที่ 1: &nbsp;<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนการเรียนที่เลือก 2: &nbsp;<span
+            แผนการเรียนที่ 2: &nbsp;<span
                 class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนการเรียนที่เลือก 3: &nbsp;<span
+            แผนการเรียนที่ 3: &nbsp;<span
                 class="underline">{{ $students->highschool3->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            แผนการเรียนที่เลือก 4: &nbsp;<span
+            แผนการเรียนที่ 4: &nbsp;<span
                 class="underline">{{ $students->highschool4->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนการเรียนที่เลือก 5: &nbsp;<span
+            แผนการเรียนที่ 5: &nbsp;<span
                 class="underline">{{ $students->highschool5->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนการเรียนที่เลือก 6: &nbsp;<span
+            แผนการเรียนที่ 6: &nbsp;<span
                 class="underline">{{ $students->highschool6->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
             แผนการเรียนที่เลือก 7: &nbsp;<span
                 class="underline">{{ $students->highschool7->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนการเรียนที่เลือก 8: &nbsp;<span
+            แผนการเรียนที่ 8: &nbsp;<span
                 class="underline">{{ $students->highschool8->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนการเรียนที่เลือก 9: &nbsp;<span
+            แผนการเรียนที่ 9: &nbsp;<span
                 class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            แผนการเรียนที่เลือก 10: &nbsp;<span
+            แผนการเรียนที่ 10: &nbsp;<span
                 class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
             {{-- แผนการเรียนที่เลือก 11: &nbsp;<span
                 class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br><br> --}}
