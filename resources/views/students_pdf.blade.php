@@ -57,9 +57,9 @@
         }
         .underline {
             text-decoration: underline !important;
-            margin-right: 1px !important;
-            margin-left: 1px !important;
-            text-underline-offset: 1px !important;
+            margin-right: 0.5px !important;
+            margin-left: 0.5px !important;
+            text-underline-offset: 0.5px !important;
             /* border-bottom: 1px solid black;
             display: inline;
             padding-bottom: 2px; */

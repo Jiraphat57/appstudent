@@ -60,9 +60,9 @@
 
         .underline {
             text-decoration: underline !important;
-            margin-right: 1px !important;
-            margin-left: 1px !important;
-            text-underline-offset: 1px !important;
+            margin-right: 0.5px !important;
+            margin-left: 0.5px !important;
+            text-underline-offset: 0.5px !important;
             /* ระยะห่างทางด้านขวาของข้อความ*/
             /* margin-left: 2px; ระยะห่างทางด้านซ้ายของข้อความ  */
             /* text-underline-offset: 6px; */
