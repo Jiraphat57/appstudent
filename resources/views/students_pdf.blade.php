@@ -177,12 +177,12 @@
                 เลขประชาชน<span class="underline">{{ $students->field_citizenfather }}</span>
                 บิดาอาชีพ<span class="underline">{{ $students->occupationfather->occupation ?? 'ไม่ระบุ' }}</span>
                 รายได้บิดา<span class="underline">{{ $students->income_father ?? 'ไม่ระบุ' }}บาท/เดือน </span>
-                มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span><br>
+                มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span>
             @elseif ($students->parent_id == 2)
                 มารดาเป็นปกครองนักเรียนชื่อ<span class="underline">{{ $students->typetitlemother->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_mother ?? 'ไม่ระบุ' }}&nbsp;&nbsp;{{ $students->surname_mother ?? 'ไม่ระบุ' }}</span>เลขประชาชน<span class="underline">{{ $students->field_citizenmother ?? 'ไม่ระบุ' }}</span>
                 อาชีพมารดา<span class="underline">{{ $students->occupationmother->occupation ?? 'ไม่ระบุ' }} </span>
                 รายได้มารดา<span class="underline"> {{ $students->income_mother ?? 'ไม่ระบุ' }}  บาท/เดือน </span>
-                มือถือ<span class="underline">{{ $students->phone_mother ?? 'ไม่ระบุ' }} </span><br>
+                มือถือ<span class="underline">{{ $students->phone_mother ?? 'ไม่ระบุ' }} </span>
             @else
                 ผู้ปกครองที่ดูแลนักเรียนในปัจจุบันชื่อ......................................................................................มีความสัมพันธ์กับนักเรียนเป็น....................................
                 เลขประจําตัวประชาชนผู้ปกครอง&nbsp;............................................................................................................
@@ -200,7 +200,7 @@
             แผนที่เลือก 6 <span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
             แผนที่เลือก 7 <span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span>
             แผนที่เลือก 8 <span class="underline">{{ $students->curriculumsec8->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
-           <br> คํารับรองของผู้ปกครอง
+            คํารับรองของผู้ปกครอง
             ข้าพเจ้า................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
             <span class="underline"> {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
             </span><br>ชั้น<span class="underline">{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}</span>ห้อง............
@@ -211,8 +211,7 @@
                 ให้หมั่นศึกษาเล่าเรียนและประพฤติตนให้ถูกต้องตามระเบียบของโรงเรียน
                 <br>2. ข้าพเจ้าจะอุปถัมภ์ค่าเล่าเรียน เครื่องแต่งกาย
                 และอุปกรณ์การเรียนของนักเรียนในความปกครองให้ได้เรียน ตลอดไปจนสำเร็จการศึกษา
-                <br>3. ถ้านักเรียนที่ข้าพเจ้ารับเป็นผู้ปกครองกระทำผิดต่อระเบียบของโรงเรียนทุกกรณี
-                ข้าพเจ้ายินดีให้ทางโรงเรียนลงโทษนักเรียนตามระเบียบของทางโรงเรียนได้
+                <br>3. ถ้านักเรียนที่ข้าพเจ้ารับเป็นผู้ปกครองกระทำผิดต่อระเบียบของโรงเรียนทุกกรณีข้าพเจ้ายินดีให้ทางโรงเรียนลงโทษนักเรียนตามระเบียบของทางโรงเรียนได้
                 <br>4. ข้าพเจ้าขอรับรองว่า หากโรงเรียนต้องการพบข้าพเจ้าเพื่อปรึกษาหารือ หรือรับทราบความประพฤติของ
                 นักเรียนในความปกครองของข้าพเจ้า ข้าพเจ้าจะรีบมาทันที
                 <br>5. ข้าพเจ้าจะส่งเสริมนักเรียนในความปกครองให้นักเรียนได้ร่วมกิจกรรมของโรงเรียน และพัฒนาตนเองในการ
