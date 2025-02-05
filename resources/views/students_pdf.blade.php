@@ -45,7 +45,7 @@
         }
         .container {
             width: 100%;
-            max-width: 210mm;
+            max-width: 200mm;
             height: auto; */
             /* height: 297mm; */
             margin: 0 auto;
