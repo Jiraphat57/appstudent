@@ -187,13 +187,13 @@
             เลขประชาชน<span class="underline">{{ $students->field_citizenfather }}</span>
             อาชีพ<span class="underline"> {{ $students->occupationfather->occupation ?? 'ไม่ระบุ' }}</span>
             รายได้<span class="underline">{{ $students->income_father ?? 'ไม่ระบุ' }}บาท/เดือน </span>
-            <br>มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span><br>
+            มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span><br>
             &nbsp;&nbsp;&nbsp;มารดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlemother->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_mother ?? 'ไม่ระบุ' }}&nbsp;&nbsp;{{ $students->surname_mother ?? 'ไม่ระบุ' }}</span>เลขประชาชน<span
                 class="underline">{{ $students->field_citizenmother ?? 'ไม่ระบุ' }}</span>
             อาชีพ<span class="underline">{{ $students->occupationmother->occupation ?? 'ไม่ระบุ' }}</span>
             รายได้<span class="underline">{{ $students->income_mother ?? 'ไม่ระบุ' }}บาท/เดือน</span>
-            <br>มือถือ<span class="underline">{{ $students->phone_mother ?? 'ไม่ระบุ' }}</span>
+            มือถือ<span class="underline">{{ $students->phone_mother ?? 'ไม่ระบุ' }}</span>
             สถานภาพของบิดา-มารดา<span class="underline">{{ $students->maritalstatus->maritalstatuse ?? 'ไม่ระบุ' }}
             </span>
             @if ($students->parent_id == 1)
