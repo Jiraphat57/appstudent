@@ -192,14 +192,14 @@
                 มือถือ............................
             @endif <br>
             =============================&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก&nbsp;&nbsp;===============================<br>
-            แผนที่ 1 <span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span>
-            แผนที่ 2 <span class="underline">{{ $students->curriculumsec2->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
-            แผนที่ 3 <span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span>
-            แผนที่ 4 <span class="underline">{{ $students->curriculumsec4->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
-            แผนที่ 5 <span class="underline">{{ $students->curriculumsec5->curriculumsec ?? 'ไม่ระบุ' }} </span>
-            แผนที่ 6 <span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
-            แผนที่ 7 <span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span>
-            แผนที่ 8 <span class="underline">{{ $students->curriculumsec8->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับที่ 1 <span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            ลำดับที่ 2 <span class="underline">{{ $students->curriculumsec2->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับที่ 3 <span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            ลำดับที่ 4 <span class="underline">{{ $students->curriculumsec4->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับที่ 5 <span class="underline">{{ $students->curriculumsec5->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            ลำดับที่ 6 <span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับที่ 7 <span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            ลำดับที่ 8 <span class="underline">{{ $students->curriculumsec8->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
             คํารับรองของผู้ปกครอง
             ข้าพเจ้า................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
             <span class="underline"> {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}

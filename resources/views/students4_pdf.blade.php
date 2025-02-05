@@ -220,25 +220,25 @@
                 มือถือ............................
             @endif
             ===============================&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก&nbsp;&nbsp;==================================
-            <br>แผนที่ 1: &nbsp;<span
+            <br>ลำดับที่ 1: &nbsp;<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนที่ 2: &nbsp;<span
+            ลำดับที่ 2: &nbsp;<span
                 class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนที่ 3: &nbsp;<span
+            ลำดับที่ 3: &nbsp;<span
                 class="underline">{{ $students->highschool3->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            แผนที่ 4: &nbsp;<span
+            ลำดับที่ 4: &nbsp;<span
                 class="underline">{{ $students->highschool4->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนที่ 5: &nbsp;<span
+            ลำดับที่ 5: &nbsp;<span
                 class="underline">{{ $students->highschool5->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนที่ 6: &nbsp;<span
+            ลำดับที่ 6: &nbsp;<span
                 class="underline">{{ $students->highschool6->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            แผนที่ 7: &nbsp;<span
+            ลำดับที่ 7: &nbsp;<span
                 class="underline">{{ $students->highschool7->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนที่ 8: &nbsp;<span
+            ลำดับที่ 8: &nbsp;<span
                 class="underline">{{ $students->highschool8->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            แผนที่ 9: &nbsp;<span
+            ลำดับที่ 9: &nbsp;<span
                 class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            แผนที่ 10: &nbsp;<span
+            ลำดับที่ 10: &nbsp;<span
                 class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
             {{-- แผนการเรียนที่เลือก 11: &nbsp;<span
                 class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br><br> --}}
