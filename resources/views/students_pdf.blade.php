@@ -148,7 +148,7 @@
             นักเรียนเป็นบุตรคนที่ <span class="underline">{{ $students->beingonlychild }}</span>มีพี่น้องร่วมบิดามารดาที่เรียนอยู่
             <span class="underline">{{ $students->sumsiblings }}คน</span><br>
             ==================================&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน&nbsp;&nbsp;&nbsp;======================================
-            <br>ที่อยู่ปัจจุบันของนักเรียน รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
+            <br>รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span class="underline">{{ $students->villagenumber }}</span>
             หมู่บ้าน<span class="underline">{{ $students->villagename }}</span>ตำบล<span class="underline">{{ $students->district }}</span>
             อำเภอ<span class="underline">{{ $students->subdistrict }} </span>
