@@ -23,7 +23,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -1002,7 +1003,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js">
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript Libraries -->
     <script src="lib/wow/wow.min.js"></script>
@@ -1012,7 +1013,17 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.th.min.js') }}"></script>
+
     <script>
+        $(document).ready(function() {
+            // กำหนดให้ใช้ Bootstrap Datepicker และภาษาไทย
+            $('#datepicker').datepicker({
+                language: 'th'
+            });
+        });
+    </script>
+    {{-- <script>
         (function($) {
             $.fn.datepicker.defaults.language = 'th';
             $.fn.datepicker.defaults.format = 'dd/mm/yyyy';
@@ -1044,8 +1055,10 @@
                 thaiyear: true
             });
         });
-    </script>
-    
+    </script> --}}
+    <script src="{{ asset('js/bootstrap-datepicker.th.min.js') }}"></script>
+
+
 </body>
 
 
