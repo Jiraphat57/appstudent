@@ -38,27 +38,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        #datepicker input {
-            width: 100%;
-            max-width: 300px;
-            font-size: 14px;
-            padding: 10px;
-        }
-
-        #datepicker .input-group-text {
-            padding: 5px;
-            /* ลด padding ของไอคอน */
-            font-size: 14px;
-            /* ปรับขนาดไอคอน */
-        }
-
-        .datepicker {
-            font-size: 0.875rem !important;
-            /* ลดขนาด Font ใน Popup */
-        }
-    </style>
-
 </head>
 
 <body>
@@ -1013,52 +992,70 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="{{ asset('js/bootstrap-datepicker.th.min.js') }}"></script>
 
     <script>
+        // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
+        function convertToBuddhistYear(date) {
+            var year = date.getFullYear();
+            var buddhistYear = year + 543; // ค.ศ. + 543 = พ.ศ.
+            date.setFullYear(buddhistYear); // เปลี่ยนปีเป็น พ.ศ.
+            return date;
+        }
         $(document).ready(function() {
-            // กำหนดให้ใช้ Bootstrap Datepicker และภาษาไทย
-            $('#datepicker').datepicker({
-                language: 'th'
+            // เมื่อคลิกที่ input เพื่อแสดง Datepicker
+            $('#datepicker input').on('focus', function() {
+                $(this).datepicker({
+                    format: 'dd/mm/yyyy',
+                    autoclose: true,
+                    todayHighlight: true,
+                    language: 'th', // ใช้ภาษาไทย
+                    thaiyear: true, // ใช้ พ.ศ.
+                    beforeShow: function(input, inst) {
+                        setTimeout(function() {
+                            inst.dpDiv.css({
+                                'top': '0px',
+                                'z-index': '9999'
+                            });
+                        }, 0);
+                    }
+                }).datepicker('show'); // แสดง Datepicker
+            });
+            // เมื่อเลือกวันที่จาก Datepicker
+            $('#datepicker input').on('changeDate', function(e) {
+                // แปลงปีเป็น พ.ศ. ทุกครั้งที่เลือกวันที่
+                var selectedDate = e.date;
+                var buddhistDate = convertToBuddhistYear(selectedDate);
+                // ดึงข้อมูลวันที่ เดือน ปี
+                var day = buddhistDate.getDate().toString().padStart(2, '0');
+                var month = (buddhistDate.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
+                var year = buddhistDate.getFullYear();
+                // สร้างสตริงวันที่ในรูปแบบ 'dd/mm/yyyy'
+                var formattedDate = day + '/' + month + '/' + year;
+                // แสดงวันที่ในช่อง input
+                $('#datepicker input').val(formattedDate);
             });
         });
     </script>
-    {{-- <script>
-        (function($) {
-            $.fn.datepicker.defaults.language = 'th';
-            $.fn.datepicker.defaults.format = 'dd/mm/yyyy';
-            $.fn.datepicker.defaults.autoclose = true;
-            $.fn.datepicker.defaults.todayHighlight = true;
-            
-            // แก้ไข fill method เพื่อเปลี่ยนจาก ค.ศ. เป็น พ.ศ.
-            var oldFill = $.fn.datepicker.Constructor.prototype.fill;
-            $.fn.datepicker.Constructor.prototype.fill = function() {
-                oldFill.call(this);
-                var $this = this;
-                if (this.o.language === 'th' && this.o.thaiyear === true) {
-                    this.picker.find('.datepicker-switch').each(function() {
-                        var text = $(this).text();
-                        var year = parseInt(text, 10);
-                        if (!isNaN(year)) {
-                            $(this).text(text.replace(year, year + 543)); // เพิ่ม 543 เพื่อแสดงเป็น พ.ศ.
-                        }
-                    });
-                }
-            };
-        })(jQuery);
-    
-        $(document).ready(function() {
-            // ตั้งค่าการใช้งาน datepicker
-            $('#datepicker input').datepicker({
-                format: 'dd/mm/yyyy',
-                language: 'th',
-                thaiyear: true
-            });
-        });
-    </script> --}}
-    <script src="{{ asset('js/bootstrap-datepicker.th.min.js') }}"></script>
+    <style>
+        #datepicker input {
+            width: 100%;
+            max-width: 300px;
+            font-size: 14px;
+            padding: 10px;
+        }
 
+        #datepicker .input-group-text {
+            padding: 5px;
+            /* ลด padding ของไอคอน */
+            font-size: 14px;
+            /* ปรับขนาดไอคอน */
+        }
 
+        .datepicker {
+            font-size: 0.875rem !important;
+            /* ลดขนาด Font ใน Popup */
+        }
+    </style>
 </body>
 
 
