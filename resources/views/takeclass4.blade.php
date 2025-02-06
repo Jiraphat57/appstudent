@@ -1033,12 +1033,13 @@
         // });
         $(document).ready(function() {
         // Initialize Datepicker with Thai Year
+        $.fn.datepicker.defaults.thaiyear = true;
         $('#datepicker input').datepicker({
             format: 'dd/mm/yyyy',
             autoclose: true,
             todayHighlight: true,
             language: 'th', // ใช้ภาษาไทย
-            thaiyear: true, // ใช้ พ.ศ.
+            // thaiyear: true, // ใช้ พ.ศ.
         }).on('changeDate', function(e) {
             // ดึงค่าที่เลือกและแปลงเป็น พ.ศ.
             var date = e.date;
