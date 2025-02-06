@@ -76,7 +76,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ route('welcome') }}"  class="nav-item nav-link active">หน้าแรก</a>
+                <a href="{{ route('welcome') }}" class="nav-item nav-link active">หน้าแรก</a>
                 <a href="{{ route('welcome') }}" class="nav-item nav-link">เกี่ยวกับ</a>
                 <a href="{{ route('welcome') }}" class="nav-item nav-link">ระบบสารสนเทศ</a>
                 <div class="nav-item dropdown">
@@ -90,7 +90,7 @@
                     </div> --}}
                 </div>
                 {{-- <a href="" class="btn btn-primary px-3 d-none d-lg-block">ติดต่อ</a> --}}
-            </div>   
+            </div>
             <a href="{{ url('dashboard') }}" class="btn btn-primary px-3 d-none d-lg-block">Admin</a>
         </div>
     </nav>
@@ -100,7 +100,8 @@
         <form class="row g-3" action="{{ route('store4') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="alert alert-success text-center" role="alert">
-                <h5><i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน ม.4</h5>**หากกรอกไม่ครบทุกช่องระบบจะไม่บันทึกข้อมูลให้ หากช่องไหนไม่มี ให้กรอก - ลงไป**
+                <h5><i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน ม.4</h5>
+                **หากกรอกไม่ครบทุกช่องระบบจะไม่บันทึกข้อมูลให้ หากช่องไหนไม่มี ให้กรอก - ลงไป**
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
@@ -460,7 +461,7 @@
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
-                <i class="bi bi-people-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;  ข้อมูลที่อยู่ปัจจุบันของนักเรียน
+                <i class="bi bi-people-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp; ข้อมูลที่อยู่ปัจจุบันของนักเรียน
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
@@ -679,7 +680,7 @@
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
-                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;  ข้อมูลมารดาผู้ให้กำเนิด
+                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; ข้อมูลมารดาผู้ให้กำเนิด
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
@@ -738,7 +739,7 @@
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
-                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;  สถานภาพของบิดา-มารดา
+                <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; สถานภาพของบิดา-มารดา
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
@@ -778,10 +779,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -794,10 +795,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -810,10 +811,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -826,10 +827,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -842,10 +843,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -858,10 +859,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -874,10 +875,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -890,10 +891,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -906,10 +907,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -922,10 +923,10 @@
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ  EMEP</option>
+                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
                             <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
                             <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน  CEP</option>
+                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP</option>
@@ -954,8 +955,8 @@
             <div class="container ">
                 {{-- <div class="row justify-content-center"> --}}
                 <div class="col text-center">
-                    <button type="submit"
-                        class="btn btn-primary btn-lg"><i class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กดสมัครเรียน&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button type="submit" class="btn btn-primary btn-lg"><i
+                            class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กดสมัครเรียน&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
                 {{-- </div>     --}}
             </div>
@@ -979,7 +980,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Datepicker JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript Libraries -->
     <script src="lib/wow/wow.min.js"></script>
@@ -1032,28 +1034,16 @@
         //     });
         // });
         $(document).ready(function() {
-        // Initialize Datepicker with Thai Year
-        $.fn.datepicker.defaults.thaiyear = true;
-        $('#datepicker input').datepicker({
-            format: 'dd/mm/yyyy',
-            autoclose: true,
-            todayHighlight: true,
-            language: 'th', // ใช้ภาษาไทย
-            // thaiyear: true, // ใช้ พ.ศ.
-        }).on('changeDate', function(e) {
-            // ดึงค่าที่เลือกและแปลงเป็น พ.ศ.
-            var date = e.date;
-            var day = date.getDate().toString().padStart(2, '0');
-            var month = (date.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
-            var year = date.getFullYear() + 543; // แปลงเป็น พ.ศ.
-
-            // สร้างวันที่ในรูปแบบ 'dd/mm/yyyy'
-            var formattedDate = `${day}/${month}/${year}`;
-
-            // อัพเดตค่าที่แสดงใน input
-            $('#datepicker input').val(formattedDate);
+            // Initialize Datepicker with Thai Year
+            $('#datepicker input').on('changeDate', function(e) {
+                var selectedDate = e.date;
+                var buddhistYear = selectedDate.getFullYear() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                var formattedDate = selectedDate.getDate().toString().padStart(2, '0') + '/' +
+                    (selectedDate.getMonth() + 1).toString().padStart(2, '0') + '/' +
+                    buddhistYear;
+                $(this).val(formattedDate);
+            });
         });
-    });
     </script>
     <style>
         #datepicker input {
@@ -1062,12 +1052,14 @@
             font-size: 14px;
             padding: 10px;
         }
+
         #datepicker .input-group-text {
             padding: 5px;
             /* ลด padding ของไอคอน */
             font-size: 14px;
             /* ปรับขนาดไอคอน */
         }
+
         .datepicker {
             font-size: 0.875rem !important;
             /* ลดขนาด Font ใน Popup */
