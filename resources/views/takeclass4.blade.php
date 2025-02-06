@@ -979,8 +979,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Datepicker JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript Libraries -->
     <script src="lib/wow/wow.min.js"></script>
@@ -1025,7 +1024,7 @@
                 // ดึงข้อมูลวันที่ เดือน ปี
                 var day = buddhistDate.getDate().toString().padStart(2, '0');
                 var month = (buddhistDate.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
-                var year = buddhistDate.getFullYear();
+                var year = buddhistDate.getFullYear()+543;
                 // สร้างสตริงวันที่ในรูปแบบ 'dd/mm/yyyy'
                 var formattedDate = day + '/' + month + '/' + year;
                 // แสดงวันที่ในช่อง input
