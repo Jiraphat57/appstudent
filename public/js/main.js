@@ -114,7 +114,14 @@
             }
         }
     });
-
+    
+    $(document).ready(function() {
+        $('#datepicker input').datepicker({
+            format: 'dd/mm/yyyy',
+            language: 'th',
+            thaiyear: true
+        });
+    });
     
 })(jQuery);
 
