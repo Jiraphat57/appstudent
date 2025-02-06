@@ -1018,8 +1018,8 @@
             $.fn.datepicker.defaults.format = 'dd/mm/yyyy';
             $.fn.datepicker.defaults.autoclose = true;
             $.fn.datepicker.defaults.todayHighlight = true;
-
-            // แปลงปี ค.ศ. เป็น พ.ศ.
+            
+            // แก้ไข fill method เพื่อเปลี่ยนจาก ค.ศ. เป็น พ.ศ.
             var oldFill = $.fn.datepicker.Constructor.prototype.fill;
             $.fn.datepicker.Constructor.prototype.fill = function() {
                 oldFill.call(this);
@@ -1029,21 +1029,20 @@
                         var text = $(this).text();
                         var year = parseInt(text, 10);
                         if (!isNaN(year)) {
-                            $(this).text(text.replace(year, year + 543));
+                            $(this).text(text.replace(year, year + 543)); // เพิ่ม 543 เพื่อแสดงเป็น พ.ศ.
                         }
                     });
                 }
             };
         })(jQuery);
-
+    
         $(document).ready(function() {
+            // ตั้งค่าการใช้งาน datepicker
             $('#datepicker input').datepicker({
                 format: 'dd/mm/yyyy',
                 language: 'th',
-                thaiyear: true, // เปิดใช้งานแปลงปีเป็น พ.ศ.
-                autoclose: true,
-                todayHighlight: true
-            }).datepicker("setDate", new Date()); // ตั้งวันที่ปัจจุบันเป็นค่าเริ่มต้น
+                thaiyear: true
+            });
         });
     </script>
     
