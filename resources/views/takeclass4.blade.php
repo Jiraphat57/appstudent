@@ -1055,7 +1055,7 @@
                 // // อัพเดตค่าที่แสดงใน input
                 // $('#datepicker input').val(formattedDate);
                 var selectedDate = e.date;
-                var buddhistYear = selectedDate.getFullYear() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                var buddhistYear = selectedDate.getFullYear(); // แปลง ค.ศ. เป็น พ.ศ.
                 var formattedDate = selectedDate.getDate().toString().padStart(2, '0') + '/' +
                     (selectedDate.getMonth() + 1).toString().padStart(2, '0') + '/' +
                     buddhistYear;
