@@ -1035,7 +1035,25 @@
         // });
         $(document).ready(function() {
             // Initialize Datepicker with Thai Year
-            $('#datepicker input').on('changeDate', function(e) {
+            $.fn.datepicker.defaults.thaiyear = true;
+            $('#datepicker input').datepicker({
+                format: 'dd/mm/yyyy',
+                autoclose: true,
+                todayHighlight: true,
+                language: 'th', // ใช้ภาษาไทย
+                // thaiyear: true, // ใช้ พ.ศ.
+            }).on('changeDate', function(e) {
+                // ดึงค่าที่เลือกและแปลงเป็น พ.ศ.
+                // var date = e.date;
+                // var day = date.getDate().toString().padStart(2, '0');
+                // var month = (date.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
+                // var year = date.getFullYear() + 543; // แปลงเป็น พ.ศ.
+
+                // // สร้างวันที่ในรูปแบบ 'dd/mm/yyyy'
+                // var formattedDate = `${day}/${month}/${year}`;
+
+                // // อัพเดตค่าที่แสดงใน input
+                // $('#datepicker input').val(formattedDate);
                 var selectedDate = e.date;
                 var buddhistYear = selectedDate.getFullYear() + 543; // แปลง ค.ศ. เป็น พ.ศ.
                 var formattedDate = selectedDate.getDate().toString().padStart(2, '0') + '/' +
