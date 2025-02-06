@@ -1013,13 +1013,13 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        // ฟังก์ชันเพิ่มปี พ.ศ.
         (function($) {
             $.fn.datepicker.defaults.language = 'th';
             $.fn.datepicker.defaults.format = 'dd/mm/yyyy';
             $.fn.datepicker.defaults.autoclose = true;
             $.fn.datepicker.defaults.todayHighlight = true;
-    
+
+            // แปลงปี ค.ศ. เป็น พ.ศ.
             var oldFill = $.fn.datepicker.Constructor.prototype.fill;
             $.fn.datepicker.Constructor.prototype.fill = function() {
                 oldFill.call(this);
@@ -1035,14 +1035,15 @@
                 }
             };
         })(jQuery);
-    
-        // ตั้งค่า Datepicker
+
         $(document).ready(function() {
             $('#datepicker input').datepicker({
                 format: 'dd/mm/yyyy',
                 language: 'th',
-                thaiyear: true
-            });
+                thaiyear: true, // เปิดใช้งานแปลงปีเป็น พ.ศ.
+                autoclose: true,
+                todayHighlight: true
+            }).datepicker("setDate", new Date()); // ตั้งวันที่ปัจจุบันเป็นค่าเริ่มต้น
         });
     </script>
     
