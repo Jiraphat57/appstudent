@@ -176,7 +176,7 @@
                             <img class="img-fluid" src="img/about-3.jpg">
                         </div>
                         <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="img/about-4.jpg">
+                            <img class="img-fluid" src="img/about-22.jpg">
                         </div>
                     </div>
                 </div>
