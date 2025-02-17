@@ -707,10 +707,7 @@
                                     {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool1_id', $students->secondaryschool1_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>
@@ -739,10 +736,7 @@
                                     {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool2_id', $students->secondaryschool2_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>
@@ -771,10 +765,7 @@
                                     {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool3_id', $students->secondaryschool3_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>
@@ -803,10 +794,7 @@
                                     {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool4_id', $students->secondaryschool4_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>
@@ -835,10 +823,7 @@
                                     {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool5_id', $students->secondaryschool5_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>
@@ -867,10 +852,7 @@
                                     {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool6_id', $students->secondaryschool6_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>
@@ -899,10 +881,7 @@
                                     {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool7_id', $students->secondaryschool7_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>
@@ -931,10 +910,7 @@
                                     {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 6 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP
                                 </option>
                                 <option value="7"
-                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 7 ? 'selected' : '' }}>ห้องเน้นความเป็นเลิศทางด้านกีฬา SEP
-                                </option>
-                                <option value="8"
-                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 8 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
+                                    {{ old('secondaryschool8_id', $students->secondaryschool8_id ?? '') == 7 ? 'selected' : '' }}>ห้องเรียนทั่วไป GP
                                 </option>
                             </select>
                         </div>

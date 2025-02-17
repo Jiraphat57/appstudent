@@ -32,7 +32,7 @@ class StudentsController extends Controller
         $students = Students::with([
             'classlevel', 'typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather','typetitlemother', 'occupationmother', 'maritalstatus',
-            'curriculumsec1','curriculumsec2','curriculumsec3','curriculumsec4','curriculumsec5','curriculumsec6','curriculumsec7','curriculumsec8'])->findOrFail($id);
+            'curriculumsec1','curriculumsec2','curriculumsec3','curriculumsec4','curriculumsec5','curriculumsec6','curriculumsec7'])->findOrFail($id);
         $pdf = PDF::loadView('students_pdf', compact('students'));
         // คืนค่า PDF ให้ดาวน์โหลด
         // return $pdf->stream('student_' . $students->id . '.pdf');
@@ -43,7 +43,7 @@ class StudentsController extends Controller
         $students = Students::with([
             'classlevel', 'typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather','typetitlemother', 'occupationmother', 'maritalstatus',
-            'curriculumsec1','curriculumsec2','curriculumsec3','curriculumsec4','curriculumsec5','curriculumsec6','curriculumsec7','curriculumsec8'])->findOrFail($id);
+            'curriculumsec1','curriculumsec2','curriculumsec3','curriculumsec4','curriculumsec5','curriculumsec6','curriculumsec7'])->findOrFail($id);
         $pdf = PDF::loadView('students_pdf', compact('students'));
         // คืนค่า PDF ให้ดาวน์โหลด
         // return $pdf->stream('student_' . $students->id . '.pdf');
@@ -141,8 +141,8 @@ class StudentsController extends Controller
             'secondaryschool4_id' => 'required|numeric',  
             'secondaryschool5_id' => 'required|numeric',
             'secondaryschool6_id' => 'required|numeric',
-            'secondaryschool7_id' => 'required|numeric',
-            'secondaryschool8_id' => 'required|numeric'
+            'secondaryschool7_id' => 'required|numeric'
+            // 'secondaryschool8_id' => 'required|numeric'
         ]);
         // dd($validatedData);
         // แปลงรูปแบบวันที่
@@ -215,7 +215,7 @@ class StudentsController extends Controller
         $students->secondaryschool5_id = $request->input('secondaryschool5_id');
         $students->secondaryschool6_id = $request->input('secondaryschool6_id');
         $students->secondaryschool7_id = $request->input('secondaryschool7_id');
-        $students->secondaryschool8_id = $request->input('secondaryschool8_id');
+        // $students->secondaryschool8_id = $request->input('secondaryschool8_id');
         // ทำif ในนี้ ถ้าเป็นม.1  ให้เลือกไหด้3 สาย ถ้าเป็นม.4
         $students->save();
         if (Auth::check()) {
@@ -328,8 +328,8 @@ class StudentsController extends Controller
             'secondaryschool4_id' => 'required|numeric',  
             'secondaryschool5_id' => 'required|numeric',
             'secondaryschool6_id' => 'required|numeric',
-            'secondaryschool7_id' => 'required|numeric',
-            'secondaryschool8_id' => 'required|numeric'
+            'secondaryschool7_id' => 'required|numeric'
+            // 'secondaryschool8_id' => 'required|numeric'
         ]);
         // dd($validatedData);
         try {

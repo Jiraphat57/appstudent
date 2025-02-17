@@ -26,7 +26,7 @@ class Students extends Model
     protected $fillable = ['classlevels_id','typetitles_id','name','surname','nameeng','surnameeng','nationalid','religions_id','nationalities_id','ethnicities_id','dateofbirth','provincesbirth_id','bloodtypes_id','travelschool1s_id','weight',
 'height','disability','previousschool','provinceschool_id','beingonlychild','brothers','youngerbrother','oldersister','sister','sumsiblings','houseid','housenumber','villagenumber','villagename','district','subdistrict','provinces_id','postalcode','typeresidences_id','distancelatyangroad','traveltime',
 'travelschool1s_id','typetitlesfather_id','name_father','surname_father','field_citizenfather','occupationfather_id','income_father','phone_father','typetitlesmother_id','name_mother','surname_mother','field_citizenmother','occupationmother_id','income_mother','phone_mother','maritalstatuses_id','parent_id',
-'secondaryschool1_id','secondaryschool2_id','secondaryschool3_id','secondaryschool4_id','secondaryschool5_id','secondaryschool6_id','secondaryschool7_id','secondaryschool8_id'];
+'secondaryschool1_id','secondaryschool2_id','secondaryschool3_id','secondaryschool4_id','secondaryschool5_id','secondaryschool6_id','secondaryschool7_id'];
 
     public function travelschool1(): BelongsTo
     {
@@ -126,8 +126,8 @@ class Students extends Model
     {
         return $this->belongsTo(SecondarySchool::class, 'secondaryschool7_id', 'id');
     }
-    public function curriculumsec8()
-    {
-        return $this->belongsTo(SecondarySchool::class, 'secondaryschool8_id', 'id');
-    }
+    // public function curriculumsec8()
+    // {
+    //     return $this->belongsTo(SecondarySchool::class, 'secondaryschool8_id', 'id');
+    // }
 }
