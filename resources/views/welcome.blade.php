@@ -141,27 +141,11 @@
                         <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
                             <img class="img-fluid" src="img/about-2.jpg">
                         </div>
-                        <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="img/about-3.jpg">
-                        </div>
-                        <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="img/about-4.jpg">
-                        </div>
                     </div>
                 </div>
-                {{-- <div class="col-lg-6">
-                    <div class="row gx-3 h-100">
-                        <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="img/about-3.jpg">
-                        </div>
-                        <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="img/about-4.jpg">
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <p class="fw-medium text-uppercase text-primary mb-2">สมัคร</p>
-                    <h3 class="display-9 mb-4">ห้องเรียนปกติ ม.1 และ ม.4</h3>
+                    <h3 class="display-9 mb-4">ห้องเรียน ม.1</h3>
                     {{-- <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                         eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
                     </p> --}}
@@ -186,7 +170,43 @@
                         </div>
                     </div>			
                 </div>
-				 
+				<div class="col-lg-6">
+                    <div class="row gx-3 h-100">
+                        <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-3.jpg">
+                        </div>
+                        <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-4.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="fw-medium text-uppercase text-primary mb-2">สมัคร</p>
+                    <h3 class="display-9 mb-4">ห้องเรียน ม.4</h3>
+                    {{-- <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                    </p> --}}
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="flex-shrink-0 bg-primary p-4">
+                            <h1 class="display-1 text-center"> 10 </h1>
+                            <h5 class="text-white">แผนการเรียน</h5>
+                            {{-- <h5 class="text-white">Experience</h5> --}}
+                        </div>
+                        <div class="ms-4">
+                            {{-- <p><i class="fa fa-check text-primary me-3"></i>ห้องเรียนวิทยาศาสตร์พลังสืบ</p> --}}
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนห้องเรียนพิเศษ (วิทยาศาสตร์-คณิตศาสตร์) ISMP Intensive Science and Mathematics Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนห้องเรียนวิทยาศาสตร์พลังสิบ TPSP Ten Power Science Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนวิทยาศาสตร์ - คณิตศาสตร์ SMEP Science Math Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านคณิตศาสตร์ - ภาษาอังกฤษ EMEP English & Math Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP Digital Technology Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP English Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาจีน CEP Chinese Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP Japanese Excellence Program</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP Vocational Skills Program</p>
+                            <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP Thai, English & Social Studies Excellence Program</p>
+                        </div>
+                    </div>			
+                </div> 
 				 <div class="col-sl-6 d-flex justify-content-center align-items-center"><p>1. ใบสมัครที่กรอกข้อมูลครบถ้วนสมบูรณ์ <br>
                         2. เอกสาร ปพ.7 หรือ สำเนาเอกสาร ปพ.1 เพื่อยืนยันสถานะการเป็นนักเรียน <br>
                         3. รูปถ่ายเครื่องแบบนักเรียนขนาด 1.5 นิ้ว จํานวน 1 รูป <br>
