@@ -886,7 +886,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-2">
+                    {{-- <div class="col-md-6 mb-2">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนที่เลือกลำดับ 8</label>
                             <select id="sel_secondaryschool8" name="secondaryschool8_id" class="form-select"
@@ -914,7 +914,7 @@
                                 </option>
                             </select>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
                 <div class="container ">
