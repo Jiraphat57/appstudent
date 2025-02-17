@@ -141,9 +141,6 @@
                         <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
                             <img class="img-fluid" src="img/about-2.jpg">
                         </div>
-                    </div>
-                </div><div class="col-lg-6">
-                    <div class="row gx-3 h-100">
                         <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
                             <img class="img-fluid" src="img/about-3.jpg">
                         </div>
@@ -152,6 +149,16 @@
                         </div>
                     </div>
                 </div>
+                {{-- <div class="col-lg-6">
+                    <div class="row gx-3 h-100">
+                        <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-3.jpg">
+                        </div>
+                        <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-4.jpg">
+                        </div>
+                    </div>
+                </div> --}}
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <p class="fw-medium text-uppercase text-primary mb-2">สมัคร</p>
                     <h3 class="display-9 mb-4">ห้องเรียนปกติ ม.1 และ ม.4</h3>
