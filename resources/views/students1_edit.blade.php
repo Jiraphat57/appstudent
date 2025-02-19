@@ -843,7 +843,7 @@
                     autoclose: true,
                     todayHighlight: true,
                     language: 'th', // ใช้ภาษาไทย
-                    thaiyear: true, // ใช้ พ.ศ.
+                    thaiyear: true // ใช้ พ.ศ.
                     beforeShow: function(input, inst) {
                         setTimeout(function() {
                             inst.dpDiv.css({
