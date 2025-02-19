@@ -952,7 +952,7 @@
                 // ดึงข้อมูลวันที่ เดือน ปี
                 var day = buddhistDate.getDate().toString().padStart(2, '0');
                 var month = (buddhistDate.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
-                var year = buddhistDate.getFullYear();
+                var year = 543+(buddhistDate.getFullYear());
                 // สร้างสตริงวันที่ในรูปแบบ 'dd/mm/yyyy'
                 var formattedDate = day + '/' + month + '/' + year;
                 // แสดงวันที่ในช่อง input
