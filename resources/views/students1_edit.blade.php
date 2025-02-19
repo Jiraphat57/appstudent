@@ -830,7 +830,7 @@
         // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
         function convertToBuddhistYear(date) {
             var year = date.getFullYear();
-            var buddhistYear = year; // ค.ศ. + 543 = พ.ศ.
+            var buddhistYear = year+ 543; // ค.ศ. + 543 = พ.ศ.
             date.setFullYear(buddhistYear); // เปลี่ยนปีเป็น พ.ศ.
             return date;
         }
