@@ -209,7 +209,7 @@
 
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
+                        <input type="Date" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
                         </span>
@@ -980,7 +980,7 @@
                 format: 'dd/mm/yyyy',
                 autoclose: true,
                 todayHighlight: true,
-                language: 'th',
+                language: 'th-th',
                 thaiyear: true
             }).datepicker('setDate', new Date());
         });
