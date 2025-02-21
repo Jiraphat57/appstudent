@@ -14,12 +14,6 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
-        rel="stylesheet"> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
@@ -206,19 +200,19 @@
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <div class="input-group date" id="datepicker"> --}}
-                        {{-- <input type="Date" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน" onchange="YearChange()"> --}}
-                        <x-filament::field-wrapper id="datepicker">
-                        <x-filament-thai-date-picker::thai-date-picker
+                    <div class="input-group date" id="datepicker">
+                        <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน" onchange="YearChange()">
+                        {{-- <x-filament::field-wrapper id="datepicker"> --}}
+                        {{-- <x-filament-thai-date-picker::thai-date-picker
                         label="วันเกิดนักเรียน"
                         name="dateofbirth"
                         display-format="d/m/Y"
                         wire:model.defer="dateofbirth"/>
-                        </x-filament::field-wrapper>
-                        {{-- <span class="input-group-text">
+                        </x-filament::field-wrapper> --}}
+                        <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
-                        </span> --}}
-                    {{-- </div> --}}
+                        </span>
+                    </div>
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
