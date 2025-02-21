@@ -205,18 +205,14 @@
                         <option value="15">อื่นๆ</option>
                     </select>
                 </div>
-
-
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <input type="Date" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
+                        <input type="Date" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน" onchange="YearChange()">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
                         </span>
                     </div>
                 </div>
-
-
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
                         aria-label="Default select example">
