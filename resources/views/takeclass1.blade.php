@@ -206,12 +206,19 @@
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
-                    <div class="input-group date" id="datepicker">
-                        <input type="Date" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน" onchange="YearChange()">
-                        <span class="input-group-text">
+                    {{-- <div class="input-group date" id="datepicker"> --}}
+                        {{-- <input type="Date" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน" onchange="YearChange()"> --}}
+                        <x-filament::field-wrapper id="datepicker">
+                        <x-filament-thai-date-picker::thai-date-picker
+                        label="วันเกิดนักเรียน"
+                        name="dateofbirth"
+                        display-format="d/m/Y"
+                        wire:model.defer="dateofbirth"/>
+                        </x-filament::field-wrapper>
+                        {{-- <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
-                        </span>
-                    </div>
+                        </span> --}}
+                    {{-- </div> --}}
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
