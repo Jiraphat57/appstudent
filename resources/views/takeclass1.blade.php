@@ -920,7 +920,7 @@
     <script src="js/locales/bootstrap-datepicker.th.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/main.js"></script>
-    {{-- <script>
+    <script>
         // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
         function convertToBuddhistYear(date) {
             var year = date.getFullYear();
@@ -976,8 +976,8 @@
             font-size: 0.875rem !important;
             /* ลดขนาด Font ใน Popup */
         }
-    </style> --}}
-    <script>
+    </style>
+    {{-- <script>
         $(document).ready(function () {
             $('#datepicker input').datepicker({
                 format: 'dd/mm/yyyy',
@@ -987,7 +987,7 @@
                 thaiyear: true
             }).datepicker('setDate', new Date());
         });
-    </script>
+    </script> --}}
 
     {{-- <style>
         #datepicker input {
