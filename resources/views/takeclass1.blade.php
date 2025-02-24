@@ -7,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
         rel="stylesheet">
 
@@ -31,6 +33,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 
@@ -913,6 +916,8 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <!-- Template Javascript -->
+    <script src="js/bootstrap-datepicker-thai.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/main.js"></script>
     {{-- <script>
         // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
