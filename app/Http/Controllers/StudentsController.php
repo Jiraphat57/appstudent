@@ -149,7 +149,7 @@ class StudentsController extends Controller
         try {
             list($day, $month, $year) = explode('/', $validatedData['dateofbirth']);
             // แปลงปีจากพุทธศักราชเป็นคริสต์ศักราช
-            $year = $year;
+            $year = $year-543;
             // สร้างวันที่ด้วย Carbon
             $dateOfBirth = Carbon::createFromFormat('d/m/Y', "$day/$month/$year")->format('Y-m-d');
         } catch (\Exception $e) {
