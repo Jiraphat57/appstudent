@@ -204,7 +204,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <input type="text" name="dateofbirth" class="form-control" data-provide="datapicker" data-data-language="th-th" placeholder="วันเกิดนักเรียน" >
+                        <input type="text" name="dateofbirth" class="form-control"  data-data-language="th-th" placeholder="วันเกิดนักเรียน" >
                         {{-- <x-filament::field-wrapper id="datepicker"> --}}
                         {{-- <x-filament-thai-date-picker::thai-date-picker
                         label="วันเกิดนักเรียน"
@@ -920,7 +920,7 @@
     <script src="js/locales/bootstrap-datepicker.th.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/main.js"></script>
-    <script>
+    {{-- <script>
         // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
         function convertToBuddhistYear(date) {
             var year = date.getFullYear();
@@ -976,8 +976,8 @@
             font-size: 0.875rem !important;
             /* ลดขนาด Font ใน Popup */
         }
-    </style>
-    {{-- <script>
+    </style> --}}
+    <script>
         $(document).ready(function () {
             $('#datepicker input').datepicker({
                 format: 'dd/mm/yyyy',
@@ -989,7 +989,7 @@
         });
     </script> --}}
 
-    {{-- <style>
+     <style>
         #datepicker input {
             width: 100%;
             max-width: 300px;
@@ -1005,7 +1005,7 @@
         .datepicker {
             font-size: 0.875rem !important;
         }
-    </style> --}}
+    </style>
 </body>
 
 
