@@ -903,7 +903,7 @@
                             });
                         }, 0);
                     }
-                }).datepicker('show'); // แสดง Datepicker
+                }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate())); // แสดง Datepicker
             });
 
             // เมื่อเลือกวันที่จาก Datepicker
