@@ -903,7 +903,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Datepicker JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js">
@@ -985,9 +985,9 @@
                 todayHighlight: true,
                 language: 'th-th',
                 thaiyear: true
-            }).datepicker('setDate', new Date());
+            }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate()));
         });
-    </script> --}}
+    </script>
 
      <style>
         #datepicker input {
