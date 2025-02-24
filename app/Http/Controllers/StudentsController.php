@@ -252,7 +252,9 @@ class StudentsController extends Controller
         $travelschool1 = Travelschool1::all();
         $secondaryschools = SecondarySchool::all();
         if ($students->dateofbirth) {
-            $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
+            // $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
+            $carbonDate = Carbon::parse($students->dateofbirth);
+            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
         }
         // $typetitle = Typetitle::all();
         // ส่งข้อมูลไปยัง View
