@@ -23,7 +23,7 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     <!-- Libraries Stylesheet -->
@@ -32,8 +32,8 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/datepicker.min.css" rel="stylesheet">
+    {{-- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker.min.css" rel="stylesheet"> --}}
     <link href="css/style.css" rel="stylesheet">
 
 
@@ -916,9 +916,9 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <!-- Template Javascript locales-->
-    <script src="js/bootstrap-datepicker-thai.js"></script>
+    {{-- <script src="js/bootstrap-datepicker-thai.js"></script>
     <script src="js/locales/bootstrap-datepicker.th.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script> --}}
     <script src="js/main.js"></script>
     {{-- <script>
         // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
