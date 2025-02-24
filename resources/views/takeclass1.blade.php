@@ -977,7 +977,7 @@
             /* ลดขนาด Font ใน Popup */
         }
     </style> --}}
-    {{-- <script>
+    <script>
         $(document).ready(function () {
             $('#datepicker input').datepicker({
                 format: 'dd/mm/yyyy',
@@ -989,7 +989,7 @@
         });
     </script>
 
-    <style>
+    {{-- <style>
         #datepicker input {
             width: 100%;
             max-width: 300px;
