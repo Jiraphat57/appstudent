@@ -204,7 +204,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน" onchange="YearChange()">
+                        <input type="text" name="dateofbirth" class="form-control" data-provide="datapicker" placeholder="วันเกิดนักเรียน" onchange="YearChange()">
                         {{-- <x-filament::field-wrapper id="datepicker"> --}}
                         {{-- <x-filament-thai-date-picker::thai-date-picker
                         label="วันเกิดนักเรียน"
@@ -915,8 +915,9 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    <!-- Template Javascript -->
+    <!-- Template Javascript locales-->
     <script src="js/bootstrap-datepicker-thai.js"></script>
+    <script src="js/locales/bootstrap-datepicker.th.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/main.js"></script>
     {{-- <script>
