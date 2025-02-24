@@ -204,7 +204,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <input type="text" name="dateofbirth" class="form-control" data-provide="datapicker" placeholder="วันเกิดนักเรียน" onchange="YearChange()">
+                        <input type="text" name="dateofbirth" class="form-control" data-provide="datapicker" placeholder="วันเกิดนักเรียน" >
                         {{-- <x-filament::field-wrapper id="datepicker"> --}}
                         {{-- <x-filament-thai-date-picker::thai-date-picker
                         label="วันเกิดนักเรียน"
