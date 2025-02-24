@@ -204,7 +204,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <input type="text" name="dateofbirth" class="form-control" data-provide="datapicker" placeholder="วันเกิดนักเรียน" >
+                        <input type="text" name="dateofbirth" class="form-control" data-provide="datapicker" data-data-language="th-th" placeholder="วันเกิดนักเรียน" >
                         {{-- <x-filament::field-wrapper id="datepicker"> --}}
                         {{-- <x-filament-thai-date-picker::thai-date-picker
                         label="วันเกิดนักเรียน"
@@ -977,7 +977,7 @@
             /* ลดขนาด Font ใน Popup */
         }
     </style> --}}
-    <script>
+    {{-- <script>
         $(document).ready(function () {
             $('#datepicker input').datepicker({
                 format: 'dd/mm/yyyy',
@@ -1005,7 +1005,7 @@
         .datepicker {
             font-size: 0.875rem !important;
         }
-    </style>
+    </style> --}}
 </body>
 
 
