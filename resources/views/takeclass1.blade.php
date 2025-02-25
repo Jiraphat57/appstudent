@@ -989,7 +989,7 @@
                         }, 0);
                     }
                 }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate())); // แสดง Datepicker
-            });
+            });});
     </script>
 
      <style>
