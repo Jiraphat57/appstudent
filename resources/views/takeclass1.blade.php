@@ -971,14 +971,16 @@
         }
     </style> --}}
     <script>
-        $(document).ready(function () {
-            $('#datepicker input').datepicker({
-                format: 'dd/mm/yyyy',
-                autoclose: true,
-                todayHighlight: true,
-                language: 'th-th',
-                thaiyear: true,
-                beforeShow: function(input, inst) {
+        $(document).ready(function() {
+            // เมื่อคลิกที่ input เพื่อแสดง Datepicker
+            $('#datepicker input').on('focus', function() {
+                $(this).datepicker({
+                    format: 'dd/mm/yyyy',
+                    autoclose: true,
+                    todayHighlight: true,
+                    language: 'th', // ใช้ภาษาไทย
+                    thaiyear: true, // ใช้ พ.ศ.
+                    beforeShow: function(input, inst) {
                         setTimeout(function() {
                             inst.dpDiv.css({
                                 'top': '0px',
@@ -986,8 +988,8 @@
                             });
                         }, 0);
                     }
-            }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate()));
-        });
+                }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate())); // แสดง Datepicker
+            });
     </script>
 
      <style>
