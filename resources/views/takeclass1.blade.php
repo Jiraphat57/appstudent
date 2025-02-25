@@ -205,13 +205,6 @@
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
                         <input type="text" name="dateofbirth" class="form-control"  data-data-language="th-th" placeholder="วันเกิดนักเรียน" >
-                        {{-- <x-filament::field-wrapper id="datepicker"> --}}
-                        {{-- <x-filament-thai-date-picker::thai-date-picker
-                        label="วันเกิดนักเรียน"
-                        name="dateofbirth"
-                        display-format="d/m/Y"
-                        wire:model.defer="dateofbirth"/>
-                        </x-filament::field-wrapper> --}}
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
                         </span>
@@ -984,7 +977,15 @@
                 autoclose: true,
                 todayHighlight: true,
                 language: 'th-th',
-                thaiyear: true
+                thaiyear: true,
+                beforeShow: function(input, inst) {
+                        setTimeout(function() {
+                            inst.dpDiv.css({
+                                'top': '0px',
+                                'z-index': '9999'
+                            });
+                        }, 0);
+                    }
             }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate()));
         });
     </script>

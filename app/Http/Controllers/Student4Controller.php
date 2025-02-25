@@ -164,7 +164,7 @@ class Student4Controller extends Controller
         try {
             list($day, $month, $year) = explode('/', $validatedData['dateofbirth']);
             // แปลงปีจากพุทธศักราชเป็นคริสต์ศักราช
-            $year = $year;
+            $year = $year-543;
             // สร้างวันที่ด้วย Carbon
             $dateOfBirth = Carbon::createFromFormat('d/m/Y', "$day/$month/$year")->format('Y-m-d');
         } catch (\Exception $e) {
@@ -268,7 +268,9 @@ class Student4Controller extends Controller
         $travelschool1 = Travelschool1::all();
         $highschools = HighSchool::all();
         if ($students->dateofbirth) {
-            $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
+            // $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
+            $carbonDate = Carbon::parse($students->dateofbirth);
+            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
         }
         // $typetitle = Typetitle::all();
         // ส่งข้อมูลไปยัง View
