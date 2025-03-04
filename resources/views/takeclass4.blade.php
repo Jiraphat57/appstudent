@@ -976,7 +976,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script>
+    <<!-- moment.js และ moment-timezone -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
@@ -990,17 +992,19 @@
                 todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
                 language: 'th',             // ใช้ภาษาไทย
             }).on('changeDate', function (e) {
-                let date = moment(e.date); // ใช้ moment.js ช่วยแปลงวันที่
+                let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
                 let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
                 let formattedDate = date.format('DD/MM') + '/' + thaiYear;
+                let dayOfWeek = date.format('dddd'); // แสดงวันในสัปดาห์
 
+                console.log("วันที่ที่เลือก:", formattedDate, "เป็นวัน", dayOfWeek);
                 $(this).val(formattedDate);
             });
 
             // เซ็ตค่าเริ่มต้น (ถ้ายังไม่มีค่า)
             let currentValue = $('#datepicker input').val();
             if (!currentValue) {
-                let today = moment();
+                let today = moment.tz("Asia/Bangkok");
                 let thaiYear = today.year() + 543;
                 let formattedToday = today.format('DD/MM') + '/' + thaiYear;
                 $('#datepicker input').datepicker('setDate', formattedToday);
