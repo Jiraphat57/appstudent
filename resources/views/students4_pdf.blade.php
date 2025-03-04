@@ -133,7 +133,7 @@
         </div>
         <div class="row col-100%">
             {{-- <div class="alert alert-success text-center" role="alert"> --}}
-            <div class="alert text-center" role="alert" style="background-color: #D8BFD8; color: black;">
+            <div class="alert text-center" role="alert" style="background-color: #D8BFD8; color: black; padding: 10px;">
                 <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
            </div>
             ชื่อนักเรียน<span class="underline">
