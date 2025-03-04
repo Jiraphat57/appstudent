@@ -130,16 +130,14 @@
             วันที่ {{ Carbon::now()->translatedFormat('j') }}
             เดือน {{ Carbon::now()->translatedFormat('F') }}
             พ.ศ. {{ Carbon::now()->addYears(543)->format('Y') }}
-        </div>
-        
-         
+        </div>     
                 {{-- <div class="text-center">
                     <span style="background-color: #D8BFD8; color: black; padding: 5px 10px; border-radius: 5px;">
                         <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                     </span>
                 </div> --}}
             <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
                      <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                 </div>
             </div>
@@ -178,7 +176,7 @@
             <span class="underline">{{ $students->sumsiblings }}คน</span><br>
             </div>
             <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
                      <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน
                 </div>
             </div>
@@ -199,7 +197,7 @@
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
             </div>
             <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
                      <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา
                 </div>
             </div>
@@ -244,8 +242,8 @@
             @endif
             </div>
             <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
-                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;อมูลแผนการเรียนที่นักเรียนได้เลือก
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
+                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก
                 </div>
             </div>
             <div class="row col-100%">
@@ -277,7 +275,7 @@
             <span class="underline">
                 {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
             </span>ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......   
-            <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
+            <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 100%;">
                 <div>ขอให้คำรับรองต่อผู้อํานวยการโรงเรียนพานพิทยาคมว่า
                 <br>1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน
                 โดยข้าพเจ้าจะเป็นผู้คอยตักเตือนนักเรียนที่ข้าพเจ้ารับเป็น ผู้ปกครอง
