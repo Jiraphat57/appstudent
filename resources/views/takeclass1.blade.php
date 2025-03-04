@@ -17,15 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet"> --}}
      <!-- CSS ของ Flatpickr -->
-     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -901,66 +899,24 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
 
-    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> --}}
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script> --}}
     <!-- Flatpickr -->
-    {{-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/th.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/th.js"></script>
 
      <!-- Day.js และ Thai Buddhist Calendar -->
-     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/localeData.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/locale/th.js"></script> --}}
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/locale/th.js"></script>
 
     <script src="js/main.js"></script>
+
     <script>
-        $(document).ready(function() {
-            // ตั้งค่าให้ datepicker ใช้ภาษาไทยและปี พ.ศ.
-            $.datepicker.setDefaults({
-                dateFormat: "dd/mm/yy",    // รูปแบบวันที่
-                firstDay: 0,               // เริ่มต้นจากวันอาทิตย์
-                monthNames: ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"],
-                monthNamesShort: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
-                dayNames: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัสบดี", "ศุกร์", "เสาร์"],
-                dayNamesShort: ["อา.", "จ.", "อ.", "พ.", "พฤ.", "ศ.", "ส."],
-                dayNamesMin: ["อา.", "จ.", "อ.", "พ.", "พฤ.", "ศ.", "ส."],
-                changeMonth: true,
-                changeYear: true,
-                showAnim: "slideDown",
-                yearRange: "1900:2999" // กำหนดช่วงปี
-            });
-
-            // ตั้งค่าให้ datepicker ใช้ภาษาไทย
-            $('#datepicker').datepicker({
-                yearRange: "1900:2999", // กำหนดช่วงปี
-                onClose: function(dateText, inst) {
-                    var selectedDate = $(this).datepicker('getDate');
-                    if (selectedDate) {
-                        var dayOfWeek = selectedDate.toLocaleString("th-TH", { weekday: "long" });
-                        alert("คุณเลือกวันที่: " + dateText + " (" + dayOfWeek + ")");
-                    }
-                }
-            });
-
-            // ตั้งค่าเริ่มต้นให้แสดงวันนี้
-            var today = new Date();
-            $('#datepicker').datepicker("setDate", today);
-        });
-    </script>
-
-    <style>
-        #datepicker {
-            width: 100%;
-            max-width: 300px;
-            font-size: 14px;
-            padding: 10px;
-        }
-    </style>
-
-    {{-- <script>
         dayjs.locale('th');  // ตั้งค่าให้เป็นภาษาไทย
         dayjs.extend(dayjs_plugin_buddhistEra);
         dayjs.extend(dayjs_plugin_localeData);
@@ -1035,7 +991,7 @@
         .datepicker {
             font-size: 0.875rem !important;
         }
-    </style> --}}
+    </style>
 </body>
 
 
