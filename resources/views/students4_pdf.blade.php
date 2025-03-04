@@ -97,7 +97,7 @@
 </head>
 
 <body>
-    <div class="container px-10">
+    <div class="container px-1">
         <div class="position-relative" style="width: 100%; height: 70px;">
             <!-- โลโก้ตรงกลาง -->
             <div class="position-absolute" style="left: 50%; transform: translateX(-50%);">
