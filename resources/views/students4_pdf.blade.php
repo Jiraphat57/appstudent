@@ -116,7 +116,7 @@
             </div>
             <!-- ภาพขวาสุด -->
             <div class="position-absolute" style="right: 0;">
-                <img class="img-fluid" style="max-width: 60px;" src="img/klipartz.png" alt="klipartz">
+                <img class="img-fluid" style="max-width: 100px;" src="img/klipartz.png" alt="klipartz">
             </div>
         </div>
 
