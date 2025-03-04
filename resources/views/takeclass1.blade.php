@@ -913,61 +913,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
     <script src="js/main.js"></script>
 
-    {{-- <script>
-        // เปิดใช้งาน Thai Buddhist Calendar
-        dayjs.extend(dayjs_plugin_buddhistEra);
-
-        $(document).ready(function () {
-            // กำหนดค่า Flatpickr
-            flatpickr("#datepicker", {
-                dateFormat: "d/m/Y",  // กำหนดรูปแบบเป็น วัน/เดือน/ปี
-                defaultDate: dayjs().format("DD/MM/YYYY"), // ใช้ค่าปีไทยแท้ๆ
-                locale: "th", // ใช้ภาษาไทย
-                onChange: function(selectedDates, dateStr, instance) {
-                    let selectedDate = dayjs(selectedDates[0]); // ใช้ Thai Buddhist Calendar คำนวณ
-                    let dayOfWeek = selectedDate.format('dddd'); // ได้ชื่อวันในสัปดาห์ที่ถูกต้อง
-                    
-                    $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
-                }
-            });
-
-            // เซ็ตค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
-            let today = dayjs();
-            let todayFormatted = today.format("DD/MM/YYYY");
-            let todayDayOfWeek = today.format('dddd');
-
-            $('#datepicker').val(todayFormatted);
-            $('#dayOfWeek').text("เป็นวัน " + todayDayOfWeek);
-        });
-    </script> --}}
     <script>
         dayjs.extend(dayjs_plugin_buddhistEra);
 
         $(document).ready(function () {
-            flatpickr("#datepicker", {
+            let picker = flatpickr("#datepicker", {
                 dateFormat: "d/m/Y",
                 locale: "th",
                 allowInput: true,
                 onOpen: function(selectedDates, dateStr, instance) {
-                    // เปลี่ยนปีที่แสดงให้เป็น พ.ศ.
                     $(".flatpickr-current-month input.cur-year").each(function () {
                         let year = parseInt($(this).val());
-                        $(this).val(year + 543); // แปลง ค.ศ. เป็น พ.ศ.
+                        if (year < 2500) {
+                            $(this).val(year + 543);
+                        }
                     });
                 },
                 onYearChange: function(selectedDates, dateStr, instance) {
-                    // อัปเดตปีที่แสดงให้เป็น พ.ศ.
                     $(".flatpickr-current-month input.cur-year").each(function () {
                         let year = parseInt($(this).val());
-                        $(this).val(year + 543);
+                        if (year < 2500) {
+                            $(this).val(year + 543);
+                        }
                     });
                 },
                 onChange: function(selectedDates, dateStr, instance) {
                     if (selectedDates.length > 0) {
-                        let selectedDate = dayjs(selectedDates[0]).add(543, 'year'); // ใช้ Thai Buddhist Calendar
-                        let dayOfWeek = selectedDate.format('dddd'); // คำนวณวันในสัปดาห์ที่ถูกต้อง
+                        let selectedDate = dayjs(selectedDates[0]).add(543, 'year'); 
+                        let dayOfWeek = selectedDate.format('dddd'); 
 
                         $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
+
+                        // แปลงค่าปีให้เป็น พ.ศ. ใน input
+                        let formattedDate = selectedDate.format("DD/MM/YYYY");
+                        $('#datepicker').val(formattedDate);
                     }
                 }
             });
