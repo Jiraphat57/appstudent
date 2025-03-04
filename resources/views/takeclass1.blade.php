@@ -8,35 +8,23 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
         rel="stylesheet">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
-    <!-- Libraries Stylesheet -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    {{-- <link href="css/datepicker.min.css" rel="stylesheet"> --}}
     <link href="css/style.css" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -895,61 +883,54 @@
     </div>
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Datepicker JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript Libraries -->
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    <!-- Template Javascript locales-->
-    {{-- <script src="js/bootstrap-datepicker-thai.js"></script>
-    <script src="js/locales/bootstrap-datepicker.th.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script> --}}
-    <script src="js/main.js"></script>
-    {{-- <script>
-        // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
-        function convertToBuddhistYear(date) {
-            var year = date.getFullYear();
-            var buddhistYear = year + 543; // ค.ศ. + 543 = พ.ศ.
-            date.setFullYear(buddhistYear); // เปลี่ยนปีเป็น พ.ศ.
-            return date;
-        }
-        $(document).ready(function() {
 
-            $('#datepicker input').on('changeDate', function(e) {
-                // แปลงปีเป็น พ.ศ. ทุกครั้งที่เลือกวันที่
-                var selectedDate = e.date;
-                var buddhistDate = convertToBuddhistYear(selectedDate);
-                // ดึงข้อมูลวันที่ เดือน ปี
-                var day = buddhistDate.getDate().toString().padStart(2, '0');
-                var month = (buddhistDate.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
-                var year = buddhistDate.getFullYear();
-                // สร้างสตริงวันที่ในรูปแบบ 'dd/mm/yyyy'
-                var formattedDate = day + '/' + month + '/' + year;
-                // แสดงวันที่ในช่อง input
-                $('#datepicker input').val(formattedDate);
-            });
-        });
-    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script>
+    <<!-- moment.js และ moment-timezone -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
     <script>
         $(document).ready(function () {
+            moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
+
             $('#datepicker input').datepicker({
-                format: 'dd/mm/yyyy',
-                autoclose: true,
-                todayHighlight: true,
-                language: 'th-th', // ตั้งค่าภาษาไทย
-                thaiyear: true // ใช้ปีพุทธศักราช
-            }).datepicker('setDate', new Date()); // ตั้งค่าวันปัจจุบันให้เป็น พ.ศ.
+                format: 'dd/mm/yyyy',       // รูปแบบวันที่
+                autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
+                todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
+                language: 'th',             // ใช้ภาษาไทย
+            }).on('changeDate', function (e) {
+                let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
+                let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                let formattedDate = date.format('DD/MM') + '/' + thaiYear;
+                let dayOfWeek = date.format('dddd'); // แสดงวันในสัปดาห์
+
+                console.log("วันที่ที่เลือก:", formattedDate, "เป็นวัน", dayOfWeek);
+                $(this).val(formattedDate);
+            });
+
+            // เซ็ตค่าเริ่มต้น (ถ้ายังไม่มีค่า)
+            let currentValue = $('#datepicker input').val();
+            if (!currentValue) {
+                let today = moment.tz("Asia/Bangkok");
+                let thaiYear = today.year() + 543;
+                let formattedToday = today.format('DD/MM') + '/' + thaiYear;
+                $('#datepicker input').datepicker('setDate', formattedToday);
+            }
         });
     </script>
-    
+
     <style>
         #datepicker input {
             width: 100%;
@@ -957,54 +938,10 @@
             font-size: 14px;
             padding: 10px;
         }
-
-        #datepicker .input-group-text {
-            padding: 5px;
-            /* ลด padding ของไอคอน */
-            font-size: 14px;
-            /* ปรับขนาดไอคอน */
-        }
-
-        .datepicker {
-            font-size: 0.875rem !important;
-            /* ลดขนาด Font ใน Popup */
-        }
-    </style> --}}
-    <script>
-        $(document).ready(function() {
-            // เมื่อคลิกที่ input เพื่อแสดง Datepicker
-            $('#datepicker input').on('focus', function() {
-                $(this).datepicker({
-                    format: 'dd/mm/yyyy',
-                    autoclose: true,
-                    todayHighlight: true,
-                    language: 'th', // ใช้ภาษาไทย
-                    thaiyear: true, // ใช้ พ.ศ.
-                    beforeShow: function(input, inst) {
-                        setTimeout(function() {
-                            inst.dpDiv.css({
-                                'top': '0px',
-                                'z-index': '9999'
-                            });
-                        }, 0);
-                    }
-                }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate())); // แสดง Datepicker
-            });});
-    </script>
-
-     <style>
-        #datepicker input {
-            width: 100%;
-            max-width: 300px;
-            font-size: 14px;
-            padding: 10px;
-        }
-
         #datepicker .input-group-text {
             padding: 5px;
             font-size: 14px;
         }
-
         .datepicker {
             font-size: 0.875rem !important;
         }
