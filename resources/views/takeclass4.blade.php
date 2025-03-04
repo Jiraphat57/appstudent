@@ -1003,8 +1003,8 @@
         // }
         $(document).ready(function() {
             // เมื่อคลิกที่ input เพื่อแสดง Datepicker
-            // $('#datepicker input').on('focus', function() {
-                $('#datepicker input').on('changeDate', function() {
+            $('#datepicker input').on('focus', function() {
+                // $('#datepicker input').on('changeDate', function() {
                 $(this).datepicker({
                     format: 'dd/mm/yyyy',
                     autoclose: true,
