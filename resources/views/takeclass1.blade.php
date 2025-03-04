@@ -16,9 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet"> --}}
-    <!-- CSS ของ Flatpickr -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+     <!-- CSS ของ Flatpickr -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -904,17 +904,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script> --}}
-      <!-- Flatpickr -->
+    <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/th.js"></script>
 
-    <!-- moment.js และ moment-timezone -->
-<!-- Day.js และ Thai Buddhist Calendar -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
+    <!-- Day.js และ Thai Buddhist Calendar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
+    {{-- <script>
         // เปิดใช้งาน Thai Buddhist Calendar
         dayjs.extend(dayjs_plugin_buddhistEra);
 
@@ -934,6 +933,47 @@
 
             // เซ็ตค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
             let today = dayjs();
+            let todayFormatted = today.format("DD/MM/YYYY");
+            let todayDayOfWeek = today.format('dddd');
+
+            $('#datepicker').val(todayFormatted);
+            $('#dayOfWeek').text("เป็นวัน " + todayDayOfWeek);
+        });
+    </script> --}}
+    <script>
+        dayjs.extend(dayjs_plugin_buddhistEra);
+
+        $(document).ready(function () {
+            flatpickr("#datepicker", {
+                dateFormat: "d/m/Y",
+                locale: "th",
+                allowInput: true,
+                onOpen: function(selectedDates, dateStr, instance) {
+                    // เปลี่ยนปีที่แสดงให้เป็น พ.ศ.
+                    $(".flatpickr-current-month input.cur-year").each(function () {
+                        let year = parseInt($(this).val());
+                        $(this).val(year + 543); // แปลง ค.ศ. เป็น พ.ศ.
+                    });
+                },
+                onYearChange: function(selectedDates, dateStr, instance) {
+                    // อัปเดตปีที่แสดงให้เป็น พ.ศ.
+                    $(".flatpickr-current-month input.cur-year").each(function () {
+                        let year = parseInt($(this).val());
+                        $(this).val(year + 543);
+                    });
+                },
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length > 0) {
+                        let selectedDate = dayjs(selectedDates[0]).add(543, 'year'); // ใช้ Thai Buddhist Calendar
+                        let dayOfWeek = selectedDate.format('dddd'); // คำนวณวันในสัปดาห์ที่ถูกต้อง
+
+                        $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
+                    }
+                }
+            });
+
+            // เซ็ตค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
+            let today = dayjs().add(543, 'year');
             let todayFormatted = today.format("DD/MM/YYYY");
             let todayDayOfWeek = today.format('dddd');
 
