@@ -97,18 +97,7 @@
 </head>
 
 <body>
-
     <div class="container px-10">
-        {{-- @foreach ($students as $student) --}}
-
-        {{-- <div class="row justify-content-center align-items-center ">
-            <div class="col-10  d-flex justify-content-center align-items-center ">
-                <img class="img-fluid  align-items-center col-1" src="img/logoPPK.png"><br>
-            </div>
-            <div class="col-1  d-flex  justify-content-center align-items-center ">
-                <img class="img-fluid align-items-center " src="img/klipartz.png"><br>
-            </div>
-        </div>   --}}
         <div class="position-relative" style="width: 100%; height: 70px;">
             <!-- โลโก้ตรงกลาง -->
             <div class="position-absolute" style="left: 50%; transform: translateX(-50%);">
@@ -119,7 +108,6 @@
                 <img class="img-fluid" style="max-width: 100px;" src="img/klipartz.png" alt="klipartz">
             </div>
         </div>
-
         <div class="row d-flex justify-content-center align-items-center"
             style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่
         </div>
@@ -131,19 +119,7 @@
             เดือน {{ Carbon::now()->translatedFormat('F') }}
             พ.ศ. {{ Carbon::now()->addYears(543)->format('Y') }}
         </div>     
-                {{-- <div class="text-center">
-                    <span style="background-color: #D8BFD8; color: black; padding: 5px 10px; border-radius: 5px;">
-                        <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
-                    </span>
-                </div> --}}
-            {{-- <div class="container">
-                <div class="text-center" style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
-                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
-                </div>
-            </div> --}}
-            <div class="container">
-                <div class="text-center" style="background-color: #D8BFD8; color: black;  padding: 5px 0; border-radius: 5px;  width: 100%; display: block; margin-left: 0.5px;  margin-right: 0.5px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน</div>
-            </div>
+        <div class="text-center" style="background-color: #D8BFD8; color: black;  padding: 5px 0; border-radius: 5px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0.5px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน</div>
             <div class="row col-100%">
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
