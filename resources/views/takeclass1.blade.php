@@ -913,9 +913,10 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/localeData.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/locale/th.js"></script>
+
     <script src="js/main.js"></script>
 
-    <script>
+    {{-- <script>
         dayjs.locale('th');  // ตั้งค่าให้เป็นภาษาไทย
         dayjs.extend(dayjs_plugin_buddhistEra);
         dayjs.extend(dayjs_plugin_localeData);
@@ -957,6 +958,31 @@
             let today = dayjs();
             let todayFormatted = today.format("DD/MM") + "/" + (today.year() + 543);
             let todayDayOfWeek = today.format('dddd');
+
+            $('#datepicker').val(todayFormatted);
+            $('#dayOfWeek').text("เป็นวัน " + todayDayOfWeek);
+        });
+    </script> --}}
+    <script>
+        $(document).ready(function() {
+            let picker = flatpickr("#datepicker", {
+                dateFormat: "d/m/Y", // รูปแบบวันที่
+                locale: "th",  // การตั้งค่าภาษาไทย
+                allowInput: true, // อนุญาตให้กรอกเอง
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length > 0) {
+                        let selectedDate = selectedDates[0];
+                        let dayOfWeek = selectedDate.toLocaleString("th-TH", { weekday: "long" }); // แสดงวันในสัปดาห์ที่ถูกต้อง
+
+                        $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
+                    }
+                }
+            });
+
+            // ตั้งค่าค่าเริ่มต้นเป็นวันนี้ (ปี พ.ศ.)
+            let today = new Date();
+            let todayFormatted = today.toLocaleDateString('th-TH');  // ใช้ Locale ภาษาไทย เพื่อแสดงผลเป็น พ.ศ.
+            let todayDayOfWeek = today.toLocaleString('th-TH', { weekday: 'long' });
 
             $('#datepicker').val(todayFormatted);
             $('#dayOfWeek').text("เป็นวัน " + todayDayOfWeek);
