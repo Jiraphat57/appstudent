@@ -216,25 +216,25 @@
             </div>
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก</div>
             <div class="row col-100%">
-            ลำดับที่ 1: &nbsp;<span
+            ลำดับ1: &nbsp;<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับที่ 2: &nbsp;<span
+            ลำดับ2: &nbsp;<span
                 class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับที่ 3: &nbsp;<span
+            ลำดับ3: &nbsp;<span
                 class="underline">{{ $students->highschool3->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            ลำดับที่ 4: &nbsp;<span
+            ลำดับ4: &nbsp;<span
                 class="underline">{{ $students->highschool4->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับที่ 5: &nbsp;<span
+            ลำดับ5: &nbsp;<span
                 class="underline">{{ $students->highschool5->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับที่ 6: &nbsp;<span
+            ลำดับ6: &nbsp;<span
                 class="underline">{{ $students->highschool6->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            ลำดับที่ 7: &nbsp;<span
+            ลำดับ7: &nbsp;<span
                 class="underline">{{ $students->highschool7->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับที่ 8: &nbsp;<span
+            ลำดับ8: &nbsp;<span
                 class="underline">{{ $students->highschool8->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับที่ 9: &nbsp;<span
+            ลำดับ9: &nbsp;<span
                 class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            ลำดับที่ 10: &nbsp;<span
+            ลำดับ10: &nbsp;<span
                 class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
             {{-- แผนการเรียนที่เลือก 11: &nbsp;<span
                 class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br><br> --}}
@@ -244,7 +244,7 @@
             <span class="underline">
                 {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
             </span>ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......   
-            <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 100%;">
+            <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
                 <div>ขอให้คำรับรองต่อผู้อํานวยการโรงเรียนพานพิทยาคมว่า
                 <br>1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน
                 โดยข้าพเจ้าจะเป็นผู้คอยตักเตือนนักเรียนที่ข้าพเจ้ารับเป็น ผู้ปกครอง
