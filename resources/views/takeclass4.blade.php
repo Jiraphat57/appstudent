@@ -1003,7 +1003,8 @@
         // }
         $(document).ready(function() {
             // เมื่อคลิกที่ input เพื่อแสดง Datepicker
-            $('#datepicker input').on('focus', function() {
+            // $('#datepicker input').on('focus', function() {
+                $('#datepicker input').on('changeDate', function() {
                 $(this).datepicker({
                     format: 'dd/mm/yyyy',
                     autoclose: true,
@@ -1021,20 +1022,20 @@
                 }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate())); // แสดง Datepicker
             });
             // เมื่อเลือกวันที่จาก Datepicker
-            $('#datepicker input').on('changeDate', function(e) {
-                // แปลงปีเป็น พ.ศ. ทุกครั้งที่เลือกวันที่
-                var selectedDate = e.date;
-                var buddhistDate = convertToBuddhistYear(selectedDate);
-                // ดึงข้อมูลวันที่ เดือน ปี
-                var day = buddhistDate.getDate().toString().padStart(2, '0');
-                var month = (buddhistDate.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
-                var year = buddhistDate.getFullYear();
-                // var year = year+543;
-                // สร้างสตริงวันที่ในรูปแบบ 'dd/mm/yyyy'
-                var formattedDate = day + '/' + month + '/' + year;
-                // แสดงวันที่ในช่อง input
-                $('#datepicker input').val(formattedDate);
-            });
+            // $('#datepicker input').on('changeDate', function(e) {
+            //     // แปลงปีเป็น พ.ศ. ทุกครั้งที่เลือกวันที่
+            //     var selectedDate = e.date;
+            //     var buddhistDate = convertToBuddhistYear(selectedDate);
+            //     // ดึงข้อมูลวันที่ เดือน ปี
+            //     var day = buddhistDate.getDate().toString().padStart(2, '0');
+            //     var month = (buddhistDate.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
+            //     var year = buddhistDate.getFullYear();
+            //     // var year = year+543;
+            //     // สร้างสตริงวันที่ในรูปแบบ 'dd/mm/yyyy'
+            //     var formattedDate = day + '/' + month + '/' + year;
+            //     // แสดงวันที่ในช่อง input
+            //     $('#datepicker input').val(formattedDate);
+            // });
         });
     </script>
     <style>
