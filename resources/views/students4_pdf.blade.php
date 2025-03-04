@@ -132,6 +132,10 @@
             พ.ศ. {{ Carbon::now()->addYears(543)->format('Y') }}
         </div>
         <div class="row col-100%">
+            {{-- <div class="alert alert-success text-center" role="alert"> --}}
+            <div class="alert text-center" role="alert" style="background-color: #D8BFD8; color: black;">
+                <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
+           </div>
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
                 {{ $students->surname }}</span>
