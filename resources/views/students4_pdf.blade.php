@@ -136,10 +136,13 @@
                         <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                     </span>
                 </div> --}}
-            <div class="container">
+            {{-- <div class="container">
                 <div class="text-center" style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
                      <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                 </div>
+            </div> --}}
+            <div class="container">
+                <div class="text-center" style="background-color: #D8BFD8; color: black;  padding: 5px 0; border-radius: 5px;  width: 100%; display: block; margin-left: 0.5px;  margin-right: 0.5px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน</div>
             </div>
             <div class="row col-100%">
             ชื่อนักเรียน<span class="underline">
