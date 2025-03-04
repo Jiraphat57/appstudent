@@ -61,7 +61,7 @@
         .underline {
             text-decoration: underline !important;
             margin-right: 0.5px !important;
-            margin-left: 0.5px !important;
+            margin-left: 1.0px !important;
             text-underline-offset: 0.5px !important;
             /* ระยะห่างทางด้านขวาของข้อความ*/
             /* margin-left: 2px; ระยะห่างทางด้านซ้ายของข้อความ  */
@@ -111,8 +111,6 @@
         <div class="row d-flex justify-content-center align-items-center"
             style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่
         </div>
-        {{-- <div class="row d-flex justify-content-center align-items-center col-100%">โรงเรียนพานพิทยาคม อําเภอพาน จังหวัดเชียงราย
-        </div> --}}
         <div class="row d-flex justify-content-center align-items-center col-100%"
             style="width: 100%; text-align: center;">เขียนที่โรงเรียนพานพิทยาคม อําเภอพาน จังหวัดเชียงราย
             วันที่ {{ Carbon::now()->translatedFormat('j') }}
@@ -124,8 +122,7 @@
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
                 {{ $students->surname }}</span>
-            ชั้น:&nbsp;{{$students->classlevel->classlevel ??'ไม่ระบุ'}}&nbsp;ห้อง:
-            .........รหัสนักเรียน:.......................เลขประจำตัวประชาชนนักเรียน:<span
+            ชั้น:&nbsp;{{$students->classlevel->classlevel ??'ไม่ระบุ'}}&nbsp;ห้อง:.........รหัสนักเรียน:.......................เลขประจำตัวประชาชนนักเรียน:<span
                 class="underline"> {{ $students->nationalid }}</span>
             <br> เชื้อชาติ:<span class="underline">{{$students->ethnicity->ethnicitie ?? 'ไม่ระบุ'}}</span>
             สัญชาติ:<span class="underline">{{$students->nationality->nationalitie ?? 'ไม่ระบุ'}}</span>ศาสนา:<span
@@ -154,11 +151,12 @@
                 class="underline">{{ $students->beingonlychild }}</span>มีพี่น้องร่วมบิดามารดาที่เรียนอยู่
             <span class="underline">{{ $students->sumsiblings }}คน</span><br>
             </div>
-            <div class="container text-center">
+            {{-- <div class="container text-center">
                 <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
                      <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน
                 </div>
-            </div>
+            </div> --}}
+            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน</div>
             <div class="row col-100%">
             <br>&nbsp;&nbsp;&nbsp; รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
@@ -175,11 +173,7 @@
             เดินทางมาโรงเรียน<span
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
             </div>
-            <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
-                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา
-                </div>
-            </div>
+            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา</div>
             <div class="row col-100%">
                 &nbsp;&nbsp;&nbsp;บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
@@ -220,11 +214,7 @@
                 มือถือ............................
             @endif
             </div>
-            <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
-                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก
-                </div>
-            </div>
+            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก</div>
             <div class="row col-100%">
             ลำดับที่ 1: &nbsp;<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
