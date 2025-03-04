@@ -8,16 +8,18 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
-        rel="stylesheet">
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"rel="stylesheet"> --}}
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet"> --}}
+    <!-- CSS ของ Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -190,13 +192,20 @@
                         <option value="15">อื่นๆ</option>
                     </select>
                 </div>
-                <div class="col-md-6 mb-2">
+                {{-- <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
                         <input type="text" name="dateofbirth" class="form-control"  data-data-language="th-th" placeholder="วันเกิดนักเรียน" >
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
                         </span>
                     </div>
+                </div> --}}
+                <div class="col-md-6 mb-2">
+                    <div class="input-group">
+                        <input type="text" id="datepicker" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
+                        <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                    </div>
+                    <p id="dayOfWeek" class="text-primary mt-2"></p> <!-- แสดงวันในสัปดาห์ -->
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
@@ -894,70 +903,53 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script> --}}
+     <!-- Flatpickr -->
+     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <<!-- moment.js และ moment-timezone -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    {{-- <script>
-        $(document).ready(function () {
-            moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
-
-            $('#datepicker input').datepicker({
-                format: 'dd/mm/yyyy',       // รูปแบบวันที่
-                autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
-                todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
-                language: 'th',             // ใช้ภาษาไทย
-            }).on('changeDate', function (e) {
-                let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
-                let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
-                let formattedDate = date.format('DD/MM') + '/' + thaiYear;
-                let dayOfWeek = date.format('dddd'); // แสดงวันในสัปดาห์
-
-                console.log("วันที่ที่เลือก:", formattedDate, "เป็นวัน", dayOfWeek);
-                $(this).val(formattedDate);
-            });
-
-            // เซ็ตค่าเริ่มต้น (ถ้ายังไม่มีค่า)
-            let currentValue = $('#datepicker input').val();
-            if (!currentValue) {
-                let today = moment.tz("Asia/Bangkok");
-                let thaiYear = today.year() + 543;
-                let formattedToday = today.format('DD/MM') + '/' + thaiYear;
-                $('#datepicker input').datepicker('setDate', formattedToday);
-            }
-        });
-    </script> --}}
     <script>
         $(document).ready(function () {
             moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
 
-            $('#datepicker input').datepicker({
-                format: 'dd/mm/yyyy',       // รูปแบบวันที่
-                autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
-                todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
-                language: 'th',             // ใช้ภาษาไทย
-            }).on('changeDate', function (e) {
-                let date = moment.tz(e.date, "Asia/Bangkok").add(543, 'years'); // แปลงเป็น พ.ศ.
-                let formattedDate = date.format('DD/MM/YYYY');
-                let dayOfWeek = date.format('dddd'); // วันในสัปดาห์
-
-                console.log("วันที่ที่เลือก:", formattedDate, "เป็นวัน", dayOfWeek);
-                $('#datepicker input').val(formattedDate);
-                $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
+            // กำหนดค่า Flatpickr
+            flatpickr("#datepicker", {
+                dateFormat: "d/m/Y",  // กำหนดรูปแบบเป็น วัน/เดือน/ปี
+                defaultDate: moment().add(543, 'years').format("DD/MM/YYYY"), // กำหนดให้ค่าเริ่มต้นเป็น พ.ศ.
+                onChange: function(selectedDates, dateStr, instance) {
+                    let selectedDate = moment(selectedDates[0]).tz("Asia/Bangkok").add(543, 'years');
+                    let dayOfWeek = selectedDate.format('dddd');
+                    
+                    $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
+                }
             });
 
-            // เซ็ตค่าเริ่มต้นเป็นวันนี้ (แปลง พ.ศ.)
-            let today = moment.tz("Asia/Bangkok").add(543, 'years');
-            let formattedToday = today.format('DD/MM/YYYY');
+            // เซ็ตค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
+            let today = moment().tz("Asia/Bangkok").add(543, 'years');
+            let todayFormatted = today.format("DD/MM/YYYY");
             let todayDayOfWeek = today.format('dddd');
 
-            $('#datepicker input').datepicker('setDate', formattedToday);
+            $('#datepicker').val(todayFormatted);
             $('#dayOfWeek').text("เป็นวัน " + todayDayOfWeek);
         });
     </script>
+
+    <style>
+        #datepicker {
+            width: 100%;
+            max-width: 300px;
+            font-size: 14px;
+            padding: 10px;
+        }
+        .input-group-text {
+            padding: 5px;
+            font-size: 14px;
+        }
+    </style>
 
     <style>
         #datepicker input {
