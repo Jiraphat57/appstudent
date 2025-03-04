@@ -995,12 +995,12 @@
 
     <script>
         // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
-        function convertToBuddhistYear(date) {
-            var year = date.getFullYear();
-            var buddhistYear = year + 543; // ค.ศ. + 543 = พ.ศ.
-            date.setFullYear(buddhistYear); // เปลี่ยนปีเป็น พ.ศ.
-            return date;
-        }
+        // function convertToBuddhistYear(date) {
+        //     var year = date.getFullYear();
+        //     var buddhistYear = year + 543; // ค.ศ. + 543 = พ.ศ.
+        //     date.setFullYear(buddhistYear); // เปลี่ยนปีเป็น พ.ศ.
+        //     return date;
+        // }
         $(document).ready(function() {
             // เมื่อคลิกที่ input เพื่อแสดง Datepicker
             $('#datepicker input').on('focus', function() {
@@ -1008,7 +1008,7 @@
                     format: 'dd/mm/yyyy',
                     autoclose: true,
                     todayHighlight: true,
-                    language: 'th', // ใช้ภาษาไทย
+                    language: 'th-th', // ใช้ภาษาไทย
                     thaiyear: true, // ใช้ พ.ศ.
                     beforeShow: function(input, inst) {
                         setTimeout(function() {
