@@ -901,7 +901,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
+    {{-- <script>
         $(document).ready(function () {
             moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
 
@@ -928,6 +928,34 @@
                 let formattedToday = today.format('DD/MM') + '/' + thaiYear;
                 $('#datepicker input').datepicker('setDate', formattedToday);
             }
+        });
+    </script> --}}
+    <script>
+        $(document).ready(function () {
+            moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
+
+            $('#datepicker input').datepicker({
+                format: 'dd/mm/yyyy',       // รูปแบบวันที่
+                autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
+                todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
+                language: 'th',             // ใช้ภาษาไทย
+            }).on('changeDate', function (e) {
+                let date = moment.tz(e.date, "Asia/Bangkok").add(543, 'years'); // แปลงเป็น พ.ศ.
+                let formattedDate = date.format('DD/MM/YYYY');
+                let dayOfWeek = date.format('dddd'); // วันในสัปดาห์
+
+                console.log("วันที่ที่เลือก:", formattedDate, "เป็นวัน", dayOfWeek);
+                $('#datepicker input').val(formattedDate);
+                $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
+            });
+
+            // เซ็ตค่าเริ่มต้นเป็นวันนี้ (แปลง พ.ศ.)
+            let today = moment.tz("Asia/Bangkok").add(543, 'years');
+            let formattedToday = today.format('DD/MM/YYYY');
+            let todayDayOfWeek = today.format('dddd');
+
+            $('#datepicker input').datepicker('setDate', formattedToday);
+            $('#dayOfWeek').text("เป็นวัน " + todayDayOfWeek);
         });
     </script>
 
