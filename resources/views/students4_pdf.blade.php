@@ -132,11 +132,16 @@
             พ.ศ. {{ Carbon::now()->addYears(543)->format('Y') }}
         </div>
         <div class="row col-100%">
-            {{-- <div class="alert alert-success text-center" role="alert"> --}}
-                <div class="text-center">
+         
+                {{-- <div class="text-center">
                     <span style="background-color: #D8BFD8; color: black; padding: 5px 10px; border-radius: 5px;">
                         <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                     </span>
+                </div> --}}
+                <div class="container text-center">
+                    <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
+                        <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
+                    </div>
                 </div>
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
