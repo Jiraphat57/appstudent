@@ -981,24 +981,27 @@
 
     <script>
         $(document).ready(function () {
+            moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
+
             $('#datepicker input').datepicker({
-                format: 'dd/mm/yyyy',       // กำหนดรูปแบบวันเดือนปี
+                format: 'dd/mm/yyyy',       // รูปแบบวันที่
                 autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
                 todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
                 language: 'th',             // ใช้ภาษาไทย
             }).on('changeDate', function (e) {
-                let date = e.date;
-                let thaiYear = date.getFullYear() + 543; // แปลง ค.ศ. เป็น พ.ศ.
-                let formattedDate = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + thaiYear;
+                let date = moment(e.date); // ใช้ moment.js ช่วยแปลงวันที่
+                let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                let formattedDate = date.format('DD/MM') + '/' + thaiYear;
+
                 $(this).val(formattedDate);
             });
 
-            // เช็คว่ามีค่าวันเกิดหรือไม่ ถ้าไม่มีให้เซ็ตวันที่ปัจจุบัน
+            // เซ็ตค่าเริ่มต้น (ถ้ายังไม่มีค่า)
             let currentValue = $('#datepicker input').val();
             if (!currentValue) {
-                let today = new Date();
-                let thaiYear = today.getFullYear() + 543;
-                let formattedToday = ('0' + today.getDate()).slice(-2) + '/' + ('0' + (today.getMonth() + 1)).slice(-2) + '/' + thaiYear;
+                let today = moment();
+                let thaiYear = today.year() + 543;
+                let formattedToday = today.format('DD/MM') + '/' + thaiYear;
                 $('#datepicker input').datepicker('setDate', formattedToday);
             }
         });
