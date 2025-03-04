@@ -264,7 +264,7 @@
             </div>
             <div class="row d-flex justify-content-center align-items-center col-100%"
                 style="width: 100%; text-align: center;">
-                &nbsp;pลงชื่อ.............................................................ผู้ปกครอง
+                &nbsp;ลงชื่อ.............................................................ผู้ปกครอง
                 <br> (………………………………………………….)
             </div>
         </div><div style="font-size: 18px;">

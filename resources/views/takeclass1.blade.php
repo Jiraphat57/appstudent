@@ -8,25 +8,23 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"rel="stylesheet"> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    rel="stylesheet">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
-    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet"> --}}
-     <!-- CSS ของ Flatpickr -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+<!-- Favicon -->
+<link href="img/favicon.ico" rel="icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<!-- Customized Bootstrap Stylesheet -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -192,20 +190,13 @@
                         <option value="15">อื่นๆ</option>
                     </select>
                 </div>
-                {{-- <div class="col-md-6 mb-2">
+                <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <input type="text" name="dateofbirth" class="form-control"  data-data-language="th-th" placeholder="วันเกิดนักเรียน" >
+                        <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
                         </span>
                     </div>
-                </div> --}}
-                <div class="col-md-6 mb-2">
-                    <div class="input-group">
-                        <input type="text" id="datepicker" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
-                        <span class="input-group-text"><i class="bi bi-calendar"></i></span>
-                    </div>
-                   
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
@@ -903,79 +894,42 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script> --}}
-    <!-- Flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/th.js"></script>
-
-     <!-- Day.js และ Thai Buddhist Calendar -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/localeData.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/locale/th.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script>
+    <<!-- moment.js และ moment-timezone -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data.min.js"></script>
+    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
     <script>
-        dayjs.locale('th');  // ตั้งค่าให้เป็นภาษาไทย
-        dayjs.extend(dayjs_plugin_buddhistEra);
-        dayjs.extend(dayjs_plugin_localeData);
-
         $(document).ready(function () {
-            let picker = flatpickr("#datepicker", {
-                dateFormat: "d/m/Y",
-                locale: "th",
-                allowInput: true,
-                onOpen: function(selectedDates, dateStr, instance) {
-                    $(".flatpickr-current-month input.cur-year").each(function () {
-                        let year = parseInt($(this).val());
-                        if (year < 2500) {
-                            $(this).val(year + 543);
-                        }
-                    });
-                },
-                onYearChange: function(selectedDates, dateStr, instance) {
-                    $(".flatpickr-current-month input.cur-year").each(function () {
-                        let year = parseInt($(this).val());
-                        if (year < 2500) {
-                            $(this).val(year + 543);
-                        }
-                    });
-                },
-                onChange: function(selectedDates, dateStr, instance) {
-                    if (selectedDates.length > 0) {
-                        let selectedDate = dayjs(selectedDates[0]);
-                        let buddhistDate = selectedDate.format("DD/MM") + "/" + (selectedDate.year() + 543); // เปลี่ยนเป็น พ.ศ.
-                        let dayOfWeek = selectedDate.format('dddd'); // ดึงวันในสัปดาห์ที่ถูกต้อง
+            moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
 
-                        $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
-                        $('#datepicker').val(buddhistDate);
-                    }
-                }
+            $('#datepicker input').datepicker({
+                format: 'dd/mm/yyyy',       // รูปแบบวันที่
+                autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
+                todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
+                language: 'th',             // ใช้ภาษาไทย
+            }).on('changeDate', function (e) {
+                let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
+                let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                let formattedDate = date.format('DD/MM') + '/' + thaiYear;
+                let dayOfWeek = date.format('dddd'); // แสดงวันในสัปดาห์
+
+                console.log("วันที่ที่เลือก:", formattedDate, "เป็นวัน", dayOfWeek);
+                $(this).val(formattedDate);
             });
 
-            // ตั้งค่าค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
-            let today = dayjs();
-            let todayFormatted = today.format("DD/MM") + "/" + (today.year() + 543);
-            let todayDayOfWeek = today.format('dddd');
-
-            $('#datepicker').val(todayFormatted);
-            $('#dayOfWeek').text("เป็นวัน " + todayDayOfWeek);
+            // เซ็ตค่าเริ่มต้น (ถ้ายังไม่มีค่า)
+            let currentValue = $('#datepicker input').val();
+            if (!currentValue) {
+                let today = moment.tz("Asia/Bangkok");
+                let thaiYear = today.year() + 543;
+                let formattedToday = today.format('DD/MM') + '/' + thaiYear;
+                $('#datepicker input').datepicker('setDate', formattedToday);
+            }
         });
     </script>
-
-    <style>
-        #datepicker {
-            width: 100%;
-            max-width: 300px;
-            font-size: 14px;
-            padding: 10px;
-        }
-        .input-group-text {
-            padding: 5px;
-            font-size: 14px;
-        }
-    </style>
 
     <style>
         #datepicker input {
