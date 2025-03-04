@@ -136,8 +136,8 @@
                         <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                     </span>
                 </div> --}}
-            <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
+            <div class="container">
+                <div class="text-center" style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
                      <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                 </div>
             </div>
