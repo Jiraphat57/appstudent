@@ -151,14 +151,10 @@
                 class="underline">{{ $students->beingonlychild }}</span>มีพี่น้องร่วมบิดามารดาที่เรียนอยู่
             <span class="underline">{{ $students->sumsiblings }}คน</span><br>
             </div>
-            {{-- <div class="container text-center">
-                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
-                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน
-                </div>
-            </div> --}}
+            
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน</div>
             <div class="row col-100%">
-            <br>&nbsp;&nbsp;&nbsp; รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
+            &nbsp;&nbsp;&nbsp; รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
             หมู่บ้าน<span class="underline">{{ $students->villagename }}</span>ตำบล<span
@@ -216,26 +212,26 @@
             </div>
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก</div>
             <div class="row col-100%">
-            ลำดับ1: &nbsp;<span
-                class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับ2: &nbsp;<span
-                class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับ3: &nbsp;<span
-                class="underline">{{ $students->highschool3->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            ลำดับ4: &nbsp;<span
-                class="underline">{{ $students->highschool4->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับ5: &nbsp;<span
-                class="underline">{{ $students->highschool5->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับ6: &nbsp;<span
-                class="underline">{{ $students->highschool6->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            ลำดับ7: &nbsp;<span
-                class="underline">{{ $students->highschool7->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับ8: &nbsp;<span
-                class="underline">{{ $students->highschool8->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
-            ลำดับ9: &nbsp;<span
-                class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br>
-            ลำดับ10: &nbsp;<span
-                class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
+            ลำดับ1:<span
+                class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>
+            ลำดับ2:<span
+                class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับ3:<span
+                class="underline">{{ $students->highschool3->curriculumhigh ?? 'ไม่ระบุ' }} </span>
+            ลำดับ4:<span
+                class="underline">{{ $students->highschool4->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับ5:<span
+                class="underline">{{ $students->highschool5->curriculumhigh ?? 'ไม่ระบุ' }} </span>
+            ลำดับ6:<span
+                class="underline">{{ $students->highschool6->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับ7:<span
+                class="underline">{{ $students->highschool7->curriculumhigh ?? 'ไม่ระบุ' }} </span>
+            ลำดับ8:<span
+                class="underline">{{ $students->highschool8->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
+            ลำดับ9:<span
+                class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>
+            ลำดับ10:<span
+                class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
             {{-- แผนการเรียนที่เลือก 11: &nbsp;<span
                 class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br><br> --}}
             <br>คํารับรองของผู้ปกครอง
