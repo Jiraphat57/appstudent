@@ -908,13 +908,17 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/th.js"></script>
 
-    <!-- Day.js และ Thai Buddhist Calendar -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
+     <!-- Day.js และ Thai Buddhist Calendar -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/localeData.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/locale/th.js"></script>
     <script src="js/main.js"></script>
 
     <script>
+        dayjs.locale('th');  // ตั้งค่าให้เป็นภาษาไทย
         dayjs.extend(dayjs_plugin_buddhistEra);
+        dayjs.extend(dayjs_plugin_localeData);
 
         $(document).ready(function () {
             let picker = flatpickr("#datepicker", {
@@ -939,21 +943,19 @@
                 },
                 onChange: function(selectedDates, dateStr, instance) {
                     if (selectedDates.length > 0) {
-                        let selectedDate = dayjs(selectedDates[0]).add(543, 'year'); 
-                        let dayOfWeek = selectedDate.format('dddd'); 
+                        let selectedDate = dayjs(selectedDates[0]);
+                        let buddhistDate = selectedDate.format("DD/MM") + "/" + (selectedDate.year() + 543); // เปลี่ยนเป็น พ.ศ.
+                        let dayOfWeek = selectedDate.format('dddd'); // ดึงวันในสัปดาห์ที่ถูกต้อง
 
                         $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
-
-                        // แปลงค่าปีให้เป็น พ.ศ. ใน input
-                        let formattedDate = selectedDate.format("DD/MM/YYYY");
-                        $('#datepicker').val(formattedDate);
+                        $('#datepicker').val(buddhistDate);
                     }
                 }
             });
 
-            // เซ็ตค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
-            let today = dayjs().add(543, 'year');
-            let todayFormatted = today.format("DD/MM/YYYY");
+            // ตั้งค่าค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
+            let today = dayjs();
+            let todayFormatted = today.format("DD/MM") + "/" + (today.year() + 543);
             let todayDayOfWeek = today.format('dddd');
 
             $('#datepicker').val(todayFormatted);
