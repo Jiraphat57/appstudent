@@ -131,18 +131,19 @@
             เดือน {{ Carbon::now()->translatedFormat('F') }}
             พ.ศ. {{ Carbon::now()->addYears(543)->format('Y') }}
         </div>
-        <div class="row col-100%">
+        
          
                 {{-- <div class="text-center">
                     <span style="background-color: #D8BFD8; color: black; padding: 5px 10px; border-radius: 5px;">
                         <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                     </span>
                 </div> --}}
-                <div class="container text-center">
-                    <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 100%;">
-                        <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
-                    </div>
+            <div class="container text-center">
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
+                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน
                 </div>
+            </div>
+            <div class="row col-100%">
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
                 {{ $students->surname }}</span>
@@ -175,7 +176,13 @@
             นักเรียนเป็นบุตรคนที่ <span
                 class="underline">{{ $students->beingonlychild }}</span>มีพี่น้องร่วมบิดามารดาที่เรียนอยู่
             <span class="underline">{{ $students->sumsiblings }}คน</span><br>
-            ==================================&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน&nbsp;&nbsp;&nbsp;======================================
+            </div>
+            <div class="container text-center">
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
+                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน
+                </div>
+            </div>
+            <div class="row col-100%">
             <br>&nbsp;&nbsp;&nbsp; รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
@@ -190,8 +197,13 @@
             <br>ใช้เวลามาโรงเรียน<span class="underline">{{ $students->traveltime }} นาที</span>
             เดินทางมาโรงเรียน<span
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
-                ==================================&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา&nbsp;&nbsp;&nbsp;======================================
-                <br>
+            </div>
+            <div class="container text-center">
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
+                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา
+                </div>
+            </div>
+            <div class="row col-100%">
                 &nbsp;&nbsp;&nbsp;บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }} </span>
@@ -230,8 +242,14 @@
                 .....................................................................................&nbsp;รายได้ผู้ปกครอง........................บาท/เดือน
                 มือถือ............................
             @endif
-            ===============================&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก&nbsp;&nbsp;==================================
-            <br>ลำดับที่ 1: &nbsp;<span
+            </div>
+            <div class="container text-center">
+                <div style="background-color: #D8BFD8; color: black; padding: 5px 0; border-radius: 5px; display: block; width: 90%;">
+                     <i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;อมูลแผนการเรียนที่นักเรียนได้เลือก
+                </div>
+            </div>
+            <div class="row col-100%">
+            ลำดับที่ 1: &nbsp;<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
             ลำดับที่ 2: &nbsp;<span
                 class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;
@@ -255,6 +273,7 @@
                 class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br><br> --}}
             <br>คํารับรองของผู้ปกครอง
             ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
+            </div>
             <span class="underline">
                 {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
             </span>ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......   
