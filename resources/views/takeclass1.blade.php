@@ -205,7 +205,7 @@
                         <input type="text" id="datepicker" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
                         <span class="input-group-text"><i class="bi bi-calendar"></i></span>
                     </div>
-                    <p id="dayOfWeek" class="text-primary mt-2"></p> <!-- แสดงวันในสัปดาห์ -->
+                   
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
@@ -904,9 +904,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script> --}}
-     <!-- Flatpickr -->
-     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <<!-- moment.js และ moment-timezone -->
+      <!-- Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/th.js"></script>
+
+    <!-- moment.js และ moment-timezone -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data.min.js"></script>
     <!-- Template Javascript -->
@@ -920,6 +922,7 @@
             flatpickr("#datepicker", {
                 dateFormat: "d/m/Y",  // กำหนดรูปแบบเป็น วัน/เดือน/ปี
                 defaultDate: moment().add(543, 'years').format("DD/MM/YYYY"), // กำหนดให้ค่าเริ่มต้นเป็น พ.ศ.
+                locale: "th", // ใช้ภาษาไทย
                 onChange: function(selectedDates, dateStr, instance) {
                     let selectedDate = moment(selectedDates[0]).tz("Asia/Bangkok").add(543, 'years');
                     let dayOfWeek = selectedDate.format('dddd');
