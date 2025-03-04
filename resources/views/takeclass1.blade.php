@@ -915,8 +915,51 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/locale/th.js"></script>
 
     <script src="js/main.js"></script>
-
     <script>
+        $(document).ready(function() {
+            // ตั้งค่าให้ datepicker ใช้ภาษาไทยและปี พ.ศ.
+            $.datepicker.setDefaults({
+                dateFormat: "dd/mm/yy",    // รูปแบบวันที่
+                firstDay: 0,               // เริ่มต้นจากวันอาทิตย์
+                monthNames: ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"],
+                monthNamesShort: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
+                dayNames: ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัสบดี", "ศุกร์", "เสาร์"],
+                dayNamesShort: ["อา.", "จ.", "อ.", "พ.", "พฤ.", "ศ.", "ส."],
+                dayNamesMin: ["อา.", "จ.", "อ.", "พ.", "พฤ.", "ศ.", "ส."],
+                changeMonth: true,
+                changeYear: true,
+                showAnim: "slideDown",
+                yearRange: "1900:2999" // กำหนดช่วงปี
+            });
+
+            // ตั้งค่าให้ datepicker ใช้ภาษาไทย
+            $('#datepicker').datepicker({
+                yearRange: "1900:2999", // กำหนดช่วงปี
+                onClose: function(dateText, inst) {
+                    var selectedDate = $(this).datepicker('getDate');
+                    if (selectedDate) {
+                        var dayOfWeek = selectedDate.toLocaleString("th-TH", { weekday: "long" });
+                        alert("คุณเลือกวันที่: " + dateText + " (" + dayOfWeek + ")");
+                    }
+                }
+            });
+
+            // ตั้งค่าเริ่มต้นให้แสดงวันนี้
+            var today = new Date();
+            $('#datepicker').datepicker("setDate", today);
+        });
+    </script>
+
+    <style>
+        #datepicker {
+            width: 100%;
+            max-width: 300px;
+            font-size: 14px;
+            padding: 10px;
+        }
+    </style>
+
+    {{-- <script>
         dayjs.locale('th');  // ตั้งค่าให้เป็นภาษาไทย
         dayjs.extend(dayjs_plugin_buddhistEra);
         dayjs.extend(dayjs_plugin_localeData);
@@ -991,7 +1034,7 @@
         .datepicker {
             font-size: 0.875rem !important;
         }
-    </style>
+    </style> --}}
 </body>
 
 
