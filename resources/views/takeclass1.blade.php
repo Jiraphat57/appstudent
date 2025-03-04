@@ -909,30 +909,31 @@
     <script src="https://npmcdn.com/flatpickr/dist/l10n/th.js"></script>
 
     <!-- moment.js และ moment-timezone -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data.min.js"></script>
-    <!-- Template Javascript -->
+<!-- Day.js และ Thai Buddhist Calendar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/buddhistEra.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
-        $(document).ready(function () {
-            moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
+        // เปิดใช้งาน Thai Buddhist Calendar
+        dayjs.extend(dayjs_plugin_buddhistEra);
 
+        $(document).ready(function () {
             // กำหนดค่า Flatpickr
             flatpickr("#datepicker", {
                 dateFormat: "d/m/Y",  // กำหนดรูปแบบเป็น วัน/เดือน/ปี
-                defaultDate: moment().add(543, 'years').format("DD/MM/YYYY"), // กำหนดให้ค่าเริ่มต้นเป็น พ.ศ.
+                defaultDate: dayjs().format("DD/MM/YYYY"), // ใช้ค่าปีไทยแท้ๆ
                 locale: "th", // ใช้ภาษาไทย
                 onChange: function(selectedDates, dateStr, instance) {
-                    let selectedDate = moment(selectedDates[0]).tz("Asia/Bangkok").add(543, 'years');
-                    let dayOfWeek = selectedDate.format('dddd');
+                    let selectedDate = dayjs(selectedDates[0]); // ใช้ Thai Buddhist Calendar คำนวณ
+                    let dayOfWeek = selectedDate.format('dddd'); // ได้ชื่อวันในสัปดาห์ที่ถูกต้อง
                     
                     $('#dayOfWeek').text("เป็นวัน " + dayOfWeek);
                 }
             });
 
             // เซ็ตค่าเริ่มต้นเป็นวันนี้ (พ.ศ.)
-            let today = moment().tz("Asia/Bangkok").add(543, 'years');
+            let today = dayjs();
             let todayFormatted = today.format("DD/MM/YYYY");
             let todayDayOfWeek = today.format('dddd');
 
