@@ -212,7 +212,7 @@
             ลำดับ6:<span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
             ลำดับ7:<span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span> --}}
             {{-- ลำดับที่ 8 <span class="underline">{{ $students->curriculumsec8->curriculumsec ?? 'ไม่ระบุ' }} </span><br> --}}
-            <br>คํารับรองของผู้ปกครอง
+            คํารับรองของผู้ปกครอง
             ข้าพเจ้า................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง 
         </div>
             <span class="underline"> {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}

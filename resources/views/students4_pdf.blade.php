@@ -201,7 +201,7 @@
             @endif
             </div>
             <div class="container row col-100%"> 
-            <div class="row col-100% text-center" style="font-size: 18px; "background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
+            <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
             <table>
                 <tbody>
                   <tr>
@@ -256,7 +256,7 @@
                 class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>
             ลำดับ10:<span
                 class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span> --}}
-            <br>คํารับรองของผู้ปกครอง
+            คํารับรองของผู้ปกครอง
             ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
             <span class="underline">
                 {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
