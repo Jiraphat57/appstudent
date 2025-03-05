@@ -108,7 +108,6 @@
         </div>   
         <div class="container row col-100%">  
         <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน</div>
-            {{-- <div class="row col-100%"> --}}
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
                 {{ $students->surname }}</span>
@@ -144,7 +143,7 @@
         {{-- </div> --}}
             <div class="container row col-100%">  
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน</div>
-            &nbsp;&nbsp;&nbsp; รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
+            รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
             หมู่บ้าน<span class="underline">{{ $students->villagename }}</span>ตำบล<span
@@ -161,15 +160,14 @@
             </div>
             <div class="container row col-100%"> 
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา</div>
-          
-                &nbsp;&nbsp;&nbsp;บิดาผู้ให้กำเนิด<span
+            บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }} </span>
             เลขประชาชน<span class="underline">{{ $students->field_citizenfather }}</span>
             อาชีพ<span class="underline"> {{ $students->occupationfather->occupation ?? 'ไม่ระบุ' }}</span>
             รายได้<span class="underline">{{ $students->income_father ?? 'ไม่ระบุ' }}บาท/เดือน </span>
             มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span><br>
-            &nbsp;&nbsp;&nbsp;มารดาผู้ให้กำเนิด<span
+            มารดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlemother->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_mother ?? 'ไม่ระบุ' }}&nbsp;&nbsp;{{ $students->surname_mother ?? 'ไม่ระบุ' }}</span>เลขประชาชน<span
                 class="underline">{{ $students->field_citizenmother ?? 'ไม่ระบุ' }}</span>
             อาชีพ<span class="underline">{{ $students->occupationmother->occupation ?? 'ไม่ระบุ' }}</span>
@@ -225,10 +223,10 @@
                 class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span>
             <br>คํารับรองของผู้ปกครอง
             ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
-            </div>
             <span class="underline">
                 {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
             </span>ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......   
+            </div>
             <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
                 <div>ขอให้คำรับรองต่อผู้อํานวยการโรงเรียนพานพิทยาคมว่า
                 <br>1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน

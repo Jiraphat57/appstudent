@@ -88,10 +88,9 @@
             </div>
             <!-- ภาพขวาสุด -->
             <div class="position-absolute" style="right: 0;">
-                <img class="img-fluid" style="max-width: 60px;" src="img/klipartz.png" alt="klipartz">
+                <img class="img-fluid" style="max-width: 100px;" src="img/klipartz.png" alt="klipartz">
             </div>
         </div>
-
         <div class="row d-flex justify-content-center align-items-center"
             style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่
         </div>
