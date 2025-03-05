@@ -177,13 +177,39 @@
             </div>
             <div class="container row col-100%"> 
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
-            ลำดับ1:<span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            <table class="row col-100% text-center" style="font-size: 18px; " color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;">
+                <tbody>
+                  <tr>
+                   <td>ลำดับ1</td>
+                    <td><span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
+                    <td>ลำดับ2</span></td>
+                    <td><span class="underline">{{ $students->curriculumsec2->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
+                  </tr>
+                  <tr>
+                    <td>ลำดับ3</td>
+                    <td><span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
+                    <td>ลำดับ4</td>
+                    <td><span class="underline">{{ $students->curriculumsec4->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
+                  </tr>
+              <tr>
+                    <td>ลำดับ5</td>
+                    <td><span class="underline">{{ $students->curriculumsec5->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
+                    <td>ลำดับ6</td>
+                    <td><span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
+                  </tr>
+                  <tr>
+                   <td>ลำดับ7</td>
+                    <td><span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
+                  </tr>
+                </tbody>
+              </table>
+            {{-- ลำดับ1:<span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span>
             ลำดับ2:<span class="underline">{{ $students->curriculumsec2->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
             ลำดับ3:<span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span>
             ลำดับ4:<span class="underline">{{ $students->curriculumsec4->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
             ลำดับ5:<span class="underline">{{ $students->curriculumsec5->curriculumsec ?? 'ไม่ระบุ' }} </span>
             ลำดับ6:<span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
-            ลำดับ7:<span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span>
+            ลำดับ7:<span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span> --}}
             {{-- ลำดับที่ 8 <span class="underline">{{ $students->curriculumsec8->curriculumsec ?? 'ไม่ระบุ' }} </span><br> --}}
             <br>คํารับรองของผู้ปกครอง
             ข้าพเจ้า................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง 
