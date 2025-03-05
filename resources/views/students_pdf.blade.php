@@ -178,7 +178,7 @@
             </div>
             <div class="container row col-100%"> 
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
-            <table class="row col-100% text-center" style="font-size: 18px; " color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;">
+            <table>
                 <tbody>
                   <tr>
                    <td>ลำดับ1</td>
