@@ -107,7 +107,7 @@
             พ.ศ. {{ Carbon::now()->addYears(543)->format('Y') }}
         </div>   
         <div class="container row col-100%">  
-        <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน</div>
+        <div class="row col-100% text-center" style="font-size: 18px;"background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน</div>
             ชื่อนักเรียน<span class="underline">
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
                 {{ $students->surname }}</span>
@@ -142,7 +142,7 @@
         </div>
         {{-- </div> --}}
             <div class="container row col-100%">  
-            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน</div>
+            <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน</div>
             รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
@@ -159,7 +159,7 @@
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
             </div>
             <div class="container row col-100%"> 
-            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา</div>
+            <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา</div>
             บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }} </span>
@@ -200,7 +200,7 @@
             @endif
             </div>
             <div class="container row col-100%"> 
-            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก</div>
+            <div class="row col-100% text-center" style="font-size: 18px; "background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
             ลำดับ1:<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>
             ลำดับ2:<span
@@ -234,7 +234,7 @@
                 ให้หมั่นศึกษาเล่าเรียนและประพฤติตนให้ถูกต้องตามระเบียบของโรงเรียน
                 <br>2. ข้าพเจ้าจะอุปถัมภ์ค่าเล่าเรียน เครื่องแต่งกาย
                 และอุปกรณ์การเรียนของนักเรียนในความปกครองให้ได้เรียน ตลอดไปจนสำเร็จการศึกษา
-                <br>3. ถ้านักเรียนที่ข้าพเจ้ารับเป็นผู้ปกครองกระทำผิดต่อระเบียบของโรงเรียนทุกกรณีข้าพเจ้ายินดีให้ทางโรงเรียนลงโทษนักเรียน<br>ตามระเบียบของทางโรงเรียนได้
+                <br>3. ถ้านักเรียนที่ข้าพเจ้ารับเป็นผู้ปกครองกระทำผิดต่อระเบียบโรงเรียนทุกกรณีข้าพเจ้ายินดีให้ทางโรงเรียนลงโทษนักเรียนตามระเบียบของทางโรงเรียนได้
                 <br>4. ข้าพเจ้าขอรับรองว่า หากโรงเรียนต้องการพบข้าพเจ้าเพื่อปรึกษาหารือ หรือรับทราบความประพฤติของ
                 นักเรียนในความปกครองของข้าพเจ้า ข้าพเจ้าจะรีบมาทันที
                 <br>5. ข้าพเจ้าจะส่งเสริมนักเรียนในความปกครองให้นักเรียนได้ร่วมกิจกรรมของโรงเรียน และพัฒนาตนเองในการสร้างชื่อเสียงให้แก่โรงเรียน

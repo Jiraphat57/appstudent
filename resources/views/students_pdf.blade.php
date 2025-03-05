@@ -176,7 +176,7 @@
             @endif <br>
             </div>
             <div class="container row col-100%"> 
-            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก</div>
+            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
             ลำดับ1:<span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span>
             ลำดับ2:<span class="underline">{{ $students->curriculumsec2->curriculumsec ?? 'ไม่ระบุ' }} </span><br>
             ลำดับ3:<span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span>
@@ -189,7 +189,7 @@
             ข้าพเจ้า................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง 
         </div>
             <span class="underline"> {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
-            </span><br>ชั้น<span class="underline">{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}</span>ห้อง............
+            </span>ชั้น<span class="underline">{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}</span>ห้อง............
             ขอให้คำรับรองต่อผู้อํานวยการ
             โรงเรียนพานพิทยาคมว่า
             <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
@@ -198,7 +198,7 @@
                 ให้หมั่นศึกษาเล่าเรียนและประพฤติตนให้ถูกต้องตามระเบียบของโรงเรียน
                 <br>2. ข้าพเจ้าจะอุปถัมภ์ค่าเล่าเรียน เครื่องแต่งกาย
                 และอุปกรณ์การเรียนของนักเรียนในความปกครองให้ได้เรียน ตลอดไปจนสำเร็จการศึกษา
-                <br>3. ถ้านักเรียนที่ข้าพเจ้ารับเป็นผู้ปกครองกระทำผิดต่อระเบียบของโรงเรียนทุกกรณีข้าพเจ้ายินดีให้ทางโรงเรียนลงโทษนักเรียนตามระเบียบของทางโรงเรียนได้
+                <br>3. ถ้านักเรียนที่ข้าพเจ้ารับเป็นผู้ปกครองกระทำผิดต่อระเบียบโรงเรียนทุกกรณีข้าพเจ้ายินดีให้ทางโรงเรียนลงโทษนักเรียนตามระเบียบของทางโรงเรียนได้
                 <br>4. ข้าพเจ้าขอรับรองว่า หากโรงเรียนต้องการพบข้าพเจ้าเพื่อปรึกษาหารือ หรือรับทราบความประพฤติของ
                 นักเรียนในความปกครองของข้าพเจ้า ข้าพเจ้าจะรีบมาทันที
                 <br>5. ข้าพเจ้าจะส่งเสริมนักเรียนในความปกครองให้นักเรียนได้ร่วมกิจกรรมของโรงเรียน และพัฒนาตนเองในการ
@@ -212,7 +212,7 @@
                 <br> (………………………………………………….)
             </div>
         </div>
-        <div style="font-size: 18px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
+        <div style="font-size: 20px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
         ตรวจหลักฐานการมอบตัว (สำหรับเจ้าหน้าที่รับมอบตัว)
         ปพ.1 ตัวจริงพร้อมสำเนาพร้อมสำเนา 1 ชุด
         <br>1.สำเนาทะเบียนบ้านของนักเรียน บิดาผู้ให้กำเนิด มารดาผู้ให้กำเนิด
