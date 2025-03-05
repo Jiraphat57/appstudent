@@ -3,7 +3,7 @@
     Carbon::setLocale('th');
 @endphp
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="utf-8">
@@ -13,26 +13,15 @@
     <meta content="" name="description">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-    <!-- Google Web Fonts -->
-    {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
-        rel="stylesheet"> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@100;400&display=swap" rel="stylesheet">
-    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Other meta and link tags -->
     <style>
         /* Insert the A4 style code here */
         @page {
@@ -153,9 +142,8 @@
             <span class="underline">{{ $students->sumsiblings }}คน</span><br>
         </div>
         {{-- </div> --}}
-            
+            <div class="container row col-100%">  
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน</div>
-            <div class="row col-100%">
             &nbsp;&nbsp;&nbsp; รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
@@ -171,8 +159,9 @@
             เดินทางมาโรงเรียน<span
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
             </div>
+            <div class="container row col-100%"> 
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา</div>
-            <div class="row col-100%">
+          
                 &nbsp;&nbsp;&nbsp;บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }} </span>
@@ -212,8 +201,8 @@
                 มือถือ............................
             @endif
             </div>
+            <div class="container row col-100%"> 
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนได้เลือก</div>
-            <div class="row col-100%">
             ลำดับ1:<span
                 class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>
             ลำดับ2:<span
@@ -233,9 +222,7 @@
             ลำดับ9:<span
                 class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>
             ลำดับ10:<span
-                class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
-            {{-- แผนการเรียนที่เลือก 11: &nbsp;<span
-                class="underline">{{ $students->highschool11->curriculumhigh ?? 'ไม่ระบุ' }} </span>&nbsp;&nbsp;<br><br> --}}
+                class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span>
             <br>คํารับรองของผู้ปกครอง
             ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
             </div>
@@ -258,7 +245,8 @@
                 </div>
                 <div class="row d-flex justify-content-center align-items-center col-100%" style="width: 100%; text-align: center;">
                 &nbsp;ลงชื่อ.............................................................ผู้ปกครอง
-                <br> (………………………………………………….)</div></div>
+                <br> (………………………………………………….)</div>
+            </div>
                 <div style="font-size: 18px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
                 ตรวจหลักฐานการมอบตัว (สำหรับเจ้าหน้าที่รับมอบตัว)
                 ปพ.1 ตัวจริงพร้อมสำเนาพร้อมสำเนา 1 ชุด
