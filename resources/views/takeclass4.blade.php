@@ -771,7 +771,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -787,7 +787,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -803,7 +803,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -819,7 +819,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -835,7 +835,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -851,7 +851,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -867,7 +867,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -883,7 +883,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -899,7 +899,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-2">
@@ -915,7 +915,7 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
                     {{-- <div class="col-md-6 mb-2">
