@@ -200,7 +200,7 @@
                             <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาจีน CEP Chinese Excellence Program</p>
                             <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP Japanese Excellence Program</p>
                             <p><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP Vocational Skills Program</p>
-                            <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาไทย อังกฤษ สังคม TESEP Thai, English & Social Studies Excellence Program</p>
+                            <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>แผนการเรียนเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TESP Thai, Social Studies Excellence Program</p>
                         </div>
                     </div>			
                 </div> 
