@@ -114,6 +114,7 @@ return new class extends Migration
             $table->string('nameeng')->nullable();
             $table->string('surnameeng')->nullable();
             $table->string('nationalid')->nullable();
+            $table->string('phonestudent1', 10)->nullable();
             $table->foreignId('religions_id')->constrained('religions')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('nationalities_id')->constrained('nationalities')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('ethnicities_id')->constrained('ethnicities')->onUpdate('cascade')->onDelete('restrict');
@@ -149,14 +150,14 @@ return new class extends Migration
             $table->string('field_citizenfather')->nullable();
             $table->foreignId('occupationfather_id')->constrained('occupations')->onUpdate('cascade')->onDelete('restrict');
             $table->string('income_father', 10)->nullable();
-            $table->string('phone_father', 15)->nullable();
+            $table->string('phone_father', 10)->nullable();
             $table->foreignId('typetitlesmother_id')->constrained('typetitles')->onUpdate('cascade')->onDelete('restrict'); //คำนำหน้ามารดา
             $table->string('name_mother')->nullable();
             $table->string('surname_mother')->nullable();
             $table->string('field_citizenmother')->nullable();
             $table->foreignId('occupationmother_id')->constrained('occupations')->onUpdate('cascade')->onDelete('restrict');
             $table->string('income_mother', 10)->nullable();
-            $table->string('phone_mother', 15)->nullable();
+            $table->string('phone_mother', 10)->nullable();
             $table->foreignId('maritalstatuses_id')->constrained('maritalstatuses')->onUpdate('cascade')->onDelete('restrict');
             $table->string('parent_id')->nullable();
             $table->foreignId('secondaryschool1_id')->nullable()->constrained('secondaryschools')->onUpdate('cascade')->onDelete('restrict');

@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center"
-            style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่
+            style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่/ใบมอบตัว
         </div>
         <div class="row d-flex justify-content-center align-items-center col-100%"
             style="width: 100%; text-align: center;">เขียนที่โรงเรียนพานพิทยาคม อําเภอพาน จังหวัดเชียงราย
@@ -113,13 +113,13 @@
                 {{ $students->typetitle->typetitle??'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
                 {{ $students->surname }}</span>
             ชั้น:&nbsp;{{$students->classlevel->classlevel ??'ไม่ระบุ'}}&nbsp;ห้อง:.........รหัสนักเรียน:.......................เลขประจำตัวประชาชนนักเรียน:<span
-                class="underline"> {{ $students->nationalid }}</span>
+                class="underline"> {{ $students->nationalid }}</span> มือถือ:<span class="underline"> {{ $students->phonestudent4 }}</span>
             <br> เชื้อชาติ:<span class="underline">{{$students->ethnicity->ethnicitie ?? 'ไม่ระบุ'}}</span>
             สัญชาติ:<span class="underline">{{$students->nationality->nationalitie ?? 'ไม่ระบุ'}}</span>ศาสนา:<span
                 class="underline">
                 {{ $students->religion->religion ?? 'ไม่ระบุ' }}</span>วันเดือนปีเกิด:<span class="underline">
                 {{ $students->dateofbirth? Carbon::parse($students->dateofbirth)->addYears(543)->translatedFormat('d/m/Y'): 'ไม่ระบุ' }}</span>
-            จังหวัด:<span class="underline">{{ $students->provincebirth->province ?? 'ไม่ระบุ' }}</span>
+            จังหวัดเกิด:<span class="underline">{{ $students->provincebirth->province ?? 'ไม่ระบุ' }}</span>
             หมู่เลือด:<span class="underline">{{ $students->bloodtype->bloodtype ?? 'ไม่ระบุ' }}</span>
             น้ำหนัก:<span class="underline">{{ $students->weight }}</span>
             ส่วนสูง:<span class="underline">{{ $students->height }}</span>
@@ -143,7 +143,7 @@
         </div>
         {{-- </div> --}}
             <div class="container row col-100%">  
-            <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ปัจจุบันของนักเรียน</div>
+            <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ที่อยู่ตามทะเบียนบ้าน/ที่อยู่ปัจจุบันของนักเรียน</div>
             รหัสประจำบ้าน<span class="underline">{{ $students->houseid }}</span>
             ที่<span class="underline">{{ $students->housenumber }}</span>หมู่<span
                 class="underline">{{ $students->villagenumber }}</span>
@@ -160,7 +160,7 @@
                 class="underline">{{ $students->travelschool1->nametravelschool ?? 'ไม่ระบุ' }}</span><br>
             </div>
             <div class="container row col-100%"> 
-            <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา</div>
+            <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลบิดาและมารดา/ผู้ปกครอง</div>
             บิดาผู้ให้กำเนิด<span
                 class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }} </span>
@@ -236,35 +236,20 @@
                   </tr>
                 </tbody>
             </table>
-            {{-- ลำดับ1:<span
-                class="underline">{{ $students->highschool1->curriculumhigh ?? 'ไม่ระบุ' }} </span>
-            ลำดับ2:<span
-                class="underline">{{ $students->highschool2->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
-            ลำดับ3:<span
-                class="underline">{{ $students->highschool3->curriculumhigh ?? 'ไม่ระบุ' }} </span>
-            ลำดับ4:<span
-                class="underline">{{ $students->highschool4->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
-            ลำดับ5:<span
-                class="underline">{{ $students->highschool5->curriculumhigh ?? 'ไม่ระบุ' }} </span>
-            ลำดับ6:<span
-                class="underline">{{ $students->highschool6->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
-            ลำดับ7:<span
-                class="underline">{{ $students->highschool7->curriculumhigh ?? 'ไม่ระบุ' }} </span>
-            ลำดับ8:<span
-                class="underline">{{ $students->highschool8->curriculumhigh ?? 'ไม่ระบุ' }} </span><br>
-            ลำดับ9:<span
-                class="underline">{{ $students->highschool9->curriculumhigh ?? 'ไม่ระบุ' }} </span>
-            ลำดับ10:<span
-                class="underline">{{ $students->highschool10->curriculumhigh ?? 'ไม่ระบุ' }} </span> --}}
-            คํารับรองของผู้ปกครอง
+            {{-- คํารับรองของผู้ปกครอง
             ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
             <span class="underline">
                 {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
-            </span>ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......   
+            ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......โดยข้าพเจ้ามีความเกี่ยวข้องเป็น.................... </span>    --}}
             </div>
             <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
-                <div>ขอให้คำรับรองต่อผู้อํานวยการโรงเรียนพานพิทยาคมว่า
-                <br>1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน
+                <div>คํารับรองของผู้ปกครอง
+                    ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
+                    <span class="underline">
+                        {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
+                    ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......โดยข้าพเจ้ามีความเกี่ยวข้องเป็น.................... ขอให้คำรับรองต่อผู้อํานวยการโรงเรียนพานพิทยาคมว่า</span>  
+                    
+                1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน
                 โดยข้าพเจ้าจะเป็นผู้คอยตักเตือนนักเรียนที่ข้าพเจ้ารับเป็น ผู้ปกครอง
                 ให้หมั่นศึกษาเล่าเรียนและประพฤติตนให้ถูกต้องตามระเบียบของโรงเรียน
                 <br>2. ข้าพเจ้าจะอุปถัมภ์ค่าเล่าเรียน เครื่องแต่งกาย

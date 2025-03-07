@@ -136,6 +136,11 @@
                         aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน">
                 </div>
                 <div class="col-md-6 mb-2">
+                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
+                    <input type="text" name="phonestudent1" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือ">
+                </div>
+                <div class="col-md-6 mb-2">
                     <select id="sel_religion" name="religions_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>ศาสนา</option>

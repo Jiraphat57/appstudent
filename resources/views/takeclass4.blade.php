@@ -136,6 +136,11 @@
                         aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน">
                 </div>
                 <div class="col-md-6 mb-2">
+                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
+                    <input type="text" name="phonestudent4" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือ">
+                </div>
+                <div class="col-md-6 mb-2">
                     <select id="sel_religion" name="religions_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>ศาสนา</option>
@@ -918,24 +923,6 @@
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
                     </div>
-                    {{-- <div class="col-md-6 mb-2">
-                        <select id="sel_highschool11" name="highschool11_id" class="form-select"
-                            aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 11</option>
-                            <option value="1">1.ห้องวิทย์พิเศษ</option>
-                            <option value="2">2.ห้องวิทย์พลังสิบ</option>
-                            <option value="3">3.วิทย์คณิต</option>
-                            <option value="4">4.ศิลป์-คำนวณ</option>
-                            <option value="5">5.ศิลป์-คอมพิวเตอร์</option>
-                            <option value="6">6.ศิลป์-จีน</option>
-                            <option value="7">7.ศิลป์-ญี่ปุ่น</option>
-                            <option value="8">8.ศิลป์-อังกฤษ</option>
-                            <option value="9">9.ศิลป์-ทั่วไป</option>
-                            <option value="10">10.ทวิศึกษา-เทคโนโลยีดิจิตอล</option>
-                            <option value="11">11.ทวิศึกษา-ทั่วไป</option>
-                        </select>
-                        </select>
-                    </div> --}}
                 </div>
             </div>
             <div class="container ">

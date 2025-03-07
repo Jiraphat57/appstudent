@@ -104,6 +104,7 @@ class Student4Controller extends Controller
             'nationalid' => 'required|max:13',
             'religions_id' => 'required|numeric',
             'nationalities_id' => 'required|numeric',
+            'phonestudent4' => 'required|max:10',
             'ethnicities_id' => 'required|numeric',
             'dateofbirth' => 'required|date_format:d/m/Y', // ตรวจสอบรูปแบบเป็น d/m/Y
             'provincesbirth_id' => 'required|numeric',
@@ -180,6 +181,7 @@ class Student4Controller extends Controller
         $students->nationalid = $request->input('nationalid');
         $students->religions_id = $request->input('religions_id');
         $students->nationalities_id = $request->input('nationalities_id');
+        $students->phonestudent4 = $request->input('phonestudent4');
         $students->ethnicities_id = $request->input('ethnicities_id');
         $students->dateofbirth = $dateOfBirth; // ใช้วันที่ที่แปลงแล้ว
         $students->provincesbirth_id = $request->input('provincesbirth_id');
@@ -295,6 +297,7 @@ class Student4Controller extends Controller
             'nationalid' => 'required|max:13',
             'religions_id' => 'required|numeric',
             'nationalities_id' => 'required|numeric',
+            'phonestudent4' => 'required|max:10',
             'ethnicities_id' => 'required|numeric',
             // 'dateofbirth' => 'required|date_format:d/m/Y', // ตรวจสอบรูปแบบเป็น d/m/Y
             'provincesbirth_id' => 'required|numeric',
