@@ -962,54 +962,52 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        // ฟังก์ชันแปลงปีจาก ค.ศ. เป็น พ.ศ.
-        function convertToBuddhistYear(date) {
-            var year = date.getFullYear();
-            var buddhistYear = year + 543; // ค.ศ. + 543 = พ.ศ.
-            date.setFullYear(buddhistYear); // เปลี่ยนปีเป็น พ.ศ.
-            return date;
-        }
+        $(document).ready(function () {
+            moment.locale('th'); // ตั้งค่า moment ให้ใช้ภาษาไทย
 
-        $(document).ready(function() {
-            // เมื่อคลิกที่ input เพื่อแสดง Datepicker
-            $('#datepicker input').on('focus', function() {
-                $(this).datepicker({
-                    format: 'dd/mm/yyyy',
-                    autoclose: true,
-                    todayHighlight: true,
-                    language: 'th', // ใช้ภาษาไทย
-                    thaiyear: true, // ใช้ พ.ศ.
-                    beforeShow: function(input, inst) {
-                        setTimeout(function() {
-                            inst.dpDiv.css({
-                                'top': '0px',
-                                'z-index': '9999'
-                            });
-                        }, 0);
-                    }
-                }).datepicker('setDate', new Date(new Date().getFullYear() + 543, new Date().getMonth(), new Date().getDate())); // แสดง Datepicker
+            $('#datepicker input').datepicker({
+                format: 'dd/mm/yyyy',       // รูปแบบวันที่
+                autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
+                todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
+                language: 'th',             // ใช้ภาษาไทย
+                container: 'body', // ป้องกัน Datepicker ซ่อนอยู่หลัง Element อื่น
+                orientation: 'bottom', // ให้แสดงข้างล่างของ input
+            }).on('changeDate', function (e) {
+                let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
+                let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                let formattedDate = date.format('DD/MM') + '/' + thaiYear;
+                let dayOfWeek = date.format('dddd'); // แสดงวันในสัปดาห์
+
+                console.log("วันที่ที่เลือก:", formattedDate, "เป็นวัน", dayOfWeek);
+                $(this).val(formattedDate);
             });
 
-            // เมื่อเลือกวันที่จาก Datepicker
-            $('#datepicker input').on('changeDate', function(e) {
-                // แปลงปีเป็น พ.ศ. ทุกครั้งที่เลือกวันที่
-                var selectedDate = e.date;
-                var buddhistDate = convertToBuddhistYear(selectedDate);
-
-                // ดึงข้อมูลวันที่ เดือน ปี
-                var day = buddhistDate.getDate().toString().padStart(2, '0');
-                var month = (buddhistDate.getMonth() + 1).toString().padStart(2, '0'); // เดือนเริ่มจาก 0
-                var year = buddhistDate.getFullYear();
-
-                // สร้างสตริงวันที่ในรูปแบบ 'dd/mm/yyyy'
-                var formattedDate = day + '/' + month + '/' + year;
-
-                // แสดงวันที่ในช่อง input
-                $('#datepicker input').val(formattedDate);
-            });
+            // เซ็ตค่าเริ่มต้น (ถ้ายังไม่มีค่า)
+            let currentValue = $('#datepicker input').val();
+            if (!currentValue) {
+                let today = moment.tz("Asia/Bangkok");
+                let thaiYear = today.year() + 543;
+                let formattedToday = today.format('DD/MM') + '/' + thaiYear;
+                $('#datepicker input').datepicker('setDate', formattedToday);
+            }
         });
     </script>
 
+    <style>
+        #datepicker input {
+            width: 100%;
+            max-width: 300px;
+            font-size: 14px;
+            padding: 10px;
+        }
+        #datepicker .input-group-text {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .datepicker {
+            font-size: 0.875rem !important;
+        }
+    </style>
 
 </body>
 
