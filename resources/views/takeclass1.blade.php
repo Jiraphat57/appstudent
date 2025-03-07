@@ -915,6 +915,8 @@
                 autoclose: true,            // ปิด popup อัตโนมัติเมื่อเลือกวันที่
                 todayHighlight: true,       // ไฮไลท์วันที่ปัจจุบัน
                 language: 'th',             // ใช้ภาษาไทย
+                container: 'body', // ป้องกัน Datepicker ซ่อนอยู่หลัง Element อื่น
+                orientation: 'bottom', // ให้แสดงข้างล่างของ input
             }).on('changeDate', function (e) {
                 let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
                 let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
