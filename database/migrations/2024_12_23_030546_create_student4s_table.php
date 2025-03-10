@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('nameeng')->nullable();
             $table->string('surnameeng')->nullable();
             $table->string('nationalid')->nullable();
-            $table->string('phonestudent4', 10)->nullable();
+            $table->string('phone4student', 10)->nullable();
             $table->foreignId('religions_id')->constrained('religions')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('nationalities_id')->constrained('nationalities')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('ethnicities_id')->constrained('ethnicities')->onUpdate('cascade')->onDelete('restrict');

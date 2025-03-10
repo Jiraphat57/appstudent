@@ -23,7 +23,7 @@ class Students extends Model
 {
     use HasFactory;
     protected $table = 'students';
-    protected $fillable = ['classlevels_id','typetitles_id','name','surname','nameeng','surnameeng','nationalid','phonestudent1','religions_id','nationalities_id','ethnicities_id','dateofbirth','provincesbirth_id','bloodtypes_id','travelschool1s_id','weight',
+    protected $fillable = ['classlevels_id','typetitles_id','name','surname','nameeng','surnameeng','nationalid','phone1student','religions_id','nationalities_id','ethnicities_id','dateofbirth','provincesbirth_id','bloodtypes_id','travelschool1s_id','weight',
 'height','disability','previousschool','provinceschool_id','beingonlychild','brothers','youngerbrother','oldersister','sister','sumsiblings','houseid','housenumber','villagenumber','villagename','district','subdistrict','provinces_id','postalcode','typeresidences_id','distancelatyangroad','traveltime',
 'travelschool1s_id','typetitlesfather_id','name_father','surname_father','field_citizenfather','occupationfather_id','income_father','phone_father','typetitlesmother_id','name_mother','surname_mother','field_citizenmother','occupationmother_id','income_mother','phone_mother','maritalstatuses_id','parent_id',
 'secondaryschool1_id','secondaryschool2_id','secondaryschool3_id','secondaryschool4_id','secondaryschool5_id','secondaryschool6_id','secondaryschool7_id'];
