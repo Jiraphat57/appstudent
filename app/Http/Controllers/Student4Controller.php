@@ -95,15 +95,15 @@ class Student4Controller extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'classlevels_id' => 'required|numeric',
-            'typetitles_id' => 'required|numeric',
-            'name' => 'required|max:90',
-            'surname' => 'required|max:90',
-            'nameeng' => 'required|max:90',
-            'surnameeng' => 'required|max:90',
-            'nationalid' => 'required|max:13',
-            'religions_id' => 'required|numeric',
-            'nationalities_id' => 'required|numeric',
+            // 'classlevels_id' => 'required|numeric',
+            // 'typetitles_id' => 'required|numeric',
+            // 'name' => 'required|max:90',
+            // 'surname' => 'required|max:90',
+            // 'nameeng' => 'required|max:90',
+            // 'surnameeng' => 'required|max:90',
+            // 'nationalid' => 'required|max:13',
+            // 'religions_id' => 'required|numeric',
+            // 'nationalities_id' => 'required|numeric',
             // 'phone4student' => 'required|max:10',
             // 'ethnicities_id' => 'required|numeric',
             // 'dateofbirth' => 'required|date_format:d/m/Y', // ตรวจสอบรูปแบบเป็น d/m/Y
