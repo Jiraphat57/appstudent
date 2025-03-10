@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center"
-            style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่/ใบมอบตัว
+            style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่/ใบมอบตัว&nbsp;&nbsp;เลขที่:<span class="underline">{{ $students->id }}</span>
         </div>
         {{-- <div class="row d-flex justify-content-center align-items-center col-100%">โรงเรียนพานพิทยาคม อําเภอพาน จังหวัดเชียงราย
         </div> --}}
