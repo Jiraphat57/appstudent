@@ -96,7 +96,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-10 text-start">
                                     <p class="fs-3 fw-medium text-primary text-uppercase animated slideInRight">โรงเรียนพานพิทยายม</p>
-                                    <h1 class="display-9 text-white mb-5 animated slideInRight">เปิดรับสมัครนักเรียน 12 ก.พ.-13 มี.ค. 2568</h1>
+                                    <h1 class="display-9 text-white mb-5 animated slideInRight">เปิดรับสมัครนักเรียน 20 - 24 มี.ค. 2568</h1>
                                     {{-- <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">กดสมัครนักเรียน</a> --}}
                                 </div>
                             </div>
