@@ -109,8 +109,8 @@
             ชื่อนักเรียน:<span class="underline">{{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
             {{ $students->surname }}</span>
             ชั้น:&nbsp;{{$students->classlevel->classlevel ??'ไม่ระบุ'}}&nbsp;ห้อง:
-            .......รหัสนักเรียน:....................เลขประจำตัวประชาชนนักเรียน:<span class="underline"> {{ $students->nationalid }}</span>มือถือ:<span class="underline"> {{ $students->phonestudent1 }}</span>
-            <br> เชื้อชาติ:<span class="underline">{{ $students->ethnicity->ethnicitie ?? 'ไม่ระบุ' }}</span>
+            .......รหัสนักเรียน:....................เลขประจำตัวประชาชนนักเรียน:<span class="underline"> {{ $students->nationalid }}</span>มือถือ:<span class="underline"> {{ $students->phone1student }}</span>
+            เชื้อชาติ:<span class="underline">{{ $students->ethnicity->ethnicitie ?? 'ไม่ระบุ' }}</span>
             สัญชาติ:<span class="underline">{{ $students->nationality->nationalitie ?? 'ไม่ระบุ' }}</span>ศาสนา:<span class="underline">
             {{ $students->religion->religion ?? 'ไม่ระบุ' }}</span> วันเดือนปีเกิด:<span class="underline">
             {{ $students->dateofbirth? Carbon::parse($students->dateofbirth)->addYears(543)->translatedFormat('d/m/Y'): 'ไม่ระบุ' }}</span>
