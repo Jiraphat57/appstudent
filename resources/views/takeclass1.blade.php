@@ -137,7 +137,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
-                    <input type="text" name="phonestudent1" class="form-control" aria-label="Sizing example input"
+                    <input type="text" name="phone1student" class="form-control" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือ">
                 </div>
                 <div class="col-md-6 mb-2">
