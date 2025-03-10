@@ -155,7 +155,7 @@
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">มือถือ</label>
                         {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
-                        <input type="text" name="phonestudent4" class="form-control"
+                        <input type="text" name="phone4student" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                             value="{{ old('nationalid', $students->phone4student ?? '') }}">
                     </div>
