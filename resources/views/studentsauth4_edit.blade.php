@@ -157,7 +157,7 @@
                         {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
                         <input type="text" name="phonestudent4" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                            value="{{ old('nationalid', $students->phonestudent4 ?? '') }}">
+                            value="{{ old('nationalid', $students->phone4student ?? '') }}">
                     </div>
                 </div>
                 <div class="col-md-6 mb-2">

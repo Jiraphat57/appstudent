@@ -181,7 +181,7 @@ class Student4Controller extends Controller
         $students->nationalid = $request->input('nationalid');
         $students->religions_id = $request->input('religions_id');
         $students->nationalities_id = $request->input('nationalities_id');
-        // $students->phone4student = $request->input('phone4student');
+        $students->phone4student = $request->input('phone4student');
         $students->ethnicities_id = $request->input('ethnicities_id');
         $students->dateofbirth = $dateOfBirth; // ใช้วันที่ที่แปลงแล้ว
         $students->provincesbirth_id = $request->input('provincesbirth_id');
