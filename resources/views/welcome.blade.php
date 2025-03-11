@@ -65,7 +65,9 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{ route('welcome') }}" class="nav-item nav-link active">หน้าแรก</a>
-                <a href="{{ route('welcome') }}" class="nav-item nav-link">เกี่ยวกับ</a>
+                <a href="https://drive.google.com/drive/folders/1-5oPPwELWyYynx1eMVqEwS4zaSkYESp9?usp=sharing"  class="nav-item nav-link"  target="_blank"  rel="noopener noreferrer">
+                    คู่มือการใช้งาน
+                 </a>
                 <a href="{{ route('welcome') }}" class="nav-item nav-link">ระบบสารสนเทศ</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ระบบออนไลน์</a>
