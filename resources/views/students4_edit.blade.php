@@ -38,7 +38,7 @@
             /* Center align for smaller screens */
         }
 
-        #datepicker input {
+        /* #datepicker input {
             width: 100%;
             max-width: 300px;
             font-size: 14px;
@@ -47,15 +47,15 @@
 
         #datepicker .input-group-text {
             padding: 5px;
-            /* ลด padding ของไอคอน */
+          
             font-size: 14px;
-            /* ปรับขนาดไอคอน */
+           
         }
 
         .datepicker {
             font-size: 0.875rem !important;
-            /* ลดขนาด Font ใน Popup */
-        }
+            
+        } */
 
         .form-section {
             padding: 20px;
