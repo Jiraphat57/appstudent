@@ -156,14 +156,14 @@
             มือถือ<span class="underline">{{ $students->phone_mother ?? 'ไม่ระบุ' }}</span>
             สถานภาพของบิดา-มารดา<span class="underline">{{ $students->maritalstatus->maritalstatuse ?? 'ไม่ระบุ' }} </span>
             @if ($students->parent_id == 1)
-                บิดาเป็นปกครองนักเรียนชื่อ<span class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
+                บิดาเป็นผู้ปกครองนักเรียนชื่อ<span class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                 &nbsp;&nbsp;{{ $students->surname_father }}</span>
                 เลขประชาชน<span class="underline">{{ $students->field_citizenfather }}</span>
                 บิดาอาชีพ<span class="underline">{{ $students->occupationfather->occupation ?? 'ไม่ระบุ' }}</span>
                 รายได้บิดา<span class="underline">{{ $students->income_father ?? 'ไม่ระบุ' }}บาท/เดือน </span>
                 มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span>
             @elseif ($students->parent_id == 2)
-                มารดาเป็นปกครองนักเรียนชื่อ<span class="underline">{{ $students->typetitlemother->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_mother ?? 'ไม่ระบุ' }}&nbsp;&nbsp;{{ $students->surname_mother ?? 'ไม่ระบุ' }}</span>เลขประชาชน<span class="underline">{{ $students->field_citizenmother ?? 'ไม่ระบุ' }}</span>
+                มารดาเป็นผู้ปกครองนักเรียนชื่อ<span class="underline">{{ $students->typetitlemother->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_mother ?? 'ไม่ระบุ' }}&nbsp;&nbsp;{{ $students->surname_mother ?? 'ไม่ระบุ' }}</span>เลขประชาชน<span class="underline">{{ $students->field_citizenmother ?? 'ไม่ระบุ' }}</span>
                 อาชีพมารดา<span class="underline">{{ $students->occupationmother->occupation ?? 'ไม่ระบุ' }} </span>
                 รายได้มารดา<span class="underline"> {{ $students->income_mother ?? 'ไม่ระบุ' }}  บาท/เดือน </span>
                 มือถือ<span class="underline">{{ $students->phone_mother ?? 'ไม่ระบุ' }} </span>
@@ -204,13 +204,7 @@
                   </tr>
                 </tbody>
               </table>
-            คํารับรองของผู้ปกครอง
-            ข้าพเจ้า................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง 
         </div>
-            <span class="underline"> {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
-            </span>ชั้น<span class="underline">{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}</span>ห้อง............
-            ขอให้คำรับรองต่อผู้อํานวยการ
-            โรงเรียนพานพิทยาคมว่า
             <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
             <div>คํารับรองของผู้ปกครอง
                 ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง

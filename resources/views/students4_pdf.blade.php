@@ -177,7 +177,7 @@
             สถานภาพของบิดา-มารดา<span class="underline">{{ $students->maritalstatus->maritalstatuse ?? 'ไม่ระบุ' }}
             </span>
             @if ($students->parent_id == 1)
-                บิดาเป็นปกครองนักเรียนชื่อ<span
+                บิดาเป็นผู้ปกครองนักเรียนชื่อ<span
                     class="underline">{{ $students->typetitlefather->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_father }}
                     &nbsp;&nbsp;{{ $students->surname_father }}</span>
                 <br>เลขประชาชน<span class="underline">{{ $students->field_citizenfather }}</span>
@@ -185,7 +185,7 @@
                 รายได้บิดา<span class="underline">{{ $students->income_father ?? 'ไม่ระบุ' }}บาท/เดือน </span>
                 มือถือ<span class="underline">{{ $students->phone_father ?? 'ไม่ระบุ' }} </span>
             @elseif ($students->parent_id == 2)
-                มารดาเป็นปกครองนักเรียนชื่อ
+                มารดาเป็นผู้ปกครองนักเรียนชื่อ
                 <span class="underline">{{ $students->typetitlemother->typetitle ?? 'ไม่ระบุ' }}{{ $students->name_mother ?? 'ไม่ระบุ' }}&nbsp;&nbsp;{{ $students->surname_mother ?? 'ไม่ระบุ' }}</span>
                 <br>เลขประชาชน<span class="underline">{{ $students->field_citizenmother ?? 'ไม่ระบุ' }}</span>
                 อาชีพมารดา<span class="underline">{{ $students->occupationmother->occupation ?? 'ไม่ระบุ' }} </span>
