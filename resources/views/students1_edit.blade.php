@@ -809,7 +809,7 @@
                 </div>
                 <div class="container ">
                     <div class="col text-center">
-                        <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-save2"></i> &nbsp;&nbsp;บันทึกข้อมูล</button>
+                        <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-save2"></i> &nbsp;&nbsp;บันทึกข้อมูลการแก้ไข</button>
                     </div>
                 </div>
             </div>
