@@ -109,7 +109,7 @@
             ชื่อนักเรียน:<span class="underline">{{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
             {{ $students->surname }}</span>
             ชั้น:&nbsp;{{$students->classlevel->classlevel ??'ไม่ระบุ'}}&nbsp;ห้อง:
-            .......รหัสนักเรียน:....................เลขประจำตัวประชาชนนักเรียน:<span class="underline"> {{ $students->nationalid }}</span>มือถือ:<span class="underline"> {{ $students->phone1student }}</span>
+            .......รหัสนักเรียน:....................เลขประจำตัวประชาชนนักเรียน:<span class="underline"> {{ $students->nationalid }}</span>มือถือ:<span class="underline"> {{ $students->phone1student }}</span> ชื่อภาษาอังกฤษ<span class="underline"> {{ $students->nameeng }}&nbsp;&nbsp;&nbsp;{{ $students->surnameeng }}</span>
             เชื้อชาติ:<span class="underline">{{ $students->ethnicity->ethnicitie ?? 'ไม่ระบุ' }}</span>
             สัญชาติ:<span class="underline">{{ $students->nationality->nationalitie ?? 'ไม่ระบุ' }}</span>ศาสนา:<span class="underline">
             {{ $students->religion->religion ?? 'ไม่ระบุ' }}</span> วันเดือนปีเกิด:<span class="underline">
