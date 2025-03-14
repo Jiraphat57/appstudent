@@ -25,7 +25,7 @@ Route::get('/takeclass1', function () {
 Route::get('/takeclass4', function () {
     return view('takeclass4');
 });
-Route::resource('students', StudentsController::class);
+// Route::resource('students', StudentsController::class);
 Route::post('/students', [StudentsController::class, 'store'])->name('store1');
 Route::post('/student4', [Student4Controller::class, 'store'])->name('store4');
 Route::get('/students/{id}/pdf', [StudentsController::class, 'generatePDF'])->name('students.pdf');
