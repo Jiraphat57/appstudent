@@ -41,7 +41,7 @@ Route::get('/students4_edit/{students}/edit', [Student4Controller::class, 'edit'
  Route::delete('/students/{id}', [StudentsController::class, 'destroy'])
     ->middleware(['auth', 'verified'])
     ->name('students.destroy');
-Route::delete('/students/{id}', [Student4Controller::class, 'destroy'])
+Route::delete('/students4/{id}', [Student4Controller::class, 'destroy'])
     ->middleware(['auth', 'verified'])
     ->name('students4.destroy');
 
