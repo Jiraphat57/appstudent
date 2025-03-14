@@ -25,7 +25,7 @@ Route::get('/takeclass1', function () {
 Route::get('/takeclass4', function () {
     return view('takeclass4');
 });
-// Route::resource('students', StudentsController::class);
+Route::resource('students', StudentsController::class);
 Route::post('/students', [StudentsController::class, 'store'])->name('store1');
 Route::post('/student4', [Student4Controller::class, 'store'])->name('store4');
 Route::get('/students/{id}/pdf', [StudentsController::class, 'generatePDF'])->name('students.pdf');
@@ -59,10 +59,17 @@ Route::get('/students4auth_edit/{students}/edit', [Student4Controller::class, 'e
     ->middleware(['auth', 'verified'])
     ->name('students4auth.edit');
 
-Route::delete('/students/{id}/update', [StudentsController::class, 'update'])
+// Route::delete('/students/{id}/update', [StudentsController::class, 'update'])
+//     ->middleware(['auth', 'verified'])
+//     ->name('studentsauth.update');
+// Route::delete('/students/{id}/update', [Student4Controller::class, 'update'])
+//     ->middleware(['auth', 'verified'])
+//     ->name('students4auth.update');
+Route::patch('/students/{id}', [StudentsController::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('studentsauth.update');
-Route::delete('/students/{id}/update', [Student4Controller::class, 'update'])
+
+Route::patch('/students4/{id}', [Student4Controller::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('students4auth.update');
    
