@@ -256,8 +256,8 @@ class StudentsController extends Controller
         if ($students->dateofbirth) {
             // $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
             $carbonDate = Carbon::parse($students->dateofbirth);
-            // $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
-            $students->dateofbirth = $carbonDate->format('d-m-Y');
+            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
+            // $students->dateofbirth = $carbonDate->format('d-m-Y');
         }
         // $typetitle = Typetitle::all();
         // ส่งข้อมูลไปยัง View
