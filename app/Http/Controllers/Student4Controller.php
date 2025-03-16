@@ -355,34 +355,73 @@ class Student4Controller extends Controller
             'highschool10_id' => 'required|numeric',
         ]);
         try {
+            // ตรวจสอบว่ามีค่า id หรือไม่
+            if (!$id) {
+                return back()->withErrors(['error' => 'ไม่พบ ID ของนักเรียน']);
+            }
+        
             // ดึงข้อมูลของนักเรียนที่ต้องการอัปเดต
-            $students = Student4::findOrFail($id);
-            // ดึงข้อมูลจาก $request (ไม่ผ่าน validation)
+            $student = Student4::find($id);
+        
+            if (!$student) {
+                return back()->withErrors(['error' => 'ไม่พบข้อมูลนักเรียน']);
+            }
+        
+            // ดึงข้อมูลจาก $request
             $input = $request->all();
-            // dd($request->all());
-            // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
-            // if ($request->has('dateofbirth')) {
-            //     $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->format('Y-m-d');
-            // }
-            if ($request->has('dateofbirth')) {
-                $thaiYear = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->year - 543; // แปลง พ.ศ. เป็น ค.ศ.
-                $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)
-                    ->year($thaiYear) // กำหนดปีใหม่เป็น ค.ศ.
-                    ->format('Y-m-d');
+        
+            // ตรวจสอบว่า dateofbirth มีค่าหรือไม่ และอยู่ในรูปแบบที่ถูกต้อง
+            if ($request->has('dateofbirth') && !empty($request->dateofbirth)) {
+                try {
+                    $thaiYear = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->year - 543;
+                    $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)
+                        ->year($thaiYear)
+                        ->format('Y-m-d');
+                } catch (\Exception $e) {
+                    return back()->withErrors(['error' => 'รูปแบบวันเกิดไม่ถูกต้อง']);
+                }
             }
+        
             // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
-            $students->update($input);
+            $student->update($input);
+        
             // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
-            // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
-            if (Auth::check()) {
-                return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
-            }else {
-                return redirect()->route('students4.edit');
-            }
+            return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
+        
         } catch (\Exception $e) {
             // ส่งข้อความข้อผิดพลาดกลับไปยังหน้าเดิม
             return back()->withErrors(['error' => 'เกิดข้อผิดพลาด: ' . $e->getMessage()]);
         }
+
+
+        // try {
+        //     // ดึงข้อมูลของนักเรียนที่ต้องการอัปเดต
+        //     $students = Student4::findOrFail($id);
+        //     // ดึงข้อมูลจาก $request (ไม่ผ่าน validation)
+        //     $input = $request->all();
+        //     // dd($request->all());
+        //     // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
+        //     // if ($request->has('dateofbirth')) {
+        //     //     $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->format('Y-m-d');
+        //     // }
+        //     if ($request->has('dateofbirth')) {
+        //         $thaiYear = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->year - 543; // แปลง พ.ศ. เป็น ค.ศ.
+        //         $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)
+        //             ->year($thaiYear) // กำหนดปีใหม่เป็น ค.ศ.
+        //             ->format('Y-m-d');
+        //     }
+        //     // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
+        //     $students->update($input);
+        //     // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
+        //     if (Auth::check()) {
+        //         return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
+        //     }else {
+        //         return redirect()->route('students4.edit');
+        //     }
+        // } catch (\Exception $e) {
+        //     // ส่งข้อความข้อผิดพลาดกลับไปยังหน้าเดิม
+        //     return back()->withErrors(['error' => 'เกิดข้อผิดพลาด: ' . $e->getMessage()]);
+        // }
     }
     public function destroy($id)
     {
