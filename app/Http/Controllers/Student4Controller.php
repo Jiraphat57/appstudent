@@ -272,7 +272,7 @@ class Student4Controller extends Controller
         if ($students->dateofbirth) {
             // $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
             $carbonDate = Carbon::parse($students->dateofbirth);
-            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year - 543);
+            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
             // $students->dateofbirth = $carbonDate->format('d-m-Y');
 
         }
@@ -366,10 +366,10 @@ class Student4Controller extends Controller
             if (!$student) {
                 return back()->withErrors(['error' => 'ไม่พบข้อมูลนักเรียน']);
             }
-        
+            dd($request->all());
             // ดึงข้อมูลจาก $request
             $input = $request->all();
-        
+            
             // ตรวจสอบว่า dateofbirth มีค่าหรือไม่ และอยู่ในรูปแบบที่ถูกต้อง
             if ($request->has('dateofbirth') && !empty($request->dateofbirth)) {
                 try {
