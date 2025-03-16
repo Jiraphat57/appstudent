@@ -195,8 +195,9 @@
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
-                    <label for="inputdate" class="col-sm-2 col-form-label">วันเกิดนักเรียน</label>
+                    {{-- <label for="inputdate" class="col-sm-2 col-form-label">วันเกิดนักเรียน</label> --}}
                     <div class="input-group date" id="datepicker">
+                        <label for="inputdate" class="col-sm-2 col-form-label">วันเกิดนักเรียน</
                         <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
