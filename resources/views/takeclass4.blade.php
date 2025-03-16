@@ -199,7 +199,7 @@
 
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <label for="inputdate" class="col-sm-3 col-form-label">วันเกิดนักเรียน
+                        <label for="inputdate" class="col-sm-3 col-form-label">วันเกิดนักเรียน</label>
                         <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
