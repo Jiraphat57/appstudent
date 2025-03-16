@@ -272,8 +272,8 @@ class Student4Controller extends Controller
         if ($students->dateofbirth) {
             // $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
             $carbonDate = Carbon::parse($students->dateofbirth);
-            // $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
-            $students->dateofbirth = $carbonDate->format('d-m-Y');
+            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
+            // $students->dateofbirth = $carbonDate->format('d-m-Y');
 
         }
         // $typetitle = Typetitle::all();
@@ -362,11 +362,18 @@ class Student4Controller extends Controller
             // ดึงข้อมูลจาก $request (ไม่ผ่าน validation)
             $input = $request->all();
             // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
-            if ($request->has('dateofbirth')) {
-                $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->format('Y-m-d');
-            }
-            // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
-            // dd($input);
+            // if ($request->has('dateofbirth')) {
+            //     $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->format('Y-m-d');
+            // }
+
+                list($day, $month, $year) = explode('/', $validatedData['dateofbirth']);
+                // แปลงปีจากพุทธศักราชเป็นคริสต์ศักราช
+                $year = $year-543;
+                // สร้างวันที่ด้วย Carbon
+                $dateOfBirth = Carbon::createFromFormat('d/m/Y', "$day/$month/$year")->format('Y-m-d');
+                
+            } catch (\Exception $e) {
+                return back()->withErrors(['dateofbirth' => 'รูปแบบวันที่ไม่ถูกต้อง']);
             $students->update($input);
             // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
             if (Auth::check()) {
