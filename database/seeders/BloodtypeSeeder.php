@@ -19,7 +19,7 @@ class BloodtypeSeeder extends Seeder
             'ARh+', 'ARh-', 
             'BRh+', 'BRh-', 
             'ABRh+', 'ABRh-', 
-            'ORh+', 'ORh-'
+            'ORh+', 'ORh-', 'ไม่ทราบ' 
         ];
         foreach ($bloodTypes as $bloodType) {
             Bloodtype::factory()->create([
