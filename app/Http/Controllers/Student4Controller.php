@@ -301,7 +301,7 @@ class Student4Controller extends Controller
             'nationalities_id' => 'required|numeric',
             'phone4student' => 'required|max:10',
             'ethnicities_id' => 'required|numeric',
-            // 'dateofbirth' => 'required|date_format:d/m/Y', // ตรวจสอบรูปแบบเป็น d/m/Y
+            'dateofbirth' => 'required|date_format:d/m/Y', // ตรวจสอบรูปแบบเป็น d/m/Y
             'provincesbirth_id' => 'required|numeric',
             'bloodtypes_id' => 'required|numeric',
             'weight' => 'required|max:3',
@@ -357,6 +357,15 @@ class Student4Controller extends Controller
         ]);
         // dd($validatedData);
         try {
+            
+            list($day, $month, $year) = explode('/', $validatedData['dateofbirth']);
+            // แปลงปีจากพุทธศักราชเป็นคริสต์ศักราช
+            $year = $year-543;
+            // สร้างวันที่ด้วย Carbon
+            $dateOfBirth = Carbon::createFromFormat('d/m/Y', "$day/$month/$year")->format('Y-m-d');
+
+        } catch (\Exception $e) {
+            return back()->withErrors(['dateofbirth' => 'รูปแบบวันที่ไม่ถูกต้อง']);
             // ดึงข้อมูลของนักเรียนที่ต้องการอัปเดต
             $students = Student4::findOrFail($id);
             // ดึงข้อมูลจาก $request (ไม่ผ่าน validation)
@@ -366,14 +375,6 @@ class Student4Controller extends Controller
             //     $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->format('Y-m-d');
             // }
 
-                list($day, $month, $year) = explode('/', $validatedData['dateofbirth']);
-                // แปลงปีจากพุทธศักราชเป็นคริสต์ศักราช
-                $year = $year-543;
-                // สร้างวันที่ด้วย Carbon
-                $dateOfBirth = Carbon::createFromFormat('d/m/Y', "$day/$month/$year")->format('Y-m-d');
-                
-            } catch (\Exception $e) {
-                return back()->withErrors(['dateofbirth' => 'รูปแบบวันที่ไม่ถูกต้อง']);
             $students->update($input);
             // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
             if (Auth::check()) {
