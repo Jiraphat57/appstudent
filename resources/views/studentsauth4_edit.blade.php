@@ -1081,9 +1081,9 @@
                         <button type="submit"
                             class="btn btn-primary btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กดบันทึก&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                     </div><br>
-                    <a href="{{ route('dashboard') }}"><button type="submit"
-                        class="btn btn-info btn-lg"><i class="bi bi-house"></i>&nbsp;&nbsp;&nbsp;กลับหน้าdashboard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
-                    {{-- </div>     --}}
+                    {{-- <a href="{{ route('dashboard') }}"><button type="submit"
+                        class="btn btn-info btn-lg"><i class="bi bi-house"></i>&nbsp;&nbsp;&nbsp;กลับหน้าdashboard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a> --}}
+                        <a href="{{ route('dashboard') }}" class="btn btn-info btn-lg">กลับหน้า dashboard</a>
                 </div>
             </div>
         </form>
