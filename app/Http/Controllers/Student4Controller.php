@@ -366,7 +366,7 @@ class Student4Controller extends Controller
             if (!$student) {
                 return back()->withErrors(['error' => 'ไม่พบข้อมูลนักเรียน']);
             }
-            dd($request->all());
+            // dd($request->all());
             // ดึงข้อมูลจาก $request
             $input = $request->all();
             
@@ -383,9 +383,10 @@ class Student4Controller extends Controller
             }
         
             // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
-            $student->update($input);
-            dd($student);
+            // $student->update($input);
+            // dd($student);
             // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
+            $student->fill($input)->save();
             return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
         
         } catch (\Exception $e) {

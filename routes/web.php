@@ -5,16 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\Student4Controller;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -58,13 +48,6 @@ Route::get('/studentsauth/{students}/edit', [StudentsController::class, 'edit'])
 Route::get('/students4auth_edit/{students}/edit', [Student4Controller::class, 'edit'])
     ->middleware(['auth', 'verified'])
     ->name('students4auth.edit');
-
-// Route::delete('/students/{id}/update', [StudentsController::class, 'update'])
-//     ->middleware(['auth', 'verified'])
-//     ->name('studentsauth.update');
-// Route::delete('/students/{id}/update', [Student4Controller::class, 'update'])
-//     ->middleware(['auth', 'verified'])
-//     ->name('students4auth.update');
 Route::patch('/students/{id}', [StudentsController::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('studentsauth.update');
