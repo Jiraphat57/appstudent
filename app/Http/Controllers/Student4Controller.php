@@ -384,7 +384,7 @@ class Student4Controller extends Controller
         
             // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
             $student->update($input);
-        
+            dd($student);
             // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
             return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
         
