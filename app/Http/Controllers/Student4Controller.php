@@ -353,29 +353,26 @@ class Student4Controller extends Controller
             'highschool8_id' => 'required|numeric',
             'highschool9_id' => 'required|numeric',
             'highschool10_id' => 'required|numeric',
-            // 'highschool11_id' => 'required|numeric' 
         ]);
-        // dd($validatedData);
         try {
-            
-            list($day, $month, $year) = explode('/', $validatedData['dateofbirth']);
-            // แปลงปีจากพุทธศักราชเป็นคริสต์ศักราช
-            $year = $year-543;
-            // สร้างวันที่ด้วย Carbon
-            $dateOfBirth = Carbon::createFromFormat('d/m/Y', "$day/$month/$year")->format('Y-m-d');
-
-        } catch (\Exception $e) {
-            return back()->withErrors(['dateofbirth' => 'รูปแบบวันที่ไม่ถูกต้อง']);
             // ดึงข้อมูลของนักเรียนที่ต้องการอัปเดต
             $students = Student4::findOrFail($id);
             // ดึงข้อมูลจาก $request (ไม่ผ่าน validation)
             $input = $request->all();
+            // dd($request->all());
             // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
             // if ($request->has('dateofbirth')) {
             //     $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->format('Y-m-d');
             // }
-
+            if ($request->has('dateofbirth')) {
+                $thaiYear = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->year - 543; // แปลง พ.ศ. เป็น ค.ศ.
+                $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)
+                    ->year($thaiYear) // กำหนดปีใหม่เป็น ค.ศ.
+                    ->format('Y-m-d');
+            }
+            // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
             $students->update($input);
+            // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
             // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
             if (Auth::check()) {
                 return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
