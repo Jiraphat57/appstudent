@@ -733,6 +733,7 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select"
                         aria-label="Default select example">
+                        <option selected>สถานภาพของบิดามารดา</option>
                         <option value="1">อยู่ด้วยกันจดทะเบียนสมรส</option>
                         <option value="2">โสด</option>
                         <option value="3">อย่าร้าง</option>
