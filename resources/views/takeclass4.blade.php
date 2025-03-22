@@ -768,7 +768,7 @@
                         <select id="sel_highschool1" name="highschool1_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 1</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -784,7 +784,7 @@
                         <select id="sel_highschool2" name="highschool2_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 2</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -800,7 +800,7 @@
                         <select id="sel_highschool3" name="highschool3_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 3</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -816,7 +816,7 @@
                         <select id="sel_highschool4" name="highschool4_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 4</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -832,7 +832,7 @@
                         <select id="sel_highschool5" name="highschool5_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 5</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -848,7 +848,7 @@
                         <select id="sel_highschool6" name="highschool6_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 6</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -864,7 +864,7 @@
                         <select id="sel_highschool7" name="highschool7_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 7</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -880,7 +880,7 @@
                         <select id="sel_highschool8" name="highschool8_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 8</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -896,7 +896,7 @@
                         <select id="sel_highschool9" name="highschool9_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 9</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -912,7 +912,7 @@
                         <select id="sel_highschool10" name="highschool10_id" class="form-select"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 10</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
