@@ -137,7 +137,7 @@
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
                     <input type="text" name="phone1student" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือ">
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน">
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_religion" name="religions_id" class="form-select"
@@ -455,7 +455,7 @@
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">รหัสประจำบ้าน</span> --}}
                     <input type="text" name="houseid" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลข 11 หลัก">
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก">
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">บ้านเลขที่</span> --}}
