@@ -19,6 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
 <link href="lib/animate/animate.min.css" rel="stylesheet">
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 <!-- Customized Bootstrap Stylesheet -->
@@ -132,12 +133,12 @@
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
                     <input type="text" name="nationalid" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน">
+                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน" >
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
                     <input type="text" name="phone1student" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน">
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน" style="color: black;">
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_religion" name="religions_id" class="form-select"
@@ -898,6 +899,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script>
@@ -936,6 +938,7 @@
                 let formattedToday = today.format('DD/MM') + '/' + thaiYear;
                 $('#datepicker input').datepicker('setDate', formattedToday);
             }
+            $('#nationalid').inputmask('9-9999-99999-99-9'); 
         });
     </script>
 
@@ -952,6 +955,11 @@
         }
         .datepicker {
             font-size: 0.875rem !important;
+        }
+        input::placeholder {
+            color: red;
+            font-weight: bold;
+            font-size: 16px;
         }
     </style>
 </body>
