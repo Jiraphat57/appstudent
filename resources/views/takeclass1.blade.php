@@ -132,13 +132,13 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
-                    <input type="text" name="nationalid" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน" >
+                    <input type="text" id="nationalid" name="nationalid" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน" style="color: black;">
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
                     <input type="text" name="phone1student" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน" style="color: black;">
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน" >
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_religion" name="religions_id" class="form-select"
