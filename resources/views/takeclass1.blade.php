@@ -25,6 +25,13 @@
 <!-- Customized Bootstrap Stylesheet -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<style>
+input::placeholder {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+</style>
 </head>
 
 <body>
@@ -137,7 +144,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
-                    <input type="text" name="phone1student" class="form-control" aria-label="Sizing example input"
+                    <input type="text" id="phone1student" name="phone1student" class="form-control" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน" >
                 </div>
                 <div class="col-md-6 mb-2">
@@ -455,7 +462,7 @@
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">รหัสประจำบ้าน</span> --}}
-                    <input type="text" name="houseid" class="form-control" aria-label="Sizing example input"
+                    <input type="text" id="houseid" name="houseid" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก">
                 </div>
                 <div class="col-md-6 mb-2">
@@ -635,7 +642,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชนบิดา</span> --}}
-                    <input type="text" name="field_citizenfather" class="form-control"
+                    <input type="text" id="field_citizenfather" name="field_citizenfather" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                         placeholder="เลขประจำตัวประชาชน13หลัก">
                 </div>
@@ -663,7 +670,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เบอร์โทรศัพท์(มือถือ)</span> --}}
-                    <input type="text" name="phone_father" class="form-control" aria-label="Sizing example input"
+                    <input type="text" id="phone_father" name="phone_father" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default"
                         placeholder="เบอร์โทรศัพท์(มือถือ)">
                 </div>
@@ -694,7 +701,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขมารดา</span> --}}
-                    <input type="text" name="field_citizenmother" class="form-control"
+                    <input type="text" id="field_citizenmother" name="field_citizenmother" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                         placeholder="เลขประจำตัวประชาชน13หลัก">
                 </div>
@@ -722,7 +729,7 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">เบอร์โทรศัพท์(มือถือ)</span> --}}
-                    <input type="text" name="phone_mother" class="form-control" aria-label="Sizing example input"
+                    <input type="text" id="phone_mother" name="phone_mother" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default"
                         placeholder="เบอร์โทรศัพท์(มือถือ)">
                 </div>
@@ -938,7 +945,9 @@
                 let formattedToday = today.format('DD/MM') + '/' + thaiYear;
                 $('#datepicker input').datepicker('setDate', formattedToday);
             }
-            $('#nationalid').inputmask('9-9999-99999-99-9'); 
+            // $('#nationalid').inputmask('9-9999-99999-99-9'); 
+            // $('#phone1student').inputmask('999-999-9999');
+            // $('#houseid').inputmask('9-9999-99999-99-9'); 
         });
     </script>
 
@@ -956,11 +965,7 @@
         .datepicker {
             font-size: 0.875rem !important;
         }
-        input::placeholder {
-            color: red;
-            font-weight: bold;
-            font-size: 16px;
-        }
+        
     </style>
 </body>
 
