@@ -25,13 +25,7 @@
 <!-- Customized Bootstrap Stylesheet -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
-<style>
-input::placeholder {
-    color: red;
-    font-weight: bold;
-    font-size: 16px;
-}
-</style>
+
 </head>
 
 <body>
@@ -947,10 +941,20 @@ input::placeholder {
             }
             // $('#nationalid').inputmask('9-9999-99999-99-9'); 
             // $('#phone1student').inputmask('999-999-9999');
-            // $('#houseid').inputmask('9-9999-99999-99-9'); 
+            // $('#houseid').inputmask('9999-999999-9'); 
+            // $('#field_citizenfather').inputmask('9-9999-99999-99-9'); 
+            // $('#phone_father').inputmask('999-999-9999');
+            // $('#field_citizenmother').inputmask('9-9999-99999-99-9'); 
+            // $('#phone_mother').inputmask('999-999-9999');
         });
     </script>
-
+    <style>
+        input::placeholder{
+            color: red;
+            /* font-weight: bold; */
+            font-size: 16px;
+        }
+    </style>
     <style>
         #datepicker input {
             width: 100%;
