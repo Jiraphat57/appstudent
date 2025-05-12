@@ -200,7 +200,7 @@
                 มือถือ............................
             @endif
             </div>
-            <div class="container row col-100%"> 
+            {{-- <div class="container row col-100%"> 
             <div class="row col-100% text-center" style="font-size: 18px; background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
             <table>
                 <tbody>
@@ -236,11 +236,7 @@
                   </tr>
                 </tbody>
             </table>
-            {{-- คํารับรองของผู้ปกครอง
-            ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
-            <span class="underline">
-                {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}
-            ชั้น&nbsp;&nbsp;{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}&nbsp;ห้อง.......โดยข้าพเจ้ามีความเกี่ยวข้องเป็น.................... </span>    --}}
+
             </div>
             <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
                 <div>คํารับรองของผู้ปกครอง
@@ -280,7 +276,7 @@
 
                     (&nbsp;&nbsp;&nbsp;&nbsp;) โรงเรียนเดิม &nbsp;&nbsp;&nbsp; (&nbsp;&nbsp;&nbsp;&nbsp;) โรงเรียนอื่น 
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </body>
