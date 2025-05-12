@@ -74,7 +74,7 @@
         body {
             font-family: 'THSarabun',sans-serif;
             /* src: url('{{ public_path('fonts/THSarabun.ttf') }}') format('truetype'); */
-            font-size: 18px;
+            font-size: 20px;
             color: black;
         }
     </style>
