@@ -599,9 +599,9 @@
                 <div class="col-md-6 mb-2">
                     {{-- <input type="text" name="subdistrict" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ"> --}}
-                    <input type="text" name="district" class="form-control @error('district') is-invalid @enderror" aria-label="Sizing example input"
+                    <input type="text" name="subdistrict" class="form-control @error('subdistrict') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ" value="{{ old('district') }}">
-                    @error('district')
+                    @error('subdistrict')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
@@ -771,9 +771,9 @@
                     {{-- <input type="textname_father" name="name_father" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                         placeholder="ชื่อบิดา"> --}}
-                    <input type="text" name="textname_father" class="form-control @error('textname_father') is-invalid @enderror" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="ชื่อบิดา" value="{{ old('textname_father') }}">
-                    @error('textname_father')
+                    <input type="text" name="name_father" class="form-control @error('name_father') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ชื่อบิดา" value="{{ old('name_father') }}">
+                    @error('name_father')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
