@@ -85,21 +85,34 @@
     <div class="container">
         <form class="row g-3" action="{{ route('store4') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @if ($errors->any())
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <h5><i class="bi bi-exclamation-triangle-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;กรุณาตรวจสอบข้อมูลที่กรอกไม่ครบ:</h5>
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="alert alert-success text-center" role="alert">
                 <h5><i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน ม.4</h5>
                 **หากกรอกไม่ครบทุกช่องระบบจะไม่บันทึกข้อมูลให้ หากช่องไหนไม่มี ให้กรอก - ลงไป**
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    {{-- <label for="exampleFormControlInput1" class="form-label">คำนำหน้าชื่อ</label> --}}
-                    <select id="classlevel" name="classlevels_id" class="form-select"
+                    <select id="classlevel" name="classlevels_id" class="form-select @error('classlevels_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>ระดับชั้นที่สมัครเข้าเรียน</option>
                         <option value="2">ม.4</option>
                     </select>
+                    @error('classlevels_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_typetitle" name="typetitles_id" class="form-select"
+                    <select id="sel_typetitle" name="typetitles_id" class="form-select @error('typetitles_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>คำนำหน้าชื่อ</option>
                         <option value="1">เด็กชาย</option>
@@ -108,40 +121,65 @@
                         <option value="4">นางสาว</option>
                         <option value="5">นาง</option>
                     </select>
+                    @error('typetitles_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ชื่อนักเรียน</span> --}}
-                    <input type="text" name="name" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="กรอกชื่อนักเรียน">
+                    {{-- <input type="text" name="name" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="กรอกชื่อนักเรียน"> --}}
+                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="กรอกชื่อนักเรียน" value="{{ old('name') }}">
+                    @error('name')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror   
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">นามสกุล</span> --}}
-                    <input type="text" name="surname" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกนามสกุล">
+                    {{-- <input type="text" name="surname" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกนามสกุล"> --}}
+                    <input type="text" name="surname" class="form-control @error('surname') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกนามสกุล" value="{{ old('surname') }}">
+                    @error('surname')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror    
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ชื่อนักเรียน</span> --}}
-                    <input type="text" name="nameeng" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="กรอกชื่อนักเรียนภาษาอังกฤษ">
+                    {{-- <input type="text" name="nameeng" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default"placeholder="กรอกชื่อนักเรียนภาษาอังกฤษ"> --}}
+                    <input type="text" name="nameeng" class="form-control @error('nameeng') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกชื่อนักเรียนภาษาอังกฤษ" value="{{ old('nameeng') }}">
+                    @error('nameeng')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">นามสกุล</span> --}}
-                    <input type="text" name="surnameeng" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกนามสกุลภาษาอังกฤษ">
+                    {{-- <input type="text" name="surnameeng" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกนามสกุลภาษาอังกฤษ"> --}}
+                        <input type="text" name="surnameeng" class="form-control @error('surnameeng') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกนามสกุลภาษาอังกฤษ" value="{{ old('nameeng') }}">
+                    @error('surnameeng')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
-                    <input type="text" name="nationalid" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน">
+                    <input type="text" name="nationalid" class="form-control @error('nationalid') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน" value="{{ old('nationalid') }}">
+                    @error('nationalid')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชน</span> --}}
-                    <input type="text" name="phone4student" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน">
+                    {{-- <input type="text" name="phone4student" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน"> --}}
+                    <input type="text" name="phone4student" class="form-control @error('phone4student') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="กรอกเบอร์มือถือนักเรียน" value="{{ old('phone4student') }}">
+                    @error('phone4student')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_religion" name="religions_id" class="form-select"
+                    {{-- <select id="sel_religion" name="religions_id" class="form-select" --}}
+                    <select id="sel_religion" name="religions_id" class="form-select @error('religions_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>ศาสนา</option>
                         <option value="1">พุทธ</option>
@@ -151,9 +189,14 @@
                         <option value="5">พราหมณ์/ฮินดู</option>
                         <option value="6">อื่นๆ</option>
                     </select>
+                    @error('religions_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_nationnalitie" name="nationalities_id" class="form-select"
+                    {{-- <select id="sel_nationnalitie" name="nationalities_id" class="form-select"
+                        aria-label="Default select example"> --}}
+                    <select id="sel_nationnalitie" name="nationalities_id" class="form-select @error('nationalities_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>สัญชาติ</option>
                         <option value="1">ไทย</option>
@@ -172,10 +215,15 @@
                         <option value="14">มาเลเชีย</option>
                         <option value="15">อื่นๆ</option>
                     </select>
+                    @error('nationalities_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="col-md-6 mb-2">
-                    <select id="sel_ethnicities" name="ethnicities_id" class="form-select"
+                    {{-- <select id="sel_ethnicities" name="ethnicities_id" class="form-select"
+                        aria-label="Default select example"> --}}
+                   <select id="sel_ethnicities" name="ethnicities_id" class="form-select @error('ethnicities_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>เชื้อชาติ</option>
                         <option value="1">ไทย</option>
@@ -194,22 +242,31 @@
                         <option value="14">มาเลเชีย</option>
                         <option value="15">อื่นๆ</option>
                     </select>
+                    @error('ethnicities_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
-
-
+                @error('dateofbirth')
+                        <div class="text-danger small">{{ $message }}</div>
+                @enderror
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
                         <label for="inputdate" class="col-sm-3 col-form-label">วันเกิดนักเรียน</label>
-                        <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน">
+                        {{-- <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน"> --}}
+                        <input type="text" name="dateofbirth" class="form-control @error('dateofbirth') is-invalid @enderror" placeholder="วันเกิดนักเรียน" value="{{ old('dateofbirth') }}">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
                         </span>
                     </div>
+                    @error('dateofbirth')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
 
 
                 <div class="col-md-6 mb-2">
-                    <select id="sel_province" name="provincesbirth_id" class="form-select"
+                    {{-- <select id="sel_province" name="provincesbirth_id" class="form-select @error('provincesbirth_id') is-invalid @enderror" --}}
+                    <select id="sel_province" name="provincesbirth_id" class="form-select @error('provincesbirth_id') is-invalid @enderror"    
                         aria-label="Default select example">
                         <option selected>จังหวัดเกิด</option>
                         <option value="1">น่าน</option>
@@ -290,9 +347,13 @@
                         <option value="76">ราชบุรี</option>
                         <option value="77">เพชรบุรี</option>
                     </select>
+                    @error('provincesbirth_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_bloodtype" name="bloodtypes_id" class="form-select"
+                    {{-- <select id="sel_bloodtype" name="bloodtypes_id" class="form-select" --}}
+                    <select id="sel_bloodtype" name="bloodtypes_id" class="form-select @error('bloodtypes_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>กรุ๊ปเลือด</option>
                         <option value="1">A</option>
@@ -309,6 +370,9 @@
                         <option value="12">ORh-</option>
                         <option value="13">ไม่ทราบ</option>
                     </select>
+                    @error('bloodtypes_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <span class="input-group-text" id="inputGroup-sizing-default">ส่วนสูง</span> --}}
@@ -330,13 +394,18 @@
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">โรงเรียนที่นักเรียนจบมา</span> --}}
-                    <input type="text" name="previousschool" class="form-control"
+                    {{-- <input type="text" name="previousschool" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="โรงเรียนเดิมที่จบมา">
+                        placeholder="โรงเรียนเดิมที่จบมา"> --}}
+                    <input type="text" name="previousschool" class="form-control @error('previousschool') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="โรงเรียนเดิมที่จบมา" value="{{ old('previousschool') }}">
+                    @error('previousschool')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="provinceschool" name="provinceschool_id" class="form-select"
+                    {{-- <select id="provinceschool" name="provinceschool_id" class="form-select" --}}
+                    <select id="provinceschool" name="provinceschool_id" class="form-select @error('provinceschool_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>จังหวัดโรงเรียนเดิม</option>
                         <option value="1">น่าน</option>
@@ -417,39 +486,65 @@
                         <option value="76">ราชบุรี</option>
                         <option value="77">เพชรบุรี</option>
                     </select>
+                    @error('provinceschool_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">นักเรียนเป็นบุตรคนที่</span> --}}
-                    <input type="text" name="beingonlychild" class="form-control"
+                    {{-- <input type="text" name="beingonlychild" class="form-control"
                         aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="นักเรียนเป็นบุตรคนที่">
+                        placeholder="นักเรียนเป็นบุตรคนที่"> --}}
+                    <input type="text" name="beingonlychild" class="form-control @error('beingonlychild') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="นักเรียนเป็นบุตรคนที่" value="{{ old('beingonlychild') }}">
+                    @error('beingonlychild')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">จำนวนพี่ชาย</span> --}}
-                    <input type="text" name="brothers" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่ชาย(หากไม่มีกรอก0)">
+                    {{-- <input type="text" name="brothers" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่ชาย(หากไม่มีกรอก0)"> --}}
+                    <input type="text" name="brothers" class="form-control @error('brothers') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่ชาย(หากไม่มีกรอก0)" value="{{ old('brothers') }}">
+                    @error('brothers')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">จำนวนน้องชาย </span> --}}
-                    <input type="text" name="youngerbrother" class="form-control"
+                    {{-- <input type="text" name="youngerbrother" class="form-control"
                         aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="จำนวนน้องชาย(หากไม่มีกรอก0)">
+                        placeholder="จำนวนน้องชาย(หากไม่มีกรอก0)"> --}}
+                    <input type="text" name="youngerbrother" class="form-control @error('youngerbrother') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนน้องชาย(หากไม่มีกรอก0)" value="{{ old('youngerbrother') }}">
+                    @error('youngerbrother')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">จำนวนพี่สาว</span> --}}
-                    <input type="text" name="oldersister" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่สาว(หากไม่มีกรอก0)">
+                    {{-- <input type="text" name="oldersister" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่สาว(หากไม่มีกรอก0)"> --}}
+                    <input type="text" name="oldersister" class="form-control @error('oldersister') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่สาว(หากไม่มีกรอก0)" value="{{ old('oldersister') }}">
+                    @error('oldersister')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <div class="col-md-2"><span class="input-group-text " id="inputGroup-sizing-default" >จำนวนน้องสาว</span></div> --}}
-                    <input type="text" name="sister" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="จำนวนน้องสาว(หากไม่มีกรอก0)">
+                    {{-- <input type="text" name="sister" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default"placeholder="จำนวนน้องสาว(หากไม่มีกรอก0)"> --}}
+                    <input type="text" name="sister" class="form-control @error('sister') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนน้องสาว(หากไม่มีกรอก0)" value="{{ old('sister') }}">
+                    @error('sister')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror    
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">จำนวนพี่น้องที่ศึกษาอยู่</span> --}}
-                    <input type="text" name="sumsiblings" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่น้องที่เรียนอยู่">
+                    {{-- <input type="text" name="sumsiblings" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่น้องที่เรียนอยู่"> --}}
+                    <input type="text" name="sumsiblings" class="form-control @error('sumsiblings') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่น้องที่เรียนอยู่" value="{{ old('sumsiblings') }}">
+                    @error('sumsiblings')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror 
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
@@ -457,38 +552,62 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">รหัสประจำบ้าน</span> --}}
-                    <input type="text" name="houseid" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก">
+                    {{-- <input type="text" name="houseid" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก"> --}}
+                    <input type="text" name="houseid" class="form-control @error('houseid') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก" value="{{ old('houseid') }}">
+                    @error('houseid')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">บ้านเลขที่</span> --}}
-                    <input type="text" name="housenumber" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="บ้านเลขที่">
+                    {{-- <input type="text" name="housenumber" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="บ้านเลขที่"> --}}
+                    <input type="text" name="housenumber" class="form-control @error('housenumber') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="บ้านเลขที่" value="{{ old('housenumber') }}">
+                    @error('housenumber')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">หมู่ที่</span> --}}
-                    <input type="text" name="villagenumber" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="หมู่ที่">
+                    {{-- <input type="text" name="villagenumber" class="form-control"
+                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default" placeholder="หมู่ที่"> --}}
+                    <input type="text" name="villagenumber" class="form-control @error('villagenumber') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="หมู่ที่" value="{{ old('villagenumber') }}">
+                    @error('villagenumber')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ชื่อหมู่บ้าน</span> --}}
-                    <input type="text" name="villagename" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน">
+                    {{-- <input type="text" name="villagename" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน"> --}}
+                    <input type="text" name="villagename" class="form-control @error('villagename') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน" value="{{ old('villagename') }}">
+                    @error('villagename')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ตำบล</span> --}}
-                    <input type="text" name="district" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ตำบล">
+                    {{-- <input type="text" name="district" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ตำบล"> --}}
+                    <input type="text" name="district" class="form-control @error('district') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ตำบล" value="{{ old('district') }}">
+                    @error('district')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">อำเภอ</span> --}}
-                    <input type="text" name="subdistrict" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ">
+                    {{-- <input type="text" name="subdistrict" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ"> --}}
+                    <input type="text" name="district" class="form-control @error('district') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ" value="{{ old('district') }}">
+                    @error('district')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_province2" name="provinces_id" class="form-select"
+                    {{-- <select id="sel_province2" name="provinces_id" class="form-select" --}}
+                    <select id="sel_province2" name="provinces_id" class="form-select @error('provinces_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>จังหวัด</option>
                         <option value="1">น่าน</option>
@@ -569,14 +688,22 @@
                         <option value="76">ราชบุรี</option>
                         <option value="77">เพชรบุรี</option>
                     </select>
+                    @error('provinces_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">รหัสไปรษณีย์</span> --}}
-                    <input type="text" name="postalcode" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="รหัสไปรษณีย์">
+                    {{-- <input type="text" name="postalcode" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="รหัสไปรษณีย์"> --}}
+                    <input type="text" name="postalcode" class="form-control @error('postalcode') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="รหัสไปรษณีย์" value="{{ old('postalcode') }}">
+                    @error('postalcode')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="seltyperesidence" name="typeresidences_id" class="form-select"
+                    {{-- <select id="seltyperesidence" name="typeresidences_id" class="form-select" --}}
+                    <select id="sseltyperesidence" name="typeresidences_id" class="form-select @error('typeresidences_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>ลักษณะที่พักอาศัย</option>
                         <option value="1">บ้านตัวเอง</option>
@@ -585,22 +712,33 @@
                         <option value="4">วัด</option>
                         <option value="5">อื่นๆ</option>
                     </select>
-                </div>
-
-                <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ที่พักห่างจากโรงเรียนเป็นถนนลาดยาง</span> --}}
-                    <input type="text" name="distancelatyangroad" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="ที่พักห่างโรงเรียนเป็นกี่เมตร(1km=1000m)">
+                    @error('typeresidences_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ใช้เวลาเดินทางมาโรงเรียน</span> --}}
-                    <input type="text" name="traveltime" class="form-control" aria-label="Sizing example input"
+                    {{-- <input type="text" name="distancelatyangroad" class="form-control"
+                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default" 
+                        placeholder="ที่พักห่างโรงเรียนเป็นกี่เมตร(1km=1000m)"> --}}
+                    <input type="text" name="distancelatyangroad" class="form-control @error('distancelatyangroad') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ที่พักห่างโรงเรียนเป็นกี่เมตร(1km=1000m)" value="{{ old('distancelatyangroad') }}">
+                    @error('distancelatyangroad')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="col-md-6 mb-2">
+                    {{-- <input type="text" name="traveltime" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="ใช้เวลาเดินทางมาโรงเรียนกี่นาที">
+                        placeholder="ใช้เวลาเดินทางมาโรงเรียนกี่นาที"> --}}
+                    <input type="text" name="traveltime" class="form-control @error('traveltime') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ใช้เวลาเดินทางมาโรงเรียนกี่นาที" value="{{ old('traveltime') }}">
+                    @error('traveltime')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="travelschool1" name="travelschool1s_id" class="form-select"
+                    {{-- <select id="travelschool1" name="travelschool1s_id" class="form-select" --}}
+                    <select id="travelschool1" name="travelschool1s_id" class="form-select @error('travelschool1s_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>พาหนะที่ใช้มาโรงเรียน</option>
                         <option value="1">เดินเท้า</option>
@@ -609,6 +747,9 @@
                         <option value="4">พาหนะเสียค่าโดยสาร</option>
                         <option value="5">อื่นๆ</option>
                     </select>
+                    @error('travelschool1s_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
@@ -616,34 +757,49 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select"
+                    {{-- <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select" --}}
+                    <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select @error('typetitlesfather_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>คำนำหน้าชื่อ</option>
                         <option value="3">นาย</option>
-                        {{-- <option value="4">นางสาว</option>
-                        <option value="5">นาง</option> --}}
                     </select>
+                    @error('typetitlesfather_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ชื่อบิดา</span> --}}
-                    <input type="textname_father" name="name_father" class="form-control"
+                    {{-- <input type="textname_father" name="name_father" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="ชื่อบิดา">
+                        placeholder="ชื่อบิดา"> --}}
+                    <input type="text" name="textname_father" class="form-control @error('textname_father') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ชื่อบิดา" value="{{ old('textname_father') }}">
+                    @error('textname_father')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">นามสกุล</span> --}}
-                    <input type="text" name="surname_father" class="form-control"
+                    {{-- <input type="text" name="surname_father" class="form-control"
                         aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="นามสกุล">
+                        placeholder="นามสกุล"> --}}
+                    <input type="text" name="surname_father" class="form-control @error('surname_father') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="นามสกุล" value="{{ old('surname_father') }}">
+                    @error('surname_father')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขประจำตัวประชาชนบิดา</span> --}}
-                    <input type="text" name="field_citizenfather" class="form-control"
+                    {{-- <input type="text" name="field_citizenfather" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เลขประจำตัวประชาชน13หลัก">
+                        placeholder="เลขประจำตัวประชาชน13หลัก"> --}}
+                    <input type="text" name="field_citizenfather" class="form-control @error('field_citizenfather') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน13หลัก" value="{{ old('field_citizenfather') }}">
+                    @error('field_citizenfather')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_occupationfather" name="occupationfather_id" class="form-select"
+                    {{-- <select id="sel_occupationfather" name="occupationfather_id" class="form-select" --}}
+                    <select id="sel_occupationfather" name="occupationfather_id" class="form-select @error('occupationfather_id') is-invalid @enderror"    
                         aria-label="Default select example">
                         <option selected>อาชีพบิดา</option>
                         <option value="1">รับราชการ</option>
@@ -657,18 +813,29 @@
                         <option value="9">ไม่ได้ประกอบอาชีพ</option>
                         <option value="10">อื่นๆ</option>
                     </select>
+                    @error('occupationfather_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">รายได้บิดา</span> --}}
-                    <input type="text" name="income_father" class="form-control"
+                    {{-- <input type="text" name="income_father" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="รายได้บิดาต่อเดือน">
+                        placeholder="รายได้บิดาต่อเดือน"> --}}
+                    <input type="text" name="income_father" class="form-control @error('income_father') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="รายได้บิดาต่อเดือน" value="{{ old('income_father') }}">
+                    @error('income_father')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เบอร์โทรศัพท์(มือถือ)</span> --}}
-                    <input type="text" name="phone_father" class="form-control" aria-label="Sizing example input"
+                    {{-- <input type="text" name="phone_father" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เบอร์โทรศัพท์(มือถือ)">
+                        placeholder="เบอร์โทรศัพท์(มือถือ)"> --}}
+                    <input type="text" name="phone_father" class="form-control @error('phone_father') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="เบอร์โทรศัพท์(มือถือ)" value="{{ old('phone_father') }}">
+                    @error('phone_father')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
@@ -676,33 +843,50 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select"
+                    {{-- <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select" --}}
+                    <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select @error('typetitlesmother_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>คำนำหน้าชื่อ</option>
                         {{-- <option value="3">นาย</option> --}}
                         <option value="4">นางสาว</option>
                         <option value="5">นาง</option>
                     </select>
+                    @error('typetitlesmother_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ชื่อมารดา</span> --}}
-                    <input type="text" name="name_mother" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อมารดา">
+                    {{-- <input type="text" name="name_mother" class="form-control" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อมารดา"> --}}
+                    <input type="text" name="name_mother" class="form-control @error('name_mother') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ชื่อมารดา" value="{{ old('name_mother') }}">
+                    @error('name_mother')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">นามสกุล</span> --}}
-                    <input type="text" name="surname_mother" class="form-control"
+                    {{-- <input type="text" name="surname_mother" class="form-control"
                         aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="นามสกุล">
+                        placeholder="นามสกุล"> --}}
+                    <input type="text" name="surname_mother" class="form-control @error('surname_mother') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="นามสกุล" value="{{ old('surname_mother') }}">
+                    @error('surname_mother')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror    
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เลขมารดา</span> --}}
-                    <input type="text" name="field_citizenmother" class="form-control"
+                    {{-- <input type="text" name="field_citizenmother" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เลขประจำตัวประชาชน13หลัก">
+                        placeholder="เลขประจำตัวประชาชน13หลัก"> --}}
+                    <input type="text" name="field_citizenmother" class="form-control @error('field_citizenmother') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน13หลัก" value="{{ old('field_citizenmother') }}">
+                    @error('field_citizenmother')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_occupationmother" name="occupationmother_id" class="form-select"
+                    {{-- <select id="sel_occupationmother" name="occupationmother_id" class="form-select" --}}
+                    <select id="sel_occupationmother" name="occupationmother_id" class="form-select @error('occupationmother_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>อาชีพมารดา</option>
                         <option value="1">รับราชการ</option>
@@ -716,18 +900,29 @@
                         <option value="9">ไม่ได้ประกอบอาชีพ</option>
                         <option value="10">อื่นๆ</option>
                     </select>
+                    @error('occupationmother_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">รายได้มารดา</span> --}}
-                    <input type="text" name="income_mother" class="form-control"
+                    {{-- <input type="text" name="income_mother" class="form-control"
                         aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="รายได้มารดาต่อเดือน">
+                        placeholder="รายได้มารดาต่อเดือน"> --}}
+                    <input type="text" name="income_mother" class="form-control @error('income_mother') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="รายได้มารดาต่อเดือน" value="{{ old('income_mother') }}">
+                    @error('income_mother')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">เบอร์โทรศัพท์(มือถือ)</span> --}}
-                    <input type="text" name="phone_mother" class="form-control" aria-label="Sizing example input"
+                    {{-- <input type="text" name="phone_mother" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เบอร์โทรศัพท์(มือถือ)">
+                        placeholder="เบอร์โทรศัพท์(มือถือ)"> --}}
+                    <input type="text" name="phone_mother" class="form-control @error('phone_mother') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="เบอร์โทรศัพท์(มือถือ)" value="{{ old('phone_mother') }}">
+                    @error('phone_mother')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror 
                 </div>
             </div>
             <div class="alert alert-success text-center" role="alert">
@@ -735,7 +930,8 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select"
+                    {{-- <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select" --}}
+                    <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select @error('maritalstatuses_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>สถานภาพของบิดามารดา</option>
                         <option value="1">อยู่ด้วยกันจดทะเบียนสมรส</option>
@@ -750,25 +946,33 @@
                         <option value="11">มารดาถึงแก่กรรมบิดาแต่งงานใหม่</option>
                         <option value="12">อื่นๆ</option>
                     </select>
+                    @error('maritalstatuses_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_parent" name="parent_id" class="form-select"
+                    {{-- <select id="sel_parent" name="parent_id" class="form-select" --}}
+                     <select id="sel_parent" name="parent_id" class="form-select @error('parent_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>ผู้ปกครองนักเรียนคือ</option>
                         <option value="1">บิดา</option>
                         <option value="2">มารดา</option>
                         <option value="3">อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย)</option>
                     </select>
+                    @error('parent_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="alert alert-success text-center" role="alert">
                     <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; โปรดเลือกห้องเรียนให้ครบ
                 </div>
                 <div class="row g-2 mb-2">
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool1" name="highschool1_id" class="form-select"
+                        {{-- <select id="sel_highschool1" name="highschool1_id" class="form-select" --}}
+                         <select id="sel_highschool1" name="highschool1_id" class="form-select @error('highschool1_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 1</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -779,12 +983,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option>
                         </select>
+                        @error('highschool1_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool2" name="highschool2_id" class="form-select"
+                        {{-- <select id="sel_highschool2" name="highschool2_id" class="form-select" --}}
+                         <select id="sel_highschool2" name="highschool2_id" class="form-select @error('highschool2_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 2</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -795,12 +1003,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool2_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool3" name="highschool3_id" class="form-select"
+                        {{-- <select id="sel_highschool3" name="highschool3_id" class="form-select" --}}
+                         <select id="sel_highschool3" name="highschool3_id" class="form-select @error('highschool3_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 3</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -811,12 +1023,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option>
                         </select>
+                        @error('highschool3_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool4" name="highschool4_id" class="form-select"
+                        {{-- <select id="sel_highschool4" name="highschool4_id" class="form-select" --}}
+                         <select id="sel_highschool4" name="highschool4_id" class="form-select @error('highschool4_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 4</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -827,12 +1043,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool4_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool5" name="highschool5_id" class="form-select"
+                        {{-- <select id="sel_highschool5" name="highschool5_id" class="form-select" --}}
+                         <select id="sel_highschool5" name="highschool5_id" class="form-select @error('highschool5_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 5</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -843,12 +1063,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool5_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool6" name="highschool6_id" class="form-select"
+                        {{-- <select id="sel_highschool6" name="highschool6_id" class="form-select" --}}
+                         <select id="sel_highschool6" name="highschool6_id" class="form-select @error('highschool6_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 6</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -859,12 +1083,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool6_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool7" name="highschool7_id" class="form-select"
+                        {{-- <select id="sel_highschool7" name="highschool7_id" class="form-select" --}}
+                         <select id="sel_highschool7" name="highschool7_id" class="form-select @error('highschool7_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 7</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -875,12 +1103,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool7_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool8" name="highschool8_id" class="form-select"
+                        {{-- <select id="sel_highschool8" name="highschool8_id" class="form-select" --}}
+                         <select id="sel_highschool8" name="highschool8_id" class="form-select @error('highschool8_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 8</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -891,12 +1123,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool8_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool9" name="highschool9_id" class="form-select"
+                        {{-- <select id="sel_highschool9" name="highschool9_id" class="form-select" --}}
+                         <select id="sel_highschool9" name="highschool9_id" class="form-select @error('highschool9_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 9</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -907,12 +1143,16 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool9_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        <select id="sel_highschool10" name="highschool10_id" class="form-select"
+                        {{-- <select id="sel_highschool10" name="highschool10_id" class="form-select" --}}
+                         <select id="sel_highschool10" name="highschool10_id" class="form-select @error('highschool10_id') is-invalid @enderror"
                             aria-label="Default select example">
                             <option selected>เลือกแผนการเรียนลำดับที่ 10</option>
-                            {{-- <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
+                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
                             <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
@@ -923,6 +1163,9 @@
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
                             <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
                         </select>
+                        @error('highschool10_id')
+                        <div class="text-danger small">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
             </div>
