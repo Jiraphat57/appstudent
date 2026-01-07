@@ -216,22 +216,6 @@
                     {{-- <select id="sel_nationnalinationalities_id" class="form-select" --}}
                     <select id="sel_nationnalitie" name="nationalities_id" class="form-select @error('nationalities_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>สัญชาติ</option>
-                        <option value="1">ไทย</option>
-                        <option value="2">ญี่ปุ่น</option>
-                        <option value="3">กะเหรี่ยง</option>
-                        <option value="4">อาข่า</option>
-                        <option value="5">ลั๊ว</option>
-                        <option value="6">ลาว</option>
-                        <option value="7">พม่า</option>
-                        <option value="8">ลาหู่</option>
-                        <option value="9">ม้ง</option>
-                        <option value="10">จีนฮ่อ</option>
-                        <option value="11">ละว้า</option>
-                        <option value="12">มอญ</option>
-                        <option value="13">ไทยใหญ่</option>
-                        <option value="14">มาเลเชีย</option>
-                        <option value="15">อื่นๆ</option> --}}
                         <option value="" {{ old('nationalities_id') == '' ? 'selected' : '' }}>สัญชาติ</option>
                         <option value="1" {{ old('nationalities_id') == '1' ? 'selected' : '' }}>ไทย</option>
                         <option value="2" {{ old('nationalities_id') == '2' ? 'selected' : '' }}>ญี่ปุ่น</option>
@@ -258,22 +242,6 @@
                     {{-- <select id="sel_ethnicities" name="ethnicities_id" class="form-select" --}}
                     <select id="sel_ethnicities" name="ethnicities_id" class="form-select @error('ethnicities_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>เชื้อชาติ</option>
-                        <option value="1">ไทย</option>
-                        <option value="2">ญี่ปุ่น</option>
-                        <option value="3">กะเหรี่ยง</option>
-                        <option value="4">อาข่า</option>
-                        <option value="5">ลั๊ว</option>
-                        <option value="6">ลาว</option>
-                        <option value="7">พม่า</option>
-                        <option value="8">ลาหู่</option>
-                        <option value="9">ม้ง</option>
-                        <option value="10">จีนฮ่อ</option>
-                        <option value="11">ละว้า</option>
-                        <option value="12">มอญ</option>
-                        <option value="13">ไทยใหญ่</option>
-                        <option value="14">มาเลเชีย</option>
-                        <option value="15">อื่นๆ</option> --}}
                         <option value="" {{ old('ethnicities_id') == '' ? 'selected' : '' }}>เชื้อชาติ</option>
                         <option value="1" {{ old('ethnicities_id') == '1' ? 'selected' : '' }}>ไทย</option>
                         <option value="2" {{ old('ethnicities_id') == '2' ? 'selected' : '' }}>ญี่ปุ่น</option>
@@ -315,84 +283,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>จังหวัดเกิด</option>
-                        <option value="1">น่าน</option>
-                        <option value="2">พะเยา</option>
-                        <option value="3">ลำปาง</option>
-                        <option value="4">ลำพูน</option>
-                        <option value="5">อุตรดิตถ์</option>
-                        <option value="6">เชียงราย</option>
-                        <option value="7">เชียงใหม่</option>
-                        <option value="8">แพร่</option>
-                        <option value="9">แม่ฮ่องสอน</option>
-                        <option value="10">กรุงเทพมหานคร</option>
-                        <option value="11">กำแพงเพชร</option>
-                        <option value="12">ชัยนาท</option>
-                        <option value="13">นครนายก</option>
-                        <option value="14">นครปฐม</option>
-                        <option value="15">นครสวรรค์</option>
-                        <option value="16">นนทบุรี</option>
-                        <option value="17">ปทุมธานี</option>
-                        <option value="18">พระนครศรีอยุธยา</option>
-                        <option value="19">พิจิตร</option>
-                        <option value="20">พิษณุโลก</option>
-                        <option value="21">ลพบุรี</option>
-                        <option value="22">สมุทรปราการ</option>
-                        <option value="23">สมุทรสงคราม</option>
-                        <option value="24">สมุทรสาคร</option>
-                        <option value="25">สระบุรี</option>
-                        <option value="26">สิงห์บุรี</option>
-                        <option value="27">สุพรรณบุรี</option>
-                        <option value="28">สุโขทัย</option>
-                        <option value="29">อุทัยธานี</option>
-                        <option value="30">อ่างทอง</option>
-                        <option value="31">เพชรบูรณ์</option>
-                        <option value="32">กาฬสินธุ์</option>
-                        <option value="33">ขอนแก่น</option>
-                        <option value="34">ชัยภูมิ</option>
-                        <option value="35">นครพนม</option>
-                        <option value="36">นครราชสีมา</option>
-                        <option value="37">บึงกาฬ</option>
-                        <option value="38">บุรีรัมย์</option>
-                        <option value="39">มหาสารคาม</option>
-                        <option value="40">มุกดาหาร</option>
-                        <option value="41">ยโสธร</option>
-                        <option value="42">ร้อยเอ็ด</option>
-                        <option value="43">ศรีสะเกษ</option>
-                        <option value="44">สกลนคร</option>
-                        <option value="45">สุรินทร์</option>
-                        <option value="46">หนองคาย</option>
-                        <option value="47">หนองบัวลำภู</option>
-                        <option value="48">อำนาจเจริญ</option>
-                        <option value="49">อุดรธานี</option>
-                        <option value="50">อุบลราชธานี</option>
-                        <option value="51">เลย</option>
-                        <option value="52">กระบี่</option>
-                        <option value="53">ชุมพร</option>
-                        <option value="54">ตรัง</option>
-                        <option value="55">นครศรีธรรมราช</option>
-                        <option value="56">นราธิวาส</option>
-                        <option value="57">ปัตตานี</option>
-                        <option value="58">พังงา</option>
-                        <option value="59">พัทลุง</option>
-                        <option value="60">ภูเก็ต</option>
-                        <option value="61">ยะลา</option>
-                        <option value="62">ระนอง</option>
-                        <option value="63">สงขลา</option>
-                        <option value="64">สตูล</option>
-                        <option value="65">สุราษฎร์ธานี</option>
-                        <option value="66">จันทบุรี</option>
-                        <option value="67">ฉะเชิงเทรา</option>
-                        <option value="68">ชลบุรี</option>
-                        <option value="69">ตราด</option>
-                        <option value="70">ปราจีนบุรี</option>
-                        <option value="71">ระยอง</option>
-                        <option value="72">สระแก้ว</option>
-                        <option value="73">กาญจนบุรี</option>
-                        <option value="74">ตาก</option>
-                        <option value="75">ประจวบคีรีขันธ์</option>
-                        <option value="76">ราชบุรี</option>
-                        <option value="77">เพชรบุรี</option> --}}
                         <option value="" {{ old('provincesbirth_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
                         <option value="1" {{ old('provincesbirth_id') == '1' ? 'selected' : '' }}>น่าน</option>
                         <option value="2" {{ old('provincesbirth_id') == '2' ? 'selected' : '' }}>พะเยา</option>
@@ -479,20 +369,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_bloodtype" name="bloodtypes_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>กรุ๊ปเลือด</option>
-                        <option value="1">A</option>
-                        <option value="2">B</option>
-                        <option value="3">AB</option>
-                        <option value="4">O</option>
-                        <option value="5">ARh+</option>
-                        <option value="6">ARh-</option>
-                        <option value="7">BRh+</option>
-                        <option value="8">BRh-</option>
-                        <option value="9">ABRh+</option>
-                        <option value="10">ABRh-</option>
-                        <option value="11">ORh+</option>
-                        <option value="12">ORh-</option>
-                        <option value="13">ไม่ทราบ</option> --}}
                         <option value="" {{ old('bloodtypes_id') == '' ? 'selected' : '' }}>กรุ๊ปเลือด</option>
                         <option value="1" {{ old('bloodtypes_id') == '1' ? 'selected' : '' }}>A</option>
                         <option value="2" {{ old('bloodtypes_id') == '2' ? 'selected' : '' }}>B</option>
@@ -513,8 +389,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="weight" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="น้ำหนัก"> --}}
                         <input type="text" name="weight" class="form-control @error('weight') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="น้ำหนัก" value="{{ old('weight') }}">
                     @error('weight')
@@ -522,22 +396,15 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="height" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="ส่วนสูง"> --}}
                     <input type="text" name="height" class="form-control @error('height') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ส่วนสูง" value="{{ old('height') }}">
                     @error('height')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
-                {{-- Disability  ความพิการ --}}
                 <div class="col-md-6 mb-2">
                     <select id="disability" name="disability" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>นักเรียนพิการหรือไม่</option>
-                        <option value="1">พิการ</option>
-                        <option value="2">ไม่พิการ</option>
-                    </select> --}}
                         <option value="" {{ old('disability') == '' ? 'selected' : '' }}>นักเรียนพิการหรือไม่</option>
                         <option value="1" {{ old('disability') == '1' ? 'selected' : '' }}>พิการ</option>
                         <option value="2" {{ old('disability') == '2' ? 'selected' : '' }}>ไม่พิการ</option>
@@ -547,9 +414,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="previousschool" class="form-control"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="โรงเรียนเดิมที่จบมา"> --}}
                         <input type="text" name="previousschool" class="form-control @error('previousschool') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="โรงเรียนเดิมที่นักเรียนจบมา" value="{{ old('previousschool') }}">
                     @error('previousschool')
@@ -652,15 +516,14 @@
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror    
                 </div>
-                {{-- <div class="col-md-6 mb-2">
-                    <input type="text" name="brothers" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่ชาย(หากไม่มีกรอก0)">
-                </div> --}}
+
+                <div class="col-md-6 mb-2">
                     <input type="text" name="brothers" class="form-control @error('brothers') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่ชาย(หากไม่มีกรอก0)" value="{{ old('brothers') }}">
                     @error('brothers')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
+                </div>    
                 <div class="col-md-6 mb-2">
                     {{-- <input type="text" name="youngerbrother" class="form-control"
                         aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
