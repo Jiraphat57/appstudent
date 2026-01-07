@@ -557,84 +557,6 @@
                     {{-- <select id="provinceschool" name="provinces_id" class="form-select" --}}
                     <select id="provinceschool" name="provinceschool_id" class="form-select @error('provinceschool_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>จังหวัดโรงเรียนเดิม</option>
-                        <option value="1">น่าน</option>
-                        <option value="2">พะเยา</option>
-                        <option value="3">ลำปาง</option>
-                        <option value="4">ลำพูน</option>
-                        <option value="5">อุตรดิตถ์</option>
-                        <option value="6">เชียงราย</option>
-                        <option value="7">เชียงใหม่</option>
-                        <option value="8">แพร่</option>
-                        <option value="9">แม่ฮ่องสอน</option>
-                        <option value="10">กรุงเทพมหานคร</option>
-                        <option value="11">กำแพงเพชร</option>
-                        <option value="12">ชัยนาท</option>
-                        <option value="13">นครนายก</option>
-                        <option value="14">นครปฐม</option>
-                        <option value="15">นครสวรรค์</option>
-                        <option value="16">นนทบุรี</option>
-                        <option value="17">ปทุมธานี</option>
-                        <option value="18">พระนครศรีอยุธยา</option>
-                        <option value="19">พิจิตร</option>
-                        <option value="20">พิษณุโลก</option>
-                        <option value="21">ลพบุรี</option>
-                        <option value="22">สมุทรปราการ</option>
-                        <option value="23">สมุทรสงคราม</option>
-                        <option value="24">สมุทรสาคร</option>
-                        <option value="25">สระบุรี</option>
-                        <option value="26">สิงห์บุรี</option>
-                        <option value="27">สุพรรณบุรี</option>
-                        <option value="28">สุโขทัย</option>
-                        <option value="29">อุทัยธานี</option>
-                        <option value="30">อ่างทอง</option>
-                        <option value="31">เพชรบูรณ์</option>
-                        <option value="32">กาฬสินธุ์</option>
-                        <option value="33">ขอนแก่น</option>
-                        <option value="34">ชัยภูมิ</option>
-                        <option value="35">นครพนม</option>
-                        <option value="36">นครราชสีมา</option>
-                        <option value="37">บึงกาฬ</option>
-                        <option value="38">บุรีรัมย์</option>
-                        <option value="39">มหาสารคาม</option>
-                        <option value="40">มุกดาหาร</option>
-                        <option value="41">ยโสธร</option>
-                        <option value="42">ร้อยเอ็ด</option>
-                        <option value="43">ศรีสะเกษ</option>
-                        <option value="44">สกลนคร</option>
-                        <option value="45">สุรินทร์</option>
-                        <option value="46">หนองคาย</option>
-                        <option value="47">หนองบัวลำภู</option>
-                        <option value="48">อำนาจเจริญ</option>
-                        <option value="49">อุดรธานี</option>
-                        <option value="50">อุบลราชธานี</option>
-                        <option value="51">เลย</option>
-                        <option value="52">กระบี่</option>
-                        <option value="53">ชุมพร</option>
-                        <option value="54">ตรัง</option>
-                        <option value="55">นครศรีธรรมราช</option>
-                        <option value="56">นราธิวาส</option>
-                        <option value="57">ปัตตานี</option>
-                        <option value="58">พังงา</option>
-                        <option value="59">พัทลุง</option>
-                        <option value="60">ภูเก็ต</option>
-                        <option value="61">ยะลา</option>
-                        <option value="62">ระนอง</option>
-                        <option value="63">สงขลา</option>
-                        <option value="64">สตูล</option>
-                        <option value="65">สุราษฎร์ธานี</option>
-                        <option value="66">จันทบุรี</option>
-                        <option value="67">ฉะเชิงเทรา</option>
-                        <option value="68">ชลบุรี</option>
-                        <option value="69">ตราด</option>
-                        <option value="70">ปราจีนบุรี</option>
-                        <option value="71">ระยอง</option>
-                        <option value="72">สระแก้ว</option>
-                        <option value="73">กาญจนบุรี</option>
-                        <option value="74">ตาก</option>
-                        <option value="75">ประจวบคีรีขันธ์</option>
-                        <option value="76">ราชบุรี</option>
-                        <option value="77">เพชรบุรี</option> --}}
                         <option value="" {{ old('provinceschool_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
                         <option value="1" {{ old('provinceschool_id') == '1' ? 'selected' : '' }}>น่าน</option>
                         <option value="2" {{ old('provinceschool_id') == '2' ? 'selected' : '' }}>พะเยา</option>
@@ -719,9 +641,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="beingonlychild" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="นักเรียนเป็นบุตรคนที่"> --}}
                     <input type="text" name="beingonlychild" class="form-control @error('beingonlychild') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="นักเรียนเป็นบุตรคนที่" value="{{ old('beingonlychild') }}">
                     @error('beingonlychild')
@@ -729,8 +648,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="brothers" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่ชาย(หากไม่มีกรอก0)"> --}}
                     <input type="text" name="brothers" class="form-control @error('brothers') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่ชาย(หากไม่มีกรอก0)" value="{{ old('brothers') }}">
                     @error('brothers')
@@ -738,9 +655,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="youngerbrother" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="จำนวนน้องชาย(หากไม่มีกรอก0)"> --}}
                     <input type="text" name="youngerbrother" class="form-control @error('youngerbrother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนน้องชาย(หากไม่มีกรอก0)" value="{{ old('youngerbrother') }}">
                     @error('youngerbrother')
@@ -748,8 +662,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="oldersister" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่สาว(หากไม่มีกรอก0)"> --}}
                     <input type="text" name="oldersister" class="form-control @error('oldersister') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่สาว(หากไม่มีกรอก0)" value="{{ old('oldersister') }}">
                     @error('oldersister')
@@ -757,8 +669,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="sister" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"placeholder="จำนวนน้องสาว(หากไม่มีกรอก0)"> --}}
                     <input type="text" name="sister" class="form-control @error('sister') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนน้องสาว(หากไม่มีกรอก0)" value="{{ old('sister') }}">
                     @error('sister')
@@ -766,8 +676,6 @@
                     @enderror    
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="sumsiblings" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่น้องที่เรียนอยู่"> --}}
                     <input type="text" name="sumsiblings" class="form-control @error('sumsiblings') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่น้องที่เรียนอยู่" value="{{ old('sumsiblings') }}">
                     @error('sumsiblings')
@@ -780,8 +688,6 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="houseid" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก"> --}}
                     <input type="text" name="houseid" class="form-control @error('houseid') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก" value="{{ old('houseid') }}">
                     @error('houseid')
@@ -789,8 +695,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="housenumber" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="บ้านเลขที่"> --}}
                     <input type="text" name="housenumber" class="form-control @error('housenumber') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="บ้านเลขที่" value="{{ old('housenumber') }}">
                     @error('housenumber')
@@ -798,8 +702,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="villagenumber" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default" placeholder="หมู่ที่"> --}}
                     <input type="text" name="villagenumber" class="form-control @error('villagenumber') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="หมู่ที่" value="{{ old('villagenumber') }}">
                     @error('villagenumber')
@@ -807,8 +709,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="villagename" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน"> --}}
                     <input type="text" name="villagename" class="form-control @error('villagename') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน" value="{{ old('villagename') }}">
                     @error('villagename')
@@ -816,8 +716,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="district" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ตำบล"> --}}
                     <input type="text" name="district" class="form-control @error('district') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ตำบล" value="{{ old('district') }}">
                     @error('district')
@@ -825,8 +723,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="subdistrict" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ"> --}}
                     <input type="text" name="subdistrict" class="form-control @error('subdistrict') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ" value="{{ old('district') }}">
                     @error('subdistrict')
@@ -834,87 +730,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_province2" name="provinces_id" class="form-select" --}}
                     <select id="sel_province2" name="provinces_id" class="form-select @error('provinces_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>จังหวัด</option>
-                        <option value="1">น่าน</option>
-                        <option value="2">พะเยา</option>
-                        <option value="3">ลำปาง</option>
-                        <option value="4">ลำพูน</option>
-                        <option value="5">อุตรดิตถ์</option>
-                        <option value="6">เชียงราย</option>
-                        <option value="7">เชียงใหม่</option>
-                        <option value="8">แพร่</option>
-                        <option value="9">แม่ฮ่องสอน</option>
-                        <option value="10">กรุงเทพมหานคร</option>
-                        <option value="11">กำแพงเพชร</option>
-                        <option value="12">ชัยนาท</option>
-                        <option value="13">นครนายก</option>
-                        <option value="14">นครปฐม</option>
-                        <option value="15">นครสวรรค์</option>
-                        <option value="16">นนทบุรี</option>
-                        <option value="17">ปทุมธานี</option>
-                        <option value="18">พระนครศรีอยุธยา</option>
-                        <option value="19">พิจิตร</option>
-                        <option value="20">พิษณุโลก</option>
-                        <option value="21">ลพบุรี</option>
-                        <option value="22">สมุทรปราการ</option>
-                        <option value="23">สมุทรสงคราม</option>
-                        <option value="24">สมุทรสาคร</option>
-                        <option value="25">สระบุรี</option>
-                        <option value="26">สิงห์บุรี</option>
-                        <option value="27">สุพรรณบุรี</option>
-                        <option value="28">สุโขทัย</option>
-                        <option value="29">อุทัยธานี</option>
-                        <option value="30">อ่างทอง</option>
-                        <option value="31">เพชรบูรณ์</option>
-                        <option value="32">กาฬสินธุ์</option>
-                        <option value="33">ขอนแก่น</option>
-                        <option value="34">ชัยภูมิ</option>
-                        <option value="35">นครพนม</option>
-                        <option value="36">นครราชสีมา</option>
-                        <option value="37">บึงกาฬ</option>
-                        <option value="38">บุรีรัมย์</option>
-                        <option value="39">มหาสารคาม</option>
-                        <option value="40">มุกดาหาร</option>
-                        <option value="41">ยโสธร</option>
-                        <option value="42">ร้อยเอ็ด</option>
-                        <option value="43">ศรีสะเกษ</option>
-                        <option value="44">สกลนคร</option>
-                        <option value="45">สุรินทร์</option>
-                        <option value="46">หนองคาย</option>
-                        <option value="47">หนองบัวลำภู</option>
-                        <option value="48">อำนาจเจริญ</option>
-                        <option value="49">อุดรธานี</option>
-                        <option value="50">อุบลราชธานี</option>
-                        <option value="51">เลย</option>
-                        <option value="52">กระบี่</option>
-                        <option value="53">ชุมพร</option>
-                        <option value="54">ตรัง</option>
-                        <option value="55">นครศรีธรรมราช</option>
-                        <option value="56">นราธิวาส</option>
-                        <option value="57">ปัตตานี</option>
-                        <option value="58">พังงา</option>
-                        <option value="59">พัทลุง</option>
-                        <option value="60">ภูเก็ต</option>
-                        <option value="61">ยะลา</option>
-                        <option value="62">ระนอง</option>
-                        <option value="63">สงขลา</option>
-                        <option value="64">สตูล</option>
-                        <option value="65">สุราษฎร์ธานี</option>
-                        <option value="66">จันทบุรี</option>
-                        <option value="67">ฉะเชิงเทรา</option>
-                        <option value="68">ชลบุรี</option>
-                        <option value="69">ตราด</option>
-                        <option value="70">ปราจีนบุรี</option>
-                        <option value="71">ระยอง</option>
-                        <option value="72">สระแก้ว</option>
-                        <option value="73">กาญจนบุรี</option>
-                        <option value="74">ตาก</option>
-                        <option value="75">ประจวบคีรีขันธ์</option>
-                        <option value="76">ราชบุรี</option>
-                        <option value="77">เพชรบุรี</option> --}}
                         <option value="" {{ old('provinces_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
                         <option value="1" {{ old('provinces_id') == '1' ? 'selected' : '' }}>น่าน</option>
                         <option value="2" {{ old('provinces_id') == '2' ? 'selected' : '' }}>พะเยา</option>
@@ -999,8 +816,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="postalcode" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="รหัสไปรษณีย์"> --}}
                     <input type="text" name="postalcode" class="form-control @error('postalcode') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="รหัสไปรษณีย์" value="{{ old('postalcode') }}">
                     @error('postalcode')
@@ -1008,15 +823,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="seltyperesidence" name="typeresidences_id" class="form-select" --}}
                     <select id="seltyperesidence" name="typeresidences_id" class="form-select @error('typeresidences_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>ลักษณะที่พักอาศัย</option>
-                        <option value="1">บ้านตัวเอง</option>
-                        <option value="2">บ้านญาติ</option>
-                        <option value="3">บ้านเช่า</option>
-                        <option value="4">วัด</option>
-                        <option value="5">อื่นๆ</option> --}}
                         <option value="" {{ old('typeresidences_id') == '' ? 'selected' : '' }}>ลักษณะที่พักอาศัย</option>
                         <option value="1" {{ old('typeresidences_id') == '1' ? 'selected' : '' }}>บ้านตัวเอง</option>
                         <option value="2" {{ old('typeresidences_id') == '2' ? 'selected' : '' }}>บ้านญาติ</option>
@@ -1029,9 +837,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="distancelatyangroad" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default" 
-                        placeholder="ที่พักห่างโรงเรียนเป็นกี่เมตร(1km=1000m)"> --}}
                     <input type="text" name="distancelatyangroad" class="form-control @error('distancelatyangroad') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ที่พักห่างโรงเรียนเป็นกี่เมตร(1km=1000m)" value="{{ old('distancelatyangroad') }}">
                     @error('distancelatyangroad')
@@ -1039,9 +844,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="traveltime" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="ใช้เวลาเดินทางมาโรงเรียนกี่นาที"> --}}
                     <input type="text" name="traveltime" class="form-control @error('traveltime') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ใช้เวลาเดินทางมาโรงเรียนกี่นาที" value="{{ old('traveltime') }}">
                     @error('traveltime')
@@ -1051,12 +853,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="travelschool1" name="travelschool1s_id" class="form-select @error('travelschool1s_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>พาหนะที่ใช้มาโรงเรียน</option>
-                        <option value="1">เดินเท้า</option>
-                        <option value="2">จักรยานยืมเรียน</option>
-                        <option value="3">พาหนะไม่เสียค่าโดยสาร</option>
-                        <option value="4">พาหนะเสียค่าโดยสาร</option>
-                        <option value="5">อื่นๆ</option> --}}
                         <option value="" {{ old('travelschool1s_id') == '' ? 'selected' : '' }}>พาหนะที่ใช้มาโรงเรียน</option>
                         <option value="1" {{ old('travelschool1s_id') == '1' ? 'selected' : '' }}>เดินเท้า</option>
                         <option value="2" {{ old('travelschool1s_id') == '2' ? 'selected' : '' }}>จักรยานยืมเรียน</option>
@@ -1073,12 +869,8 @@
                 <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; ข้อมูลบิดาผู้ให้กำเนิด
             </div>
             <div class="row g-2 mb-2">
-                <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select" --}}
-                    <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select @error('typetitlesfather_id') is-invalid @enderror"
+                <div class="col-md-6 mb-2">                    <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select @error('typetitlesfather_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>คำนำหน้าชื่อ</option>
-                        <option value="3">นาย</option> --}}
                         <option value="" {{ old('typetitlesfather_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
                         <option value="1" {{ old('typetitlesfather_id') == '1' ? 'selected' : '' }}>นาย</option>
                     </select>
@@ -1087,9 +879,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="textname_father" name="name_father" class="form-control"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="ชื่อบิดา"> --}}
                     <input type="text" name="name_father" class="form-control @error('name_father') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ชื่อบิดา" value="{{ old('name_father') }}">
                     @error('name_father')
@@ -1097,9 +886,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="surname_father" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="นามสกุล"> --}}
                     <input type="text" name="surname_father" class="form-control @error('surname_father') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="นามสกุล" value="{{ old('surname_father') }}">
                     @error('surname_father')
@@ -1107,9 +893,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="field_citizenfather" class="form-control"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เลขประจำตัวประชาชน13หลัก"> --}}
                     <input type="text" name="field_citizenfather" class="form-control @error('field_citizenfather') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน13หลัก" value="{{ old('field_citizenfather') }}">
                     @error('field_citizenfather')
@@ -1120,17 +903,6 @@
                     {{-- <select id="sel_occupationfather" name="occupationfather_id" class="form-select" --}}
                     <select id="sel_occupationfather" name="occupationfather_id" class="form-select @error('occupationfather_id') is-invalid @enderror"    
                         aria-label="Default select example">
-                        {{-- <option selected>อาชีพบิดา</option>
-                        <option value="1">รับราชการ</option>
-                        <option value="2">พนักงานรัฐวิสาหกิจ</option>
-                        <option value="3">นักธุรกิจ-ค้าขาย</option>
-                        <option value="4">เกษตรกร</option>
-                        <option value="5">รับจ้าง</option>
-                        <option value="6">พระ/นักบวช</option>
-                        <option value="7">พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
-                        <option value="8">เกษียณ</option>
-                        <option value="9">ไม่ได้ประกอบอาชีพ</option>
-                        <option value="10">อื่นๆ</option> --}}
                         <option value="" {{ old('occupationfather_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
                         <option value="1" {{ old('occupationfather_id') == '1' ? 'selected' : '' }}>รับราชการ</option>
                         <option value="2" {{ old('occupationfather_id') == '2' ? 'selected' : '' }}>พนักงานรัฐวิสาหกิจ</option>
@@ -1148,9 +920,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="income_father" class="form-control"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="รายได้บิดาต่อเดือน"> --}}
                     <input type="text" name="income_father" class="form-control @error('income_father') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="รายได้บิดาต่อเดือน" value="{{ old('income_father') }}">
                     @error('income_father')
@@ -1158,9 +927,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="phone_father" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เบอร์โทรศัพท์(มือถือ)"> --}}
                     <input type="text" name="phone_father" class="form-control @error('phone_father') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เบอร์โทรศัพท์(มือถือ)" value="{{ old('phone_father') }}">
                     @error('phone_father')
@@ -1176,9 +942,6 @@
                     {{-- <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select" --}}
                     <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select @error('typetitlesmother_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>คำนำหน้าชื่อ</option>
-                        <option value="4">นางสาว</option>
-                        <option value="5">นาง</option> --}}
                         <option value="" {{ old('typetitlesmother_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
                         <option value="4" {{ old('typetitlesmother_id') == '4' ? 'selected' : '' }}>นางสาว</option>
                         <option value="5" {{ old('typetitlesmother_id') == '5' ? 'selected' : '' }}>นาง</option>
@@ -1188,8 +951,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="name_mother" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อมารดา"> --}}
                     <input type="text" name="name_mother" class="form-control @error('name_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ชื่อมารดา" value="{{ old('name_mother') }}">
                     @error('name_mother')
@@ -1197,9 +958,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="surname_mother" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="นามสกุล"> --}}
                     <input type="text" name="surname_mother" class="form-control @error('surname_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="นามสกุล" value="{{ old('surname_mother') }}">
                     @error('surname_mother')
@@ -1207,9 +965,6 @@
                     @enderror    
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="field_citizenmother" class="form-control"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เลขประจำตัวประชาชน13หลัก"> --}}
                     <input type="text" name="field_citizenmother" class="form-control @error('field_citizenmother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน13หลัก" value="{{ old('field_citizenmother') }}">
                     @error('field_citizenmother')
@@ -1220,17 +975,6 @@
                     {{-- <select id="sel_occupationmother" name="occupationmother_id" class="form-select" --}}
                     <select id="sel_occupationmother" name="occupationmother_id" class="form-select @error('occupationmother_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>อาชีพมารดา</option>
-                        <option value="1">รับราชการ</option>
-                        <option value="2">พนักงานรัฐวิสาหกิจ</option>
-                        <option value="3">นักธุรกิจ-ค้าขาย</option>
-                        <option value="4">เกษตรกร</option>
-                        <option value="5">รับจ้าง</option>
-                        <option value="6">พระ/นักบวช</option>
-                        <option value="7">พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
-                        <option value="8">เกษียณ</option>
-                        <option value="9">ไม่ได้ประกอบอาชีพ</option>
-                        <option value="10">อื่นๆ</option> --}}
                         <option value="" {{ old('occupationmother_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
                         <option value="1" {{ old('occupationmother_id') == '1' ? 'selected' : '' }}>รับราชการ</option>
                         <option value="2" {{ old('occupationmother_id') == '2' ? 'selected' : '' }}>พนักงานรัฐวิสาหกิจ</option>
@@ -1248,9 +992,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="income_mother" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="รายได้มารดาต่อเดือน"> --}}
                     <input type="text" name="income_mother" class="form-control @error('income_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="รายได้มารดาต่อเดือน" value="{{ old('income_mother') }}">
                     @error('income_mother')
@@ -1258,9 +999,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="phone_mother" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เบอร์โทรศัพท์(มือถือ)"> --}}
                     <input type="text" name="phone_mother" class="form-control @error('phone_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เบอร์โทรศัพท์(มือถือ)" value="{{ old('phone_mother') }}">
                     @error('phone_mother')
@@ -1275,18 +1013,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select @error('maritalstatuses_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>สถานภาพของบิดามารดา</option>
-                        <option value="1">อยู่ด้วยกันจดทะเบียนสมรส</option>
-                        <option value="2">โสด</option>
-                        <option value="3">อย่าร้าง</option>
-                        <option value="4">อยู่ด้วยกันไม่จดทะเบียนสมรส</option>
-                        <option value="5">แยกกันอยู่</option>
-                        <option value="7">บิดาถึงแก่กรรม</option>
-                        <option value="8">มารดาถึงแก่กรรม</option>
-                        <option value="9">บิดาและมารดาถึงแก่กรรม</option>
-                        <option value="10">บิดาถึงแก่กรรมมารดาแต่งงานใหม่</option>
-                        <option value="11">มารดาถึงแก่กรรมบิดาแต่งงานใหม่</option>
-                        <option value="12">อื่นๆ</option> --}}
                         <option value="" {{ old('maritalstatuses_id') == '' ? 'selected' : '' }}>สถานภาพของบิดามารดา</option>
                         <option value="1" {{ old('maritalstatuses_id') == '1' ? 'selected' : '' }}>อยู่ด้วยกันจดทะเบียนสมรส</option>
                         <option value="2" {{ old('maritalstatuses_id') == '2' ? 'selected' : '' }}>โสด</option>
@@ -1306,13 +1032,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_parent" name="parent_id" class="form-select" --}}
                      <select id="sel_parent" name="parent_id" class="form-select @error('parent_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        {{-- <option selected>ผู้ปกครองนักเรียนคือ</option>
-                        <option value="1">บิดา</option>
-                        <option value="2">มารดา</option>
-                        <option value="3">อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย)</option> --}}
                         <option value="" {{ old('parent_id') == '' ? 'selected' : '' }}>ผู้ปกครองนักเรียนคือ</option>
                         <option value="1" {{ old('parent_id') == '1' ? 'selected' : '' }}>บิดา</option>
                         <option value="2" {{ old('parent_id') == '2' ? 'selected' : '' }}>มารดา</option>
@@ -1330,17 +1051,6 @@
                         {{-- <select id="sel_highschool1" name="highschool1_id" class="form-select" --}}
                          <select id="sel_highschool1" name="highschool1_id" class="form-select @error('highschool1_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 1</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool1_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool1_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool1_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1361,17 +1071,6 @@
                         {{-- <select id="sel_highschool2" name="highschool2_id" class="form-select" --}}
                          <select id="sel_highschool2" name="highschool2_id" class="form-select @error('highschool2_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 2</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool2_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool2_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool2_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1392,17 +1091,6 @@
                         {{-- <select id="sel_highschool3" name="highschool3_id" class="form-select" --}}
                          <select id="sel_highschool3" name="highschool3_id" class="form-select @error('highschool3_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 3</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool3_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool3_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool3_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1423,17 +1111,6 @@
                         {{-- <select id="sel_highschool4" name="highschool4_id" class="form-select" --}}
                          <select id="sel_highschool4" name="highschool4_id" class="form-select @error('highschool4_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 4</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool4_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool4_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool4_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1454,17 +1131,6 @@
                         {{-- <select id="sel_highschool5" name="highschool5_id" class="form-select" --}}
                          <select id="sel_highschool5" name="highschool5_id" class="form-select @error('highschool5_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 5</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool5_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool5_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool5_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1485,17 +1151,6 @@
                         {{-- <select id="sel_highschool6" name="highschool6_id" class="form-select" --}}
                          <select id="sel_highschool6" name="highschool6_id" class="form-select @error('highschool6_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 6</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool6_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool6_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool6_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1516,17 +1171,7 @@
                         {{-- <select id="sel_highschool7" name="highschool7_id" class="form-select" --}}
                          <select id="sel_highschool7" name="highschool7_id" class="form-select @error('highschool7_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 7</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+
                             <option value="" {{ old('highschool7_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool7_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool7_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1544,20 +1189,8 @@
                         @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        {{-- <select id="sel_highschool8" name="highschool8_id" class="form-select" --}}
                          <select id="sel_highschool8" name="highschool8_id" class="form-select @error('highschool8_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 8</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool8_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool8_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool8_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1575,20 +1208,8 @@
                         @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        {{-- <select id="sel_highschool9" name="highschool9_id" class="form-select" --}}
                          <select id="sel_highschool9" name="highschool9_id" class="form-select @error('highschool9_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 9</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool9_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool9_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool9_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1606,20 +1227,8 @@
                         @enderror
                     </div>
                     <div class="col-md-6 mb-2">
-                        {{-- <select id="sel_highschool10" name="highschool10_id" class="form-select" --}}
                          <select id="sel_highschool10" name="highschool10_id" class="form-select @error('highschool10_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 10</option>
-                            <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                            <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                            <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
-                            <option value="4">4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
-                            <option value="5">5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                            <option value="6">6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                            <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                            <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                            <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
                             <option value="" {{ old('highschool10_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1" {{ old('highschool10_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2" {{ old('highschool10_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
@@ -1639,12 +1248,10 @@
                 </div>
             </div>
             <div class="container ">
-                {{-- <div class="row justify-content-center"> --}}
                 <div class="col text-center">
                     <button type="submit" class="btn btn-primary btn-lg"><i
                             class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กดสมัครเรียน&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
-                {{-- </div>     --}}
             </div>
         </form>
     </div>
