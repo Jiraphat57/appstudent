@@ -87,17 +87,6 @@
     <div class="container">
         <form class="row g-3" action="{{ route('store1') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            {{-- @if ($errors->any())
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <h5><i class="bi bi-exclamation-triangle-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;กรุณาตรวจสอบข้อมูลที่กรอกไม่ครบ:</h5>
-                    <ul class="mb-0">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif --}}
             <div class="alert alert-success text-center" role="alert">
                  <h5><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน ม.1</h5>**หากกรอกไม่ครบทุกช่องระบบจะไม่บันทึกข้อมูลให้ หากช่องไหนไม่มี ให้กรอก - ลงไป**
             </div>
