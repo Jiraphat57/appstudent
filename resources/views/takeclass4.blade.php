@@ -1312,7 +1312,7 @@
             let currentValue = $('#datepicker input').val();
             if (!currentValue) {
                 let today = moment.tz("Asia/Bangkok");
-                let thaiYear = today.year() + 543;
+                let thaiYear = today.year();
                 let formattedToday = today.format('DD/MM') + '/' + thaiYear;
                 $('#datepicker input').datepicker('setDate', formattedToday);
             }
