@@ -732,7 +732,7 @@
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="col-md-6 mb-2"> --}}
+                <div class="col-md-6 mb-2"> 
                     <input type="text" name="district" class="form-control @error('district') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ตำบล" value="{{ old('district') }}">
                     @error('district')
