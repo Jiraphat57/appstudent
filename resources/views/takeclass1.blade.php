@@ -735,9 +735,9 @@
                 <div class="col-md-6 mb-2">
                     {{-- <input type="text" name="villagename" class="form-control" aria-label="Sizing example input"
                         id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน"> --}}
-                    <input type="text" name="villagenumber" class="form-control @error('villagenumber') is-invalid @enderror" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน" value="{{ old('villagenumber') }}">
-                    @error('villagenumber')
+                    <input type="text" name="villagename" class="form-control @error('villagename') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน" value="{{ old('villagename') }}">
+                    @error('villagename')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
