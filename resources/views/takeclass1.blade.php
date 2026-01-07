@@ -1115,18 +1115,6 @@
                         <div class="text-danger small">{{ $message }}</div>
                         @enderror
                 </div>
-                {{-- <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool8" name="secondaryschool8_id" class="form-select"
-                        aria-label="Default select example">
-                        <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
-                        <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
-                        <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                        <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                        <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                        <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                        <option value="7">ห้องเรียนทั่วไป GP</option>
-                    </select>
-                </div> --}}
             </div>
             <div class="container ">
                 {{-- <div class="row justify-content-center"> --}}
@@ -1184,7 +1172,7 @@
                 orientation: 'bottom', // ให้แสดงข้างล่างของ input
             }).on('changeDate', function (e) {
                 let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
-                let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                let thaiYear = date.year(); // แปลง ค.ศ. เป็น พ.ศ.
                 let formattedDate = date.format('DD/MM') + '/' + thaiYear;
                 let dayOfWeek = date.format('dddd'); // แสดงวันในสัปดาห์
 
