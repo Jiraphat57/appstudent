@@ -530,7 +530,8 @@
                 </div>
                 {{-- Disability  ความพิการ --}}
                 <div class="col-md-6 mb-2">
-                    <select id="sel_disability" name="disability" class="form-select"
+                    {{-- <select id="sel_disability" name="disability" class="form-select" --}}
+                    <select id="sel_disability" name="disability" class="form-select @error('disability') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('disability') == '' ? 'selected' : '' }}>นักเรียนพิการหรือไม่</option>
                         <option value="1" {{ old('disability') == '1' ? 'selected' : '' }}>พิการ</option>
