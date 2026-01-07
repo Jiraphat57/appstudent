@@ -85,7 +85,7 @@
     <div class="container">
         <form class="row g-3" action="{{ route('store4') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            @if ($errors->any())
+            {{-- @if ($errors->any())
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <h5><i class="bi bi-exclamation-triangle-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;กรุณาตรวจสอบข้อมูลที่กรอกไม่ครบ:</h5>
                     <ul class="mb-0">
@@ -95,7 +95,7 @@
                     </ul>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-            @endif
+            @endif --}}
             <div class="alert alert-success text-center" role="alert">
                 <h5><i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน ม.4</h5>
                 **หากกรอกไม่ครบทุกช่องระบบจะไม่บันทึกข้อมูลให้ หากช่องไหนไม่มี ให้กรอก - ลงไป**
@@ -104,8 +104,10 @@
                 <div class="col-md-6 mb-2">
                     <select id="classlevel" name="classlevels_id" class="form-select @error('classlevels_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>ระดับชั้นที่สมัครเข้าเรียน</option>
-                        <option value="2">ม.4</option>
+                        {{-- <option selected>ระดับชั้นที่สมัครเข้าเรียน</option>
+                        <option value="2">ม.4</option> --}}
+                        <option value="" {{ old('classlevels_id') == '' ? 'selected' : '' }}>ระดับชั้นที่สมัครเข้าเรียน</option>
+                        <option value="2" {{ old('classlevels_id') == '2' ? 'selected' : '' }}>ม.4</option>
                     </select>
                     @error('classlevels_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -114,12 +116,18 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_typetitle" name="typetitles_id" class="form-select @error('typetitles_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>คำนำหน้าชื่อ</option>
+                        {{-- <option selected>คำนำหน้าชื่อ</option>
                         <option value="1">เด็กชาย</option>
                         <option value="2">เด็กหญิง</option>
                         <option value="3">นาย</option>
                         <option value="4">นางสาว</option>
-                        <option value="5">นาง</option>
+                        <option value="5">นาง</option> --}}
+                        <option value="" {{ old('typetitles_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
+                        <option value="1" {{ old('typetitles_id') == '1' ? 'selected' : '' }}>เด็กชาย</option>
+                        <option value="2" {{ old('typetitles_id') == '2' ? 'selected' : '' }}>เด็กหญิง</option>
+                        <option value="3" {{ old('typetitles_id') == '3' ? 'selected' : '' }}>นาย</option>
+                        <option value="4" {{ old('typetitles_id') == '4' ? 'selected' : '' }}>นางสาว</option>
+                        <option value="5" {{ old('typetitles_id') == '5' ? 'selected' : '' }}>นาง</option>
                     </select>
                     @error('typetitles_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -181,13 +189,20 @@
                     {{-- <select id="sel_religion" name="religions_id" class="form-select" --}}
                     <select id="sel_religion" name="religions_id" class="form-select @error('religions_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>ศาสนา</option>
+                        {{-- <option selected>ศาสนา</option>
                         <option value="1">พุทธ</option>
                         <option value="2">อิสลาม</option>
                         <option value="3">คริสต์</option>
                         <option value="4">ซิกส์</option>
                         <option value="5">พราหมณ์/ฮินดู</option>
-                        <option value="6">อื่นๆ</option>
+                        <option value="6">อื่นๆ</option> --}}
+                        <option value="" {{ old('religions_id') == '' ? 'selected' : '' }}>ศาสนา</option>
+                        <option value="1" {{ old('religions_id') == '1' ? 'selected' : '' }}>พุทธ</option>
+                        <option value="2" {{ old('religions_id') == '2' ? 'selected' : '' }}>อิสลาม</option>
+                        <option value="3" {{ old('religions_id') == '3' ? 'selected' : '' }}>คริสต์</option>
+                        <option value="4" {{ old('religions_id') == '4' ? 'selected' : '' }}>ซิกส์</option>
+                        <option value="5" {{ old('religions_id') == '5' ? 'selected' : '' }}>พราหมณ์/ฮินดู</option>
+                        <option value="6" {{ old('religions_id') == '6' ? 'selected' : '' }}>อื่นๆ</option>
                     </select>
                     @error('religions_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -198,7 +213,7 @@
                         aria-label="Default select example"> --}}
                     <select id="sel_nationnalitie" name="nationalities_id" class="form-select @error('nationalities_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>สัญชาติ</option>
+                        {{-- <option selected>สัญชาติ</option>
                         <option value="1">ไทย</option>
                         <option value="2">ญี่ปุ่น</option>
                         <option value="3">กะเหรี่ยง</option>
@@ -213,7 +228,23 @@
                         <option value="12">มอญ</option>
                         <option value="13">ไทยใหญ่</option>
                         <option value="14">มาเลเชีย</option>
-                        <option value="15">อื่นๆ</option>
+                        <option value="15">อื่นๆ</option> --}}
+                        <option value="" {{ old('nationalities_id') == '' ? 'selected' : '' }}>สัญชาติ</option>
+                        <option value="1" {{ old('nationalities_id') == '1' ? 'selected' : '' }}>ไทย</option>
+                        <option value="2" {{ old('nationalities_id') == '2' ? 'selected' : '' }}>ญี่ปุ่น</option>
+                        <option value="3" {{ old('nationalities_id') == '3' ? 'selected' : '' }}>กะเหรี่ยง</option>
+                        <option value="4" {{ old('nationalities_id') == '4' ? 'selected' : '' }}>อาข่า</option>
+                        <option value="5" {{ old('nationalities_id') == '5' ? 'selected' : '' }}>ลั๊ว</option>
+                        <option value="6" {{ old('nationalities_id') == '6' ? 'selected' : '' }}>ลาว</option>
+                        <option value="7" {{ old('nationalities_id') == '7' ? 'selected' : '' }}>พม่า</option>
+                        <option value="8" {{ old('nationalities_id') == '8' ? 'selected' : '' }}>ลาหู่</option>
+                        <option value="9" {{ old('nationalities_id') == '9' ? 'selected' : '' }}>ม้ง</option>
+                        <option value="10" {{ old('nationalities_id') == '10' ? 'selected' : '' }}>จีนฮ่อ</option>
+                        <option value="11" {{ old('nationalities_id') == '11' ? 'selected' : '' }}>ละว้า</option>
+                        <option value="12" {{ old('nationalities_id') == '12' ? 'selected' : '' }}>มอญ</option>
+                        <option value="13" {{ old('nationalities_id') == '13' ? 'selected' : '' }}>ไทยใหญ่</option>
+                        <option value="14" {{ old('nationalities_id') == '14' ? 'selected' : '' }}>มาเลเชีย</option>
+                        <option value="15" {{ old('nationalities_id') == '15' ? 'selected' : '' }}>อื่นๆ</option>
                     </select>
                     @error('nationalities_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -225,7 +256,7 @@
                         aria-label="Default select example"> --}}
                    <select id="sel_ethnicities" name="ethnicities_id" class="form-select @error('ethnicities_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>เชื้อชาติ</option>
+                        {{-- <option selected>เชื้อชาติ</option>
                         <option value="1">ไทย</option>
                         <option value="2">ญี่ปุ่น</option>
                         <option value="3">กะเหรี่ยง</option>
@@ -240,7 +271,23 @@
                         <option value="12">มอญ</option>
                         <option value="13">ไทยใหญ่</option>
                         <option value="14">มาเลเชีย</option>
-                        <option value="15">อื่นๆ</option>
+                        <option value="15">อื่นๆ</option> --}}
+                        <option value="" {{ old('ethnicities_id') == '' ? 'selected' : '' }}>เชื้อชาติ</option>
+                        <option value="1" {{ old('ethnicities_id') == '1' ? 'selected' : '' }}>ไทย</option>
+                        <option value="2" {{ old('ethnicities_id') == '2' ? 'selected' : '' }}>ญี่ปุ่น</option>
+                        <option value="3" {{ old('ethnicities_id') == '3' ? 'selected' : '' }}>กะเหรี่ยง</option>
+                        <option value="4" {{ old('ethnicities_id') == '4' ? 'selected' : '' }}>อาข่า</option>
+                        <option value="5" {{ old('ethnicities_id') == '5' ? 'selected' : '' }}>ลั๊ว</option>
+                        <option value="6" {{ old('ethnicities_id') == '6' ? 'selected' : '' }}>ลาว</option>
+                        <option value="7" {{ old('ethnicities_id') == '7' ? 'selected' : '' }}>พม่า</option>
+                        <option value="8" {{ old('ethnicities_id') == '8' ? 'selected' : '' }}>ลาหู่</option>
+                        <option value="9" {{ old('ethnicities_id') == '9' ? 'selected' : '' }}>ม้ง</option>
+                        <option value="10" {{ old('ethnicities_id') == '10' ? 'selected' : '' }}>จีนฮ่อ</option>
+                        <option value="11" {{ old('ethnicities_id') == '11' ? 'selected' : '' }}>ละว้า</option>
+                        <option value="12" {{ old('ethnicities_id') == '12' ? 'selected' : '' }}>มอญ</option>
+                        <option value="13" {{ old('ethnicities_id') == '13' ? 'selected' : '' }}>ไทยใหญ่</option>
+                        <option value="14" {{ old('ethnicities_id') == '14' ? 'selected' : '' }}>มาเลเชีย</option>
+                        <option value="15" {{ old('ethnicities_id') == '15' ? 'selected' : '' }}>อื่นๆ</option>
                     </select>
                     @error('ethnicities_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -253,7 +300,7 @@
                     <div class="input-group date" id="datepicker">
                         <label for="inputdate" class="col-sm-3 col-form-label">วันเกิดนักเรียน</label>
                         {{-- <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน"> --}}
-                        <input type="text" name="dateofbirth" class="form-control @error('dateofbirth') is-invalid @enderror" placeholder="วันเกิดนักเรียน" value="{{ old('dateofbirth') }}">
+                        <input type="text" name="dateofbirth" class="form-control @error('dateofbirth') is-invalid @enderror" placeholder="กรอกเป็น (ค.ศ.)คริสต์ศักราช" value="{{ old('dateofbirth') }}">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
                         </span>
@@ -268,7 +315,7 @@
                     {{-- <select id="sel_province" name="provincesbirth_id" class="form-select @error('provincesbirth_id') is-invalid @enderror" --}}
                     <select id="sel_province" name="provincesbirth_id" class="form-select @error('provincesbirth_id') is-invalid @enderror"    
                         aria-label="Default select example">
-                        <option selected>จังหวัดเกิด</option>
+                        {{-- <option selected>จังหวัดเกิด</option>
                         <option value="1">น่าน</option>
                         <option value="2">พะเยา</option>
                         <option value="3">ลำปาง</option>
@@ -345,17 +392,94 @@
                         <option value="74">ตาก</option>
                         <option value="75">ประจวบคีรีขันธ์</option>
                         <option value="76">ราชบุรี</option>
-                        <option value="77">เพชรบุรี</option>
+                        <option value="77">เพชรบุรี</option> --}}
+                        <option value="" {{ old('provincesbirth_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
+                        <option value="1" {{ old('provincesbirth_id') == '1' ? 'selected' : '' }}>น่าน</option>
+                        <option value="2" {{ old('provincesbirth_id') == '2' ? 'selected' : '' }}>พะเยา</option>
+                        <option value="3" {{ old('provincesbirth_id') == '3' ? 'selected' : '' }}>ลำปาง</option>
+                        <option value="4" {{ old('provincesbirth_id') == '4' ? 'selected' : '' }}>ลำพูน</option>
+                        <option value="5" {{ old('provincesbirth_id') == '5' ? 'selected' : '' }}>อุตรดิตถ์</option>
+                        <option value="6" {{ old('provincesbirth_id') == '6' ? 'selected' : '' }}>เชียงราย</option>
+                        <option value="7" {{ old('provincesbirth_id') == '7' ? 'selected' : '' }}>เชียงใหม่</option>
+                        <option value="8" {{ old('provincesbirth_id') == '8' ? 'selected' : '' }}>แพร่</option>
+                        <option value="9" {{ old('provincesbirth_id') == '9' ? 'selected' : '' }}>แม่ฮ่องสอน</option>
+                        <option value="10" {{ old('provincesbirth_id') == '10' ? 'selected' : '' }}>กรุงเทพมหานคร</option>
+                        <option value="11" {{ old('provincesbirth_id') == '11' ? 'selected' : '' }}>กำแพงเพชร</option>
+                        <option value="12" {{ old('provincesbirth_id') == '12' ? 'selected' : '' }}>ชัยนาท</option>
+                        <option value="13" {{ old('provincesbirth_id') == '13' ? 'selected' : '' }}>นครนายก</option>
+                        <option value="14" {{ old('provincesbirth_id') == '14' ? 'selected' : '' }}>นครปฐม</option>
+                        <option value="15" {{ old('provincesbirth_id') == '15' ? 'selected' : '' }}>นครสวรรค์</option>
+                        <option value="16" {{ old('provincesbirth_id') == '16' ? 'selected' : '' }}>นนทบุรี</option>
+                        <option value="17" {{ old('provincesbirth_id') == '17' ? 'selected' : '' }}>ปทุมธานี</option>
+                        <option value="18" {{ old('provincesbirth_id') == '18' ? 'selected' : '' }}>พระนครศรีอยุธยา</option>
+                        <option value="19" {{ old('provincesbirth_id') == '19' ? 'selected' : '' }}>พิจิตร</option>
+                        <option value="20" {{ old('provincesbirth_id') == '20' ? 'selected' : '' }}>พิษณุโลก</option>
+                        <option value="21" {{ old('provincesbirth_id') == '21' ? 'selected' : '' }}>ลพบุรี</option>
+                        <option value="22" {{ old('provincesbirth_id') == '22' ? 'selected' : '' }}>สมุทรปราการ</option>
+                        <option value="23" {{ old('provincesbirth_id') == '23' ? 'selected' : '' }}>สมุทรสงคราม</option>
+                        <option value="24" {{ old('provincesbirth_id') == '24' ? 'selected' : '' }}>สมุทรสาคร</option>
+                        <option value="25" {{ old('provincesbirth_id') == '25' ? 'selected' : '' }}>สระบุรี</option>
+                        <option value="26" {{ old('provincesbirth_id') == '26' ? 'selected' : '' }}>สิงห์บุรี</option>
+                        <option value="27" {{ old('provincesbirth_id') == '27' ? 'selected' : '' }}>สุพรรณบุรี</option>
+                        <option value="28" {{ old('provincesbirth_id') == '28' ? 'selected' : '' }}>สุโขทัย</option>
+                        <option value="29" {{ old('provincesbirth_id') == '29' ? 'selected' : '' }}>อุทัยธานี</option>
+                        <option value="30" {{ old('provincesbirth_id') == '30' ? 'selected' : '' }}>อ่างทอง</option>
+                        <option value="31" {{ old('provincesbirth_id') == '31' ? 'selected' : '' }}>เพชรบูรณ์</option>
+                        <option value="32" {{ old('provincesbirth_id') == '32' ? 'selected' : '' }}>กาฬสินธุ์</option>
+                        <option value="33" {{ old('provincesbirth_id') == '33' ? 'selected' : '' }}>ขอนแก่น</option>
+                        <option value="34" {{ old('provincesbirth_id') == '34' ? 'selected' : '' }}>ชัยภูมิ</option>
+                        <option value="35" {{ old('provincesbirth_id') == '35' ? 'selected' : '' }}>นครพนม</option>
+                        <option value="36" {{ old('provincesbirth_id') == '36' ? 'selected' : '' }}>นครราชสีมา</option>
+                        <option value="37" {{ old('provincesbirth_id') == '37' ? 'selected' : '' }}>บึงกาฬ</option>
+                        <option value="38" {{ old('provincesbirth_id') == '38' ? 'selected' : '' }}>บุรีรัมย์</option>
+                        <option value="39" {{ old('provincesbirth_id') == '39' ? 'selected' : '' }}>มหาสารคาม</option>
+                        <option value="40" {{ old('provincesbirth_id') == '40' ? 'selected' : '' }}>มุกดาหาร</option>
+                        <option value="41" {{ old('provincesbirth_id') == '41' ? 'selected' : '' }}>ยโสธร</option>
+                        <option value="42" {{ old('provincesbirth_id') == '42' ? 'selected' : '' }}>ร้อยเอ็ด</option>
+                        <option value="43" {{ old('provincesbirth_id') == '43' ? 'selected' : '' }}>ศรีสะเกษ</option>
+                        <option value="44" {{ old('provincesbirth_id') == '44' ? 'selected' : '' }}>สกลนคร</option>
+                        <option value="45" {{ old('provincesbirth_id') == '45' ? 'selected' : '' }}>สุรินทร์</option>
+                        <option value="46" {{ old('provincesbirth_id') == '46' ? 'selected' : '' }}>หนองคาย</option>
+                        <option value="47" {{ old('provincesbirth_id') == '47' ? 'selected' : '' }}>หนองบัวลำภู</option>
+                        <option value="48" {{ old('provincesbirth_id') == '48' ? 'selected' : '' }}>อำนาจเจริญ</option>
+                        <option value="49" {{ old('provincesbirth_id') == '49' ? 'selected' : '' }}>อุดรธานี</option>
+                        <option value="50" {{ old('provincesbirth_id') == '50' ? 'selected' : '' }}>อุบลราชธานี</option>
+                        <option value="51" {{ old('provincesbirth_id') == '51' ? 'selected' : '' }}>เลย</option>
+                        <option value="52" {{ old('provincesbirth_id') == '52' ? 'selected' : '' }}>กระบี่</option>
+                        <option value="53" {{ old('provincesbirth_id') == '53' ? 'selected' : '' }}>ชุมพร</option>
+                        <option value="54" {{ old('provincesbirth_id') == '54' ? 'selected' : '' }}>ตรัง</option>
+                        <option value="55" {{ old('provincesbirth_id') == '55' ? 'selected' : '' }}>นครศรีธรรมราช</option>
+                        <option value="56" {{ old('provincesbirth_id') == '56' ? 'selected' : '' }}>นราธิวาส</option>
+                        <option value="57" {{ old('provincesbirth_id') == '57' ? 'selected' : '' }}>ปัตตานี</option>
+                        <option value="58" {{ old('provincesbirth_id') == '58' ? 'selected' : '' }}>พังงา</option>
+                        <option value="59" {{ old('provincesbirth_id') == '59' ? 'selected' : '' }}>พัทลุง</option>
+                        <option value="60" {{ old('provincesbirth_id') == '60' ? 'selected' : '' }}>ภูเก็ต</option>
+                        <option value="61" {{ old('provincesbirth_id') == '61' ? 'selected' : '' }}>ยะลา</option>
+                        <option value="62" {{ old('provincesbirth_id') == '62' ? 'selected' : '' }}>ระนอง</option>
+                        <option value="63" {{ old('provincesbirth_id') == '63' ? 'selected' : '' }}>สงขลา</option>
+                        <option value="64" {{ old('provincesbirth_id') == '64' ? 'selected' : '' }}>สตูล</option>
+                        <option value="65" {{ old('provincesbirth_id') == '65' ? 'selected' : '' }}>สุราษฎร์ธานี</option>
+                        <option value="66" {{ old('provincesbirth_id') == '66' ? 'selected' : '' }}>จันทบุรี</option>
+                        <option value="67" {{ old('provincesbirth_id') == '67' ? 'selected' : '' }}>ฉะเชิงเทรา</option>
+                        <option value="68" {{ old('provincesbirth_id') == '68' ? 'selected' : '' }}>ชลบุรี</option>
+                        <option value="69" {{ old('provincesbirth_id') == '69' ? 'selected' : '' }}>ตราด</option>
+                        <option value="70" {{ old('provincesbirth_id') == '70' ? 'selected' : '' }}>ปราจีนบุรี</option>
+                        <option value="71" {{ old('provincesbirth_id') == '71' ? 'selected' : '' }}>ระยอง</option>
+                        <option value="72" {{ old('provincesbirth_id') == '72' ? 'selected' : '' }}>สระแก้ว</option>
+                        <option value="73" {{ old('provincesbirth_id') == '73' ? 'selected' : '' }}>กาญจนบุรี</option>
+                        <option value="74" {{ old('provincesbirth_id') == '74' ? 'selected' : '' }}>ตาก</option>
+                        <option value="75" {{ old('provincesbirth_id') == '75' ? 'selected' : '' }}>ประจวบคีรีขันธ์</option>
+                        <option value="76" {{ old('provincesbirth_id') == '76' ? 'selected' : '' }}>ราชบุรี</option>
+                        <option value="77" {{ old('provincesbirth_id') == '77' ? 'selected' : '' }}>เพชรบุรี</option>
                     </select>
                     @error('provincesbirth_id')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_bloodtype" name="bloodtypes_id" class="form-select" --}}
                     <select id="sel_bloodtype" name="bloodtypes_id" class="form-select @error('bloodtypes_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>กรุ๊ปเลือด</option>
+                        {{-- <option selected>กรุ๊ปเลือด</option>
                         <option value="1">A</option>
                         <option value="2">B</option>
                         <option value="3">AB</option>
@@ -368,46 +492,72 @@
                         <option value="10">ABRh-</option>
                         <option value="11">ORh+</option>
                         <option value="12">ORh-</option>
-                        <option value="13">ไม่ทราบ</option>
+                        <option value="13">ไม่ทราบ</option> --}}
+                        <option value="" {{ old('bloodtypes_id') == '' ? 'selected' : '' }}>กรุ๊ปเลือด</option>
+                        <option value="1" {{ old('bloodtypes_id') == '1' ? 'selected' : '' }}>A</option>
+                        <option value="2" {{ old('bloodtypes_id') == '2' ? 'selected' : '' }}>B</option>
+                        <option value="3" {{ old('bloodtypes_id') == '3' ? 'selected' : '' }}>AB</option>
+                        <option value="4" {{ old('bloodtypes_id') == '4' ? 'selected' : '' }}>O</option>
+                        <option value="5" {{ old('bloodtypes_id') == '5' ? 'selected' : '' }}>ARh+</option>
+                        <option value="6" {{ old('bloodtypes_id') == '6' ? 'selected' : '' }}>ARh-</option>
+                        <option value="7" {{ old('bloodtypes_id') == '7' ? 'selected' : '' }}>BRh+</option>
+                        <option value="8" {{ old('bloodtypes_id') == '8' ? 'selected' : '' }}>BRh-</option>
+                        <option value="9" {{ old('bloodtypes_id') == '9' ? 'selected' : '' }}>ABRh+</option>
+                        <option value="10" {{ old('bloodtypes_id') == '10' ? 'selected' : '' }}>ABRh-</option>
+                        <option value="11" {{ old('bloodtypes_id') == '11' ? 'selected' : '' }}>ORh+</option>
+                        <option value="12" {{ old('bloodtypes_id') == '12' ? 'selected' : '' }}>ORh-</option>
+                        <option value="13" {{ old('bloodtypes_id') == '13' ? 'selected' : '' }}>ไม่ทราบ</option>
                     </select>
                     @error('bloodtypes_id')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">ส่วนสูง</span> --}}
-                    <input type="text" name="weight" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="น้ำหนัก">
+                    <input type="text" name="weight" class="form-control @error('weight') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="น้ำหนัก" value="{{ old('weight') }}">
+                    @error('weight')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <span class="input-group-text" id="inputGroup-sizing-default">น้ำหนัก</span> --}}
-                    <input type="text" name="height" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="ส่วนสูง">
+                    {{-- <input type="text" name="height" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ส่วนสูง"> --}}
+                    <input type="text" name="height" class="form-control @error('height') is-invalid @enderror" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="ส่วนสูง" value="{{ old('height') }}">
+                    @error('height')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 {{-- Disability  ความพิการ --}}
                 <div class="col-md-6 mb-2">
                     <select id="disability" name="disability" class="form-select"
                         aria-label="Default select example">
-                        <option selected>นักเรียนพิการหรือไม่</option>
+                        {{-- <option selected>นักเรียนพิการหรือไม่</option>
                         <option value="1">พิการ</option>
-                        <option value="2">ไม่พิการ</option>
+                        <option value="2">ไม่พิการ</option> --}}
+                        <option value="" {{ old('disability') == '' ? 'selected' : '' }}>นักเรียนพิการหรือไม่</option>
+                        <option value="1" {{ old('disability') == '1' ? 'selected' : '' }}>พิการ</option>
+                        <option value="2" {{ old('disability') == '2' ? 'selected' : '' }}>ไม่พิการ</option>
                     </select>
+                    @error('disability')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <input type="text" name="previousschool" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                         placeholder="โรงเรียนเดิมที่จบมา"> --}}
                     <input type="text" name="previousschool" class="form-control @error('previousschool') is-invalid @enderror" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="โรงเรียนเดิมที่จบมา" value="{{ old('previousschool') }}">
+                        aria-describedby="inputGroup-sizing-default" placeholder="โรงเรียนเดิมที่นักเรียนจบมา" value="{{ old('previousschool') }}">
                     @error('previousschool')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="provinceschool" name="provinceschool_id" class="form-select" --}}
+                    {{-- <select id="provinceschool" name="provinces_id" class="form-select" --}}
                     <select id="provinceschool" name="provinceschool_id" class="form-select @error('provinceschool_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>จังหวัดโรงเรียนเดิม</option>
+                        {{-- <option selected>จังหวัดโรงเรียนเดิม</option>
                         <option value="1">น่าน</option>
                         <option value="2">พะเยา</option>
                         <option value="3">ลำปาง</option>
@@ -484,7 +634,85 @@
                         <option value="74">ตาก</option>
                         <option value="75">ประจวบคีรีขันธ์</option>
                         <option value="76">ราชบุรี</option>
-                        <option value="77">เพชรบุรี</option>
+                        <option value="77">เพชรบุรี</option> --}}
+                        <option value="" {{ old('provinceschool_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
+                        <option value="1" {{ old('provinceschool_id') == '1' ? 'selected' : '' }}>น่าน</option>
+                        <option value="2" {{ old('provinceschool_id') == '2' ? 'selected' : '' }}>พะเยา</option>
+                        <option value="3" {{ old('provinceschool_id') == '3' ? 'selected' : '' }}>ลำปาง</option>
+                        <option value="4" {{ old('provinceschool_id') == '4' ? 'selected' : '' }}>ลำพูน</option>
+                        <option value="5" {{ old('provinceschool_id') == '5' ? 'selected' : '' }}>อุตรดิตถ์</option>
+                        <option value="6" {{ old('provinceschool_id') == '6' ? 'selected' : '' }}>เชียงราย</option>
+                        <option value="7" {{ old('provinceschool_id') == '7' ? 'selected' : '' }}>เชียงใหม่</option>
+                        <option value="8" {{ old('provinceschool_id') == '8' ? 'selected' : '' }}>แพร่</option>
+                        <option value="9" {{ old('provinceschool_id') == '9' ? 'selected' : '' }}>แม่ฮ่องสอน</option>
+                        <option value="10" {{ old('provinceschool_id') == '10' ? 'selected' : '' }}>กรุงเทพมหานคร</option>
+                        <option value="11" {{ old('provinceschool_id') == '11' ? 'selected' : '' }}>กำแพงเพชร</option>
+                        <option value="12" {{ old('provinceschool_id') == '12' ? 'selected' : '' }}>ชัยนาท</option>
+                        <option value="13" {{ old('provinceschool_id') == '13' ? 'selected' : '' }}>นครนายก</option>
+                        <option value="14" {{ old('provinceschool_id') == '14' ? 'selected' : '' }}>นครปฐม</option>
+                        <option value="15" {{ old('provinceschool_id') == '15' ? 'selected' : '' }}>นครสวรรค์</option>
+                        <option value="16" {{ old('provinceschool_id') == '16' ? 'selected' : '' }}>นนทบุรี</option>
+                        <option value="17" {{ old('provinceschool_id') == '17' ? 'selected' : '' }}>ปทุมธานี</option>
+                        <option value="18" {{ old('provinceschool_id') == '18' ? 'selected' : '' }}>พระนครศรีอยุธยา</option>
+                        <option value="19" {{ old('provinceschool_id') == '19' ? 'selected' : '' }}>พิจิตร</option>
+                        <option value="20" {{ old('provinceschool_id') == '20' ? 'selected' : '' }}>พิษณุโลก</option>
+                        <option value="21" {{ old('provinceschool_id') == '21' ? 'selected' : '' }}>ลพบุรี</option>
+                        <option value="22" {{ old('provinceschool_id') == '22' ? 'selected' : '' }}>สมุทรปราการ</option>
+                        <option value="23" {{ old('provinceschool_id') == '23' ? 'selected' : '' }}>สมุทรสงคราม</option>
+                        <option value="24" {{ old('provinceschool_id') == '24' ? 'selected' : '' }}>สมุทรสาคร</option>
+                        <option value="25" {{ old('provinceschool_id') == '25' ? 'selected' : '' }}>สระบุรี</option>
+                        <option value="26" {{ old('provincesbirth_id') == '26' ? 'selected' : '' }}>สิงห์บุรี</option>
+                        <option value="27" {{ old('provinceschool_id') == '27' ? 'selected' : '' }}>สุพรรณบุรี</option>
+                        <option value="28" {{ old('provinceschool_id') == '28' ? 'selected' : '' }}>สุโขทัย</option>
+                        <option value="29" {{ old('provinceschool_id') == '29' ? 'selected' : '' }}>อุทัยธานี</option>
+                        <option value="30" {{ old('provinceschool_id') == '30' ? 'selected' : '' }}>อ่างทอง</option>
+                        <option value="31" {{ old('provinceschool_id') == '31' ? 'selected' : '' }}>เพชรบูรณ์</option>
+                        <option value="32" {{ old('provinceschool_id') == '32' ? 'selected' : '' }}>กาฬสินธุ์</option>
+                        <option value="33" {{ old('provinceschool_id') == '33' ? 'selected' : '' }}>ขอนแก่น</option>
+                        <option value="34" {{ old('provinceschool_id') == '34' ? 'selected' : '' }}>ชัยภูมิ</option>
+                        <option value="35" {{ old('provinceschool_id') == '35' ? 'selected' : '' }}>นครพนม</option>
+                        <option value="36" {{ old('provinceschool_id') == '36' ? 'selected' : '' }}>นครราชสีมา</option>
+                        <option value="37" {{ old('provinceschool_id') == '37' ? 'selected' : '' }}>บึงกาฬ</option>
+                        <option value="38" {{ old('provinceschool_id') == '38' ? 'selected' : '' }}>บุรีรัมย์</option>
+                        <option value="39" {{ old('provinceschool_id') == '39' ? 'selected' : '' }}>มหาสารคาม</option>
+                        <option value="40" {{ old('provinceschool_id') == '40' ? 'selected' : '' }}>มุกดาหาร</option>
+                        <option value="41" {{ old('provinceschool_id') == '41' ? 'selected' : '' }}>ยโสธร</option>
+                        <option value="42" {{ old('provinceschool_id') == '42' ? 'selected' : '' }}>ร้อยเอ็ด</option>
+                        <option value="43" {{ old('provinceschool_id') == '43' ? 'selected' : '' }}>ศรีสะเกษ</option>
+                        <option value="44" {{ old('provinceschool_id') == '44' ? 'selected' : '' }}>สกลนคร</option>
+                        <option value="45" {{ old('provinceschool_id') == '45' ? 'selected' : '' }}>สุรินทร์</option>
+                        <option value="46" {{ old('provinceschool_id') == '46' ? 'selected' : '' }}>หนองคาย</option>
+                        <option value="47" {{ old('provinceschool_id') == '47' ? 'selected' : '' }}>หนองบัวลำภู</option>
+                        <option value="48" {{ old('provinceschool_id') == '48' ? 'selected' : '' }}>อำนาจเจริญ</option>
+                        <option value="49" {{ old('provinceschool_id') == '49' ? 'selected' : '' }}>อุดรธานี</option>
+                        <option value="50" {{ old('provinceschool_id') == '50' ? 'selected' : '' }}>อุบลราชธานี</option>
+                        <option value="51" {{ old('provinceschool_id') == '51' ? 'selected' : '' }}>เลย</option>
+                        <option value="52" {{ old('provinceschool_id') == '52' ? 'selected' : '' }}>กระบี่</option>
+                        <option value="53" {{ old('provinceschool_id') == '53' ? 'selected' : '' }}>ชุมพร</option>
+                        <option value="54" {{ old('provinceschool_id') == '54' ? 'selected' : '' }}>ตรัง</option>
+                        <option value="55" {{ old('provinceschool_id') == '55' ? 'selected' : '' }}>นครศรีธรรมราช</option>
+                        <option value="56" {{ old('provinceschool_id') == '56' ? 'selected' : '' }}>นราธิวาส</option>
+                        <option value="57" {{ old('provinceschool_id') == '57' ? 'selected' : '' }}>ปัตตานี</option>
+                        <option value="58" {{ old('provinceschool_id') == '58' ? 'selected' : '' }}>พังงา</option>
+                        <option value="59" {{ old('provinceschool_id') == '59' ? 'selected' : '' }}>พัทลุง</option>
+                        <option value="60" {{ old('provinceschool_id') == '60' ? 'selected' : '' }}>ภูเก็ต</option>
+                        <option value="61" {{ old('provinceschool_id') == '61' ? 'selected' : '' }}>ยะลา</option>
+                        <option value="62" {{ old('provinceschool_id') == '62' ? 'selected' : '' }}>ระนอง</option>
+                        <option value="63" {{ old('provinceschool_id') == '63' ? 'selected' : '' }}>สงขลา</option>
+                        <option value="64" {{ old('provinceschool_id') == '64' ? 'selected' : '' }}>สตูล</option>
+                        <option value="65" {{ old('provinceschool_id') == '65' ? 'selected' : '' }}>สุราษฎร์ธานี</option>
+                        <option value="66" {{ old('provinceschool_id') == '66' ? 'selected' : '' }}>จันทบุรี</option>
+                        <option value="67" {{ old('provinceschool_id') == '67' ? 'selected' : '' }}>ฉะเชิงเทรา</option>
+                        <option value="68" {{ old('provinceschool_id') == '68' ? 'selected' : '' }}>ชลบุรี</option>
+                        <option value="69" {{ old('provinceschool_id') == '69' ? 'selected' : '' }}>ตราด</option>
+                        <option value="70" {{ old('provinceschool_id') == '70' ? 'selected' : '' }}>ปราจีนบุรี</option>
+                        <option value="71" {{ old('provinceschool_id') == '71' ? 'selected' : '' }}>ระยอง</option>
+                        <option value="72" {{ old('provinceschool_id') == '72' ? 'selected' : '' }}>สระแก้ว</option>
+                        <option value="73" {{ old('provinceschool_id') == '73' ? 'selected' : '' }}>กาญจนบุรี</option>
+                        <option value="74" {{ old('provinceschool_id') == '74' ? 'selected' : '' }}>ตาก</option>
+                        <option value="75" {{ old('provinceschool_id') == '75' ? 'selected' : '' }}>ประจวบคีรีขันธ์</option>
+                        <option value="76" {{ old('provinceschool_id') == '76' ? 'selected' : '' }}>ราชบุรี</option>
+                        <option value="77" {{ old('provinceschool_id') == '77' ? 'selected' : '' }}>เพชรบุรี</option>
                     </select>
                     @error('provinceschool_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -609,7 +837,7 @@
                     {{-- <select id="sel_province2" name="provinces_id" class="form-select" --}}
                     <select id="sel_province2" name="provinces_id" class="form-select @error('provinces_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>จังหวัด</option>
+                        {{-- <option selected>จังหวัด</option>
                         <option value="1">น่าน</option>
                         <option value="2">พะเยา</option>
                         <option value="3">ลำปาง</option>
@@ -686,7 +914,85 @@
                         <option value="74">ตาก</option>
                         <option value="75">ประจวบคีรีขันธ์</option>
                         <option value="76">ราชบุรี</option>
-                        <option value="77">เพชรบุรี</option>
+                        <option value="77">เพชรบุรี</option> --}}
+                        <option value="" {{ old('provinces_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
+                        <option value="1" {{ old('provinces_id') == '1' ? 'selected' : '' }}>น่าน</option>
+                        <option value="2" {{ old('provinces_id') == '2' ? 'selected' : '' }}>พะเยา</option>
+                        <option value="3" {{ old('provinces_id') == '3' ? 'selected' : '' }}>ลำปาง</option>
+                        <option value="4" {{ old('provinces_id') == '4' ? 'selected' : '' }}>ลำพูน</option>
+                        <option value="5" {{ old('provinces_id') == '5' ? 'selected' : '' }}>อุตรดิตถ์</option>
+                        <option value="6" {{ old('provinces_id') == '6' ? 'selected' : '' }}>เชียงราย</option>
+                        <option value="7" {{ old('provinces_id') == '7' ? 'selected' : '' }}>เชียงใหม่</option>
+                        <option value="8" {{ old('provinces_id') == '8' ? 'selected' : '' }}>แพร่</option>
+                        <option value="9" {{ old('provinces_id') == '9' ? 'selected' : '' }}>แม่ฮ่องสอน</option>
+                        <option value="10" {{ old('provinces_id') == '10' ? 'selected' : '' }}>กรุงเทพมหานคร</option>
+                        <option value="11" {{ old('provinces_id') == '11' ? 'selected' : '' }}>กำแพงเพชร</option>
+                        <option value="12" {{ old('provinces_id') == '12' ? 'selected' : '' }}>ชัยนาท</option>
+                        <option value="13" {{ old('provinces_id') == '13' ? 'selected' : '' }}>นครนายก</option>
+                        <option value="14" {{ old('provinces_id') == '14' ? 'selected' : '' }}>นครปฐม</option>
+                        <option value="15" {{ old('provinces_id') == '15' ? 'selected' : '' }}>นครสวรรค์</option>
+                        <option value="16" {{ old('provinces_id') == '16' ? 'selected' : '' }}>นนทบุรี</option>
+                        <option value="17" {{ old('provinces_id') == '17' ? 'selected' : '' }}>ปทุมธานี</option>
+                        <option value="18" {{ old('provinces_id') == '18' ? 'selected' : '' }}>พระนครศรีอยุธยา</option>
+                        <option value="19" {{ old('provinces_id') == '19' ? 'selected' : '' }}>พิจิตร</option>
+                        <option value="20" {{ old('provinces_id') == '20' ? 'selected' : '' }}>พิษณุโลก</option>
+                        <option value="21" {{ old('provinces_id') == '21' ? 'selected' : '' }}>ลพบุรี</option>
+                        <option value="22" {{ old('provinces_id') == '22' ? 'selected' : '' }}>สมุทรปราการ</option>
+                        <option value="23" {{ old('provinces_id') == '23' ? 'selected' : '' }}>สมุทรสงคราม</option>
+                        <option value="24" {{ old('provinces_id') == '24' ? 'selected' : '' }}>สมุทรสาคร</option>
+                        <option value="25" {{ old('provinces_id') == '25' ? 'selected' : '' }}>สระบุรี</option>
+                        <option value="26" {{ old('provinces_id') == '26' ? 'selected' : '' }}>สิงห์บุรี</option>
+                        <option value="27" {{ old('provinces_id') == '27' ? 'selected' : '' }}>สุพรรณบุรี</option>
+                        <option value="28" {{ old('provinces_id') == '28' ? 'selected' : '' }}>สุโขทัย</option>
+                        <option value="29" {{ old('provinces_id') == '29' ? 'selected' : '' }}>อุทัยธานี</option>
+                        <option value="30" {{ old('provinces_id') == '30' ? 'selected' : '' }}>อ่างทอง</option>
+                        <option value="31" {{ old('provinces_id') == '31' ? 'selected' : '' }}>เพชรบูรณ์</option>
+                        <option value="32" {{ old('provinces_id') == '32' ? 'selected' : '' }}>กาฬสินธุ์</option>
+                        <option value="33" {{ old('provinces_id') == '33' ? 'selected' : '' }}>ขอนแก่น</option>
+                        <option value="34" {{ old('provinces_id') == '34' ? 'selected' : '' }}>ชัยภูมิ</option>
+                        <option value="35" {{ old('provinces_id') == '35' ? 'selected' : '' }}>นครพนม</option>
+                        <option value="36" {{ old('provinces_id') == '36' ? 'selected' : '' }}>นครราชสีมา</option>
+                        <option value="37" {{ old('provinces_id') == '37' ? 'selected' : '' }}>บึงกาฬ</option>
+                        <option value="38" {{ old('provinces_id') == '38' ? 'selected' : '' }}>บุรีรัมย์</option>
+                        <option value="39" {{ old('provinces_id') == '39' ? 'selected' : '' }}>มหาสารคาม</option>
+                        <option value="40" {{ old('provinces_id') == '40' ? 'selected' : '' }}>มุกดาหาร</option>
+                        <option value="41" {{ old('provinces_id') == '41' ? 'selected' : '' }}>ยโสธร</option>
+                        <option value="42" {{ old('provinces_id') == '42' ? 'selected' : '' }}>ร้อยเอ็ด</option>
+                        <option value="43" {{ old('provinces_id') == '43' ? 'selected' : '' }}>ศรีสะเกษ</option>
+                        <option value="44" {{ old('provinces_id') == '44' ? 'selected' : '' }}>สกลนคร</option>
+                        <option value="45" {{ old('provinces_id') == '45' ? 'selected' : '' }}>สุรินทร์</option>
+                        <option value="46" {{ old('provinces_id') == '46' ? 'selected' : '' }}>หนองคาย</option>
+                        <option value="47" {{ old('provinces_id') == '47' ? 'selected' : '' }}>หนองบัวลำภู</option>
+                        <option value="48" {{ old('provinces_id') == '48' ? 'selected' : '' }}>อำนาจเจริญ</option>
+                        <option value="49" {{ old('provinces_id') == '49' ? 'selected' : '' }}>อุดรธานี</option>
+                        <option value="50" {{ old('provinces_id') == '50' ? 'selected' : '' }}>อุบลราชธานี</option>
+                        <option value="51" {{ old('provinces_id') == '51' ? 'selected' : '' }}>เลย</option>
+                        <option value="52" {{ old('provinces_id') == '52' ? 'selected' : '' }}>กระบี่</option>
+                        <option value="53" {{ old('provinces_id') == '53' ? 'selected' : '' }}>ชุมพร</option>
+                        <option value="54" {{ old('provinces_id') == '54' ? 'selected' : '' }}>ตรัง</option>
+                        <option value="55" {{ old('provinces_id') == '55' ? 'selected' : '' }}>นครศรีธรรมราช</option>
+                        <option value="56" {{ old('provinces_id') == '56' ? 'selected' : '' }}>นราธิวาส</option>
+                        <option value="57" {{ old('provinces_id') == '57' ? 'selected' : '' }}>ปัตตานี</option>
+                        <option value="58" {{ old('provinces_id') == '58' ? 'selected' : '' }}>พังงา</option>
+                        <option value="59" {{ old('provinces_id') == '59' ? 'selected' : '' }}>พัทลุง</option>
+                        <option value="60" {{ old('provinces_id') == '60' ? 'selected' : '' }}>ภูเก็ต</option>
+                        <option value="61" {{ old('provinces_id') == '61' ? 'selected' : '' }}>ยะลา</option>
+                        <option value="62" {{ old('provinces_id') == '62' ? 'selected' : '' }}>ระนอง</option>
+                        <option value="63" {{ old('provinces_id') == '63' ? 'selected' : '' }}>สงขลา</option>
+                        <option value="64" {{ old('provinces_id') == '64' ? 'selected' : '' }}>สตูล</option>
+                        <option value="65" {{ old('provinces_id') == '65' ? 'selected' : '' }}>สุราษฎร์ธานี</option>
+                        <option value="66" {{ old('provinces_id') == '66' ? 'selected' : '' }}>จันทบุรี</option>
+                        <option value="67" {{ old('provinces_id') == '67' ? 'selected' : '' }}>ฉะเชิงเทรา</option>
+                        <option value="68" {{ old('provinces_id') == '68' ? 'selected' : '' }}>ชลบุรี</option>
+                        <option value="69" {{ old('provinces_id') == '69' ? 'selected' : '' }}>ตราด</option>
+                        <option value="70" {{ old('provinces_id') == '70' ? 'selected' : '' }}>ปราจีนบุรี</option>
+                        <option value="71" {{ old('provinces_id') == '71' ? 'selected' : '' }}>ระยอง</option>
+                        <option value="72" {{ old('provinces_id') == '72' ? 'selected' : '' }}>สระแก้ว</option>
+                        <option value="73" {{ old('provinces_id') == '73' ? 'selected' : '' }}>กาญจนบุรี</option>
+                        <option value="74" {{ old('provinces_id') == '74' ? 'selected' : '' }}>ตาก</option>
+                        <option value="75" {{ old('provinces_id') == '75' ? 'selected' : '' }}>ประจวบคีรีขันธ์</option>
+                        <option value="76" {{ old('provinces_id') == '76' ? 'selected' : '' }}>ราชบุรี</option>
+                        <option value="77" {{ old('provinces_id') == '77' ? 'selected' : '' }}>เพชรบุรี</option>
                     </select>
                     @error('provinces_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -703,14 +1009,20 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     {{-- <select id="seltyperesidence" name="typeresidences_id" class="form-select" --}}
-                    <select id="sseltyperesidence" name="typeresidences_id" class="form-select @error('typeresidences_id') is-invalid @enderror"
+                    <select id="seltyperesidence" name="typeresidences_id" class="form-select @error('typeresidences_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>ลักษณะที่พักอาศัย</option>
+                        {{-- <option selected>ลักษณะที่พักอาศัย</option>
                         <option value="1">บ้านตัวเอง</option>
                         <option value="2">บ้านญาติ</option>
                         <option value="3">บ้านเช่า</option>
                         <option value="4">วัด</option>
-                        <option value="5">อื่นๆ</option>
+                        <option value="5">อื่นๆ</option> --}}
+                        <option value="" {{ old('typeresidences_id') == '' ? 'selected' : '' }}>ลักษณะที่พักอาศัย</option>
+                        <option value="1" {{ old('typeresidences_id') == '1' ? 'selected' : '' }}>บ้านตัวเอง</option>
+                        <option value="2" {{ old('typeresidences_id') == '2' ? 'selected' : '' }}>บ้านญาติ</option>
+                        <option value="3" {{ old('typeresidences_id') == '3' ? 'selected' : '' }}>บ้านเช่า</option>
+                        <option value="4" {{ old('typeresidences_id') == '4' ? 'selected' : '' }}>วัด</option>
+                        <option value="5" {{ old('typeresidences_id') == '5' ? 'selected' : '' }}>อื่นๆ</option>
                     </select>
                     @error('typeresidences_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -737,15 +1049,20 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="travelschool1" name="travelschool1s_id" class="form-select" --}}
                     <select id="travelschool1" name="travelschool1s_id" class="form-select @error('travelschool1s_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>พาหนะที่ใช้มาโรงเรียน</option>
+                        {{-- <option selected>พาหนะที่ใช้มาโรงเรียน</option>
                         <option value="1">เดินเท้า</option>
                         <option value="2">จักรยานยืมเรียน</option>
                         <option value="3">พาหนะไม่เสียค่าโดยสาร</option>
                         <option value="4">พาหนะเสียค่าโดยสาร</option>
-                        <option value="5">อื่นๆ</option>
+                        <option value="5">อื่นๆ</option> --}}
+                        <option value="" {{ old('travelschool1s_id') == '' ? 'selected' : '' }}>พาหนะที่ใช้มาโรงเรียน</option>
+                        <option value="1" {{ old('travelschool1s_id') == '1' ? 'selected' : '' }}>เดินเท้า</option>
+                        <option value="2" {{ old('travelschool1s_id') == '2' ? 'selected' : '' }}>จักรยานยืมเรียน</option>
+                        <option value="3" {{ old('travelschool1s_id') == '3' ? 'selected' : '' }}>พาหนะไม่เสียค่าโดยสาร</option>
+                        <option value="4" {{ old('travelschool1s_id') == '4' ? 'selected' : '' }}>พาหนะเสียค่าโดยสาร</option>
+                        <option value="5" {{ old('travelschool1s_id') == '5' ? 'selected' : '' }}>อื่นๆ</option>
                     </select>
                     @error('travelschool1s_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -760,8 +1077,10 @@
                     {{-- <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select" --}}
                     <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select @error('typetitlesfather_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>คำนำหน้าชื่อ</option>
-                        <option value="3">นาย</option>
+                        {{-- <option selected>คำนำหน้าชื่อ</option>
+                        <option value="3">นาย</option> --}}
+                        <option value="" {{ old('typetitlesfather_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
+                        <option value="1" {{ old('typetitlesfather_id') == '1' ? 'selected' : '' }}>นาย</option>
                     </select>
                     @error('typetitlesfather_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -801,7 +1120,7 @@
                     {{-- <select id="sel_occupationfather" name="occupationfather_id" class="form-select" --}}
                     <select id="sel_occupationfather" name="occupationfather_id" class="form-select @error('occupationfather_id') is-invalid @enderror"    
                         aria-label="Default select example">
-                        <option selected>อาชีพบิดา</option>
+                        {{-- <option selected>อาชีพบิดา</option>
                         <option value="1">รับราชการ</option>
                         <option value="2">พนักงานรัฐวิสาหกิจ</option>
                         <option value="3">นักธุรกิจ-ค้าขาย</option>
@@ -811,7 +1130,18 @@
                         <option value="7">พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
                         <option value="8">เกษียณ</option>
                         <option value="9">ไม่ได้ประกอบอาชีพ</option>
-                        <option value="10">อื่นๆ</option>
+                        <option value="10">อื่นๆ</option> --}}
+                        <option value="" {{ old('occupationfather_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
+                        <option value="1" {{ old('occupationfather_id') == '1' ? 'selected' : '' }}>รับราชการ</option>
+                        <option value="2" {{ old('occupationfather_id') == '2' ? 'selected' : '' }}>พนักงานรัฐวิสาหกิจ</option>
+                        <option value="3" {{ old('occupationfather_id') == '3' ? 'selected' : '' }}>นักธุรกิจ-ค้าขาย</option>
+                        <option value="4" {{ old('occupationfather_id') == '4' ? 'selected' : '' }}>เกษตรกร</option>
+                        <option value="5" {{ old('occupationfather_id') == '5' ? 'selected' : '' }}>รับจ้าง</option>
+                        <option value="6" {{ old('occupationfather_id') == '6' ? 'selected' : '' }}>พระ/นักบวช</option>
+                        <option value="7" {{ old('occupationfather_id') == '7' ? 'selected' : '' }}>พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
+                        <option value="8" {{ old('occupationfather_id') == '8' ? 'selected' : '' }}>เกษียณ</option>
+                        <option value="9" {{ old('occupationfather_id') == '9' ? 'selected' : '' }}>ไม่ได้ประกอบอาชีพ</option>
+                        <option value="10" {{ old('occupationfather_id') == '10' ? 'selected' : '' }}>อื่นๆ</option>    
                     </select>
                     @error('occupationfather_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -846,10 +1176,12 @@
                     {{-- <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select" --}}
                     <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select @error('typetitlesmother_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>คำนำหน้าชื่อ</option>
-                        {{-- <option value="3">นาย</option> --}}
+                        {{-- <option selected>คำนำหน้าชื่อ</option>
                         <option value="4">นางสาว</option>
-                        <option value="5">นาง</option>
+                        <option value="5">นาง</option> --}}
+                        <option value="" {{ old('typetitlesmother_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
+                        <option value="4" {{ old('typetitlesmother_id') == '4' ? 'selected' : '' }}>นางสาว</option>
+                        <option value="5" {{ old('typetitlesmother_id') == '5' ? 'selected' : '' }}>นาง</option>
                     </select>
                     @error('typetitlesmother_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -888,7 +1220,7 @@
                     {{-- <select id="sel_occupationmother" name="occupationmother_id" class="form-select" --}}
                     <select id="sel_occupationmother" name="occupationmother_id" class="form-select @error('occupationmother_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>อาชีพมารดา</option>
+                        {{-- <option selected>อาชีพมารดา</option>
                         <option value="1">รับราชการ</option>
                         <option value="2">พนักงานรัฐวิสาหกิจ</option>
                         <option value="3">นักธุรกิจ-ค้าขาย</option>
@@ -898,7 +1230,18 @@
                         <option value="7">พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
                         <option value="8">เกษียณ</option>
                         <option value="9">ไม่ได้ประกอบอาชีพ</option>
-                        <option value="10">อื่นๆ</option>
+                        <option value="10">อื่นๆ</option> --}}
+                        <option value="" {{ old('occupationmother_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
+                        <option value="1" {{ old('occupationmother_id') == '1' ? 'selected' : '' }}>รับราชการ</option>
+                        <option value="2" {{ old('occupationmother_id') == '2' ? 'selected' : '' }}>พนักงานรัฐวิสาหกิจ</option>
+                        <option value="3" {{ old('occupationmother_id') == '3' ? 'selected' : '' }}>นักธุรกิจ-ค้าขาย</option>
+                        <option value="4" {{ old('occupationmother_id') == '4' ? 'selected' : '' }}>เกษตรกร</option>
+                        <option value="5" {{ old('occupationmother_id') == '5' ? 'selected' : '' }}>รับจ้าง</option>
+                        <option value="6" {{ old('occupationmother_id') == '6' ? 'selected' : '' }}>พระ/นักบวช</option>
+                        <option value="7" {{ old('occupationmother_id') == '7' ? 'selected' : '' }}>พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
+                        <option value="8" {{ old('occupationmother_id') == '8' ? 'selected' : '' }}>เกษียณ</option>
+                        <option value="9" {{ old('occupationmother_id') == '9' ? 'selected' : '' }}>ไม่ได้ประกอบอาชีพ</option>
+                        <option value="10" {{ old('occupationmother_id') == '10' ? 'selected' : '' }}>อื่นๆ</option>  
                     </select>
                     @error('occupationmother_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -930,10 +1273,9 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select" --}}
                     <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select @error('maritalstatuses_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>สถานภาพของบิดามารดา</option>
+                        {{-- <option selected>สถานภาพของบิดามารดา</option>
                         <option value="1">อยู่ด้วยกันจดทะเบียนสมรส</option>
                         <option value="2">โสด</option>
                         <option value="3">อย่าร้าง</option>
@@ -944,7 +1286,20 @@
                         <option value="9">บิดาและมารดาถึงแก่กรรม</option>
                         <option value="10">บิดาถึงแก่กรรมมารดาแต่งงานใหม่</option>
                         <option value="11">มารดาถึงแก่กรรมบิดาแต่งงานใหม่</option>
-                        <option value="12">อื่นๆ</option>
+                        <option value="12">อื่นๆ</option> --}}
+                        <option value="" {{ old('maritalstatuses_id') == '' ? 'selected' : '' }}>สถานภาพของบิดามารดา</option>
+                        <option value="1" {{ old('maritalstatuses_id') == '1' ? 'selected' : '' }}>อยู่ด้วยกันจดทะเบียนสมรส</option>
+                        <option value="2" {{ old('maritalstatuses_id') == '2' ? 'selected' : '' }}>โสด</option>
+                        <option value="3" {{ old('maritalstatuses_id') == '3' ? 'selected' : '' }}>อย่าร้าง</option>
+                        <option value="4" {{ old('maritalstatuses_id') == '4' ? 'selected' : '' }}>อยู่ด้วยกันไม่จดทะเบียนสมรส</option>
+                        <option value="5" {{ old('maritalstatuses_id') == '5' ? 'selected' : '' }}>แยกกันอยู่</option>
+                        {{-- <option value="6" {{ old('maritalstatuses_id') == '6' ? 'selected' : '' }}>บิดาถึงแก่กรรม</option> --}}
+                        <option value="7" {{ old('maritalstatuses_id') == '7' ? 'selected' : '' }}>บิดาถึงแก่กรรม</option>
+                        <option value="8" {{ old('maritalstatuses_id') == '8' ? 'selected' : '' }}>มารดาถึงแก่กรรม</option>
+                        <option value="9" {{ old('maritalstatuses_id') == '9' ? 'selected' : '' }}>บิดาและมารดาถึงแก่กรรม</option>
+                        <option value="10" {{ old('maritalstatuses_id') == '10' ? 'selected' : '' }}>บิดาถึงแก่กรรมมารดาแต่งงานใหม่</option> 
+                        <option value="11" {{ old('maritalstatuses_id') == '11' ? 'selected' : '' }}>มารดาถึงแก่กรรมบิดาแต่งงานใหม่<</option>
+                        <option value="12" {{ old('maritalstatuses_id') == '12' ? 'selected' : '' }}>อื่นๆ</option> 
                     </select>
                     @error('maritalstatuses_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -954,10 +1309,14 @@
                     {{-- <select id="sel_parent" name="parent_id" class="form-select" --}}
                      <select id="sel_parent" name="parent_id" class="form-select @error('parent_id') is-invalid @enderror"
                         aria-label="Default select example">
-                        <option selected>ผู้ปกครองนักเรียนคือ</option>
+                        {{-- <option selected>ผู้ปกครองนักเรียนคือ</option>
                         <option value="1">บิดา</option>
                         <option value="2">มารดา</option>
-                        <option value="3">อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย)</option>
+                        <option value="3">อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย)</option> --}}
+                        <option value="" {{ old('parent_id') == '' ? 'selected' : '' }}>ผู้ปกครองนักเรียนคือ</option>
+                        <option value="1" {{ old('parent_id') == '1' ? 'selected' : '' }}>บิดา</option>
+                        <option value="2" {{ old('parent_id') == '2' ? 'selected' : '' }}>มารดา</option>
+                        <option value="3" {{ old('parent_id') == '3' ? 'selected' : '' }}>อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย)</option>
                     </select>
                     @error('parent_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -971,7 +1330,7 @@
                         {{-- <select id="sel_highschool1" name="highschool1_id" class="form-select" --}}
                          <select id="sel_highschool1" name="highschool1_id" class="form-select @error('highschool1_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 1</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 1</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -981,7 +1340,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool1_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool1_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool1_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool1_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool1_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool1_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool1_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool1_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool1_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool1_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool1_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool1_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -991,7 +1361,7 @@
                         {{-- <select id="sel_highschool2" name="highschool2_id" class="form-select" --}}
                          <select id="sel_highschool2" name="highschool2_id" class="form-select @error('highschool2_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 2</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 2</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1001,7 +1371,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool2_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool2_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool2_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool2_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool2_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool2_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool2_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool2_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool2_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool2_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool2_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool2_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1011,7 +1392,7 @@
                         {{-- <select id="sel_highschool3" name="highschool3_id" class="form-select" --}}
                          <select id="sel_highschool3" name="highschool3_id" class="form-select @error('highschool3_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 3</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 3</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1021,7 +1402,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool3_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool3_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool3_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool3_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool3_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool3_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool3_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool3_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool3_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool3_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool3_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool3_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1031,7 +1423,7 @@
                         {{-- <select id="sel_highschool4" name="highschool4_id" class="form-select" --}}
                          <select id="sel_highschool4" name="highschool4_id" class="form-select @error('highschool4_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 4</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 4</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1041,7 +1433,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool4_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool4_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool4_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool4_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool4_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool4_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool4_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool4_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool4_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool4_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool4_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool4_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1051,7 +1454,7 @@
                         {{-- <select id="sel_highschool5" name="highschool5_id" class="form-select" --}}
                          <select id="sel_highschool5" name="highschool5_id" class="form-select @error('highschool5_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 5</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 5</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1061,7 +1464,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool5_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool5_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool5_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool5_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool5_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool5_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool5_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool5_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool5_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool5_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool5_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool5_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1071,7 +1485,7 @@
                         {{-- <select id="sel_highschool6" name="highschool6_id" class="form-select" --}}
                          <select id="sel_highschool6" name="highschool6_id" class="form-select @error('highschool6_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 6</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 6</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1081,7 +1495,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool6_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool6_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool6_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool6_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool6_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool6_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool6_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool6_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool6_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool6_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool6_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool6_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1091,7 +1516,7 @@
                         {{-- <select id="sel_highschool7" name="highschool7_id" class="form-select" --}}
                          <select id="sel_highschool7" name="highschool7_id" class="form-select @error('highschool7_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 7</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 7</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1101,7 +1526,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool7_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool7_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool7_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool7_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool7_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool7_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool7_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool7_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool7_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool7_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool7_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool7_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1111,7 +1547,7 @@
                         {{-- <select id="sel_highschool8" name="highschool8_id" class="form-select" --}}
                          <select id="sel_highschool8" name="highschool8_id" class="form-select @error('highschool8_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 8</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 8</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1121,7 +1557,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool8_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool8_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool8_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool8_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool8_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool8_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool8_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool8_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool8_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool8_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool8_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool8_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1131,7 +1578,7 @@
                         {{-- <select id="sel_highschool9" name="highschool9_id" class="form-select" --}}
                          <select id="sel_highschool9" name="highschool9_id" class="form-select @error('highschool9_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 9</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 9</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1141,7 +1588,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool9_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool9_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool9_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool9_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool9_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool9_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool9_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool9_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool9_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool9_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool9_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool9_id')
                         <div class="text-danger small">{{ $message }}</div>
@@ -1151,7 +1609,7 @@
                         {{-- <select id="sel_highschool10" name="highschool10_id" class="form-select" --}}
                          <select id="sel_highschool10" name="highschool10_id" class="form-select @error('highschool10_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option selected>เลือกแผนการเรียนลำดับที่ 10</option>
+                            {{-- <option selected>เลือกแผนการเรียนลำดับที่ 10</option>
                             <option value="1">1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                             <option value="2">2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
                             <option value="3">3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
@@ -1161,7 +1619,18 @@
                             <option value="7">7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
                             <option value="8">8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
                             <option value="9">9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
-                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option>
+                            <option value="10">10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย สังคม TSEP</option> --}}
+                            <option value="" {{ old('highschool10_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
+                            <option value="1" {{ old('highschool10_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
+                            <option value="2" {{ old('highschool10_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>
+                            <option value="3" {{ old('highschool10_id') == '3' ? 'selected' : '' }}>3.ห้องเรียนวิทยาศาสตร์ – คณิตศาสตร์ SMEP</option>
+                            <option value="4" {{ old('highschool10_id') == '4' ? 'selected' : '' }}>4.ห้องเน้นความเป็นเลิศทางด้านคณิตศาสตร์ – ภาษาอังกฤษ EMEP</option>
+                            <option value="5" {{ old('highschool10_id') == '5' ? 'selected' : '' }}>5.ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
+                            <option value="6" {{ old('highschool10_id') == '6' ? 'selected' : '' }}>6.ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
+                            <option value="7" {{ old('highschool10_id') == '7' ? 'selected' : '' }}>7.ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
+                            <option value="8" {{ old('highschool10_id') == '8' ? 'selected' : '' }}>8.ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
+                            <option value="9" {{ old('highschool10_id') == '9' ? 'selected' : '' }}>9.ห้องเน้นความเป็นเลิศทางด้านทักษะอาชีพ VSP</option>
+                            <option value="10" {{ old('highschool10_id') == '10' ? 'selected' : '' }}>10.ห้องเน้นความเป็นเลิศทางด้านภาษาไทย  สังคม TSEP</option> 
                         </select>
                         @error('highschool10_id')
                         <div class="text-danger small">{{ $message }}</div>
