@@ -705,8 +705,6 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" id="houseid" name="houseid" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก"> --}}
                     <input type="text" name="houseid" class="form-control @error('houseid') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เลขทะเบียนบ้าน 11 หลัก" value="{{ old('houseid') }}">
                     @error('houseid')
@@ -714,8 +712,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="housenumber" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="บ้านเลขที่"> --}}
                     <input type="text" name="housenumber" class="form-control @error('housenumber') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="บ้านเลขที่" value="{{ old('housenumber') }}">
                     @error('housenumber')
@@ -723,9 +719,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="villagenumber" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="หมู่ที่"> --}}
                     <input type="text" name="villagenumber" class="form-control @error('villagenumber') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="หมู่ที่" value="{{ old('villagenumber') }}">
                     @error('villagenumber')
@@ -733,8 +726,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="villagename" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน"> --}}
                     <input type="text" name="villagename" class="form-control @error('villagename') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ชื่อหมู่บ้าน" value="{{ old('villagename') }}">
                     @error('villagename')
@@ -742,8 +733,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2"> --}}
-                    {{-- <input type="text" name="district" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ตำบล"> --}}
                     <input type="text" name="district" class="form-control @error('district') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ตำบล" value="{{ old('district') }}">
                     @error('district')
@@ -751,8 +740,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="subdistrict" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ"> --}}
                     <input type="text" name="subdistrict" class="form-control @error('subdistrict') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="อำเภอ" value="{{ old('district') }}">
                     @error('subdistrict')
@@ -846,8 +833,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="postalcode" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="รหัสไปรษณีย์"> --}}
                     <input type="text" name="postalcode" class="form-control @error('postalcode') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="รหัสไปรษณีย์" value="{{ old('postalcode') }}">
                     @error('postalcode')
@@ -857,12 +842,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="seltyperesidence" name="typeresidences_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>ลักษณะที่พักอาศัย</option>
-                        <option value="1">บ้านตัวเอง</option>
-                        <option value="2">บ้านญาติ</option>
-                        <option value="3">บ้านเช่า</option>
-                        <option value="4">วัด</option>
-                        <option value="5">อื่นๆ</option> --}}
                         <option value="" {{ old('typeresidences_id') == '' ? 'selected' : '' }}>ลักษณะที่พักอาศัย</option>
                         <option value="1" {{ old('typeresidences_id') == '1' ? 'selected' : '' }}>บ้านตัวเอง</option>
                         <option value="2" {{ old('typeresidences_id') == '2' ? 'selected' : '' }}>บ้านญาติ</option>
@@ -875,9 +854,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="distancelatyangroad" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="ที่พักห่างโรงเรียนเป็นกี่เมตร(1km=1000m)"> --}}
                     <input type="text" name="distancelatyangroad" class="form-control @error('distancelatyangroad') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ที่พักห่างโรงเรียนเป็นกี่เมตร(1km=1000m)" value="{{ old('distancelatyangroad') }}">
                     @error('distancelatyangroad')
@@ -885,9 +861,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="traveltime" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="ใช้เวลาเดินทางมาโรงเรียนกี่นาที"> --}}
                     <input type="text" name="traveltime" class="form-control @error('traveltime') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ใช้เวลาเดินทางมาโรงเรียนกี่นาที" value="{{ old('traveltime') }}">
                     @error('traveltime')
@@ -897,12 +870,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="travelschool1" name="travelschool1s_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>พาหนะที่ใช้มาโรงเรียน</option>
-                        <option value="1">เดินเท้า</option>
-                        <option value="2">จักรยานยืมเรียน</option>
-                        <option value="3">พาหนะไม่เสียค่าโดยสาร</option>
-                        <option value="4">พาหนะเสียค่าโดยสาร</option>
-                        <option value="5">อื่นๆ</option> --}}
                         <option value="" {{ old('travelschool1s_id') == '' ? 'selected' : '' }}>พาหนะที่ใช้มาโรงเรียน</option>
                         <option value="1" {{ old('travelschool1s_id') == '1' ? 'selected' : '' }}>เดินเท้า</option>
                         <option value="2" {{ old('travelschool1s_id') == '2' ? 'selected' : '' }}>จักรยานยืมเรียน</option>
