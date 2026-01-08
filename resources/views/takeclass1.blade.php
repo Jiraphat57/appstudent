@@ -869,7 +869,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_parent" name="parent_id" class="form-select"
+                    {{-- <select id="sel_parent" name="parent_id" class="form-select" --}}
+                    <select id="sel_parent" name="parent_id" class="form-select @error('parent_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('parent_id') == '' ? 'selected' : '' }}>ผู้ปกครองนักเรียนคือ</option>
                         <option value="1" {{ old('parent_id') == '1' ? 'selected' : '' }}>บิดา</option>
