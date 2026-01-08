@@ -492,8 +492,8 @@
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนน้องสาว(หากไม่มีกรอก0)" value="{{ old('sister') }}">
                     @error('sister')
                         <div class="text-danger small">{{ $message }}</div>
-                    @enderror   
-                </div>
+                    @enderror 
+                </div> 
                 <div class="col-md-6 mb-2">
                     <input type="text" name="sumsiblings" class="form-control @error('sumsiblings') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="จำนวนพี่น้องที่เรียนอยู่" value="{{ old('sumsiblings') }}">
@@ -734,16 +734,6 @@
                     <select id="sel_occupationfather" name="occupationfather_id" class="form-select"
                         aria-label="Default select example">
                         <option selected>อาชีพบิดา</option>
-                        {{-- <option value="1">รับราชการ</option>
-                        <option value="2">พนักงานรัฐวิสาหกิจ</option>
-                        <option value="3">นักธุรกิจ-ค้าขาย</option>
-                        <option value="4">เกษตรกร</option>
-                        <option value="5">รับจ้าง</option>
-                        <option value="6">พระ/นักบวช</option>
-                        <option value="7">พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
-                        <option value="8">เกษียณ</option>
-                        <option value="9">ไม่ได้ประกอบอาชีพ</option>
-                        <option value="10">อื่นๆ</option> --}}
                         <option value="" {{ old('occupationfather_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
                         <option value="1" {{ old('occupationfather_id') == '1' ? 'selected' : '' }}>รับราชการ</option>
                         <option value="2" {{ old('occupationfather_id') == '2' ? 'selected' : '' }}>พนักงานรัฐวิสาหกิจ</option>
@@ -761,9 +751,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="income_father" class="form-control"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="รายได้บิดาต่อเดือน"> --}}
                     <input type="text" name="income_father" class="form-control @error('income_father') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="รายได้บิดาต่อเดือน" value="{{ old('income_father') }}">
                     @error('income_father')
@@ -771,9 +758,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" id="phone_father" name="phone_father" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เบอร์โทรศัพท์(มือถือ)"> --}}
                     <input type="text" name="phone_father" class="form-control @error('phone_father') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เบอร์โทรศัพท์(มือถือ)" value="{{ old('phone_father') }}">
                     @error('phone_father')
@@ -788,17 +772,12 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>คำนำหน้าชื่อ</option>
-                        <option value="4">นางสาว</option>
-                        <option value="5">นาง</option> --}}
                         <option value="" {{ old('typetitlesmother_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
                         <option value="4" {{ old('typetitlesmother_id') == '4' ? 'selected' : '' }}>นางสาว</option>
                         <option value="5" {{ old('typetitlesmother_id') == '5' ? 'selected' : '' }}>นาง</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="name_mother" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default" placeholder="ชื่อมารดา"> --}}
                     <input type="text" name="name_mother" class="form-control @error('name_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="ชื่อมารดา" value="{{ old('name_mother') }}">
                     @error('name_mother')
@@ -806,9 +785,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="surname_mother" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="นามสกุล"> --}}
                     <input type="text" name="surname_mother" class="form-control @error('surname_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="นามสกุล" value="{{ old('surname_mother') }}">
                     @error('surname_mother')
@@ -816,7 +792,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" id="field_citizenmother" name="field_citizenmother" class="form-control"
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                         placeholder="เลขประจำตัวประชาชน13หลัก"> --}}
                     <input type="text" name="field_citizenmother" class="form-control @error('field_citizenmother') is-invalid @enderror" aria-label="Sizing example input"
@@ -828,17 +803,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_occupationmother" name="occupationmother_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>อาชีพมารดา</option>
-                        <option value="1">รับราชการ</option>
-                        <option value="2">พนักงานรัฐวิสาหกิจ</option>
-                        <option value="3">นักธุรกิจ-ค้าขาย</option>
-                        <option value="4">เกษตรกร</option>
-                        <option value="5">รับจ้าง</option>
-                        <option value="6">พระ/นักบวช</option>
-                        <option value="7">พนักงานของรัฐ/ลูกจ้างประจํา/ลูกจ้างชั่วคราว</option>
-                        <option value="8">เกษียณ</option>
-                        <option value="9">ไม่ได้ประกอบอาชีพ</option>
-                        <option value="10">อื่นๆ</option> --}}
                         <option value="" {{ old('occupationmother_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
                         <option value="1" {{ old('occupationmother_id') == '1' ? 'selected' : '' }}>รับราชการ</option>
                         <option value="2" {{ old('occupationmother_id') == '2' ? 'selected' : '' }}>พนักงานรัฐวิสาหกิจ</option>
@@ -856,9 +820,6 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" name="income_mother" class="form-control"
-                        aria-label="Sizing example input" id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="รายได้มารดาต่อเดือน"> --}}
                     <input type="text" name="income_mother" class="form-control @error('income_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="รายได้มารดาต่อเดือน" value="{{ old('income_mother') }}">
                     @error('income_mother')
@@ -866,9 +827,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <input type="text" id="phone_mother" name="phone_mother" class="form-control" aria-label="Sizing example input"
-                        id="" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เบอร์โทรศัพท์(มือถือ)"> --}}
                     <input type="text" name="phone_mother" class="form-control @error('phone_mother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เบอร์โทรศัพท์(มือถือ)" value="{{ old('phone_mother') }}">
                     @error('phone_mother')
@@ -883,18 +841,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>สถานภาพของบิดามารดา</option>
-                        <option value="1">อยู่ด้วยกันจดทะเบียนสมรส</option>
-                        <option value="2">โสด</option>
-                        <option value="3">อย่าร้าง</option>
-                        <option value="4">อยู่ด้วยกันไม่จดทะเบียนสมรส</option>
-                        <option value="5">แยกกันอยู่</option>
-                        <option value="7">บิดาถึงแก่กรรม</option>
-                        <option value="8">มารดาถึงแก่กรรม</option>
-                        <option value="9">บิดาและมารดาถึงแก่กรรม</option>
-                        <option value="10">บิดาถึงแก่กรรมมารดาแต่งงานใหม่</option>
-                        <option value="11">มารดาถึงแก่กรรมบิดาแต่งงานใหม่</option>
-                        <option value="12">อื่นๆ</option> --}}
                         <option value="" {{ old('maritalstatuses_id') == '' ? 'selected' : '' }}>สถานภาพของบิดามารดา</option>
                         <option value="1" {{ old('maritalstatuses_id') == '1' ? 'selected' : '' }}>อยู่ด้วยกันจดทะเบียนสมรส</option>
                         <option value="2" {{ old('maritalstatuses_id') == '2' ? 'selected' : '' }}>โสด</option>
@@ -916,10 +862,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_parent" name="parent_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>ผู้ปกครองนักเรียนคือ</option>
-                        <option value="1">บิดา</option>
-                        <option value="2">มารดา</option>
-                        <option value="3">อื่นๆ(ญาติ,ปู่-ย่า,ตา-ยาย)</option> --}}
                         <option value="" {{ old('parent_id') == '' ? 'selected' : '' }}>ผู้ปกครองนักเรียนคือ</option>
                         <option value="1" {{ old('parent_id') == '1' ? 'selected' : '' }}>บิดา</option>
                         <option value="2" {{ old('parent_id') == '2' ? 'selected' : '' }}>มารดา</option>
@@ -937,14 +879,6 @@
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select"
                         aria-label="Default select example">
-                        {{-- <option selected>เลือกแผนการเรียนลำดับที่ 1</option>
-                        {{-- <option value="1">ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option> --}}
-                        {{-- <option value="2">ห้องวิทยาศาสตร์พลังสิบ TPSP</option> --}}
-                        {{-- <option value="3">ห้องเน้นความเป็นเลิศทางด้านเทคโนโลยีดิจิทัล DTEP</option>
-                        <option value="4">ห้องเน้นความเป็นเลิศทางด้านภาษาอังกฤษ EEP</option>
-                        <option value="5">ห้องเน้นความเป็นเลิศทางด้านภาษาจีน CEP</option>
-                        <option value="6">ห้องเน้นความเป็นเลิศทางด้านภาษาญี่ปุ่น JEP</option>
-                        <option value="7">ห้องเรียนทั่วไป GP</option> --}} --}}
                         <option value="" {{ old('secondaryschool1_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool1_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
                         <option value="2" {{ old('secondaryschool1_id') == '2' ? 'selected' : '' }}>2.ห้องวิทยาศาสตร์พลังสิบ TPSP</option>

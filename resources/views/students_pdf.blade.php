@@ -176,76 +176,7 @@
                 มือถือ............................
             @endif <br>
             </div>
-            {{-- <div class="container row col-100%"> 
-            <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลแผนการเรียนที่นักเรียนเลือก</div>
-            <table>
-                <tbody>
-                  <tr>
-                   <td>ลำดับ1</td>
-                    <td><span class="underline">{{ $students->curriculumsec1->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
-                    <td>ลำดับ2</span></td>
-                    <td><span class="underline">{{ $students->curriculumsec2->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
-                  </tr>
-                  <tr>
-                    <td>ลำดับ3</td>
-                    <td><span class="underline">{{ $students->curriculumsec3->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
-                    <td>ลำดับ4</td>
-                    <td><span class="underline">{{ $students->curriculumsec4->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
-                  </tr>
-              <tr>
-                    <td>ลำดับ5</td>
-                    <td><span class="underline">{{ $students->curriculumsec5->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
-                    <td>ลำดับ6</td>
-                    <td><span class="underline">{{ $students->curriculumsec6->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
-                  </tr>
-                  <tr>
-                   <td>ลำดับ7</td>
-                    <td><span class="underline">{{ $students->curriculumsec7->curriculumsec ?? 'ไม่ระบุ' }} </span></td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-            <div style="font-size: 16px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
-            <div>คํารับรองของผู้ปกครอง
-                ข้าพเจ้า...................................................................ขอรับรองและยืนยันว่าข้าพเจ้าเป็นผู้ปกครอง
-                <span class="underline">
-                    {{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;{{ $students->surname }}</span>
-                ชั้น<span class="underline">{{ $students->classlevel->classlevel ?? 'ไม่ระบุ' }}</span> &nbsp;ห้อง.......โดยข้าพเจ้ามีความเกี่ยวข้องเป็น.................... ขอให้คำรับรองต่อผู้อํานวยการโรงเรียนพานพิทยาคมว่า 
-                <br>1. ข้าพเจ้ามีส่วนรับผิดชอบต่อการกระทำของนักเรียน
-                โดยข้าพเจ้าจะเป็นผู้คอยตักเตือนนักเรียนที่ข้าพเจ้ารับเป็น ผู้ปกครอง
-                ให้หมั่นศึกษาเล่าเรียนและประพฤติตนให้ถูกต้องตามระเบียบของโรงเรียน
-                <br>2. ข้าพเจ้าจะอุปถัมภ์ค่าเล่าเรียน เครื่องแต่งกาย
-                และอุปกรณ์การเรียนของนักเรียนในความปกครองให้ได้เรียน ตลอดไปจนสำเร็จการศึกษา
-                <br>3. ถ้านักเรียนที่ข้าพเจ้ารับเป็นผู้ปกครองกระทำผิดต่อระเบียบโรงเรียนทุกกรณีข้าพเจ้ายินดีให้ทางโรงเรียนลงโทษนักเรียนตามระเบียบทางโรงเรียนได้
-                <br>4. ข้าพเจ้าขอรับรองว่า หากโรงเรียนต้องการพบข้าพเจ้าเพื่อปรึกษาหารือ หรือรับทราบความประพฤติของ
-                นักเรียนในความปกครองของข้าพเจ้า ข้าพเจ้าจะรีบมาทันที
-                <br>5. ข้าพเจ้าจะส่งเสริมนักเรียนในความปกครองให้นักเรียนได้ร่วมกิจกรรมของโรงเรียน และพัฒนาตนเองในการ
-                สร้างชื่อเสียงให้แก่โรงเรียน
-                <br>6. หากนักเรียนในความปกครองของข้าพเจ้าไม่สามารถจบหลักสูตรการศึกษาได้ตามที่โรงเรียนกําหนด ข้าพเจ้า
-                ยินดีที่จะให้นักเรียนลาออกจากโรงเรียน เพื่อไปศึกษาต่อในสถานศึกษาอื่นต่อไป
-            </div>
-            <div class="row d-flex justify-content-center align-items-center col-100%"
-                style="width: 100%; text-align: center;">
-                &nbsp;&nbsp;ลงชื่อ.............................................................ผู้ปกครอง
-                <br> (………………………………………………….)
-            </div>
-        </div>
-        <div style="font-size: 20px; border: 1px solid black;  padding: 20px;  margin: 20px;width: 90%;">
-        ตรวจหลักฐานการมอบตัว (สำหรับเจ้าหน้าที่รับมอบตัว)
-        ปพ.1 ตัวจริงพร้อมสำเนาพร้อมสำเนา 1 ชุด
-        <br>1.สำเนาทะเบียนบ้านของนักเรียน บิดาผู้ให้กำเนิด มารดาผู้ให้กำเนิด
-        <br>2.สำเนาบัตรประจําตัวประชาชนของนักเรียน บิดาผู้ให้กำเนิด มารดาผู้ให้กำเนิด
-        <br>3.สำเนาทะเบียนบ้านของผู้ที่เป็นผู้ปกครองนักเรียน (กรณีนักเรียนไม่ได้อยู่กับบิดาหรือมารดา)
-        <br>4.อื่นๆ
-        (โปรดระบุ..........................................................................................................................................................................................
-        <br>
-        <div style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            ลงชื่อ......................................................ผู้รับสมัครนักเรียน<br>
-            (……………………….............................) </div>
-            <br>
-        </div>
-            (&nbsp;&nbsp;&nbsp;&nbsp;) เขตพื้นที่บริการ &nbsp;&nbsp;&nbsp;(&nbsp;&nbsp;&nbsp;&nbsp;) นอกเขตพื้นที่บริการ
-        </div> --}}
+           
     </div>
 </body>
 
