@@ -230,7 +230,7 @@
                     @error('dateofbirth')
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
-                    </div>
+                    {{-- </div> --}}
                 </div>
                 <div class="col-md-6 mb-2">
                     <select id="sel_province" name="provincesbirth_id" class="form-select"
