@@ -696,7 +696,8 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select"
+                    {{-- <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select" --}}
+                    <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select @error('typetitlesfather_id') is-invalid @enderror"
                         aria-label="Default select example">
                         {{-- <option selected>คำนำหน้าชื่อ</option>
                         <option value="3">นาย</option> --}}
