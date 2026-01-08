@@ -792,8 +792,6 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="เลขประจำตัวประชาชน13หลัก"> --}}
                     <input type="text" name="field_citizenmother" class="form-control @error('field_citizenmother') is-invalid @enderror" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default" placeholder="เลขประจำตัวประชาชน13หลัก" value="{{ old('field_citizenmother') }}">
                     @error('field_citizenmother')
