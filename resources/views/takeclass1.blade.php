@@ -233,7 +233,8 @@
                     {{-- </div> --}}
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_province" name="provincesbirth_id" class="form-select"
+                    {{-- <select id="sel_province" name="provincesbirth_id" class="form-select" --}}
+                    <select id="sel_province" name="provincesbirth_id" class="form-select @error('provincesbirth_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('provincesbirth_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
                         <option value="1" {{ old('provincesbirth_id') == '1' ? 'selected' : '' }}>น่าน</option>
@@ -319,7 +320,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_bloodtype" name="bloodtypes_id" class="form-select"
+                    {{-- <select id="sel_bloodtype" name="bloodtypes_id" class="form-select" --}}
+                    <select id="sel_bloodtype" name="bloodtypes_id" class="form-select @error('bloodtypes_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('bloodtypes_id') == '' ? 'selected' : '' }}>กรุ๊ปเลือด</option>
                         <option value="1" {{ old('bloodtypes_id') == '1' ? 'selected' : '' }}>A</option>
@@ -355,7 +357,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="disability" name="disability" class="form-select"
+                    {{-- <select id="disability" name="disability" class="form-select" --}}
+                     <select id="disability" name="disability" class="form-select @error('disability') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('disability') == '' ? 'selected' : '' }}>นักเรียนพิการหรือไม่</option>
                         <option value="1" {{ old('disability') == '1' ? 'selected' : '' }}>พิการ</option>
@@ -373,7 +376,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="provinceschool" name="provinceschool_id" class="form-select"
+                    {{-- <select id="provinceschool" name="provinceschool_id" class="form-select" --}}
+                    <select id="provinceschool" name="provinceschool_id" class="form-select @error('provinceschool_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('provinceschool_id') == '' ? 'selected' : '' }}>จังหวัดโรงเรียนเดิม</option>
                         <option value="1" {{ old('provinceschool_id') == '1' ? 'selected' : '' }}>น่าน</option>
@@ -549,7 +553,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_province2" name="provinces_id" class="form-select"
+                    {{-- <select id="sel_province2" name="provinces_id" class="form-select" --}}
+                    <select id="sel_province2" name="provinces_id" class="form-select @error('provinces_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('provinces_id') == '' ? 'selected' : '' }}>จังหวัดเกิด</option>
                         <option value="1" {{ old('provinces_id') == '1' ? 'selected' : '' }}>น่าน</option>
@@ -642,7 +647,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="seltyperesidence" name="typeresidences_id" class="form-select"
+                    <select id="seltyperesidence" name="typeresidences_id" class="form-select @error('typeresidences_id') is-invalid @enderror"
+                    {{-- <select id="seltyperesidence" name="typeresidences_id" class="form-select" --}}
                         aria-label="Default select example">
                         <option value="" {{ old('typeresidences_id') == '' ? 'selected' : '' }}>ลักษณะที่พักอาศัย</option>
                         <option value="1" {{ old('typeresidences_id') == '1' ? 'selected' : '' }}>บ้านตัวเอง</option>
@@ -670,7 +676,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="travelschool1" name="travelschool1s_id" class="form-select"
+                    {{-- <select id="travelschool1" name="travelschool1s_id" class="form-select" --}}
+                    <select id="travelschool1" name="travelschool1s_id" class="form-select @error('travelschool1s_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('travelschool1s_id') == '' ? 'selected' : '' }}>พาหนะที่ใช้มาโรงเรียน</option>
                         <option value="1" {{ old('travelschool1s_id') == '1' ? 'selected' : '' }}>เดินเท้า</option>
@@ -731,7 +738,8 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_occupationfather" name="occupationfather_id" class="form-select"
+                    {{-- <select id="sel_occupationfather" name="occupationfather_id" class="form-select" --}}
+                    <select id="sel_occupationfather" name="occupationfather_id" class="form-select @error('occupationfather_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option selected>อาชีพบิดา</option>
                         <option value="" {{ old('occupationfather_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
@@ -770,7 +778,8 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select"
+                    {{-- <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select" --}}
+                    <select id="sel_typetitlemother" name="typetitlesmother_id" class="form-select @error('typetitlesmother_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('typetitlesmother_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
                         <option value="4" {{ old('typetitlesmother_id') == '4' ? 'selected' : '' }}>นางสาว</option>
@@ -799,7 +808,8 @@
                     @enderror 
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_occupationmother" name="occupationmother_id" class="form-select"
+                    {{-- <select id="sel_occupationmother" name="occupationmother_id" class="form-select" --}}
+                    <select id="sel_occupationmother" name="occupationmother_id" class="form-select @error('occupationmother_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('occupationmother_id') == '' ? 'selected' : '' }}>อาชีพบิดา</option>
                         <option value="1" {{ old('occupationmother_id') == '1' ? 'selected' : '' }}>รับราชการ</option>
@@ -837,7 +847,8 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select"
+                    {{-- <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select" --}}
+                    <select id="sel_maritalstatuse" name="maritalstatuses_id" class="form-select @error('maritalstatuses_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('maritalstatuses_id') == '' ? 'selected' : '' }}>สถานภาพของบิดามารดา</option>
                         <option value="1" {{ old('maritalstatuses_id') == '1' ? 'selected' : '' }}>อยู่ด้วยกันจดทะเบียนสมรส</option>
@@ -875,7 +886,8 @@
             </div>
             <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select"
+                    {{-- <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select" --}}
+                    <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select @error('secondaryschool1_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool1_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool1_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
@@ -891,7 +903,8 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool2" name="secondaryschool2_id" class="form-select"
+                    {{-- <select id="sel_secondaryschool2" name="secondaryschool2_id" class="form-select" --}}
+                    <select id="sel_secondaryschool2" name="secondaryschool2_id" class="form-select @error('secondaryschool2_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool2_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool2_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
@@ -907,7 +920,8 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool3" name="secondaryschool3_id" class="form-select"
+                    {{-- <select id="sel_secondaryschool3" name="secondaryschool3_id" class="form-select" --}}
+                    <select id="sel_secondaryschool3" name="secondaryschool3_id" class="form-select @error('secondaryschool3_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool3_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool3_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
@@ -923,7 +937,8 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select"
+                    {{-- <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select" --}}
+                    <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select @error('secondaryschool4_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool4_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool4_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
@@ -939,7 +954,8 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select"
+                    {{-- <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select" --}}
+                    <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select @error('secondaryschool5_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool5_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool5_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
@@ -955,7 +971,8 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select"
+                    {{-- <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select" --}}
+                    <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select @error('secondaryschool6_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool6_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool6_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
@@ -971,7 +988,8 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select"
+                    {{-- <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select" --}}
+                    <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select @error('secondaryschool7_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool7_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
                         <option value="1" {{ old('secondaryschool7_id') == '1' ? 'selected' : '' }}>1.ห้องเรียนพิเศษ(วิทยาศาสตร์-คณิตศาสตร์) ISMP</option>
