@@ -245,7 +245,7 @@
                 @enderror
                 <div class="col-md-6 mb-2">
                     <div class="input-group date" id="datepicker">
-                        <label for="inputdate" class="col-sm-5 col-form-label">วันเกิด กรอก(ค.ศ.)</label>
+                        <label for="inputdate" class="col-sm-4 col-form-label">วันเดือนปีเกิด กรอก(ค.ศ.)</label>
                         {{-- <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน"> --}}
                         <input type="text" name="dateofbirth" class="form-control @error('dateofbirth') is-invalid @enderror" placeholder="กรอกเป็น (ค.ศ.)คริสต์ศักราช" value="{{ old('dateofbirth') }}">
                         <span class="input-group-text">
