@@ -222,9 +222,9 @@
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="col-md-6 mb-2">
+                <div class="col-md-6 mb-3">
                     <div class="input-group date" id="datepicker">
-                        <label for="inputdate" class="col-sm-3 col-form-label">วันเกิดนักเรียน กรอกเป็น (ค.ศ.)</label>
+                        <label for="inputdate" class="col-sm-3 col-form-label">วันเดือนปีเกิด กรอก(ค.ศ.)</label>
                         <input type="text" name="dateofbirth" class="form-control @error('dateofbirth') is-invalid @enderror" placeholder="กรอกเป็น (ค.ศ.)คริสต์ศักราช" value="{{ old('dateofbirth') }}">
                         <span class="input-group-text">
                             <i class="bi bi-calendar"></i>
