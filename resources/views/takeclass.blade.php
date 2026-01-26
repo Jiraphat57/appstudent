@@ -232,7 +232,7 @@
                     </select>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">วันเดือนปีเกิด</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default">วันเดือนปีเกิด กรอกเป็น (ค.ศ.)</span>
                         <input type="text" name="dateofbirth" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="เช่น 2552">
                     </div>
                     <div class="input-group mb-3">
