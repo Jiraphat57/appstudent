@@ -14,16 +14,6 @@ class ReligionSeeder extends Seeder
      */
     public function run(): void
     {
-        // DB::table('religions')->insert(
-        //     array(
-        //         ['religion' => 'พุทธ'],
-        //         ['religion' => 'อิสลาม'],
-        //         ['religion' => 'คริสต์'],
-        //         ['religion' => 'ซิกส์'],
-        //         ['religion' => 'พราหมณ์/ฮินดู'],
-        //         ['religion' => 'อื่นๆ']
-        //     )
-        // );
         $religions = [
             'พุทธ', 'อิสลาม', 'คริสต์', 'ซิกส์', 
             'พราหมณ์/ฮินดู', 'อื่นๆ'

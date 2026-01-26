@@ -18,6 +18,8 @@ use App\Models\Typetitle;
 use App\Models\Student4;
 use App\Models\SecondarySchool;
 use App\Models\HighSchool;
+use App\Models\Servicearea;
+use App\Models\Districtschool;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -159,6 +161,139 @@ class Student4Controller extends Controller
             'highschool9_id' => 'required|numeric',
             'highschool10_id' => 'required|numeric'
             // 'highschool11_id' => 'required|numeric' 
+             ], [
+            'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
+            'classlevels_id.numeric' => 'ระดับชั้นต้องเป็นตัวเลข',
+            'typetitles_id.required' => 'กรุณาเลือกคำนำหน้าชื่อ',
+            'typetitles_id.numeric' => 'คำนำหน้าชื่อต้องเป็นตัวเลข',
+            'name.required' => 'กรุณากรอกชื่อ',
+            'name.max' => 'ชื่อต้องไม่เกิน 90 ตัวอักษร',
+            'surname.required' => 'กรุณากรอกนามสกุล',
+            'surname.max' => 'นามสกุลต้องไม่เกิน 90 ตัวอักษร',
+            'nameeng.required' => 'กรุณากรอกชื่อภาษาอังกฤษ',
+            'nameeng.max' => 'ชื่อภาษาอังกฤษต้องไม่เกิน 90 ตัวอักษร',
+            'surnameeng.required' => 'กรุณากรอกนามสกุลภาษาอังกฤษ',
+            'surnameeng.max' => 'นามสกุลภาษาอังกฤษต้องไม่เกิน 90 ตัวอักษร',
+            'nationalid.required' => 'กรุณากรอกเลขบัตรประชาชน',
+            'nationalid.string' => 'เลขบัตรประชาชนต้องเป็นตัวอักษร',
+            'nationalid.min' => 'เลขบัตรประชาชนต้องมี 13 หลัก',
+            'nationalid.max' => 'เลขบัตรประชาชนต้องมี 13 หลัก',
+            'religions_id.required' => 'กรุณาเลือกศาสนา',
+            'religions_id.numeric' => 'ศาสนาต้องเป็นตัวเลข',
+            'nationalities_id.required' => 'กรุณาเลือกสัญชาติ',
+            'nationalities_id.numeric' => 'สัญชาติต้องเป็นตัวเลข',
+            'phone4student.required' => 'กรุณากรอกเบอร์โทรศัพท์นักเรียน',
+            'phone4student.max' => 'เบอร์โทรศัพท์นักเรียนต้องไม่เกิน 10 ตัวอักษร',
+            'ethnicities_id.required' => 'กรุณาเลือกเชื้อชาติ',
+            'ethnicities_id.numeric' => 'เชื้อชาติต้องเป็นตัวเลข',
+            'dateofbirth.required' => 'กรุณากรอกวันเกิด',
+            'dateofbirth.date_format' => 'รูปแบบวันที่ไม่ถูกต้อง (ต้องเป็น d/m/Y)',
+            'provincesbirth_id.required' => 'กรุณาเลือกจังหวัดที่เกิด',
+            'provincesbirth_id.numeric' => 'จังหวัดที่เกิดต้องเป็นตัวเลข',
+            'bloodtypes_id.required' => 'กรุณาเลือกกรุ๊ปเลือด',
+            'bloodtypes_id.numeric' => 'กรุ๊ปเลือดต้องเป็นตัวเลข',
+            'weight.required' => 'กรุณากรอกน้ำหนัก',
+            'weight.max' => 'น้ำหนักต้องไม่เกิน 3 ตัวอักษร',
+            'height.required' => 'กรุณากรอกส่วนสูง',
+            'height.max' => 'ส่วนสูงต้องไม่เกิน 3 ตัวอักษร',
+            'disability.required' => 'กรุณากรอกความพิการ',
+            'disability.max' => 'ความพิการต้องไม่เกิน 2 ตัวอักษร',
+            'previousschool.required' => 'กรุณากรอกโรงเรียนเดิม',
+            'previousschool.max' => 'โรงเรียนเดิมต้องไม่เกิน 90 ตัวอักษร',
+            'provinceschool_id.required' => 'กรุณาเลือกจังหวัดของโรงเรียน',
+            'provinceschool_id.numeric' => 'จังหวัดของโรงเรียนต้องเป็นตัวเลข',
+            'beingonlychild.required' => 'กรุณากรอกข้อมูลบุตรคนเดียว',
+            'beingonlychild.max' => 'ข้อมูลบุตรคนเดียวต้องไม่เกิน 50 ตัวอักษร',
+            'brothers.required' => 'กรุณากรอกจำนวนพี่ชาย',
+            'brothers.max' => 'จำนวนพี่ชายต้องไม่เกิน 10 ตัวอักษร',
+            'youngerbrother.required' => 'กรุณากรอกจำนวนน้องชาย',
+            'youngerbrother.max' => 'จำนวนน้องชายต้องไม่เกิน 10 ตัวอักษร',
+            'oldersister.required' => 'กรุณากรอกจำนวนพี่สาว',
+            'oldersister.max' => 'จำนวนพี่สาวต้องไม่เกิน 10 ตัวอักษร',
+            'sister.required' => 'กรุณากรอกจำนวนน้องสาว',
+            'sister.max' => 'จำนวนน้องสาวต้องไม่เกิน 10 ตัวอักษร',
+            'sumsiblings.required' => 'กรุณากรอกจำนวนพี่น้องรวม',
+            'sumsiblings.max' => 'จำนวนพี่น้องรวมต้องไม่เกิน 10 ตัวอักษร',
+            'houseid.required' => 'กรุณากรอกเลขที่บ้าน',
+            'houseid.max' => 'เลขที่บ้านต้องไม่เกิน 11 ตัวอักษร',
+            'housenumber.required' => 'กรุณากรอกเลขที่บ้าน',
+            'housenumber.max' => 'เลขที่บ้านต้องไม่เกิน 11 ตัวอักษร',
+            'villagenumber.required' => 'กรุณากรอกหมู่ที่',
+            'villagenumber.max' => 'หมู่ที่ต้องไม่เกิน 8 ตัวอักษร',
+            'villagename.required' => 'กรุณากรอกชื่อหมู่บ้าน',
+            'villagename.max' => 'ชื่อหมู่บ้านต้องไม่เกิน 100 ตัวอักษร',
+            'district.required' => 'กรุณากรอกตำบล',
+            'district.max' => 'ตำบลต้องไม่เกิน 100 ตัวอักษร',
+            'subdistrict.required' => 'กรุณากรอกอำเภอ',
+            'subdistrict.max' => 'อำเภอต้องไม่เกิน 100 ตัวอักษร',
+            'provinces_id.required' => 'กรุณาเลือกจังหวัด',
+            'provinces_id.numeric' => 'จังหวัดต้องเป็นตัวเลข',
+            'postalcode.required' => 'กรุณากรอกรหัสไปรษณีย์',
+            'postalcode.max' => 'รหัสไปรษณีย์ต้องไม่เกิน 6 ตัวอักษร',
+            'typeresidences_id.required' => 'กรุณาเลือกประเภทที่อยู่อาศัย',
+            'typeresidences_id.numeric' => 'ประเภทที่อยู่อาศัยต้องเป็นตัวเลข',
+            'distancelatyangroad.required' => 'กรุณากรอกระยะทางจากถนนลาดยาง',
+            'distancelatyangroad.max' => 'ระยะทางจากถนนลาดยางต้องไม่เกิน 7 ตัวอักษร',
+            'traveltime.required' => 'กรุณากรอกเวลาในการเดินทาง',
+            'traveltime.max' => 'เวลาในการเดินทางต้องไม่เกิน 7 ตัวอักษร',
+            'travelschool1s_id.required' => 'กรุณาเลือกวิธีการเดินทางมาโรงเรียน',
+            'travelschool1s_id.numeric' => 'วิธีการเดินทางมาโรงเรียนต้องเป็นตัวเลข',
+            'typetitlesfather_id.required' => 'กรุณาเลือกคำนำหน้าชื่อบิดา',
+            'typetitlesfather_id.numeric' => 'คำนำหน้าชื่อบิดาต้องเป็นตัวเลข',
+            'name_father.required' => 'กรุณากรอกชื่อบิดา',
+            'name_father.max' => 'ชื่อบิดาต้องไม่เกิน 100 ตัวอักษร',
+            'surname_father.required' => 'กรุณากรอกนามสกุลบิดา',
+            'surname_father.max' => 'นามสกุลบิดาต้องไม่เกิน 100 ตัวอักษร',
+            'field_citizenfather.required' => 'กรุณากรอกเลขบัตรประชาชนบิดา',
+            'field_citizenfather.string' => 'เลขบัตรประชาชนบิดาต้องเป็นตัวอักษร',
+            'field_citizenfather.min' => 'เลขบัตรประชาชนบิดาต้องมี 13 หลัก',
+            'field_citizenfather.max' => 'เลขบัตรประชาชนบิดาต้องมี 13 หลัก',
+            'occupationfather_id.required' => 'กรุณาเลือกอาชีพบิดา',
+            'occupationfather_id.numeric' => 'อาชีพบิดาต้องเป็นตัวเลข',
+            'income_father.required' => 'กรุณากรอกรายได้บิดา',
+            'income_father.max' => 'รายได้บิดาต้องไม่เกิน 11 ตัวอักษร',
+            'phone_father.required' => 'กรุณากรอกเบอร์โทรศัพท์บิดา',
+            'phone_father.max' => 'เบอร์โทรศัพท์บิดาต้องไม่เกิน 10 ตัวอักษร',
+            'typetitlesmother_id.required' => 'กรุณาเลือกคำนำหน้าชื่อมารดา',
+            'typetitlesmother_id.numeric' => 'คำนำหน้าชื่อมารดาต้องเป็นตัวเลข',
+            'name_mother.required' => 'กรุณากรอกชื่อมารดา',
+            'name_mother.max' => 'ชื่อมารดาต้องไม่เกิน 100 ตัวอักษร',
+            'surname_mother.required' => 'กรุณากรอกนามสกุลมารดา',
+            'surname_mother.max' => 'นามสกุลมารดาต้องไม่เกิน 100 ตัวอักษร',
+            'field_citizenmother.required' => 'กรุณากรอกเลขบัตรประชาชนมารดา',
+            'field_citizenmother.string' => 'เลขบัตรประชาชนมารดาต้องเป็นตัวอักษร',
+            'field_citizenmother.min' => 'เลขบัตรประชาชนมารดาต้องมี 13 หลัก',
+            'field_citizenmother.max' => 'เลขบัตรประชาชนมารดาต้องมี 13 หลัก',
+            'occupationmother_id.required' => 'กรุณาเลือกอาชีพมารดา',
+            'occupationmother_id.numeric' => 'อาชีพมารดาต้องเป็นตัวเลข',
+            'income_mother.required' => 'กรุณากรอกรายได้มารดา',
+            'income_mother.max' => 'รายได้มารดาต้องไม่เกิน 11 ตัวอักษร',
+            'phone_mother.required' => 'กรุณากรอกเบอร์โทรศัพท์มารดา',
+            'phone_mother.max' => 'เบอร์โทรศัพท์มารดาต้องไม่เกิน 10 ตัวอักษร',
+            'maritalstatuses_id.required' => 'กรุณาเลือกสถานภาพสมรส',
+            'maritalstatuses_id.numeric' => 'สถานภาพสมรสต้องเป็นตัวเลข',
+            'parent_id.required' => 'กรุณาเลือกผู้ปกครอง',
+            'parent_id.numeric' => 'ผู้ปกครองต้องเป็นตัวเลข',
+            'highschool1_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 1',
+            'highschool1_id.numeric' => 'แผนการเรียนลำดับที่ 1 ต้องเป็นตัวเลข',
+            'highschool2_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 2',
+            'highschool2_id.numeric' => 'แผนการเรียนลำดับที่ 2 ต้องเป็นตัวเลข',
+            'highschool3_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 3',
+            'highschool3_id.numeric' => 'แผนการเรียนลำดับที่ 3 ต้องเป็นตัวเลข',
+            'highschool4_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 4',
+            'highschool4_id.numeric' => 'แผนการเรียนลำดับที่ 4 ต้องเป็นตัวเลข',
+            'highschool5_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 5',
+            'highschool5_id.numeric' => 'แผนการเรียนลำดับที่ 5 ต้องเป็นตัวเลข',
+            'highschool6_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 6',
+            'highschool6_id.numeric' => 'แผนการเรียนลำดับที่ 6 ต้องเป็นตัวเลข',
+            'highschool7_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 7',
+            'highschool7_id.numeric' => 'แผนการเรียนลำดับที่ 7 ต้องเป็นตัวเลข',
+            'highschool8_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 8',
+            'highschool8_id.numeric' => 'แผนการเรียนลำดับที่ 8 ต้องเป็นตัวเลข',
+            'highschool9_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 9',
+            'highschool9_id.numeric' => 'แผนการเรียนลำดับที่ 9 ต้องเป็นตัวเลข',
+            'highschool10_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 10',
+            'highschool10_id.numeric' => 'แผนการเรียนลำดับที่ 10 ต้องเป็นตัวเลข',
         ]);
         // dd($validatedData);
         // แปลงรูปแบบวันที่
@@ -288,7 +423,6 @@ class Student4Controller extends Controller
     }
     public function update(Request $request, $id)
     {
-        // dd($request->all());
         $validatedData = $request->validate([
             'classlevels_id' => 'required|numeric',
             'typetitles_id' => 'required|numeric',
@@ -353,46 +487,141 @@ class Student4Controller extends Controller
             'highschool8_id' => 'required|numeric',
             'highschool9_id' => 'required|numeric',
             'highschool10_id' => 'required|numeric',
-        ]);
-        // try {
-        //     // ตรวจสอบว่ามีค่า id หรือไม่
-        //     if (!$id) {
-        //         return back()->withErrors(['error' => 'ไม่พบ ID ของนักเรียน']);
-        //     }
-        
-        //     // ดึงข้อมูลของนักเรียนที่ต้องการอัปเดต
-        //     $student = Student4::find($id);
-        
-        //     if (!$student) {
-        //         return back()->withErrors(['error' => 'ไม่พบข้อมูลนักเรียน']);
-        //     }
-        //     // dd($request->all());
-        //     // ดึงข้อมูลจาก $request
-        //     $input = $request->all();
-            
-        //     // ตรวจสอบว่า dateofbirth มีค่าหรือไม่ และอยู่ในรูปแบบที่ถูกต้อง
-        //     if ($request->has('dateofbirth') && !empty($request->dateofbirth)) {
-        //         try {
-        //             $thaiYear = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)->year - 543;
-        //             $input['dateofbirth'] = Carbon::createFromFormat('d-m-Y', $request->dateofbirth)
-        //                 ->year($thaiYear)
-        //                 ->format('Y-m-d');
-        //         } catch (\Exception $e) {
-        //             return back()->withErrors(['error' => 'รูปแบบวันเกิดไม่ถูกต้อง']);
-        //         }
-        //     }
-        
-        //     // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
-        //     // $student->update($input);
-        //     // dd($student);
-        //     // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
-        //     $student->fill($input)->save();
-        //     return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
-        
-        // } catch (\Exception $e) {
-        //     // ส่งข้อความข้อผิดพลาดกลับไปยังหน้าเดิม
-        //     return back()->withErrors(['error' => 'เกิดข้อผิดพลาด: ' . $e->getMessage()]);
-        // }
+            ], [
+            'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
+            'classlevels_id.numeric' => 'ระดับชั้นต้องเป็นตัวเลข',
+            'typetitles_id.required' => 'กรุณาเลือกคำนำหน้าชื่อ',
+            'typetitles_id.numeric' => 'คำนำหน้าชื่อต้องเป็นตัวเลข',
+            'name.required' => 'กรุณากรอกชื่อ',
+            'name.max' => 'ชื่อต้องไม่เกิน 90 ตัวอักษร',
+            'surname.required' => 'กรุณากรอกนามสกุล',
+            'surname.max' => 'นามสกุลต้องไม่เกิน 90 ตัวอักษร',
+            'nameeng.required' => 'กรุณากรอกชื่อภาษาอังกฤษ',
+            'nameeng.max' => 'ชื่อภาษาอังกฤษต้องไม่เกิน 90 ตัวอักษร',
+            'surnameeng.required' => 'กรุณากรอกนามสกุลภาษาอังกฤษ',
+            'surnameeng.max' => 'นามสกุลภาษาอังกฤษต้องไม่เกิน 90 ตัวอักษร',
+            'nationalid.required' => 'กรุณากรอกเลขบัตรประชาชน',
+            'nationalid.string' => 'เลขบัตรประชาชนต้องเป็นตัวอักษร',
+            'nationalid.min' => 'เลขบัตรประชาชนต้องมี 13 หลัก',
+            'nationalid.max' => 'เลขบัตรประชาชนต้องมี 13 หลัก',
+            'religions_id.required' => 'กรุณาเลือกศาสนา',
+            'religions_id.numeric' => 'ศาสนาต้องเป็นตัวเลข',
+            'nationalities_id.required' => 'กรุณาเลือกสัญชาติ',
+            'nationalities_id.numeric' => 'สัญชาติต้องเป็นตัวเลข',
+            'phone4student.required' => 'กรุณากรอกเบอร์โทรศัพท์นักเรียน',
+            'phone4student.max' => 'เบอร์โทรศัพท์นักเรียนต้องไม่เกิน 10 ตัวอักษร',
+            'ethnicities_id.required' => 'กรุณาเลือกเชื้อชาติ',
+            'ethnicities_id.numeric' => 'เชื้อชาติต้องเป็นตัวเลข',
+            'dateofbirth.required' => 'กรุณากรอกวันเกิด',
+            'dateofbirth.date_format' => 'รูปแบบวันที่ไม่ถูกต้อง (ต้องเป็น d/m/Y)',
+            'provincesbirth_id.required' => 'กรุณาเลือกจังหวัดที่เกิด',
+            'provincesbirth_id.numeric' => 'จังหวัดที่เกิดต้องเป็นตัวเลข',
+            'bloodtypes_id.required' => 'กรุณาเลือกกรุ๊ปเลือด',
+            'bloodtypes_id.numeric' => 'กรุ๊ปเลือดต้องเป็นตัวเลข',
+            'weight.required' => 'กรุณากรอกน้ำหนัก',
+            'weight.max' => 'น้ำหนักต้องไม่เกิน 3 ตัวอักษร',
+            'height.required' => 'กรุณากรอกส่วนสูง',
+            'height.max' => 'ส่วนสูงต้องไม่เกิน 3 ตัวอักษร',
+            'disability.required' => 'กรุณากรอกความพิการ',
+            'disability.max' => 'ความพิการต้องไม่เกิน 2 ตัวอักษร',
+            'previousschool.required' => 'กรุณากรอกโรงเรียนเดิม',
+            'previousschool.max' => 'โรงเรียนเดิมต้องไม่เกิน 90 ตัวอักษร',
+            'provinceschool_id.required' => 'กรุณาเลือกจังหวัดของโรงเรียน',
+            'provinceschool_id.numeric' => 'จังหวัดของโรงเรียนต้องเป็นตัวเลข',
+            'beingonlychild.required' => 'กรุณากรอกข้อมูลบุตรคนเดียว',
+            'beingonlychild.max' => 'ข้อมูลบุตรคนเดียวต้องไม่เกิน 50 ตัวอักษร',
+            'brothers.required' => 'กรุณากรอกจำนวนพี่ชาย',
+            'brothers.max' => 'จำนวนพี่ชายต้องไม่เกิน 10 ตัวอักษร',
+            'youngerbrother.required' => 'กรุณากรอกจำนวนน้องชาย',
+            'youngerbrother.max' => 'จำนวนน้องชายต้องไม่เกิน 10 ตัวอักษร',
+            'oldersister.required' => 'กรุณากรอกจำนวนพี่สาว',
+            'oldersister.max' => 'จำนวนพี่สาวต้องไม่เกิน 10 ตัวอักษร',
+            'sister.required' => 'กรุณากรอกจำนวนน้องสาว',
+            'sister.max' => 'จำนวนน้องสาวต้องไม่เกิน 10 ตัวอักษร',
+            'sumsiblings.required' => 'กรุณากรอกจำนวนพี่น้องรวม',
+            'sumsiblings.max' => 'จำนวนพี่น้องรวมต้องไม่เกิน 10 ตัวอักษร',
+            'houseid.required' => 'กรุณากรอกเลขที่บ้าน',
+            'houseid.max' => 'เลขที่บ้านต้องไม่เกิน 11 ตัวอักษร',
+            'housenumber.required' => 'กรุณากรอกเลขที่บ้าน',
+            'housenumber.max' => 'เลขที่บ้านต้องไม่เกิน 11 ตัวอักษร',
+            'villagenumber.required' => 'กรุณากรอกหมู่ที่',
+            'villagenumber.max' => 'หมู่ที่ต้องไม่เกิน 8 ตัวอักษร',
+            'villagename.required' => 'กรุณากรอกชื่อหมู่บ้าน',
+            'villagename.max' => 'ชื่อหมู่บ้านต้องไม่เกิน 100 ตัวอักษร',
+            'district.required' => 'กรุณากรอกตำบล',
+            'district.max' => 'ตำบลต้องไม่เกิน 100 ตัวอักษร',
+            'subdistrict.required' => 'กรุณากรอกอำเภอ',
+            'subdistrict.max' => 'อำเภอต้องไม่เกิน 100 ตัวอักษร',
+            'provinces_id.required' => 'กรุณาเลือกจังหวัด',
+            'provinces_id.numeric' => 'จังหวัดต้องเป็นตัวเลข',
+            'postalcode.required' => 'กรุณากรอกรหัสไปรษณีย์',
+            'postalcode.max' => 'รหัสไปรษณีย์ต้องไม่เกิน 6 ตัวอักษร',
+            'typeresidences_id.required' => 'กรุณาเลือกประเภทที่อยู่อาศัย',
+            'typeresidences_id.numeric' => 'ประเภทที่อยู่อาศัยต้องเป็นตัวเลข',
+            'distancelatyangroad.required' => 'กรุณากรอกระยะทางจากถนนลาดยาง',
+            'distancelatyangroad.max' => 'ระยะทางจากถนนลาดยางต้องไม่เกิน 7 ตัวอักษร',
+            'traveltime.required' => 'กรุณากรอกเวลาในการเดินทาง',
+            'traveltime.max' => 'เวลาในการเดินทางต้องไม่เกิน 7 ตัวอักษร',
+            'travelschool1s_id.required' => 'กรุณาเลือกวิธีการเดินทางมาโรงเรียน',
+            'travelschool1s_id.numeric' => 'วิธีการเดินทางมาโรงเรียนต้องเป็นตัวเลข',
+            'typetitlesfather_id.required' => 'กรุณาเลือกคำนำหน้าชื่อบิดา',
+            'typetitlesfather_id.numeric' => 'คำนำหน้าชื่อบิดาต้องเป็นตัวเลข',
+            'name_father.required' => 'กรุณากรอกชื่อบิดา',
+            'name_father.max' => 'ชื่อบิดาต้องไม่เกิน 100 ตัวอักษร',
+            'surname_father.required' => 'กรุณากรอกนามสกุลบิดา',
+            'surname_father.max' => 'นามสกุลบิดาต้องไม่เกิน 100 ตัวอักษร',
+            'field_citizenfather.required' => 'กรุณากรอกเลขบัตรประชาชนบิดา',
+            'field_citizenfather.string' => 'เลขบัตรประชาชนบิดาต้องเป็นตัวอักษร',
+            'field_citizenfather.min' => 'เลขบัตรประชาชนบิดาต้องมี 13 หลัก',
+            'field_citizenfather.max' => 'เลขบัตรประชาชนบิดาต้องมี 13 หลัก',
+            'occupationfather_id.required' => 'กรุณาเลือกอาชีพบิดา',
+            'occupationfather_id.numeric' => 'อาชีพบิดาต้องเป็นตัวเลข',
+            'income_father.required' => 'กรุณากรอกรายได้บิดา',
+            'income_father.max' => 'รายได้บิดาต้องไม่เกิน 11 ตัวอักษร',
+            'phone_father.required' => 'กรุณากรอกเบอร์โทรศัพท์บิดา',
+            'phone_father.max' => 'เบอร์โทรศัพท์บิดาต้องไม่เกิน 10 ตัวอักษร',
+            'typetitlesmother_id.required' => 'กรุณาเลือกคำนำหน้าชื่อมารดา',
+            'typetitlesmother_id.numeric' => 'คำนำหน้าชื่อมารดาต้องเป็นตัวเลข',
+            'name_mother.required' => 'กรุณากรอกชื่อมารดา',
+            'name_mother.max' => 'ชื่อมารดาต้องไม่เกิน 100 ตัวอักษร',
+            'surname_mother.required' => 'กรุณากรอกนามสกุลมารดา',
+            'surname_mother.max' => 'นามสกุลมารดาต้องไม่เกิน 100 ตัวอักษร',
+            'field_citizenmother.required' => 'กรุณากรอกเลขบัตรประชาชนมารดา',
+            'field_citizenmother.string' => 'เลขบัตรประชาชนมารดาต้องเป็นตัวอักษร',
+            'field_citizenmother.min' => 'เลขบัตรประชาชนมารดาต้องมี 13 หลัก',
+            'field_citizenmother.max' => 'เลขบัตรประชาชนมารดาต้องมี 13 หลัก',
+            'occupationmother_id.required' => 'กรุณาเลือกอาชีพมารดา',
+            'occupationmother_id.numeric' => 'อาชีพมารดาต้องเป็นตัวเลข',
+            'income_mother.required' => 'กรุณากรอกรายได้มารดา',
+            'income_mother.max' => 'รายได้มารดาต้องไม่เกิน 11 ตัวอักษร',
+            'phone_mother.required' => 'กรุณากรอกเบอร์โทรศัพท์มารดา',
+            'phone_mother.max' => 'เบอร์โทรศัพท์มารดาต้องไม่เกิน 10 ตัวอักษร',
+            'maritalstatuses_id.required' => 'กรุณาเลือกสถานภาพสมรส',
+            'maritalstatuses_id.numeric' => 'สถานภาพสมรสต้องเป็นตัวเลข',
+            'parent_id.required' => 'กรุณาเลือกผู้ปกครอง',
+            'parent_id.numeric' => 'ผู้ปกครองต้องเป็นตัวเลข',
+            'highschool1_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 1',
+            'highschool1_id.numeric' => 'แผนการเรียนลำดับที่ 1 ต้องเป็นตัวเลข',
+            'highschool2_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 2',
+            'highschool2_id.numeric' => 'แผนการเรียนลำดับที่ 2 ต้องเป็นตัวเลข',
+            'highschool3_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 3',
+            'highschool3_id.numeric' => 'แผนการเรียนลำดับที่ 3 ต้องเป็นตัวเลข',
+            'highschool4_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 4',
+            'highschool4_id.numeric' => 'แผนการเรียนลำดับที่ 4 ต้องเป็นตัวเลข',
+            'highschool5_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 5',
+            'highschool5_id.numeric' => 'แผนการเรียนลำดับที่ 5 ต้องเป็นตัวเลข',
+            'highschool6_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 6',
+            'highschool6_id.numeric' => 'แผนการเรียนลำดับที่ 6 ต้องเป็นตัวเลข',
+            'highschool7_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 7',
+            'highschool7_id.numeric' => 'แผนการเรียนลำดับที่ 7 ต้องเป็นตัวเลข',
+            'highschool8_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 8',
+            'highschool8_id.numeric' => 'แผนการเรียนลำดับที่ 8 ต้องเป็นตัวเลข',
+            'highschool9_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 9',
+            'highschool9_id.numeric' => 'แผนการเรียนลำดับที่ 9 ต้องเป็นตัวเลข',
+            'highschool10_id.required' => 'กรุณาเลือกแผนการเรียนลำดับที่ 10',
+            'highschool10_id.numeric' => 'แผนการเรียนลำดับที่ 10 ต้องเป็นตัวเลข',
+        ]);     
+    
         try {
             // ดึงข้อมูลของนักเรียนที่ต้องการอัปเดต
             $students = Student4::findOrFail($id);
@@ -418,7 +647,6 @@ class Student4Controller extends Controller
             // ส่งข้อความข้อผิดพลาดกลับไปยังหน้าเดิม
             return back()->withErrors(['error' => 'เกิดข้อผิดพลาด: ' . $e->getMessage()]);
         }
-
     }
     public function destroy($id)
     {
@@ -435,5 +663,77 @@ class Student4Controller extends Controller
             // ส่งข้อความข้อผิดพลาดกลับไปหน้าเดิม
             return back()->withErrors(['error' => 'เกิดข้อผิดพลาด: ' . $e->getMessage()]);
         }
+    }
+    public function indexservicearea4(Request $request)
+    {
+        return view('dashboard', compact('students','student4s', 'search'));
+    }
+    public function createservicearea4()
+    {
+        return view('students.create'); // แบบฟอร์มเพิ่มนักเรียน
+    }
+    public function storeservicearea4(Request $request)
+    {
+
+    }
+    public function editservicearea4($id)
+    {
+        $student = Student4::findOrFail($id); // ดึงข้อมูลของนักเรียนที่จะแก้ไข
+        $classlevels = Classlevel::all(); // ดึงข้อมูลระดับชั้นทั้งหมด
+        $typetitles = Typetitle::all(); // ดึงข้อมูลคำนำหน้าชื่อทั้งหมด
+        $provinces = Province::all();
+        $highschools = HighSchool::all();
+        return view('servicearea4', compact('student', 'classlevels', 'typetitles', 'provinces', 'highschools'));
+    }
+    public function updateservicearea4(Request $request, $id)
+    {
+        $request->validate([
+        'servicearea4_id' => 'required|numeric|exists:serviceareas,id',
+        'districtschool4_id' => 'required|numeric|exists:districtschools,id',]);
+        // 2️⃣ ดึงข้อมูลนักเรียน
+        // $student = Students::findOrFail($id); // ดึงข้อมูลของนักเรียนที่จะแก้ไข
+        $classlevels = Classlevel::all(); // ดึงข้อมูลระดับชั้นทั้งหมด
+        $typetitles = Typetitle::all(); // ดึงข้อมูลคำนำหน้าชื่อทั้งหมด
+        $provinces = Province::all();
+        $highschools = HighSchool::all();
+        $districtschools = Districtschool::all();
+        $student = Student4::findOrFail($id); 
+        $student->update([
+            'servicearea4_id' => $request->servicearea4_id,
+            'districtschool4_id' => $request->districtschool4_id,
+        ]);
+        return redirect()
+            ->route('dashboard', $id)
+            ->with('success', 'บันทึกข้อมูลเรียบร้อย');
+    }
+    public function dashboard4()
+    {
+        $countM4 = Student4::where('classlevels_id', 2)->count();
+        // Servicearea;
+        $countInM4 = Student4::where('servicearea4_id', 3)->count();
+        $countOutM4 = Student4::where('servicearea4_id', 4)->count();
+        $countOut_M4 = Student4::where('servicearea4_id', 5)->count();
+        $countdistric1 = Student4::where('districtschool4_id', 1)->count();
+        $countdistric2 = Student4::where('districtschool4_id', 2)->count();
+        $countdistric3 = Student4::where('districtschool4_id', 3)->count();
+        $countdistric4 = Student4::where('districtschool4_id', 4)->count();
+        $countdistric5 = Student4::where('districtschool4_id', 5)->count();
+        $countdistric6 = Student4::where('districtschool4_id', 6)->count();
+        $countdistric7 = Student4::where('districtschool4_id', 7)->count();
+        $countdistric8 = Student4::where('districtschool4_id', 8)->count();
+        $countdistric9 = Student4::where('districtschool4_id', 9)->count();
+        $countdistric10 = Student4::where('districtschool4_id', 10)->count();
+        $countdistric11 = Student4::where('districtschool4_id', 11)->count();
+        $countdistric12 = Student4::where('districtschool4_id', 12)->count();
+        $countdistric13 = Student4::where('districtschool4_id', 13)->count();
+        $countdistric14 = Student4::where('districtschool4_id', 14)->count();
+        $countdistric15 = Student4::where('districtschool4_id', 15)->count();
+        $countdistric16 = Student4::where('districtschool4_id', 16)->count();
+        $countdistric17 = Student4::where('districtschool4_id', 17)->count();
+        $countdistric18 = Student4::where('districtschool4_id', 18)->count();
+        $countdistric19 = Student4::where('districtschool4_id', 19)->count();
+        return view('themes.dashboard4', compact('countM4','countInM4','countOutM4','countOut_M4','countdistric1','countdistric2','countdistric3',
+        'countdistric4','countdistric5','countdistric6','countdistric7','countdistric8','countdistric9','countdistric10','countdistric11','countdistric12',
+        'countdistric13','countdistric14','countdistric15','countdistric16','countdistric17','countdistric18','countdistric19'));
     }
 }

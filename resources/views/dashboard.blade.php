@@ -35,6 +35,7 @@
                                 
                             </td> --}}
                             <td class="border border-gray-300 px-4 py-2">
+                                <a href="{{ route('servicearea1.edit', $student->id) }}"> <button type="submit" class="btn btn-info">ตรวจสอบพื้นที่บริการ</button></a> |
                                 <a href="{{ route('studentsauth.pdf', $student->id) }}"><button type="submit" class="btn btn-success"> ดาวน์โหลด PDF </button></a> |
                                 <a href="{{ route('studentsauth.edit', $student->id) }}"> <button type="submit" class="btn btn-warning">แก้ไข</button></a> |
                                 <form action="{{ route('students.destroy', $student->id) }}" method="POST" style="display:inline;">
@@ -80,10 +81,8 @@
                 <td class="border border-gray-300 px-4 py-2">{{ $student4->nationalid }}</td>
                 <td class="border border-gray-300 px-4 py-2">{{ $student4->typetitle->typetitle}}{{ $student4->name }}&nbsp;&nbsp;{{ $student4->surname }}</td>
                 <td class="border border-gray-300 px-4 py-2">{{ $student4->classlevel->classlevel ?? 'ไม่ระบุ'}}</td>
-                {{-- <td class="border border-gray-300 px-4 py-2">
-                    
-                </td> --}}
                 <td class="border border-gray-300 px-4 py-2">
+                    <a href="{{ route('servicearea4.edit', $student4->id) }}"> <button type="submit" class="btn btn-info">ตรวจสอบพื้นที่บริการ</button></a> |
                     <a href="{{ route('students4auth.pdf', $student4->id) }}"><button type="submit" class="btn btn-success"> ดาวน์โหลด PDF </button></a> |
                     <a href="{{ route('students4auth.edit', $student4->id) }}"> <button type="submit" class="btn btn-warning">แก้ไข</button></a> |
                     <form action="{{ route('students4.destroy', $student4->id) }}" method="POST" style="display:inline;">

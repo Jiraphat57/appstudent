@@ -899,7 +899,7 @@
                 orientation: 'bottom', // ให้แสดงข้างล่างของ input
             }).on('changeDate', function (e) {
                 let date = moment.tz(e.date, "Asia/Bangkok"); // กำหนดโซนเวลาเป็นไทย
-                let thaiYear = date.year() + 543; // แปลง ค.ศ. เป็น พ.ศ.
+                let thaiYear = date.year(); // แปลง ค.ศ. เป็น พ.ศ.
                 let formattedDate = date.format('DD/MM') + '/' + thaiYear;
                 let dayOfWeek = date.format('dddd'); // แสดงวันในสัปดาห์
 
@@ -911,7 +911,7 @@
             let currentValue = $('#datepicker input').val();
             if (!currentValue) {
                 let today = moment.tz("Asia/Bangkok");
-                let thaiYear = today.year() + 543;
+                let thaiYear = today.year();
                 let formattedToday = today.format('DD/MM') + '/' + thaiYear;
                 $('#datepicker input').datepicker('setDate', formattedToday);
             }

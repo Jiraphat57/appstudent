@@ -77,6 +77,8 @@ return new class extends Migration
             $table->foreignId('highschool9_id')->nullable()->constrained('highschools')->onUpdate('cascade')->onDelete('restrict');
             $table->foreignId('highschool10_id')->nullable()->constrained('highschools')->onUpdate('cascade')->onDelete('restrict');
             // $table->foreignId('highschool11_id')->nullable()->constrained('highschools')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('servicearea4_id')->nullable()->constrained('serviceareas')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('districtschool4_id')->nullable()->constrained('districtschools')->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();
         });
     }
