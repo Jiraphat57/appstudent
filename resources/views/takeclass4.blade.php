@@ -243,7 +243,7 @@
                 @error('dateofbirth')
                         <div class="text-danger small">{{ $message }}</div>
                 @enderror
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-1">
                     <div class="input-group date" id="datepicker">
                         <label for="inputdate" class="col-sm-3 col-form-label">วันเดือนปีเกิด กรอก(ค.ศ.)</label>
                         {{-- <input type="text" name="dateofbirth" class="form-control" placeholder="วันเกิดนักเรียน"> --}}
