@@ -35,7 +35,7 @@ class Student4 extends Model
 'travelschool1s_id','typetitlesfather_id','name_father','surname_father','field_citizenfather','occupationfather_id','income_father','phone_father','typetitlesmother_id','name_mother','surname_mother','field_citizenmother','occupationmother_id','income_mother','phone_mother','maritalstatuses_id','parent_id',
 'highschool1_id','highschool2_id','highschool3_id','highschool4_id','highschool5_id','highschool6_id','highschool17_id','highschool8_id','highschool9_id','highschool10_id','servicearea4_id','districtschool4_id'];
 
-    public function servicearea4(): BelongsTo
+    public function serviceareas4(): BelongsTo
     {
         return $this->belongsTo(Servicearea::class, 'servicearea4_id', 'id');
     }
