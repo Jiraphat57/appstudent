@@ -2,91 +2,105 @@
 
 @section('content')
     <!-- Main content -->
-    
-    <div class="container-fluid" >
+
+    <div class="container-fluid">
         {{-- <h5 class="mb-3">Small Box</h5> --}}
-    <div class="row">
-        <div class="col-lg-3 col-6">
-            <div class="small-box bg-primary">
-                <div class="inner text-center ">
-                    <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold;">นักเรียนระดับชั้น ม.4 ทั้งหมด(2569)</p>
-                    <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">{{ number_format($countM4) }} คน</h1>
-                    {{-- <p>นักเรียนระดับชั้น ม.1 ทั้งหมด</p> --}}
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-primary">
+                    <div class="inner text-center ">
+                        <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold;">นักเรียนระดับชั้น ม.4
+                            ทั้งหมด(2569)</p>
+                        <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">
+                            {{ number_format($countM4) }} คน</h1>
+                        {{-- <p>นักเรียนระดับชั้น ม.1 ทั้งหมด</p> --}}
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <a href="#" class="small-box-footer"
+                        style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
+                        More info <i class="fas fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-                <div class="icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <a href="#" class="small-box-footer" style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
             </div>
-        </div>
-        {{-- <h3>53<sup style="font-size: 20px">{{ number_format($countInM1) }}</sup></h3> --}}
-        <div class="col-lg-2 col-6">
-            <div class="small-box bg-success">
-                <div class="inner text-center">
-                    <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">นักเรียนจบ ม.3 พานพิทยาคม(2569)</p>            
-                    <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">{{ number_format($countInM4) }} คน</h1>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-users "></i>
-                </div>
-                <a href="#" class="small-box-footer" style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-6">
-            <div class="small-box bg-warning">
-                <div class="inner">
+            {{-- <h3>53<sup style="font-size: 20px">{{ number_format($countInM1) }}</sup></h3> --}}
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-success">
                     <div class="inner text-center">
-                    <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">นักเรียนจบ ม.3 โรงเรียนอื่นในจังหวัดเชียงราย(2569)</p>            
-                    <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">{{ number_format($countOutM4) }} คน</h1>
+                        <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">นักเรียนจบ ม.3
+                            พานพิทยาคม(2569)</p>
+                        <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">
+                            {{ number_format($countInM4) }} คน</h1>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-users "></i>
+                    </div>
+                    <a href="#" class="small-box-footer"
+                        style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
+                        More info <i class="fas fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-
-                </div>
-                <div class="icon">
-                    <i class="fas fa-user-plus"></i>
-                </div>
-                <a href="#" class="small-box-footer" style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
             </div>
-        </div>
-        <div class="col-lg-2 col-6">
-            <div class="small-box bg-info">
-                <div class="inner">
+
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <div class="inner text-center">
+                            <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">นักเรียนจบ ม.3
+                                โรงเรียนอื่นในจังหวัดเชียงราย(2569)</p>
+                            <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">
+                                {{ number_format($countOutM4) }} คน</h1>
+                        </div>
+
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <a href="#" class="small-box-footer"
+                        style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
+                        More info <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <div class="inner text-center">
+                            <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">นักเรียนจบ ม.3
+                                โรงเรียนอื่นต่างจังหวัด(2569)</p>
+                            <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">
+                                {{ number_format($countOut_M4) }} คน</h1>
+                        </div>
+
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <a href="#" class="small-box-footer"
+                        style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
+                        More info <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-danger">
                     <div class="inner text-center">
-                    <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">นักเรียนจบ ม.3 โรงเรียนอื่นต่างจังหวัด(2569)</p>            
-                    <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;">{{ number_format($countOut_M4) }} คน</h1>
+                        <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">จำนวนนักเรียน ม.4 ปีเก่า
+                            2568 </p>
+                        <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;"> 303 คน</h1>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <a href="#" class="small-box-footer"
+                        style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
+                        More info <i class="fas fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-
-                </div>
-                <div class="icon">
-                    <i class="fas fa-user-plus"></i>
-                </div>
-                <a href="#" class="small-box-footer" style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
             </div>
         </div>
-
-        <div class="col-lg-2 col-6">
-            <div class="small-box bg-danger">
-                <div class="inner text-center">
-                    <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">จำนวนนักเรียน ม.4 ปีเก่า 2568 </p>            
-                    <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;"> 303 คน</h1>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <a href="#" class="small-box-footer" style="font-family: 'THSarabun'; font-size: 20px; font-weight: bold;">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-danger">
@@ -113,14 +127,15 @@
                 <!-- LINE CHART -->
                 <div class="card card-success">
                     <div class="card-header">
-                        <h3 class="card-title" style="font-family: 'THSarabun'; font-size: 26px; font-weight: bold">สรุปนักเรียนระดับชั้น ม.4 ทั้งหมด</h3>
+                        <h3 class="card-title" style="font-family: 'THSarabun'; font-size: 26px; font-weight: bold">
+                            สรุปนักเรียนระดับชั้น ม.4 ทั้งหมด</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                 <i class="fas fa-minus"></i>
                             </button>
                             <button type="button" class="btn btn-tool" data-card-widget="remove">
                                 <i class="fas fa-times"></i>
-                            </button>    
+                            </button>
                         </div>
                     </div>
                     <div class="card-body">
@@ -134,7 +149,8 @@
             <div class="col-md-12">
                 <div class="card card-info">
                     <div class="card-header">
-                        <h3 class="card-title" style="font-family: 'THSarabun'; font-size: 26px; font-weight: bold">ตำบลของ อำเภอพานและพื้นที่ใกล้เคียง</h3>
+                        <h3 class="card-title" style="font-family: 'THSarabun'; font-size: 26px; font-weight: bold">ตำบลของ
+                            อำเภอพานและพื้นที่ใกล้เคียง</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -154,9 +170,8 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <a href="{{ route('exportM4.students') }}"
-                class="btn btn-success btn-lg"
-                style="font-family:'THSarabun'; font-size:22px; font-weight:bold">
+                <a href="{{ route('exportM4.students') }}" class="btn btn-success btn-lg"
+                    style="font-family:'THSarabun'; font-size:22px; font-weight:bold">
                     <i class="fas fa-file-excel"></i> ดาวน์โหลดข้อมูลนักเรียน ม.4 ทั้งหมด
                 </a>
             </div>
@@ -343,7 +358,7 @@
         })
     </script>
     <script>
-        $(function () {
+        $(function() {
 
             var barChartCanvas = $('#barChart').get(0).getContext('2d')
 
@@ -394,17 +409,19 @@
         })
     </script>
     <script>
-        $(function () {
-            var ctx = $('#lineChart').get(0).getContext('2d')
+        $(function() {
+
+            var ctx = document.getElementById('lineChart').getContext('2d');
+
             var districtBarData = {
                 labels: [
-                    'สันมะเค็ด','แม่อ้อ','ธารทอง','สันติสุข','ดอยงาม',
-                    'หัวง้ม','เจริญเมือง','ป่าหุ่ง','ม่วงคำ','ทรายขาว',
-                    'สันกลาง','แม่เย็น','เมืองพาน','ทานตะวัน','และเวียงห้าว',
-                    'ป่าแงะ อ.ป่าแดด','ป่าแดด อ.ป่าแดด','ป่าแฝก อ.แม่ใจ','อำเภอ อื่นๆ'
+                    'สันมะเค็ด', 'แม่อ้อ', 'ธารทอง', 'สันติสุข', 'ดอยงาม',
+                    'หัวง้ม', 'เจริญเมือง', 'ป่าหุ่ง', 'ม่วงคำ', 'ทรายขาว',
+                    'สันกลาง', 'แม่เย็น', 'เมืองพาน', 'ทานตะวัน', 'และเวียงห้าว',
+                    'ป่าแงะ อ.ป่าแดด', 'ป่าแดด อ.ป่าแดด', 'ป่าแฝก อ.แม่ใจ', 'อำเภอ อื่นๆ'
                 ],
                 datasets: [{
-                    label: 'จำนวนนักเรียนระดับชั้น ม.4 (คน)',
+                    label: 'จำนวนนักเรียนระดับชั้น ม.1 (คน)',
                     data: [
                         {{ $countdistric1 }},
                         {{ $countdistric2 }},
@@ -426,96 +443,104 @@
                         {{ $countdistric18 }},
                         {{ $countdistric19 }}
                     ],
-                    backgroundColor: '#17a2b8'
+                    backgroundColor: [
+                        '#28a745', '#17a2b8', '#ffc107', '#dc3545', '#007bff',
+                        '#6f42c1', '#fd7e14', '#20c997', '#6610f2', '#e83e8c',
+                        '#343a40', '#adb5bd', '#198754', '#0dcaf0', '#ff6f00',
+                        '#795548', '#9c27b0', '#03a9f4', '#8bc34a'
+                    ],
+                    borderWidth: 1
                 }]
-            }
+            };
 
             var districtBarOptions = {
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    yAxes: [{
+                    y: {
+                        beginAtZero: true,
                         ticks: {
-                            beginAtZero: true
+                            precision: 0
                         }
-                    }]
+                    }
                 },
-                legend: {
-                    display: true
+                plugins: {
+                    legend: {
+                        display: true
+                    }
                 }
-            }
+            };
 
             new Chart(ctx, {
                 type: 'bar',
                 data: districtBarData,
                 options: districtBarOptions
-            })
+            });
 
-        })
-        </script>
-        <script>
-            $(document).ready(function () {
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
 
-                const ctx = document.getElementById('donutChart');
-                if (!ctx) {
-                    console.error('ไม่พบ canvas donutChart');
-                    return;
-                }
+            const ctx = document.getElementById('donutChart');
+            if (!ctx) {
+                console.error('ไม่พบ canvas donutChart');
+                return;
+            }
 
-                const labels = [
-                    'สันมะเค็ด','แม่อ้อ','ธารทอง','สันติสุข','ดอยงาม',
-                    'หัวง้ม','เจริญเมือง','ป่าหุ่ง','ม่วงคำ','ทรายขาว',
-                    'สันกลาง','แม่เย็น','เมืองพาน','ทานตะวัน','และเวียงห้าว',
-                    'ป่าแงะ อ.ป่าแดด','ป่าแดด อ.ป่าแดด','ป่าแฝก อ.แม่ใจ','อำเภอ อื่นๆ'
-                ];
+            const labels = [
+                'สันมะเค็ด', 'แม่อ้อ', 'ธารทอง', 'สันติสุข', 'ดอยงาม',
+                'หัวง้ม', 'เจริญเมือง', 'ป่าหุ่ง', 'ม่วงคำ', 'ทรายขาว',
+                'สันกลาง', 'แม่เย็น', 'เมืองพาน', 'ทานตะวัน', 'และเวียงห้าว',
+                'ป่าแงะ อ.ป่าแดด', 'ป่าแดด อ.ป่าแดด', 'ป่าแฝก อ.แม่ใจ', 'อำเภอ อื่นๆ'
+            ];
 
-                const dataValues = [
-                    {{ $countdistric1 }},
-                    {{ $countdistric2 }},
-                    {{ $countdistric3 }},
-                    {{ $countdistric4 }},
-                    {{ $countdistric5 }},
-                    {{ $countdistric6 }},
-                    {{ $countdistric7 }},
-                    {{ $countdistric8 }},
-                    {{ $countdistric9 }},
-                    {{ $countdistric10 }},
-                    {{ $countdistric11 }},
-                    {{ $countdistric12 }},
-                    {{ $countdistric13 }},
-                    {{ $countdistric14 }},
-                    {{ $countdistric15 }},
-                    {{ $countdistric16 }},
-                    {{ $countdistric17 }},
-                    {{ $countdistric18 }},
-                    {{ $countdistric19 }}
-                ];
+            const dataValues = [
+                {{ $countdistric1 }},
+                {{ $countdistric2 }},
+                {{ $countdistric3 }},
+                {{ $countdistric4 }},
+                {{ $countdistric5 }},
+                {{ $countdistric6 }},
+                {{ $countdistric7 }},
+                {{ $countdistric8 }},
+                {{ $countdistric9 }},
+                {{ $countdistric10 }},
+                {{ $countdistric11 }},
+                {{ $countdistric12 }},
+                {{ $countdistric13 }},
+                {{ $countdistric14 }},
+                {{ $countdistric15 }},
+                {{ $countdistric16 }},
+                {{ $countdistric17 }},
+                {{ $countdistric18 }},
+                {{ $countdistric19 }}
+            ];
 
-                /* ✅ สร้างสีให้ครบตามจำนวนข้อมูล */
-                const backgroundColors = labels.map((_, i) =>
-                    `hsl(${i * 20}, 70%, 55%)`
-                );
+            /* ✅ สร้างสีให้ครบตามจำนวนข้อมูล */
+            const backgroundColors = labels.map((_, i) =>
+                `hsl(${i * 20}, 70%, 55%)`
+            );
 
-                new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            data: dataValues,
-                            backgroundColor: backgroundColors
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'bottom'
-                            }
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: dataValues,
+                        backgroundColor: backgroundColors
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
                         }
                     }
-                });
+                }
             });
-        </script>
-
+        });
+    </script>
 @endsection
