@@ -20,6 +20,6 @@ class Servicearea extends Model
     }
     public function serviceareas4()
     {
-        return $this->hasMany(Students4::class, 'servicearea4_id', 'id');
+        return $this->hasMany(Student4::class, 'servicearea4_id', 'id');
     }
 }
