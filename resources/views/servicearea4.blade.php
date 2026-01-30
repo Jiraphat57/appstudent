@@ -168,9 +168,9 @@
                             <option value="">ข้อมูลพื้นที่บริการ</option>
                             {{-- <option value="1" {{ old('servicearea4_id', $student->serviceareas1_id) == 1 ? 'selected' : '' }}>ในเขต(ม.1)</option>
                             <option value="2" {{ old('servicearea4_id', $student->serviceareas1_id) == 2 ? 'selected' : '' }}>นอกเขต(ม.1)</option> --}}
-                            <option value="3" {{ old('servicearea4_id') == '3' ? 'selected' : '' }}>โรงเรียนเดิม(ม.4)</option>
-                            <option value="4" {{ old('servicearea4_id') == '4' ? 'selected' : '' }}>โรงเรียนอื่นในจังหวัดเชียงราย(ม.4)</option>
-                            <option value="5" {{ old('servicearea4_id') == '5' ? 'selected' : '' }}>โรงเรียนอื่นต่างจังหวัด(ม.4)</option>
+                            <option value="3" {{ old('servicearea4_id', $student->servicearea4_id) == '3' ? 'selected' : '' }}>โรงเรียนเดิม(ม.4)</option>
+                            <option value="4" {{ old('servicearea4_id', $student->servicearea4_id) == '4' ? 'selected' : '' }}>โรงเรียนอื่นในจังหวัดเชียงราย(ม.4)</option>
+                            <option value="5" {{ old('servicearea4_id', $student->servicearea4_id) == '5' ? 'selected' : '' }}>โรงเรียนอื่นต่างจังหวัด(ม.4)</option>
                         </select>
                         @error('servicearea4_id')
                             <div class="text-danger small">{{ $message }}</div>
