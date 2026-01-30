@@ -54,6 +54,12 @@ Route::patch('/students/{id}', [StudentsController::class, 'update'])
 Route::patch('/students4/{id}', [Student4Controller::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('students4auth.update');
+Route::patch('/students1Updat/{id}', [StudentsController::class, 'update'])
+    // ->middleware(['auth', 'verified'])
+    ->name('students1.update');
+Route::patch('/students4Updat/{id}', [Student4Controller::class, 'update'])
+    // ->middleware(['auth', 'verified'])
+    ->name('students4.update');
 Route::get('/dashboard', [StudentsController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
