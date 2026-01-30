@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('dashboardLTE4') }}"  class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    <a href=""  class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                         {{-- <i class="nav-icon fas fa-tachometer-alt"></i> --}}
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p style="font-family: 'THSarabun'; font-size: 22px; font-weight: bold"> กลับหน้า Admin</p>
