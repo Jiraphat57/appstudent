@@ -215,7 +215,7 @@
         <div class="text-center mt-3">
             {{-- <a href="{{ route('students.pdf', $student->id) }}"> <button type="submit"
                     class="btn btn-success btn-lg"><i class="bi bi-cloud-download"></i>&nbsp;&nbsp;&nbsp;โหลดใบสมัคร&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a> --}}
-            <a href="{{ route('dashboard) }}"><button type="submit"
+            <a href="{{ route('dashboard') }}"><button type="submit"
                     class="btn btn-info btn-lg"><i class="bi bi-house"></i>&nbsp;&nbsp;&nbsp;กลับหน้าแรก&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
         </div><br>  
     </div>
