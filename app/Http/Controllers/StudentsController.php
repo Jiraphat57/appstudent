@@ -618,6 +618,15 @@ class StudentsController extends Controller
             return back()->withErrors(['error' => 'เกิดข้อผิดพลาด: ' . $e->getMessage()]);
         }
     }
+    public function updateGuest1(Request $request, $id)
+        {
+            $students = Students::findOrFail($id);
+            $students->update($request->all());
+
+            return redirect()->route('welcome')
+                ->with('success', 'บันทึกข้อมูลเรียบร้อยแล้ว');
+        }
+
     public function destroy($id)
     {
         try {

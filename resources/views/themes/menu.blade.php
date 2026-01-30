@@ -41,6 +41,13 @@
                         <p style="font-family: 'THSarabun'; font-size: 22px; font-weight: bold"> รายงานผลนักเรียน ม.4</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ url('dashboardLTE4') }}"  class="nav-link {{ request()->routeIs('dashboardLTE4') ? 'active' : '' }}">
+                        {{-- <i class="nav-icon fas fa-tachometer-alt"></i> --}}
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p style="font-family: 'THSarabun'; font-size: 22px; font-weight: bold"> กลับหน้า Admin</p>
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
                     <a href="widgets" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>

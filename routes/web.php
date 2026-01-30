@@ -54,10 +54,11 @@ Route::patch('/students/{id}', [StudentsController::class, 'update'])
 Route::patch('/students4/{id}', [Student4Controller::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('students4auth.update');
-Route::patch('/students1Updat/{id}', [StudentsController::class, 'update'])
-    // ->middleware(['auth', 'verified'])
+
+Route::patch('/students1Updat/{id}', [StudentsController::class, 'updateGuest1'])
     ->name('students1.update');
-Route::patch('/students4Updat/{id}', [Student4Controller::class, 'update'])
+
+Route::patch('/students4Updat/{id}', [Student4Controller::class, 'updateGuest4'])
     // ->middleware(['auth', 'verified'])
     ->name('students4.update');
 Route::get('/dashboard', [StudentsController::class, 'index'])
@@ -69,15 +70,6 @@ Route::resource('students4', Student4Controller::class)
     ->only(['edit', 'update']);
 Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-// Route::get('/dashboardLTE', function () {
-//     return view('/themes/index');
-//     })->name('/dashboardLTE');
-// Route::get('/dashboardLTE', function () {
-//     return view('themes.index');
-// })->middleware('auth')->name('dashboardLTE1');
-// Route::get('/dashboardLTE', function () {
-//     return view('themes.dashboard1');
-// })->middleware('auth')->name('dashboardLTE');
 Route::get('/dashboardLTE', [StudentsController::class, 'dashboard1'])
     ->middleware('auth')
     ->name('dashboardLTE'); 
