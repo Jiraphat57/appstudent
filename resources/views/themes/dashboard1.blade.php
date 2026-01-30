@@ -449,7 +449,25 @@
                         {{ $countdistric18 }},
                         {{ $countdistric19 }}
                     ],
-                    backgroundColor: '#17a2b8'
+                    backgroundColor:    '#28a745', // Green
+                                        '#17a2b8', // Teal
+                                        '#ffc107', // Yellow
+                                        '#dc3545', // Red
+                                        '#007bff', // Blue
+                                        '#6f42c1', // Purple
+                                        '#fd7e14', // Orange
+                                        '#20c997', // Mint
+                                        '#6610f2', // Indigo
+                                        '#e83e8c', // Pink
+                                        '#343a40', // Dark
+                                        '#adb5bd', // Gray
+                                        '#198754', // Dark Green
+                                        '#0dcaf0', // Cyan
+                                        '#ff6f00', // Deep Orange
+                                        '#795548', // Brown
+                                        '#9c27b0', // Deep Purple
+                                        '#03a9f4', // Light Blue
+                                        '#8bc34a'  // Light Green
                 }]
             }
 
