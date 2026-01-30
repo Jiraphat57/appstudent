@@ -92,7 +92,6 @@ Route::get('/servicearea1/{id}', [StudentsController::class, 'editservicearea1']
 Route::patch('/servicearea1/{id}', [StudentsController::class, 'updateservicearea1'])
     ->middleware(['auth', 'verified'])
     ->name('servicearea1.update');
-
 Route::get('/servicearea4/{id}', [Student4Controller::class, 'editservicearea4'])
     ->middleware(['auth', 'verified'])
     ->name('servicearea4.edit');

@@ -96,7 +96,7 @@
                     <select id="classlevel" name="classlevels_id" class="form-select @error('classlevels_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('classlevels_id') == '' ? 'selected' : '' }}>ระดับชั้นที่สมัครเข้าเรียน</option>
-                        <option value="1" {{ old('classlevels_id') == '2' ? 'selected' : '' }}>ม.1</option>
+                        <option value="1" {{ old('classlevels_id') == '1' ? 'selected' : '' }}>ม.1</option>
                     </select>
                     @error('classlevels_id')
                         <div class="text-danger small">{{ $message }}</div>

@@ -853,9 +853,8 @@
                 <div class="container ">
                     {{-- <div class="row justify-content-center">       --}}
                     <!-- เพิ่มข้อมูลที่คุณต้องการแสดงเพิ่มเติมในฟอร์มที่นี่ -->
-
                     <div class="col text-center">
-                        <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;บันทึกข้อมูลบันทึกข้อมูลการแก้ไข</button>
+                        <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;บันทึกข้อมูลการแก้ไข</button>
                     </div>
                     {{-- <br> --}}
                     {{-- </div>     --}}
