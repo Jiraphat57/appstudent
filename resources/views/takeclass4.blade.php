@@ -870,7 +870,7 @@
                         <option value="7" {{ old('maritalstatuses_id') == '7' ? 'selected' : '' }}>บิดาถึงแก่กรรม</option>
                         <option value="8" {{ old('maritalstatuses_id') == '8' ? 'selected' : '' }}>บิดาและมารดาถึงแก่กรรม</option>
                         <option value="9" {{ old('maritalstatuses_id') == '9' ? 'selected' : '' }}>บิดาถึงแก่กรรมมารดาแต่งงานใหม่</option> 
-                        <option value="10" {{ old('maritalstatuses_id') == '10' ? 'selected' : '' }}>มารดาถึงแก่กรรมบิดาแต่งงานใหม่<</option>
+                        <option value="10" {{ old('maritalstatuses_id') == '10' ? 'selected' : '' }}>มารดาถึงแก่กรรมบิดาแต่งงานใหม่</option>
                         <option value="11" {{ old('maritalstatuses_id') == '11' ? 'selected' : '' }}>อื่นๆ</option> 
                     </select>
                     @error('maritalstatuses_id')
