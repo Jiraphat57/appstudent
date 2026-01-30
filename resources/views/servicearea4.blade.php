@@ -194,7 +194,7 @@
                             <option value="12" {{ old('servicearea4_id', $student->districtschool4_id) == 12 ? 'selected' : '' }}>12 ต.แม่เย็น</option>
                             <option value="13" {{ old('servicearea4_id', $student->districtschool4_id) == 13 ? 'selected' : '' }}>13 ต.เมืองพาน</option>
                             <option value="14" {{ old('servicearea4_id', $student->districtschool4_id) == 14 ? 'selected' : '' }}>14 ต.ทานตะวัน</option>
-                            <option value="15" {{ old('servicearea4_id', $student->districtschool4_id) == 15 ? 'selected' : '' }}>15 ต.และเวียงห้าว</option>
+                            <option value="15" {{ old('servicearea4_id', $student->districtschool4_id) == 15 ? 'selected' : '' }}>15 ต.เวียงห้าว</option>
                             <option value="16" {{ old('servicearea4_id', $student->districtschool4_id) == 16 ? 'selected' : '' }}>16 ต.ป่าแงะ อ.ป่าแดด</option>
                             <option value="17" {{ old('servicearea4_id', $student->districtschool4_id) == 17 ? 'selected' : '' }}>17 ต.ป่าแดด อ.ป่าแดด</option>
                             <option value="18" {{ old('servicearea4_id', $student->districtschool4_id) == 18 ? 'selected' : '' }}>18 ต.ป่าแฝก อ.แม่ใจ</option>
