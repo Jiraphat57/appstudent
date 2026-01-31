@@ -36,7 +36,7 @@ class Student4Controller extends Controller
         // $students = Students::with('typetitle')->findOrFail($id);
 
         $students = Student4::with([
-            'classlevel','numId','typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
+            'classlevel','typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather',
             'typetitlemother', 'occupationmother', 'maritalstatus','highschool1','highschool2','highschool3',
             'highschool4','highschool5','highschool6','highschool7','highschool8','highschool9','highschool10'

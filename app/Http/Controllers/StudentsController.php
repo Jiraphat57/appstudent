@@ -32,7 +32,7 @@ class StudentsController extends Controller
     public function generatePDF($id)
     {
         $students = Students::with([
-            'classlevel','numId','typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
+            'classlevel','typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather','typetitlemother', 'occupationmother', 'maritalstatus',
             'curriculumsec1','curriculumsec2','curriculumsec3','curriculumsec4','curriculumsec5','curriculumsec6','curriculumsec7'])->findOrFail($id);
         $pdf = PDF::loadView('students_pdf', compact('students'));
