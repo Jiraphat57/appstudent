@@ -112,6 +112,14 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
+                    <input type="text" name="numId" class="form-control @error('numId') is-invalid @enderror" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขที่สมัคร" value="{{ old('numId') }}">
+                    @error('numId')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="col-md-6 mb-2">
                     <select id="sel_typetitle" name="typetitles_id" class="form-select @error('typetitles_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('typetitles_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
@@ -870,7 +878,7 @@
                         <option value="7" {{ old('maritalstatuses_id') == '7' ? 'selected' : '' }}>บิดาถึงแก่กรรม</option>
                         <option value="8" {{ old('maritalstatuses_id') == '8' ? 'selected' : '' }}>บิดาและมารดาถึงแก่กรรม</option>
                         <option value="9" {{ old('maritalstatuses_id') == '9' ? 'selected' : '' }}>บิดาถึงแก่กรรมมารดาแต่งงานใหม่</option> 
-                        <option value="10" {{ old('maritalstatuses_id') == '10' ? 'selected' : '' }}>มารดาถึงแก่กรรมบิดาแต่งงานใหม่</option>
+                        <option value="10" {{ old('maritalstatuses_id') == '10' ? 'selected' : '' }}>มารดาถึงแก่กรรมบิดาแต่งงานใหม่<</option>
                         <option value="11" {{ old('maritalstatuses_id') == '11' ? 'selected' : '' }}>อื่นๆ</option> 
                     </select>
                     @error('maritalstatuses_id')

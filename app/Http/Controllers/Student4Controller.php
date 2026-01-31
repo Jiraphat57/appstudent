@@ -36,7 +36,7 @@ class Student4Controller extends Controller
         // $students = Students::with('typetitle')->findOrFail($id);
 
         $students = Student4::with([
-            'classlevel', 'typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
+            'classlevel','numId','typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather',
             'typetitlemother', 'occupationmother', 'maritalstatus','highschool1','highschool2','highschool3',
             'highschool4','highschool5','highschool6','highschool7','highschool8','highschool9','highschool10'
@@ -98,6 +98,7 @@ class Student4Controller extends Controller
     {
         $validatedData = $request->validate([
             'classlevels_id' => 'required|numeric',
+            'numId'=> 'required|max:4',
             'typetitles_id' => 'required|numeric',
             'name' => 'required|max:90',
             'surname' => 'required|max:90',
@@ -164,6 +165,8 @@ class Student4Controller extends Controller
              ], [
             'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
             'classlevels_id.numeric' => 'ระดับชั้นต้องเป็นตัวเลข',
+            'numId.required' => 'กรุณากรอกเลขที่สมัคร',
+            'numId.max' => 'ชื่อต้องไม่เกิน 4 หลัก',
             'typetitles_id.required' => 'กรุณาเลือกคำนำหน้าชื่อ',
             'typetitles_id.numeric' => 'คำนำหน้าชื่อต้องเป็นตัวเลข',
             'name.required' => 'กรุณากรอกชื่อ',
@@ -308,6 +311,7 @@ class Student4Controller extends Controller
         }
         $students = new Student4();
         $students->classlevels_id = $request->input('classlevels_id');
+        $students->numId = $request->input('numId');
         $students->typetitles_id = $request->input('typetitles_id');
         $students->name = $request->input('name');
         $students->surname = $request->input('surname');
@@ -425,6 +429,7 @@ class Student4Controller extends Controller
     {
         $validatedData = $request->validate([
             'classlevels_id' => 'required|numeric',
+            'numId'=> 'required|max:4',
             'typetitles_id' => 'required|numeric',
             'name' => 'required|max:90',
             'surname' => 'required|max:90',
@@ -490,6 +495,8 @@ class Student4Controller extends Controller
             ], [
             'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
             'classlevels_id.numeric' => 'ระดับชั้นต้องเป็นตัวเลข',
+            'numId.required' => 'กรุณากรอกเลขที่สมัคร',
+            'numId.max' => 'ชื่อต้องไม่เกิน 4 หลัก',
             'typetitles_id.required' => 'กรุณาเลือกคำนำหน้าชื่อ',
             'typetitles_id.numeric' => 'คำนำหน้าชื่อต้องเป็นตัวเลข',
             'name.required' => 'กรุณากรอกชื่อ',

@@ -103,6 +103,13 @@
                     @enderror
                 </div>
                 <div class="col-md-6 mb-2">
+                    <input type="text" name="numId" class="form-control @error('numId') is-invalid @enderror" aria-label="Sizing example input"
+                        id="" aria-describedby="inputGroup-sizing-default" placeholder="เลขที่สมัคร" value="{{ old('numId') }}">
+                    @error('numId')
+                        <div class="text-danger small">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="col-md-6 mb-2">
                     <select id="sel_typetitle" name="typetitles_id" class="form-select @error('typetitles_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('typetitles_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>

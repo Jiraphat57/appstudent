@@ -32,7 +32,7 @@ class StudentsController extends Controller
     public function generatePDF($id)
     {
         $students = Students::with([
-            'classlevel', 'typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
+            'classlevel','numId','typetitle', 'religion', 'nationality', 'ethnicity', 'provincebirth', 'bloodtype', 'provinceschool', 'provincesaddress', 'typeresidence',
             'travelschool1', 'typetitlefather', 'occupationfather','typetitlemother', 'occupationmother', 'maritalstatus',
             'curriculumsec1','curriculumsec2','curriculumsec3','curriculumsec4','curriculumsec5','curriculumsec6','curriculumsec7'])->findOrFail($id);
         $pdf = PDF::loadView('students_pdf', compact('students'));
@@ -86,6 +86,7 @@ class StudentsController extends Controller
         // dd($request->all());
         $validatedData = $request->validate([
             'classlevels_id' => 'required|numeric',
+            'numId'=> 'required|max:4',
             'typetitles_id' => 'required|numeric',
             'name' => 'required|max:90',
             'surname' => 'required|max:90',
@@ -149,6 +150,8 @@ class StudentsController extends Controller
                 ], [
             'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
             'classlevels_id.numeric' => 'ระดับชั้นต้องเป็นตัวเลข',
+            'numId.required' => 'กรุณากรอกเลขที่สมัคร',
+            'numId.max' => 'ชื่อต้องไม่เกิน 4 หลัก',
             'typetitles_id.required' => 'กรุณาเลือกคำนำหน้าชื่อ',
             'typetitles_id.numeric' => 'คำนำหน้าชื่อต้องเป็นตัวเลข',
             'name.required' => 'กรุณากรอกชื่อ',
@@ -287,6 +290,7 @@ class StudentsController extends Controller
         }
         $students = new Students();
         $students->classlevels_id = $request->input('classlevels_id');
+        $students->numId = $request->input('numId');
         $students->typetitles_id = $request->input('typetitles_id');
         $students->name = $request->input('name');
         $students->surname = $request->input('surname');
@@ -403,6 +407,7 @@ class StudentsController extends Controller
         // dd($request->all());
         $validatedData = $request->validate([
             'classlevels_id' => 'required|numeric',
+            'numId'=> 'required|max:4',
             'typetitles_id' => 'required|numeric',
             'name' => 'required|max:90',
             'surname' => 'required|max:90',
@@ -466,6 +471,8 @@ class StudentsController extends Controller
                 ], [
             'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
             'classlevels_id.numeric' => 'ระดับชั้นต้องเป็นตัวเลข',
+            'numId.required' => 'กรุณากรอกเลขที่สมัคร',
+            'numId.max' => 'ชื่อต้องไม่เกิน 4 หลัก',
             'typetitles_id.required' => 'กรุณาเลือกคำนำหน้าชื่อ',
             'typetitles_id.numeric' => 'คำนำหน้าชื่อต้องเป็นตัวเลข',
             'name.required' => 'กรุณากรอกชื่อ',

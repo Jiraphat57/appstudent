@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->foreignId('classlevels_id')->constrained('classlevels')->onUpdate('cascade')->onDelete('restrict');
+            $table->string('numId');
             $table->foreignId('typetitles_id')->constrained('typetitles')->onUpdate('cascade')->onDelete('restrict');
             $table->string('name');
             $table->string('surname');
