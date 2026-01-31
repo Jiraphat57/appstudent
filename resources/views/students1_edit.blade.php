@@ -96,6 +96,14 @@
                 </div>
                 <div class="col-md-6 mb-2">
                     <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">เลขที่สมัคร</label>
+                        <input type="text" name="numId" class="form-control" aria-label="Sizing example input"
+                            id="numId" aria-describedby="inputGroup-sizing-default"
+                            value="{{ old('name', $students->numId ?? '') }}">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">คำนำหน้าชื่อ</label>
                         <select id="typetitles" name="typetitles_id" class="form-select"
                             aria-label="Default select example">
