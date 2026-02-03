@@ -88,7 +88,7 @@
                 <div class="small-box bg-danger">
                     <div class="inner text-center">
                         <p style="font-family: 'THSarabun'; font-size: 36px; font-weight: bold">จำนวนนักเรียน ม.4 ปีเก่า
-                            2568 </p>
+                           (10 มิ.ย.) 2568 </p>
                         <h1 style="font-family: 'THSarabun'; font-size: 70px; font-weight: bold;"> 303 คน</h1>
                     </div>
                     <div class="icon">

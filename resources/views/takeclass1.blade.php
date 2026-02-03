@@ -894,9 +894,8 @@
             <div class="alert alert-success text-center" role="alert">
                 <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;  โปรดเลือกห้องเรียน
             </div>
-            <div class="row g-2 mb-2">
+            {{-- <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select" --}}
                     <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select @error('secondaryschool1_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool1_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 1</option>
@@ -913,7 +912,6 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_secondaryschool2" name="secondaryschool2_id" class="form-select" --}}
                     <select id="sel_secondaryschool2" name="secondaryschool2_id" class="form-select @error('secondaryschool2_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool2_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 2</option>
@@ -930,7 +928,6 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_secondaryschool3" name="secondaryschool3_id" class="form-select" --}}
                     <select id="sel_secondaryschool3" name="secondaryschool3_id" class="form-select @error('secondaryschool3_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool3_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 3</option>
@@ -947,7 +944,6 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select" --}}
                     <select id="sel_secondaryschool4" name="secondaryschool4_id" class="form-select @error('secondaryschool4_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool4_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 4</option>
@@ -964,7 +960,6 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select" --}}
                     <select id="sel_secondaryschool5" name="secondaryschool5_id" class="form-select @error('secondaryschool5_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool5_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 5</option>
@@ -981,7 +976,6 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select" --}}
                     <select id="sel_secondaryschool6" name="secondaryschool6_id" class="form-select @error('secondaryschool6_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool6_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 6</option>
@@ -998,7 +992,6 @@
                         @enderror
                 </div>
                 <div class="col-md-6 mb-2">
-                    {{-- <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select" --}}
                     <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select @error('secondaryschool7_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('secondaryschool7_id') == '' ? 'selected' : '' }}>เลือกแผนการเรียนลำดับที่ 7</option>
@@ -1014,9 +1007,9 @@
                         <div class="text-danger small">{{ $message }}</div>
                         @enderror
                 </div>
-            </div>
+            </div> --}}
             <div class="container ">
-                {{-- <div class="row justify-content-center"> --}}
+
                 <div class="col text-center">
                     <button type="submit"
                         class="btn btn-primary btn-lg"><i class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กดสมัครเรียน&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
