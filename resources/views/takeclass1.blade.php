@@ -891,9 +891,9 @@
                     @enderror
                 </div>
             </div>
-            <div class="alert alert-success text-center" role="alert">
+            {{-- <div class="alert alert-success text-center" role="alert">
                 <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;  โปรดเลือกห้องเรียน
-            </div>
+            </div> --}}
             {{-- <div class="row g-2 mb-2">
                 <div class="col-md-6 mb-2">
                     <select id="sel_secondaryschool1" name="secondaryschool1_id" class="form-select @error('secondaryschool1_id') is-invalid @enderror"

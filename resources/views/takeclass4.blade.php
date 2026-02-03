@@ -897,9 +897,9 @@
                         <div class="text-danger small">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="alert alert-success text-center" role="alert">
+                {{-- <div class="alert alert-success text-center" role="alert">
                     <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; โปรดเลือกห้องเรียนให้ครบ
-                </div>
+                </div> --}}
                 {{-- <div class="row g-2 mb-2">
                     <div class="col-md-6 mb-2">
                          <select id="sel_highschool1" name="highschool1_id" class="form-select @error('highschool1_id') is-invalid @enderror"
