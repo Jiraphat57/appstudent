@@ -452,7 +452,6 @@
                     borderWidth: 1
                 }]
             };
-
             var districtBarOptions = {
                 responsive: true,
                 maintainAspectRatio: false,
@@ -470,13 +469,11 @@
                     }
                 }
             };
-
             new Chart(ctx, {
                 type: 'bar',
                 data: districtBarData,
                 options: districtBarOptions
             });
-
         });
     </script>
     <script>
@@ -487,14 +484,12 @@
                 console.error('ไม่พบ canvas donutChart');
                 return;
             }
-
             const labels = [
                 'สันมะเค็ด', 'แม่อ้อ', 'ธารทอง', 'สันติสุข', 'ดอยงาม',
                 'หัวง้ม', 'เจริญเมือง', 'ป่าหุ่ง', 'ม่วงคำ', 'ทรายขาว',
                 'สันกลาง', 'แม่เย็น', 'เมืองพาน', 'ทานตะวัน', 'และเวียงห้าว',
                 'ป่าแงะ อ.ป่าแดด', 'ป่าแดด อ.ป่าแดด', 'ป่าแฝก อ.แม่ใจ', 'อำเภอ อื่นๆ'
             ];
-
             const dataValues = [
                 {{ $countdistric1 }},
                 {{ $countdistric2 }},
@@ -516,7 +511,6 @@
                 {{ $countdistric18 }},
                 {{ $countdistric19 }}
             ];
-
             /* ✅ สร้างสีให้ครบตามจำนวนข้อมูล */
             const backgroundColors = labels.map((_, i) =>
                 `hsl(${i * 20}, 70%, 55%)`
