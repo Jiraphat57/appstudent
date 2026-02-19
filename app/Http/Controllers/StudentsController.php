@@ -139,13 +139,13 @@ class StudentsController extends Controller
             'phone_mother' => 'required|max:10',
             'maritalstatuses_id' => 'required|numeric',
             'parent_id' => 'required|numeric',
-            'secondaryschool1_id' => 'required|numeric',
-            'secondaryschool2_id' => 'required|numeric',
-            'secondaryschool3_id' => 'required|numeric',
-            'secondaryschool4_id' => 'required|numeric',  
-            'secondaryschool5_id' => 'required|numeric',
-            'secondaryschool6_id' => 'required|numeric',
-            'secondaryschool7_id' => 'required|numeric'
+            // 'secondaryschool1_id' => 'required|numeric',
+            // 'secondaryschool2_id' => 'required|numeric',
+            // 'secondaryschool3_id' => 'required|numeric',
+            // 'secondaryschool4_id' => 'required|numeric',  
+            // 'secondaryschool5_id' => 'required|numeric',
+            // 'secondaryschool6_id' => 'required|numeric',
+            // 'secondaryschool7_id' => 'required|numeric'
             // 'secondaryschool8_id' => 'required|numeric'
                 ], [
             'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
@@ -262,20 +262,20 @@ class StudentsController extends Controller
             'maritalstatuses_id.numeric' => 'สถานภาพสมรสต้องเป็นตัวเลข',
             'parent_id.required' => 'กรุณาเลือกผู้ปกครอง',
             'parent_id.numeric' => 'ผู้ปกครองต้องเป็นตัวเลข',
-            'secondaryschool1_id.required' => 'กรุณาเลือกสายการเรียน 1',
-            'secondaryschool1_id.numeric' => 'สายการเรียน 1 ต้องเป็นตัวเลข',
-            'secondaryschool2_id.required' => 'กรุณาเลือกสายการเรียน 2',
-            'secondaryschool2_id.numeric' => 'สายการเรียน 2 ต้องเป็นตัวเลข',
-            'secondaryschool3_id.required' => 'กรุณาเลือกสายการเรียน 3',
-            'secondaryschool3_id.numeric' => 'สายการเรียน 3 ต้องเป็นตัวเลข',
-            'secondaryschool4_id.required' => 'กรุณาเลือกสายการเรียน 4',
-            'secondaryschool4_id.numeric' => 'สายการเรียน 4 ต้องเป็นตัวเลข',
-            'secondaryschool5_id.required' => 'กรุณาเลือกสายการเรียน 5',
-            'secondaryschool5_id.numeric' => 'สายการเรียน 5 ต้องเป็นตัวเลข',
-            'secondaryschool6_id.required' => 'กรุณาเลือกสายการเรียน 6',
-            'secondaryschool6_id.numeric' => 'สายการเรียน 6 ต้องเป็นตัวเลข',
-            'secondaryschool7_id.required' => 'กรุณาเลือกสายการเรียน 7',
-            'secondaryschool7_id.numeric' => 'สายการเรียน 7 ต้องเป็นตัวเลข',
+            // 'secondaryschool1_id.required' => 'กรุณาเลือกสายการเรียน 1',
+            // 'secondaryschool1_id.numeric' => 'สายการเรียน 1 ต้องเป็นตัวเลข',
+            // 'secondaryschool2_id.required' => 'กรุณาเลือกสายการเรียน 2',
+            // 'secondaryschool2_id.numeric' => 'สายการเรียน 2 ต้องเป็นตัวเลข',
+            // 'secondaryschool3_id.required' => 'กรุณาเลือกสายการเรียน 3',
+            // 'secondaryschool3_id.numeric' => 'สายการเรียน 3 ต้องเป็นตัวเลข',
+            // 'secondaryschool4_id.required' => 'กรุณาเลือกสายการเรียน 4',
+            // 'secondaryschool4_id.numeric' => 'สายการเรียน 4 ต้องเป็นตัวเลข',
+            // 'secondaryschool5_id.required' => 'กรุณาเลือกสายการเรียน 5',
+            // 'secondaryschool5_id.numeric' => 'สายการเรียน 5 ต้องเป็นตัวเลข',
+            // 'secondaryschool6_id.required' => 'กรุณาเลือกสายการเรียน 6',
+            // 'secondaryschool6_id.numeric' => 'สายการเรียน 6 ต้องเป็นตัวเลข',
+            // 'secondaryschool7_id.required' => 'กรุณาเลือกสายการเรียน 7',
+            // 'secondaryschool7_id.numeric' => 'สายการเรียน 7 ต้องเป็นตัวเลข',
         ]);
         // dd($validatedData);
         // แปลงรูปแบบวันที่
@@ -343,13 +343,13 @@ class StudentsController extends Controller
         $students->phone_mother = $request->input('phone_mother');
         $students->maritalstatuses_id = $request->input('maritalstatuses_id');
         $students->parent_id = $request->input('parent_id');
-        $students->secondaryschool1_id = $request->input('secondaryschool1_id');
-        $students->secondaryschool2_id = $request->input('secondaryschool2_id');
-        $students->secondaryschool3_id = $request->input('secondaryschool3_id');
-        $students->secondaryschool4_id = $request->input('secondaryschool4_id');
-        $students->secondaryschool5_id = $request->input('secondaryschool5_id');
-        $students->secondaryschool6_id = $request->input('secondaryschool6_id');
-        $students->secondaryschool7_id = $request->input('secondaryschool7_id');
+        // $students->secondaryschool1_id = $request->input('secondaryschool1_id');
+        // $students->secondaryschool2_id = $request->input('secondaryschool2_id');
+        // $students->secondaryschool3_id = $request->input('secondaryschool3_id');
+        // $students->secondaryschool4_id = $request->input('secondaryschool4_id');
+        // $students->secondaryschool5_id = $request->input('secondaryschool5_id');
+        // $students->secondaryschool6_id = $request->input('secondaryschool6_id');
+        // $students->secondaryschool7_id = $request->input('secondaryschool7_id');
         // $students->secondaryschool8_id = $request->input('secondaryschool8_id');
         // ทำif ในนี้ ถ้าเป็นม.1  ให้เลือกไหด้3 สาย ถ้าเป็นม.4
         $students->save();
@@ -460,13 +460,13 @@ class StudentsController extends Controller
             'phone_mother' => 'required|max:10',
             'maritalstatuses_id' => 'required|numeric',
             'parent_id' => 'required|numeric',
-            'secondaryschool1_id' => 'required|numeric',
-            'secondaryschool2_id' => 'required|numeric',
-            'secondaryschool3_id' => 'required|numeric', 
-            'secondaryschool4_id' => 'required|numeric',  
-            'secondaryschool5_id' => 'required|numeric',
-            'secondaryschool6_id' => 'required|numeric',
-            'secondaryschool7_id' => 'required|numeric'
+            // 'secondaryschool1_id' => 'required|numeric',
+            // 'secondaryschool2_id' => 'required|numeric',
+            // 'secondaryschool3_id' => 'required|numeric', 
+            // 'secondaryschool4_id' => 'required|numeric',  
+            // 'secondaryschool5_id' => 'required|numeric',
+            // 'secondaryschool6_id' => 'required|numeric',
+            // 'secondaryschool7_id' => 'required|numeric'
             // 'secondaryschool8_id' => 'required|numeric'
                 ], [
             'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
@@ -583,20 +583,20 @@ class StudentsController extends Controller
             'maritalstatuses_id.numeric' => 'สถานภาพสมรสต้องเป็นตัวเลข',
             'parent_id.required' => 'กรุณาเลือกผู้ปกครอง',
             'parent_id.numeric' => 'ผู้ปกครองต้องเป็นตัวเลข',
-            'secondaryschool1_id.required' => 'กรุณาเลือกสายการเรียน 1',
-            'secondaryschool1_id.numeric' => 'สายการเรียน 1 ต้องเป็นตัวเลข',
-            'secondaryschool2_id.required' => 'กรุณาเลือกสายการเรียน 2',
-            'secondaryschool2_id.numeric' => 'สายการเรียน 2 ต้องเป็นตัวเลข',
-            'secondaryschool3_id.required' => 'กรุณาเลือกสายการเรียน 3',
-            'secondaryschool3_id.numeric' => 'สายการเรียน 3 ต้องเป็นตัวเลข',
-            'secondaryschool4_id.required' => 'กรุณาเลือกสายการเรียน 4',
-            'secondaryschool4_id.numeric' => 'สายการเรียน 4 ต้องเป็นตัวเลข',
-            'secondaryschool5_id.required' => 'กรุณาเลือกสายการเรียน 5',
-            'secondaryschool5_id.numeric' => 'สายการเรียน 5 ต้องเป็นตัวเลข',
-            'secondaryschool6_id.required' => 'กรุณาเลือกสายการเรียน 6',
-            'secondaryschool6_id.numeric' => 'สายการเรียน 6 ต้องเป็นตัวเลข',
-            'secondaryschool7_id.required' => 'กรุณาเลือกสายการเรียน 7',
-            'secondaryschool7_id.numeric' => 'สายการเรียน 7 ต้องเป็นตัวเลข',
+            // 'secondaryschool1_id.required' => 'กรุณาเลือกสายการเรียน 1',
+            // 'secondaryschool1_id.numeric' => 'สายการเรียน 1 ต้องเป็นตัวเลข',
+            // 'secondaryschool2_id.required' => 'กรุณาเลือกสายการเรียน 2',
+            // 'secondaryschool2_id.numeric' => 'สายการเรียน 2 ต้องเป็นตัวเลข',
+            // 'secondaryschool3_id.required' => 'กรุณาเลือกสายการเรียน 3',
+            // 'secondaryschool3_id.numeric' => 'สายการเรียน 3 ต้องเป็นตัวเลข',
+            // 'secondaryschool4_id.required' => 'กรุณาเลือกสายการเรียน 4',
+            // 'secondaryschool4_id.numeric' => 'สายการเรียน 4 ต้องเป็นตัวเลข',
+            // 'secondaryschool5_id.required' => 'กรุณาเลือกสายการเรียน 5',
+            // 'secondaryschool5_id.numeric' => 'สายการเรียน 5 ต้องเป็นตัวเลข',
+            // 'secondaryschool6_id.required' => 'กรุณาเลือกสายการเรียน 6',
+            // 'secondaryschool6_id.numeric' => 'สายการเรียน 6 ต้องเป็นตัวเลข',
+            // 'secondaryschool7_id.required' => 'กรุณาเลือกสายการเรียน 7',
+            // 'secondaryschool7_id.numeric' => 'สายการเรียน 7 ต้องเป็นตัวเลข',
         ]);
         // dd($validatedData);
         try {
