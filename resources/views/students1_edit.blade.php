@@ -699,7 +699,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="alert alert-success text-center" role="alert">
+                {{-- <div class="alert alert-success text-center" role="alert">
                     <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; เลือกห้องเรียนให้ครบ
                 </div>
                 <div class="row g-2 mb-2">
@@ -786,36 +786,8 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 7</label>
-                                <select id="sel_secondaryschool7" name="secondaryschool7_id" class="form-select"
-                                    aria-label="Default select example">
-                                    @foreach ($secondaryschools as $curriculumsec)
-                                        <option value="{{ $curriculumsec->id }}"
-                                            {{ old('secondaryschool7_id', $students->secondaryschool7_id) == $curriculumsec->id ? 'selected' : '' }}>
-                                            {{ $curriculumsec->curriculumsec}}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        {{-- <div class="col-md-6 mb-2">
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 8</label>
-                                <select id="sel_secondaryschool8" name="secondaryschool8_id" class="form-select"
-                                    aria-label="Default select example">
-                                    @foreach ($secondaryschools as $curriculumsec)
-                                        <option value="{{ $curriculumsec->id }}"
-                                            {{ old('secondaryschool8_id', $students->secondaryschool8_id) == $curriculumsec->id ? 'selected' : '' }}>
-                                            {{ $curriculumsec->curriculumsec}}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div> --}}
                     </div>
-                </div>
+                </div> --}}
                 <div class="container ">
                     <div class="col text-center">
                         <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-save2"></i> &nbsp;&nbsp;บันทึกข้อมูลการแก้ไข</button>

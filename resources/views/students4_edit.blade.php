@@ -698,7 +698,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="alert alert-success text-center" role="alert">
+                {{-- <div class="alert alert-success text-center" role="alert">
                     <i class="bi bi-journal-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; เลือกห้องเรียนให้ครบ
                 </div>
                 <div class="row g-2 mb-2">
@@ -843,21 +843,7 @@
                             </select>
                         </div>
                     </div>
-                    {{-- <div class="col-md-6 mb-2">
-                        <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupSelect01">แผนการเรียนลำดับที่ 11</label>
-                            <select id="sel_highschool11" name="highschool11_id" class="form-select"
-                                aria-label="Default select example">
-                                @foreach ($highschools as $curriculumhigh)
-                                    <option value="{{ $curriculumhigh->id }}"
-                                        {{ old('highschool11_id', $students->highschool11_id) == $curriculumhigh->id ? 'selected' : '' }}>
-                                        {{ $curriculumhigh->curriculumhigh }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div> --}}
-                </div>
+                </div> --}}
                 <div class="container ">
                     {{-- <div class="row justify-content-center">       --}}
                     <!-- เพิ่มข้อมูลที่คุณต้องการแสดงเพิ่มเติมในฟอร์มที่นี่ -->
