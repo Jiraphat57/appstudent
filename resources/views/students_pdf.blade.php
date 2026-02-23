@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center"
-            style="width: 100%; text-align: center; font-size: 20px;">ใบรับสมัครนักเรียนใหม่/ใบมอบตัว&nbsp;&nbsp;เลขที่:<span class="underline">{{ $students->numId }}</span>
+            style="width: 100%; text-align: center; font-size: 20px;">ใบรับมอบตัว&nbsp;&nbsp;เลขที่:<span class="underline">{{ $students->numId }}</span>
         </div>
         {{-- <div class="row d-flex justify-content-center align-items-center col-100%">โรงเรียนพานพิทยาคม อําเภอพาน จังหวัดเชียงราย
         </div> --}}
@@ -107,7 +107,7 @@
             <div class="container row col-100%">  
             <div class="row col-100% text-center" style="background-color: #D8BFD8; color: black;  padding: 0px 0; border-radius: 0px;  width: 100%; display: block; margin-left: 0px;  margin-right: 0px;"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลนักเรียน</div>
             ชื่อนักเรียน:<span class="underline">{{ $students->typetitle->typetitle ?? 'ไม่ระบุ' }}{{ $students->name }}&nbsp;&nbsp;
-            {{ $students->surname }}</span>
+            {{ $students->surname }}</span>&nbsp;เลขที่สมัคร:&nbsp;{{$students->numId->numId ??'ไม่ระบุ'}}&nbsp;
             ชั้น:&nbsp;{{$students->classlevel->classlevel ??'ไม่ระบุ'}}&nbsp;ห้อง:
             .......รหัสนักเรียน:....................เลขประจำตัวประชาชนนักเรียน:<span class="underline"> {{ $students->nationalid }}</span>มือถือ:<span class="underline"> {{ $students->phone1student }}</span> ชื่อภาษาอังกฤษ<span class="underline"> {{ $students->nameeng }}&nbsp;&nbsp;&nbsp;{{ $students->surnameeng }}</span>
             เชื้อชาติ:<span class="underline">{{ $students->ethnicity->ethnicitie ?? 'ไม่ระบุ' }}</span>
