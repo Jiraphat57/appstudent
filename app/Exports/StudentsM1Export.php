@@ -31,7 +31,7 @@ class StudentsM1Export implements FromCollection, WithHeadings, WithMapping
         return [
             // $student->id,                                  
             $student->classlevel->classlevel ?? '-',                    // ชั้น
-            $student->numId->numId ?? '-',
+            $student->numId->numId,
             $student->typetitle->typetitle ?? '-',                          // คำนำหน้าชื่อ
             $student->name,                                 //  ชื่อ
             $student->surname,                              //นามสกุล
