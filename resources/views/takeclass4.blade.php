@@ -727,7 +727,7 @@
                 <div class="col-md-6 mb-2">                    <select id="sel_typetitlefather" name="typetitlesfather_id" class="form-select @error('typetitlesfather_id') is-invalid @enderror"
                         aria-label="Default select example">
                         <option value="" {{ old('typetitlesfather_id') == '' ? 'selected' : '' }}>คำนำหน้าชื่อ</option>
-                        <option value="1" {{ old('typetitlesfather_id') == '1' ? 'selected' : '' }}>นาย</option>
+                        <option value="3" {{ old('typetitlesfather_id') == '3' ? 'selected' : '' }}>นาย</option>
                     </select>
                     @error('typetitlesfather_id')
                         <div class="text-danger small">{{ $message }}</div>
