@@ -433,7 +433,7 @@ class Student4Controller extends Controller
     {
         $validatedData = $request->validate([
             'classlevels_id' => 'required|numeric',
-            'numId'=> 'required|max:4',
+            // 'numId'=> 'required|max:4',
             'typetitles_id' => 'required|numeric',
             'name' => 'required|max:90',
             'surname' => 'required|max:90',
