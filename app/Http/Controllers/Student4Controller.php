@@ -499,8 +499,8 @@ class Student4Controller extends Controller
             ], [
             'classlevels_id.required' => 'กรุณาเลือกระดับชั้น',
             'classlevels_id.numeric' => 'ระดับชั้นต้องเป็นตัวเลข',
-            'numId.required' => 'กรุณากรอกเลขที่สมัคร',
-            'numId.max' => 'ชื่อต้องไม่เกิน 4 หลัก',
+            // 'numId.required' => 'กรุณากรอกเลขที่สมัคร',
+            // 'numId.max' => 'ชื่อต้องไม่เกิน 4 หลัก',
             'typetitles_id.required' => 'กรุณาเลือกคำนำหน้าชื่อ',
             'typetitles_id.numeric' => 'คำนำหน้าชื่อต้องเป็นตัวเลข',
             'name.required' => 'กรุณากรอกชื่อ',
