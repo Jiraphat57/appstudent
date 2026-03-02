@@ -42,12 +42,12 @@ Route::get('/authstudents/{id}/pdf', [StudentsController::class, 'authgeneratePD
 Route::get('/auth4students/{id}/pdf', [Student4Controller::class, 'auth4generatePDF'])
     ->middleware(['auth', 'verified'])
     ->name('students4auth.pdf');
-Route::get('/studentsauth/{students}/edit', [StudentsController::class, 'edit'])
-    ->middleware(['auth', 'verified'])
-    ->name('studentsauth.edit');
-Route::get('/students4auth_edit/{students}/edit', [Student4Controller::class, 'edit'])
-    ->middleware(['auth', 'verified'])
-    ->name('students4auth.edit');
+// Route::get('/studentsauth/{students}/edit', [StudentsController::class, 'edit'])
+//     ->middleware(['auth', 'verified'])
+//     ->name('studentsauth.edit');
+// Route::get('/students4auth_edit/{students}/edit', [Student4Controller::class, 'edit'])
+//     ->middleware(['auth', 'verified'])
+//     ->name('students4auth.edit');
 Route::patch('/students/{id}', [StudentsController::class, 'update'])
     ->middleware(['auth', 'verified'])
     ->name('studentsauth.update');
