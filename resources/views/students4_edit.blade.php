@@ -98,7 +98,7 @@
                         <label class="input-group-text" for="inputGroupSelect01">เลขที่สมัคร</label>
                         <input type="text" name="numId" class="form-control" aria-label="Sizing example input"
                             id="numId" aria-describedby="inputGroup-sizing-default"
-                            value="{{ old('name', $students->numId ?? '') }}">
+                            value="{{ old('numId', $students->numId ?? '') }}">
                     </div>
                 </div>
                 <div class="col-md-6 mb-2">
