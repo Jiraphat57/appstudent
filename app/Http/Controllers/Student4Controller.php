@@ -415,7 +415,7 @@ class Student4Controller extends Controller
         if ($students->dateofbirth) {
             // $students->dateofbirth = Carbon::parse($students->dateofbirth)->format('d-m-Y');
             $carbonDate = Carbon::parse($students->dateofbirth);
-            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year + 543);
+            $students->dateofbirth = $carbonDate->format('d-m') . '-' . ($carbonDate->year);
             // $students->dateofbirth = $carbonDate->format('d-m-Y');
 
         }
@@ -652,13 +652,11 @@ class Student4Controller extends Controller
             // อัปเดตข้อมูลใน model (อย่าลืมกำหนด fillable ใน model)
             $students->update($input);
             // ส่งกลับไปยังหน้า dashboard พร้อมข้อความสำเร็จ
-            
             if (Auth::check()) {
                 return redirect()->route('dashboard')->with('success', 'แก้ไขข้อมูลสำเร็จ!');
             }else {
                 return redirect()->route('students4.edit');
             }
-
             } catch (\Exception $e) {
             // ส่งข้อความข้อผิดพลาดกลับไปยังหน้าเดิม
             return back()->withErrors(['error' => 'เกิดข้อผิดพลาด: ' . $e->getMessage()]);
@@ -668,7 +666,6 @@ class Student4Controller extends Controller
         {
             $students = Student4::findOrFail($id);
             $students->update($request->all());
-
             return redirect()->route('welcome')
                 ->with('success', 'บันทึกข้อมูลเรียบร้อยแล้ว');
         }
@@ -677,10 +674,8 @@ class Student4Controller extends Controller
         try {
             // ค้นหานักเรียนโดย ID
             $student = Student4::findOrFail($id);
-
             // ลบนักเรียน
             $student->delete();
-
             // กลับไปหน้า dashboard พร้อมข้อความสำเร็จ
             return redirect()->route('dashboard')->with('success', 'ลบนักเรียนสำเร็จ!');
         } catch (\Exception $e) {

@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <p class="mb-2">Call us</p>
-                                    <h5 class="mb-0">09-4706-4411</h5>
+                                    <h5 class="mb-0">09-4706-4400</h5>
                                 </div>
                             </div>
                         </div>
@@ -246,10 +246,10 @@
     <div class="container">
         <div class="row justify-content-center p2">
             <div class="col-sm-4 text-start" >
-                <a href="{{ url('/takeclass1') }}" class="center btn btn-primary py-3 px-6 animated"><i class="bi bi-1-circle"></i>&nbsp;กรอกข้อมูลมอบตัว ม.1</a>
+                <a href="{{ url('/takeclass1') }}" class="center btn btn-primary py-3 px-6 animated"><i class="bi bi-1-circle"></i>&nbsp;กรอกข้อมูลสมัคร/มอบตัว ม.1</a>
             </div>
             <div class="col-sm-4 text-start">
-                <a href="{{ url('/takeclass4') }}" class="center btn btn-primary py-3 px-6 animated"><i class="bi bi-4-circle"></i>&nbsp;กรอกข้อมูลมอบตัว ม.4</a>
+                <a href="{{ url('/takeclass4') }}" class="center btn btn-primary py-3 px-6 animated"><i class="bi bi-4-circle"></i>&nbsp;กรอกข้อมูลสมัคร/มอบตัว ม.4</a>
             </div>
             
         </div>   
