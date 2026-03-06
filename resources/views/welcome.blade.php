@@ -98,7 +98,9 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-10 text-start">
                                     <p class="fs-3 fw-medium text-primary text-uppercase animated slideInRight">โรงเรียนพานพิทยายม</p>
-                                    <h1 class="display-9 text-white mb-5 animated slideInRight">เปิดรับสมัครนักเรียน ม.1,ม.4 9 - 19 มี.ค. 2569</h1>
+                                    <h1 class="display-9 text-white mb-5 animated slideInRight">เปิดรับสมัครนักเรียน ม.1,ม.4 วันที่ 19 - 23 มี.ค. 2569</h1><br>
+                                    <h1 class="display-9 text-white mb-5 animated slideInRight">ประกาศผลสอบ ม.1 วันที่ 1 ,ม.4 วันที่ 2 เมษายน 2569</h1><br>
+                                    <h1 class="display-9 text-white mb-5 animated slideInRight">รายงานตัว ม.1 วันที่ 4 ,ม.4 วันที่ 5 เมษายน 2569</h1>
                                     {{-- <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">กดสมัครนักเรียน</a> --}}
                                 </div>
                             </div>
