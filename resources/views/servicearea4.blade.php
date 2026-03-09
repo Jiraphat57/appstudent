@@ -179,7 +179,7 @@
                     <div class="col-md-6 mb-2">
                         <select id="sel_districtschool4" name="districtschool4_id" class="form-select @error('districtschool4_id') is-invalid @enderror"
                             aria-label="Default select example">
-                            <option value="">ตำบลของโรงเรียนที่จบ</option>
+                            <option value="">ตำบลของหมู่บ้านนักเรียน</option>
                             <option value="1" {{ old('servicearea4_id', $student->districtschool4_id) == 1 ? 'selected' : '' }}>1 ต.สันมะเค็ด</option>
                             <option value="2" {{ old('servicearea4_id', $student->districtschool4_id) == 2 ? 'selected' : '' }}>2 ต.แม่อ้อ</option>
                             <option value="3" {{ old('servicearea4_id', $student->districtschool4_id) == 3 ? 'selected' : '' }}>3 ต.ธารทอง</option>

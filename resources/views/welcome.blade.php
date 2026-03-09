@@ -235,7 +235,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <p class="mb-2">Call us</p>
-                                    <h5 class="mb-0">0-5372-1512</h5>
+                                    <h5 class="mb-0">09-4706-3300</h5>
                                 </div>
                             </div>
                         </div>
