@@ -41,7 +41,7 @@ class StudentsM4Export implements FromCollection, WithHeadings, WithMapping
             $student->nameeng,                              // ชื่อภาษาอังกฤษ
             $student->surnameeng,                           //  นามสกุลภาษาอังกฤษ
             $student->nationalid,                           //  เลขประจำตัวประชาชน
-            $student->phone1student,                            //เบอร์โทร
+            $student->phone4student,                            //เบอร์โทร
             $student->religion->religion ?? '-',               //ศาสนา
             $student->nationality->nationalitie ?? '-',            //สัญชาติ
             $student->ethnicity->ethnicitie ?? '-',                //เชื้อชาติ
