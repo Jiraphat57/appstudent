@@ -1012,7 +1012,7 @@
 
                 <div class="col text-center">
                     <button type="submit"
-                        class="btn btn-primary btn-lg"><i class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กดสมัครเรียน&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        class="btn btn-primary btn-lg"><i class="bi bi-save2"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กดยืนยันสิทธิ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
                 {{-- </div>     --}}
             </div>
