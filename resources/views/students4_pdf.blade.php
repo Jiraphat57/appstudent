@@ -98,8 +98,11 @@
                 <img class="img-fluid" style="max-width: 100px;" src="img/klipartz.png" alt="klipartz">
             </div>
         </div>
-        <div class="row d-flex justify-content-center align-items-center"
+        {{-- <div class="row d-flex justify-content-center align-items-center"
             style="width: 100%; text-align: center; font-size: 20px;">ใบรับมอบตัว&nbsp;&nbsp;เลขที่:<span class="underline">{{ $students->numId }}</span>
+        </div> --}}
+         <div class="row d-flex justify-content-center align-items-center"
+            style="width: 100%; text-align: center; font-size: 20px;">การรู้จักนักเรียนเป็นรายบุคคล (เยี่ยมบ้านนักเรียน)
         </div>
         <div class="row d-flex justify-content-center align-items-center col-100%"
             style="width: 100%; text-align: center;">เขียนที่โรงเรียนพานพิทยาคม อําเภอพาน จังหวัดเชียงราย
